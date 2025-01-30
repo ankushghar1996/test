@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-01-16T17:32:51 IST" name="Default suite" finished-at="2025-01-16T17:33:28 IST" duration-ms="37296">
+    <groups>
+    </groups>
+    <test started-at="2025-01-16T17:32:51 IST" name="Default test" finished-at="2025-01-16T17:33:28 IST" duration-ms="37296">
+      <class name="Demo.HO_FSG_Demo">
+        <test-method is-config="true" signature="Data_Provider()[pri:0, instance:Demo.HO_FSG_Demo@8462f31]" started-at="2025-01-16T17:32:50 IST" name="Data_Provider" finished-at="2025-01-16T17:32:51 IST" duration-ms="875" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Data_Provider -->
+        <test-method is-config="true" signature="openbrowser()[pri:0, instance:Demo.HO_FSG_Demo@8462f31]" started-at="2025-01-16T17:32:51 IST" name="openbrowser" finished-at="2025-01-16T17:33:01 IST" duration-ms="9776" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openbrowser -->
+        <test-method signature="RM_PJPmaster()[pri:1, instance:Demo.HO_FSG_Demo@8462f31]" started-at="2025-01-16T17:33:01 IST" name="RM_PJPmaster" finished-at="2025-01-16T17:33:28 IST" duration-ms="27100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RM_PJPmaster -->
+        <test-method is-config="true" signature="close()[pri:0, instance:Demo.HO_FSG_Demo@8462f31]" started-at="2025-01-16T17:33:28 IST" name="close" finished-at="2025-01-16T17:33:28 IST" duration-ms="385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:Demo.HO_FSG_Demo@8462f31]" started-at="2025-01-16T17:33:28 IST" name="afterSuite" finished-at="2025-01-16T17:33:28 IST" duration-ms="383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- Demo.HO_FSG_Demo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
