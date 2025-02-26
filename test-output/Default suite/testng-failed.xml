@@ -3,15 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Demo.Upload_File">
+      <class name="HO_Activity_Credential.AddMedia">
         <methods>
+          <include name="Add_Media_Case3"/>
           <include name="close"/>
           <include name="afterSuite"/>
-          <include name="Order_Detailes_Reports"/>
           <include name="openbrowser"/>
+          <include name="Add_Media_Case2"/>
           <include name="Data_Provider"/>
+          <include name="Add_Media_Case1"/>
         </methods>
-      </class> <!-- Demo.Upload_File -->
+      </class> <!-- HO_Activity_Credential.AddMedia -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

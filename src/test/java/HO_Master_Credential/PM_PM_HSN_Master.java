@@ -21,15 +21,16 @@ public class PM_PM_HSN_Master extends BaseClass {
 	
 	
 	Liabrary.custom_click(hp.getMaster_Menu(),"Select Master Menu");	
-	
+	Thread.sleep(1000);
 	
 	Liabrary.custom_click(hp.getProductMaster_SubMenu(),"Select Product Master Submenu");	
-	
+	Thread.sleep(1000);
 	
 	Liabrary.custom_click(HSN1.getHSN_Master_Menu(),"Select HSN Master Menu");	
+	Thread.sleep(1000);
 
 
-
+	
 
 
 

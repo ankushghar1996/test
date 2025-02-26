@@ -22,6 +22,8 @@ public class AddMedia extends BaseClass{
 		Media_Add_Media AM = PageFactory.initElements(driver, Media_Add_Media.class);
 		Common_Data CD = PageFactory.initElements(driver, Common_Data.class);
 		
+		
+		
 //		ObjectRepo.test.log(Status.INFO, "Test Case 1 : Verify that user should be select Activity Menu.");
 		Liabrary.custom_click(hp.getActivity_Menu(), "select Activity Menu");
 		Thread.sleep(1000);
