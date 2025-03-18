@@ -4,7 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="HO_LoginPage.Login_Credential"/>
-      <class name="HO_Master_Credential.PM_PM_HSN_Master"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
