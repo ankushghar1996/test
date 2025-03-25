@@ -1,0 +1,9 @@
+# Email Extension Plugin
+http://wiki.jenkins-ci.org/display/JENKINS/email-ext-plugin
+ 
+# Pre-send Script
+def reportPath = build.getWorkspace().child("test-output/emailable-report.html")
+msg.setContent(reportPath.readToString(), "text/html");
+ 
+# TESTNG RESULTS PLUGIN
+http://wiki.jenkins-ci.org/display/JENKINS/testng-plugin

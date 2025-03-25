@@ -28,11 +28,16 @@ public class Demo_Mail {
         email.setSSLOnConnect(false); 
         email.setFrom("qaautomation@heerasoftware.com"); // Sender
         email.setSubject("Test Email");
-        email.setMsg("Hello, this is a test code."
-        		+ " file:///C:/Users/10389/eclipse-workspace/FOSROC_Automation/test-output/Extent_Reports/TestReport.html");
+        email.setMsg("Hello, this is a test code.");
         email.addTo("ankush.gharsele@heerasoftware.com"); // Receiver
         email.send();
  
         System.out.println("============== Email sent successfully! ===============");
+        
+        
+        
+        
+        
+        
     }
 }
