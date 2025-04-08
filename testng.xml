@@ -4,7 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="HO_LoginPage.Login_Credential"/>
-     
+      <class name="HO_Activity_Credential.Upload_media"/>
       
     </classes>
   </test> <!-- Test -->
