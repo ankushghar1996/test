@@ -4,6 +4,7 @@
 
   <test thread-count="5" name="Test">
     <classes>
+<<<<<<< HEAD
     
     
       <class name="SECR_Portal_Credential.New_Distributor_Cred"/>
@@ -13,6 +14,10 @@
       <class name="DataBase_Fosroc.New_Distributor_Database_Conn"/>
       
       
+=======
+      <class name="HO_LoginPage.Login_Credential"/>
+    
+>>>>>>> 28ec7a81f59e181810d5e308030d20d591e67db5
       
     </classes>
   </test> <!-- Test -->
