@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Demo.Upload_File">
+      <class name="DataBase_Fosroc.New_Distributor_Database_Conn">
         <methods>
-          <include name="close"/>
-          <include name="afterSuite"/>
-          <include name="Order_Detailes_Reports"/>
-          <include name="openbrowser"/>
-          <include name="Data_Provider"/>
+          <include name="tearDown"/>
+          <include name="verifyDistributorData"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- Demo.Upload_File -->
+      </class> <!-- DataBase_Fosroc.New_Distributor_Database_Conn -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

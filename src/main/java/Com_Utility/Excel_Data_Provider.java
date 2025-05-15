@@ -7,7 +7,11 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.poi.ss.usermodel.Cell;                    
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 
 public class Excel_Data_Provider {
 
@@ -45,6 +49,36 @@ private XSSFWorkbook wb;
 		
 }
 	
+	public String getStringdata2(String sheetname, int rownum, int cellnum) {
+
+	    Cell cell = wb.getSheet(sheetname).getRow(rownum).getCell(cellnum);
+
+	    if (cell == null) {
+
+	        return "";  // Return empty if cell is null
+
+	    }
+
+	    switch (cell.getCellType()) {
+
+	        case STRING:
+
+	            return cell.getStringCellValue();
+
+	        case NUMERIC:
+
+	            return String.valueOf((int) cell.getNumericCellValue());
+
+	        default:
+
+	            return "";
+
+	    }
+
+	}
+ 
+	
+	
 	public  String get_Date(String sheetname,int rownum,int cellnum) {
 		Date date= wb.getSheet(sheetname).getRow(rownum).getCell(cellnum).getDateCellValue();
 		DateFormat simple = new SimpleDateFormat("dd/MM/yyyy");
@@ -56,6 +90,28 @@ private XSSFWorkbook wb;
 return String.format("%.0f", d);
 
 	}
+	
+	
+	
+	public Object[][] getAllData(String sheetName) {
+	    int rowCount = wb.getSheet(sheetName).getPhysicalNumberOfRows();
+	    int colCount = wb.getSheet(sheetName).getRow(0).getLastCellNum();
+
+	    Object[][] data = new Object[rowCount - 1][colCount];
+
+	    for (int i = 1; i < rowCount; i++) {
+	        for (int j = 0; j < colCount; j++) {
+	            Cell cell = wb.getSheet(sheetName).getRow(i).getCell(j);
+	            data[i - 1][j] = (cell != null) ? cell.toString() : "";
+	        }
+	    }
+	    return data;
+	}
+
+	
+	
+	
+	
 	
 	
 	

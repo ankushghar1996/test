@@ -3,15 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="HO_LoginPage.Login_Credential">
+      <class name="DataBase_Fosroc.New_Distributor_Database_Conn">
         <methods>
-          <include name="testloginpage"/>
-          <include name="close"/>
-          <include name="afterSuite"/>
-          <include name="openbrowser"/>
-          <include name="Data_Provider"/>
+          <include name="tearDown"/>
+          <include name="verifyDistributorData"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- HO_LoginPage.Login_Credential -->
+      </class> <!-- DataBase_Fosroc.New_Distributor_Database_Conn -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -31,16 +31,16 @@ public class FSG_FSGMaster_AddPage extends BaseClass{
 		FSG_FSGMaster FSG = PageFactory.initElements(driver, FSG_FSGMaster.class);
 		
 	
-		ObjectRepo.startTestAndLog_1_SS("Test Case 1", "Verify that user should be select Master Menu.");
+		
 		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");
 		Thread.sleep(1000);
 		   
 		
-		ObjectRepo.startTestAndLog_1_SS("Test Case 2", "Verify that user should be select FSG Master sub menu.");
+		
 		Liabrary.custom_click(hp.getFSGMaster_SubMenu(), "select FSG Master sub menu");
 		Thread.sleep(1000);
 	
-		ObjectRepo.startTestAndLog_1_SS("Test Case 3", "Verify that user should be select FSG Master menu.");
+	
 		Liabrary.custom_click(FSG.getFSG_Master(), "FSG Master menu");
 		Thread.sleep(1000);
 	
@@ -52,94 +52,78 @@ public class FSG_FSGMaster_AddPage extends BaseClass{
 		ObjectRepo.AssertTextAndLog(Actual_Text, Expected_Text);
 		Thread.sleep(2000);
 	
-			ObjectRepo.startTestAndLog_1_SS("Test Case 5", "Verify that user should be click on Add btn.");
+			
 			Liabrary.custom_click(FA.getAdd_btn(), "Add btn");
 			Thread.sleep(1000);
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 6", "Verify that user should be click on Channeltype dropdown.");
+			
 			Liabrary.custom_click(FA.getChannelType_Dropdown(), "Channeltype dropdown");
 			Thread.sleep(1000);
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 7", "Verify that user should be click on ChannelTypeValue Dropdown.");
+			
 			Liabrary.custom_click(FA.getChannelTypeValue_Dropdown(), "ChannelTypeValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 8", "Verify that user should be click on FSGType Dropdown.");
 			Liabrary.custom_click(FA.getFSGType_Dropdown(), "FSGType Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 9", "Verify that user should be click on FSGTypeValue Dropdown.");
 			Liabrary.custom_click(FA.getFSGTypeValue_Dropdown(), "FSGTypeValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 10", "Verify that user should be click on Distributor Dropdown.");
 			Liabrary.custom_click(FA.getDistributor_Dropdown(), "Distributor Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 11", "Verify that user should be click on DistributorValue Dropdown.");
 			Liabrary.custom_click(FA.getDistributorValue_Dropdown(), "DistributorValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 12", "Verify that user should be send Employee Code Textbox.");
 			Liabrary.custom_Sendkeys(FA.getEmployee_Code_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 0), "Employee Code Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 13", "Verify that user should be send FSG Name Textbox.");
 			Liabrary.custom_Sendkeys(FA.getFSG_Name_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 1), "FSG Name Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 14", "Verify that user should be send Address1 Textbox.");
 			Liabrary.custom_Sendkeys(FA.getAddress1_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 2), "Address1 Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 15", "Verify that user should be select State Dropdown.");
 			Liabrary.custom_click(FA.getState_Dropdown(), "State Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 16", "Verify that user should be select StateValue Dropdown.");
 			Liabrary.custom_click(FA.getStateValue_Dropdown(), "StateValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 17", "Verify that user should be select Town Dropdown.");
 			Liabrary.custom_click(FA.getTown_Dropdown(), "Town Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 18", "Verify that user should be select TownValue Dropdown.");
 			Liabrary.custom_click(FA.getTownValue_Dropdown(), "TownValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 19", "Verify that user should be send Email ID Textbox.");
 			Liabrary.custom_Sendkeys(FA.getEmail_ID_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 3), "Email ID Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 20", "Verify that user should be send PinCode Textbox.");
 			Liabrary.custom_Sendkeys(FA.getPinCode_Textbox(), excel.getNumericdata("HO_ADD_FSG", 1, 4), "PinCode Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 21", "Verify that user should be send MobileNo Textbox.");
 			Liabrary.custom_Sendkeys(FA.getMobileNo_Textbox(), excel.getNumericdata("HO_ADD_FSG", 1, 5), "MobileNo Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 22", "Verify that user should be send PanNo Textbox.");
 			Liabrary.custom_Sendkeys(FA.getPanNo_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 6), "PanNo Textbox");
 			Thread.sleep(3000);
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 23", "Verify that user should be click on Close btn.");
 			Liabrary.custom_click(FA.getClose_btn(), "Close btn");
 			Thread.sleep(1000);
 			
@@ -243,17 +227,14 @@ public class FSG_FSGMaster_AddPage extends BaseClass{
 		
 		
 		Liabrary.custom_click(hp.getMaster_Menu(),"Select Master Menu");
-		ObjectRepo.startTestAndLog_1_SS("Test Case 1", "Verify that user should be select Master Menu.");
 		Thread.sleep(1000);
 		
 		
 		Liabrary.custom_click(hp.getRouteMaster_SubMenu(),"Select Route Master Submenu");
-		ObjectRepo.startTestAndLog_1_SS("Test Case 2", "Verify that user should be select Route Master sub menu.");
 		Thread.sleep(1000);
 		
 		
 		Liabrary.custom_click(PM1.getPJP_Master_Menu(),"Select PJP Master Page");
-		ObjectRepo.startTestAndLog_1_SS("Test Case 3", "Verify that user should be select PJP Master Page.");
 		Thread.sleep(1000);
 		
 		
@@ -266,47 +247,38 @@ public class FSG_FSGMaster_AddPage extends BaseClass{
 		
 		
 		Liabrary.custom_click(PM1.getSelect_Division_Dropdown(), "select Division From dropdown");
-		ObjectRepo.startTestAndLog_1_SS("Test Case 4", " Verify that user should be Select Division Dropdown.");
 	    Thread.sleep(1000);
 	    
 	    
 	  	Liabrary.custom_click(PM1.getSelect_Division_Dropdown_Value(), "select Division From dropdown Value");
-	  	ObjectRepo.startTestAndLog_1_SS("Test Case 5", "Verify that user should be Select Division Dropdown Value.");
 	    Thread.sleep(1000);
 	    
 	    
 	  	Liabrary.custom_click(PM1.getChanel_Type_Dropdown(), "select Channel Type dropdown ");
-	  	ObjectRepo.startTestAndLog_1_SS("Test Case 6", "Verify that user should be Select Channel Type Dropdown.");
 	    Thread.sleep(1000);
 	    
 	    
 	  	Liabrary.custom_click(PM1.getChanel_Type_Dropdown_Value(), "select channel Type dropdown Value");
-	  	ObjectRepo.startTestAndLog_1_SS("Test Case 7", "Verify that user should be Select Channel Type Dropdown Value.");
 	    Thread.sleep(1000);
 	    
 	    
 	  	Liabrary.custom_click(PM1.getDistributor_Name_Dropdown(), "select Distributor dropdown");
-	  	ObjectRepo.startTestAndLog_1_SS("Test Case 8", "Verify that user should be Select Distributor Dropdown.");
 	    Thread.sleep(1000);
 	    
 	    
 	  	Liabrary.custom_click(PM1.getDistributor_Name_Dropdown_Value(), "select Distributor Name dropdown Value");
-		ObjectRepo.startTestAndLog_1_SS("Test Case 9", "Verify that user should be Select Distributor Name Dropdown Value.");
 	    Thread.sleep(1000);
 	    
 	    
 	  	Liabrary.custom_click(PM1.getFSG_Name_Dropdown(), "select FSG Name dropdown");
-	  	ObjectRepo.startTestAndLog_1_SS("Test Case 10", "Verify that user should be Select FSG Name Dropdown.");
 	    Thread.sleep(1000);
 	    
 	    
 	  	Liabrary.custom_click(PM1.getFSG_Name_Dropdown_Value(), "select FSG Name dropdown Value");
-	  	ObjectRepo.startTestAndLog_1_SS("Test Case 11", "Verify that user should be Select FSG Name Dropdown Value.");
 	    Thread.sleep(1000);
 	    
 	    
 	    Liabrary.custom_click(CD.getView_Btn(),"Click on View Button");
-	    ObjectRepo.startTestAndLog_1_SS("Test Case 12", "Verify that user should be click on View btn.");
 	    Thread.sleep(1000);
 	
 	
@@ -322,16 +294,13 @@ public class FSG_FSGMaster_AddPage extends BaseClass{
 		FSG_FSGMaster FSG = PageFactory.initElements(driver, FSG_FSGMaster.class);
 		
 	
-		ObjectRepo.startTestAndLog_1_SS("Test Case 1", "Verify that user should be select Master Menu.");
 		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");
 		Thread.sleep(1000);
 		   
 		
-		ObjectRepo.startTestAndLog_1_SS("Test Case 2", "Verify that user should be select FSG Master sub menu.");
 		Liabrary.custom_click(hp.getFSGMaster_SubMenu(), "select FSG Master sub menu");
 		Thread.sleep(1000);
 	
-		ObjectRepo.startTestAndLog_1_SS("Test Case 3", "Verify that user should be select FSG Master menu.");
 		Liabrary.custom_click(FSG.getFSG_Master(), "FSG Master menu");
 		Thread.sleep(1000);
 	
@@ -343,90 +312,72 @@ public class FSG_FSGMaster_AddPage extends BaseClass{
 		ObjectRepo.AssertTextAndLog(Actual_Text, Expected_Text);
 		Thread.sleep(2000);
 	
-			ObjectRepo.startTestAndLog_1_SS("Test Case 5", "Verify that user should be click on Add btn.");
 			Liabrary.custom_click(FA.getAdd_btn(), "Add btn");
 			Thread.sleep(1000);
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 6", "Verify that user should be click on Channeltype dropdown.");
 			Liabrary.custom_click(FA.getChannelType_Dropdown(), "Channeltype dropdown");
 			Thread.sleep(1000);
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 7", "Verify that user should be click on ChannelTypeValue Dropdown.");
 			Liabrary.custom_click(FA.getChannelTypeValue_Dropdown(), "ChannelTypeValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 8", "Verify that user should be click on FSGType Dropdown.");
 			Liabrary.custom_click(FA.getFSGType_Dropdown(), "FSGType Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 9", "Verify that user should be click on FSGTypeValue Dropdown.");
 			Liabrary.custom_click(FA.getFSGTypeValue1_Dropdown(), "FSGTypeValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 10", "Verify that user should be click on Distributor Dropdown.");
 			Liabrary.custom_click(FA.getDistributor_Dropdown(), "Distributor Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 11", "Verify that user should be click on DistributorValue Dropdown.");
 			Liabrary.custom_click(FA.getDistributorValue_Dropdown(), "DistributorValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 12", "Verify that user should be send Employee Code Textbox.");
 			Liabrary.custom_Sendkeys(FA.getEmployee_Code_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 0), "Employee Code Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 13", "Verify that user should be send FSG Name Textbox.");
 			Liabrary.custom_Sendkeys(FA.getFSG_Name_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 1), "FSG Name Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 14", "Verify that user should be send Address1 Textbox.");
 			Liabrary.custom_Sendkeys(FA.getAddress1_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 2), "Address1 Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 15", "Verify that user should be select State Dropdown.");
 			Liabrary.custom_click(FA.getState_Dropdown(), "State Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 16", "Verify that user should be select StateValue Dropdown.");
 			Liabrary.custom_click(FA.getStateValue_Dropdown(), "StateValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 17", "Verify that user should be select Town Dropdown.");
 			Liabrary.custom_click(FA.getTown_Dropdown(), "Town Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 18", "Verify that user should be select TownValue Dropdown.");
 			Liabrary.custom_click(FA.getTownValue_Dropdown(), "TownValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 19", "Verify that user should be send Email ID Textbox.");
 			Liabrary.custom_Sendkeys(FA.getEmail_ID_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 3), "Email ID Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 20", "Verify that user should be send PinCode Textbox.");
 			Liabrary.custom_Sendkeys(FA.getPinCode_Textbox(), excel.getNumericdata("HO_ADD_FSG", 1, 4), "PinCode Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 21", "Verify that user should be send MobileNo Textbox.");
 			Liabrary.custom_Sendkeys(FA.getMobileNo_Textbox(), excel.getNumericdata("HO_ADD_FSG", 1, 5), "MobileNo Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 22", "Verify that user should be send PanNo Textbox.");
 			Liabrary.custom_Sendkeys(FA.getPanNo_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 6), "PanNo Textbox");
 			Thread.sleep(3000);
 		
@@ -444,16 +395,13 @@ public class FSG_FSGMaster_AddPage extends BaseClass{
 		FSG_FSGMaster FSG = PageFactory.initElements(driver, FSG_FSGMaster.class);
 		
 	
-		ObjectRepo.startTestAndLog_1_SS("Test Case 1", "Verify that user should be select Master Menu.");
 		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");
 		Thread.sleep(1000);
 		   
 		
-		ObjectRepo.startTestAndLog_1_SS("Test Case 2", "Verify that user should be select FSG Master sub menu.");
 		Liabrary.custom_click(hp.getFSGMaster_SubMenu(), "select FSG Master sub menu");
 		Thread.sleep(1000);
 	
-		ObjectRepo.startTestAndLog_1_SS("Test Case 3", "Verify that user should be select FSG Master menu.");
 		Liabrary.custom_click(FSG.getFSG_Master(), "FSG Master menu");
 		Thread.sleep(1000);
 	
@@ -465,70 +413,56 @@ public class FSG_FSGMaster_AddPage extends BaseClass{
 		ObjectRepo.AssertTextAndLog(Actual_Text, Expected_Text);
 		Thread.sleep(2000);
 	
-			ObjectRepo.startTestAndLog_1_SS("Test Case 5", "Verify that user should be click on Add btn.");
 			Liabrary.custom_click(FA.getAdd_btn(), "Add btn");
 			Thread.sleep(1000);
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 6", "Verify that user should be click on Channeltype dropdown.");
 			Liabrary.custom_click(FA.getChannelType_Dropdown(), "Channeltype dropdown");
 			Thread.sleep(1000);
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 7", "Verify that user should be click on ChannelTypeValue Dropdown.");
 			Liabrary.custom_click(FA.getChannelTypeValue_Dropdown(), "ChannelTypeValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 8", "Verify that user should be click on FSGType Dropdown.");
 			Liabrary.custom_click(FA.getFSGType_Dropdown(), "FSGType Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 9", "Verify that user should be click on FSGTypeValue Dropdown.");
 			Liabrary.custom_click(FA.getFSGTypeValue1_Dropdown(), "FSGTypeValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 10", "Verify that user should be click on Distributor Dropdown.");
 			Liabrary.custom_click(FA.getDistributor_Dropdown(), "Distributor Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 11", "Verify that user should be click on DistributorValue Dropdown.");
 			Liabrary.custom_click(FA.getDistributorValue_Dropdown(), "DistributorValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 12", "Verify that user should be send Employee Code Textbox.");
 			Liabrary.custom_Sendkeys(FA.getEmployee_Code_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 0), "Employee Code Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 13", "Verify that user should be send FSG Name Textbox.");
 			Liabrary.custom_Sendkeys(FA.getFSG_Name_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 1), "FSG Name Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 14", "Verify that user should be send Address1 Textbox.");
 			Liabrary.custom_Sendkeys(FA.getAddress1_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 2), "Address1 Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 15", "Verify that user should be select State Dropdown.");
 			Liabrary.custom_click(FA.getState_Dropdown(), "State Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 16", "Verify that user should be select StateValue Dropdown.");
 			Liabrary.custom_click(FA.getStateValue_Dropdown(), "StateValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 17", "Verify that user should be select Town Dropdown.");
 			Liabrary.custom_click(FA.getTown_Dropdown(), "Town Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 18", "Verify that user should be select TownValue Dropdown.");
 			Liabrary.custom_click(FA.getTownValue_Dropdown(), "TownValue Dropdown");
 			Thread.sleep(1000);
 			
@@ -539,22 +473,18 @@ public class FSG_FSGMaster_AddPage extends BaseClass{
 		*/	
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 20", "Verify that user should be send PinCode Textbox.");
 			Liabrary.custom_Sendkeys(FA.getPinCode_Textbox(), excel.getNumericdata("HO_ADD_FSG", 1, 4), "PinCode Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 21", "Verify that user should be send MobileNo Textbox.");
 			Liabrary.custom_Sendkeys(FA.getMobileNo_Textbox(), excel.getNumericdata("HO_ADD_FSG", 1, 5), "MobileNo Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 22", "Verify that user should be send PanNo Textbox.");
 			Liabrary.custom_Sendkeys(FA.getPanNo_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 6), "PanNo Textbox");
 			Thread.sleep(3000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 23", "Verify that user should be click on save btn.");
 			Liabrary.custom_click(FA.getSave_btn(), "save btn");
 			Thread.sleep(1000);
 			
@@ -576,16 +506,13 @@ public class FSG_FSGMaster_AddPage extends BaseClass{
 		FSG_FSGMaster FSG = PageFactory.initElements(driver, FSG_FSGMaster.class);
 		
 	
-		ObjectRepo.startTestAndLog_1_SS("Test Case 1", "Verify that user should be select Master Menu.");
 		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");
 		Thread.sleep(1000);
 		   
 		
-		ObjectRepo.startTestAndLog_1_SS("Test Case 2", "Verify that user should be select FSG Master sub menu.");
 		Liabrary.custom_click(hp.getFSGMaster_SubMenu(), "select FSG Master sub menu");
 		Thread.sleep(1000);
 	
-		ObjectRepo.startTestAndLog_1_SS("Test Case 3", "Verify that user should be select FSG Master menu.");
 		Liabrary.custom_click(FSG.getFSG_Master(), "FSG Master menu");
 		Thread.sleep(1000);
 		
@@ -597,97 +524,78 @@ public class FSG_FSGMaster_AddPage extends BaseClass{
 		ObjectRepo.AssertTextAndLog(Actual_Text, Expected_Text);
 		Thread.sleep(2000);
 	
-		ObjectRepo.startTestAndLog_1_SS("Test Case 5", "Verify that user should be click on Add btn.");
 		Liabrary.custom_click(FA.getAdd_btn(), "Add btn");
 		Thread.sleep(1000);
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 6", "Verify that user should be click on Channeltype dropdown.");
 			Liabrary.custom_click(FA.getChannelType_Dropdown(), "Channeltype dropdown");
 			Thread.sleep(1000);
 		
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 7", "Verify that user should be click on ChannelTypeValue Dropdown.");
 			Liabrary.custom_click(FA.getChannelTypeValue_Dropdown(), "ChannelTypeValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 8", "Verify that user should be click on FSGType Dropdown.");
 			Liabrary.custom_click(FA.getFSGType_Dropdown(), "FSGType Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 9", "Verify that user should be click on FSGTypeValue Dropdown.");
 			Liabrary.custom_click(FA.getFSGTypeValue1_Dropdown(), "FSGTypeValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 10", "Verify that user should be click on Distributor Dropdown.");
 			Liabrary.custom_click(FA.getDistributor_Dropdown(), "Distributor Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 11", "Verify that user should be click on DistributorValue Dropdown.");
 			Liabrary.custom_click(FA.getDistributorValue_Dropdown(), "DistributorValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 12", "Verify that user should be send Employee Code Textbox.");
 			Liabrary.custom_Sendkeys(FA.getEmployee_Code_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 0), "Employee Code Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 13", "Verify that user should be send FSG Name Textbox.");
 			Liabrary.custom_Sendkeys(FA.getFSG_Name_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 1), "FSG Name Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 14", "Verify that user should be send Address1 Textbox.");
 			Liabrary.custom_Sendkeys(FA.getAddress1_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 2), "Address1 Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 15", "Verify that user should be select State Dropdown.");
 			Liabrary.custom_click(FA.getState_Dropdown(), "State Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 16", "Verify that user should be select StateValue Dropdown.");
 			Liabrary.custom_click(FA.getStateValue_Dropdown(), "StateValue Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 17", "Verify that user should be select Town Dropdown.");
 			Liabrary.custom_click(FA.getTown_Dropdown(), "Town Dropdown");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 18", "Verify that user should be select TownValue Dropdown.");
 			Liabrary.custom_click(FA.getTownValue_Dropdown(), "TownValue Dropdown");
 			Thread.sleep(1000);
 			
 	
-			ObjectRepo.startTestAndLog_1_SS("Test Case 19", "Verify that user should be send Email ID Textbox.");
 			Liabrary.custom_Sendkeys(FA.getEmail_ID_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 3), "Email ID Textbox");
 			Thread.sleep(1000);
 			
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 20", "Verify that user should be send PinCode Textbox.");
 			Liabrary.custom_Sendkeys(FA.getPinCode_Textbox(), excel.getNumericdata("HO_ADD_FSG", 1, 4), "PinCode Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 21", "Verify that user should be send MobileNo Textbox.");
 			Liabrary.custom_Sendkeys(FA.getMobileNo_Textbox(), excel.getStringdata("HO_ADD_FSG", 3, 5), "MobileNo Textbox");
 			Thread.sleep(1000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 22", "Verify that user should be send PanNo Textbox.");
 			Liabrary.custom_Sendkeys(FA.getPanNo_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 6), "PanNo Textbox");
 			Thread.sleep(3000);
 			
 			
-			ObjectRepo.startTestAndLog_1_SS("Test Case 23", "Verify that user should be click on save btn.");
 			Liabrary.custom_click(FA.getSave_btn(), "save btn");
 			Thread.sleep(1000);
 			

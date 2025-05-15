@@ -1,5 +1,5 @@
 package Com_Utility;
- 
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Base64;
@@ -19,119 +19,124 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
- 
+
 public class ObjectRepo {
- 
-    // Declare static variables for ExtentReports and WebDriver
+
     public static ExtentReports extent;
     public static ExtentTest test;
     public static WebDriver driver;
-	public static Object startTest;
- 
-    // Method to initialize ExtentReports
+    public static Object startTest;
+
     public static ExtentReports initializeReport() {
-        // Define the path for the report to be saved
         String reportFolderPath = System.getProperty("user.dir") + File.separator + "test-output" + File.separator + "Extent_Reports" + File.separator;
- 
-        // Create the folder if it doesn't exist
         File reportDir = new File(reportFolderPath);
         if (!reportDir.exists()) {
-            reportDir.mkdirs(); // Create the directory if it doesn't exist
+            reportDir.mkdirs();
         }
- 
-        // Create an ExtentSparkReporter and provide the path where the report will be saved
         ExtentSparkReporter reporter = new ExtentSparkReporter(reportFolderPath + "TestReport.html");
         reporter.config().setDocumentTitle("Test Execution Report");
         reporter.config().setReportName("Automation Test Report For Fosroc_HO");
-        reporter.config().setTheme(Theme.DARK);  // Use a dark theme for the report
- 
-        // Initialize ExtentReports instance and attach the reporter
+        reporter.config().setTheme(Theme.DARK);
+
         extent = new ExtentReports();
         extent.attachReporter(reporter);
- 
-        // Set system information to display in the report
         extent.setSystemInfo("Browser Name", "Chrome");
-        extent.setSystemInfo("QA Name", " Aniket Jadhav,Ankush Gharsle");
+        extent.setSystemInfo("QA Name", "Ankush Gharsle, Aniket Jadhav,");
         extent.setSystemInfo("Environment", "QA Environment");
- 
-        return extent;  // Return the instance of ExtentReports
+        return extent;
     }
- 
-    // Method to start a test case in ExtentReports (needed for logging)
+
     public static void startTest(String testName, String testDescription) {
-        // Start the test in ExtentReports
         test = extent.createTest(testName, testDescription);
     }
 
- 
-        // Method 1: to start the test and log the step
-        public static void startTestAndLog_1(String testNumber, String testDescription ) { //,String logMessage) {
-            // Start the test
-        	 test = extent.createTest(testNumber, testDescription);            
-            // Log the message
-         // test.log(Status.INFO, logMessage);
-        }
-        // Existing methods like startTest, finalizeReport, etc.
-        public static void startTestAndLog_1_SS(String testNumber, String testDescription) {
-            // Start the test
-            test = extent.createTest(testNumber, testDescription);  
-            // Capture a screenshot automatically after starting the test
-            try {
-                String encodedScreenshot = takeScreenshot();  // Capture screenshot as Base64
-                if (encodedScreenshot != null && !encodedScreenshot.isEmpty()) {
-                    // Attach screenshot to Extent Report in Base64 format
-                    test.info(testDescription + " - Screenshot Captured");
-                    test.addScreenCaptureFromBase64String(encodedScreenshot);
-                } else {
-                    test.fail("Screenshot could not be captured.");
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-                test.fail("Error while capturing screenshot: " + e.getMessage());
+    
+    
+    public static void startTestAndLog_1(String testNumber, String testDescription) {
+        test = extent.createTest(testNumber, testDescription);
+    }
+
+    /*
+    public static void startTestAndLog_1_SS(String testNumber, String testDescription) {
+        test = extent.createTest(testNumber, testDescription);
+        try {
+            String encodedScreenshot = takeScreenshot();
+            if (encodedScreenshot != null && !encodedScreenshot.isEmpty()) {
+                test.info(testDescription + " - Screenshot Captured");
+                test.addScreenCaptureFromBase64String(encodedScreenshot);
+            } else {
+                test.fail("Screenshot could not be captured.");
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+            test.fail("Error while capturing screenshot: " + e.getMessage());
         }
- 
-        
+    }
+    */
+    
+    
+    public static void startTestAndLog_1_SS(String testNumber, String testDescription, Runnable action) {
+        // Start the test
+        test = extent.createTest(testNumber, testDescription);
 
-        //Method 2:
-        // Method 1: to start the test and log the step
-        public static void startTestAndLog_2(String testNumber, String testDescription) {
-            // Start the test
-        	 test = extent.createTest(testNumber, testDescription);            
-            // Log the message
-            test.log(Status.INFO,testDescription);
-        }
- 
-        // Existing methods like startTest, finalizeReport, etc.
+        try {
+            // Perform the test action
+            action.run();
 
-     // Utility method for asserting text and logging the result
-        public static void AssertTextAndLog(String actualText, String expectedText) throws Exception {
-            try {
-                // Assert that the actual text matches the expected text
-                Assert.assertEquals(actualText, expectedText);
- 
-                // If assertion passes, log the success in the report
-                ObjectRepo.test.log(Status.PASS,"| Expected: " + expectedText + " | Actual: " + actualText);
-            } catch (AssertionError e) {
-                // If assertion fails, log the failure in ExtentReport
-                ObjectRepo.test.fail(" | Expected: " + expectedText + " | Actual: " + actualText);
- 
-                // Optionally take a screenshot and attach it to the report
-                String screenshotPath = ObjectRepo.takeScreenshot();
-                ObjectRepo.test.addScreenCaptureFromPath(screenshotPath);
- 
-                // Rethrow the exception to mark the test as failed
-                throw e; // Re-throw the AssertionError to indicate the failure
+            // Capture screenshot after successful execution
+            String encodedScreenshot = takeScreenshot();
+            test.pass(testDescription + " - Step Passed");
+
+            if (encodedScreenshot != null && !encodedScreenshot.isEmpty()) {
+                test.addScreenCaptureFromBase64String(encodedScreenshot, "Screenshot - Passed");
+            } else {
+                test.warning("Screenshot could not be captured.");
             }
+
+        } catch (Exception e) {
+            // Capture screenshot on failure
+            String encodedScreenshot = null;
+            try {
+                encodedScreenshot = takeScreenshot();
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+
+            test.fail(testDescription + " - Step Failed: " + e.getMessage());
+            if (encodedScreenshot != null && !encodedScreenshot.isEmpty()) {
+                test.addScreenCaptureFromBase64String(encodedScreenshot, "Screenshot - Failed");
+            }
+
+            throw new RuntimeException(e); // Rethrow to fail the test
         }
- 
-            // Other existing methods...
+    }
+    
+    
+    
 
- 
+    public static void startTestAndLog_2(String testNumber, String testDescription) {
+        test = extent.createTest(testNumber, testDescription);
+        test.log(Status.INFO, testDescription);
         
+    }
 
- 
-    // Method to log test result
+    
+    
+    public static void AssertTextAndLog(String actualText, String expectedText) throws Exception {
+        try {
+            Assert.assertEquals(actualText, expectedText);
+            test.log(Status.PASS, "| Expected: " + expectedText + " | Actual: " + actualText);
+        } catch (AssertionError e) {
+            test.fail(" | Expected: " + expectedText + " | Actual: " + actualText);
+            String screenshotPath = takeScreenshot();
+            test.addScreenCaptureFromPath(screenshotPath);
+            throw e;
+        }
+        
+    }
+    
+    
+
     public static void logTestResult(String testName, String testDescription, boolean isTestPassed, String additionalInfo) {
         startTest(testName, testDescription);
         if (isTestPassed) {
@@ -140,80 +145,57 @@ public class ObjectRepo {
             test.fail(additionalInfo);
         }
     }
- 
-    public static void Print_Dynamic_Error_Massage(WebDriver driver, String xpathLocator, String testNumber_Print_Massage) {
-        try {
-        	// Start the test
-            test = extent.createTest(testNumber_Print_Massage);
-            // Find all elements that contain the error message
-            List<WebElement> errorMessageList = driver.findElements(By.xpath(xpathLocator));
 
-            // Check if any error message is displayed
-            if (errorMessageList.size() > 0) {
-                // Iterate over the list of error messages
+    public static void Print_Dynamic_Error_Massage(WebDriver driver, String xpathLocator, String testNumber_Print_Massage) {
+    	
+        try {
+        	
+            test = extent.createTest(testNumber_Print_Massage);
+            List<WebElement> errorMessageList = driver.findElements(By.xpath(xpathLocator));
+            if (!errorMessageList.isEmpty()) {
                 for (WebElement errorMessage : errorMessageList) {
-                    // Check if the error message is displayed
                     if (errorMessage.isDisplayed()) {
                         String errorText = errorMessage.getText();
-
-                        // Log the error message in the console
                         System.out.println("Error Message Print: " + errorText);
-                        System.out.println("Test Case Number: " +testNumber_Print_Massage);
-
-                        // Log the error message into Extent Report
-                        ObjectRepo.test.pass("  Error Massage: " + errorText);
-                      /*  
-                        // Log any additional message (optional)
-                        if (logMessage != null && !logMessage.isEmpty()) {
-                            ObjectRepo.test.info(logMessage);
-                        } */  //add this string in method name for additional log massage
-                        // public static void Print_Dynamic_Error_Massage(WebDriver driver, String xpathLocator, String Test_Case_Number, String logMessage)
-
-                        // Optionally capture and log the screenshot as well
+                        System.out.println("Test Case Number: " + testNumber_Print_Massage);
+                        test.pass("  Error Massage: " + errorText);
                         logTestWithScreenshot("Error captured for  " + testNumber_Print_Massage);
                     }
                 }
-            } 
-            else 
-            {
-                // If no error message is found, log that information
+            } else {
                 System.out.println("No error message displayed.");
             }
-        } 
-        catch (Exception e)
-        {
-            // Catch any other exception that might occur
+        } catch (Exception e) {
             System.err.println("An unexpected error occurred: " + e.getMessage());
             e.printStackTrace();
-            ObjectRepo.test.fail("An unexpected error occurred: " + e.getMessage());
+            test.fail("An unexpected error occurred: " + e.getMessage());
         }
+        
     }
-   
     
+    
+
     public static String takeScreenshot() throws IOException {
-        if (BaseClass.driver == null) {
+        // Ensure the WebDriver is initialized
+        if (driver == null) {
             throw new IllegalStateException("Driver is not initialized.");
         }
- 
-        // Take screenshot
-        File srcFile = ((TakesScreenshot) BaseClass.driver).getScreenshotAs(OutputType.FILE);
- 
-        // Convert the screenshot to Base64 encoding (without saving it to disk)
+
+        // Take screenshot and store it in a temporary file
+        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+        // Convert the screenshot file to a byte array
         byte[] fileContent = FileUtils.readFileToByteArray(srcFile);
-        String encodedScreenshot = Base64.getEncoder().encodeToString(fileContent);
- 
-        return encodedScreenshot;  // Return Base64 encoded screenshot
+
+        // Convert the byte array to a Base64 encoded string
+        return Base64.getEncoder().encodeToString(fileContent);
     }
- 
+
     public static void logTestWithScreenshot(String logMessage) {
         try {
-            // Capture the screenshot as Base64
             String encodedScreenshot = takeScreenshot();
- 
-            // Log the message and attach the screenshot to the Extent Report
             if (encodedScreenshot != null && !encodedScreenshot.isEmpty()) {
-                // Attach screenshot to Extent Report in Base64 format
-                test.info(logMessage +"==>Screenshot Captured");
+                test.info(logMessage + " ==>Screenshot Captured");
                 test.addScreenCaptureFromBase64String(encodedScreenshot);
             } else {
                 test.fail("Screenshot could not be captured.");
@@ -224,24 +206,33 @@ public class ObjectRepo {
         }
     }
 
-    // Method to finalize the report and flush it to the specified location
     public static void finalizeReport() {
-        // Flush the ExtentReports to generate the final report
         if (extent != null) {
-            extent.flush();  // This writes the report to the specified location
+            extent.flush();
+        }
+        System.out.println("✅ Extent Report flushed successfully...");
+
+        try {
+            String reportPath = System.getProperty("user.dir") + "/test-output/Extent_Reports/TestReport.html";
+            File reportFile = new File(reportPath);
+            if (!reportFile.exists()) {
+                System.out.println("❌ Report file not found at: " + reportPath);
+                return;
+            }
+            Thread.sleep(5000);
+            Demo_Mail.sendReportEmail();
+        } catch (Exception e) {
+            System.out.println("❌ Failed to send email: " + e.getMessage());
+            e.printStackTrace();
         }
     }
- 
-    // Optional: You can use @AfterClass annotation to finalize the report after each test class
+
     @AfterClass
     public static void finalizeReportAfterClass() {
-        finalizeReport();  // Flush the report after all tests in this class are executed
+        finalizeReport();
     }
- 
-	
- 
-	public static ExtentReports extentreport() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-}
+
+    public static ExtentReports extentreport() {
+        return null;
+    }
+} 

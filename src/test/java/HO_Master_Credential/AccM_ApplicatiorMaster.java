@@ -13,8 +13,8 @@ import HO_Master.AM_ApplicatiorMaster;
 import HO_Master.DM_DistributorTransfer;
 
 public class AccM_ApplicatiorMaster extends BaseClass{
-
-	
+		
+		
 	@Test
 	public void Distributor_Transfer1() throws Exception {
 		
@@ -22,7 +22,7 @@ public class AccM_ApplicatiorMaster extends BaseClass{
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		AM_ApplicatiorMaster AP = PageFactory.initElements(driver, AM_ApplicatiorMaster.class);
 		
-	
+		
 //		ObjectRepo.test.log(Status.INFO, "Test Case 1 : Verify that user should be select Master Menu.");
 		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");
 		Thread.sleep(1000);

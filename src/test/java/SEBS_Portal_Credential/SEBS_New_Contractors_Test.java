@@ -1,0 +1,194 @@
+package SEBS_Portal_Credential;
+ 
+import java.time.Duration;
+ 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+ 
+import Com_Utility.BaseClass_SEBS_Portal;
+import Com_Utility.Liabrary;
+import SEBS_Portal.SEBS_New_Contractors;
+ 
+public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
+ 
+  @Test
+  public void New_Contractors() throws Exception {
+  SEBS_New_Contractors SEBS = PageFactory.initElements(driver,SEBS_New_Contractors.class);
+  Liabrary.custom_click(SEBS.getMenu(), "Click on Menu Button");
+  Thread.sleep(1000);
+  Liabrary.custom_click(SEBS.getNew_Contractor_Creation(), "Click on new Contractor Creation");
+  Thread.sleep(1000);	
+  Liabrary.custom_click(SEBS.getCreation_Button(), "Click on new Contractor Creation Button");
+  Thread.sleep(1000);
+  Liabrary.custom_click(SEBS.getSelect_Distributor_Dropdown(), "Click On Distributor Dropdown");
+  Thread.sleep(1000);	
+  Liabrary.custom_click(SEBS.getSelect_Distributor_Dropdown_Value(), "Click On Distributor Dropdown Value");
+  Thread.sleep(1000);
+  Liabrary.custom_click(SEBS.getSales_Engineer_Dropdown(),"Click on Sales_Engineer_Dropdown");
+  Thread.sleep(1000);
+  Liabrary.custom_click(SEBS.getSales_Engineer_Dropdown_Value(),"Click on Sales_Engineer_Dropdown Value");
+  Thread.sleep(1000);
+  Liabrary.custom_click(SEBS.getRoute(),"Click on Route Button");
+  Thread.sleep (1000);
+  Liabrary.custom_click(SEBS.getRoute_Value(), "Click on Route Button Value");
+  Thread.sleep (1000);
+//	//SE-Area Dropdown AND Value
+//  Liabrary.custom_click(null, null);
+//  Thread.sleep (1000);
+//	
+//  Liabrary.custom_click(null, null);
+//  Thread.sleep (1000);	
+
+	driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("HSPL ");
+	  Thread.sleep (1000);
+	  WebElement element1 = driver.findElement(By.xpath("//div[@class='col-12 mb-3']//select[@aria-label='Default select example']"));
+	  JavascriptExecutor JSE1 = (JavascriptExecutor)driver;
+	  JSE1.executeScript("arguments[0].scrollIntoView(true);", element1);
+	  Thread.sleep(1000);
+	  Liabrary.custom_click(SEBS.getContractor_Type(), "Click on Contractor Type");
+	  Thread.sleep (1000);
+	  Liabrary.custom_click(SEBS.getContractor_Type_Value(), "Click on Contractor Type");
+	  Thread.sleep (1000);
+	  //Contact Number
+	  driver.findElement(By.xpath("//input[@placeholder='Enter Contact Number']")).sendKeys("123456789");
+	  Thread.sleep (1000);
+	  WebElement element2 = driver.findElement(By.xpath("//input[@placeholder='Enter Email Address']"));
+	  JavascriptExecutor JSE2 = (JavascriptExecutor)driver;
+	  JSE2.executeScript("arguments[0].scrollIntoView(true);", element2);
+	  Thread.sleep (1000);
+	  //Email
+	  driver.findElement(By.xpath("//input[@placeholder='Enter Email Address']")).sendKeys("HSPL@Test.com");
+	  Thread.sleep (1000);
+	  //Address Line 1
+	  driver.findElement(By.xpath("//input[@placeholder='Enter Address Line 1']")).sendKeys("Navle Bridge");
+	  Thread.sleep (1000);
+	  driver.findElement(By.xpath("//input[@placeholder='Enter Address Line 2']")).sendKeys("Narhe");
+	  Thread.sleep (1000);
+	  Liabrary.custom_click(SEBS.getState_Dropdown(), "Click on State Drpopdown");
+	  Thread.sleep (1000);
+	  Liabrary.custom_click(SEBS.getState_Dropdown_Value(), "Click on State Drpopdown Value");
+	  Thread.sleep (1000);
+	  Liabrary.custom_click(SEBS.getCity_Dropdown(), "Click on City Dropdown");
+	  Thread.sleep (1000);
+	  Liabrary.custom_click(SEBS.getCity_Dropdown_Value(), "Click on City Dropdown Value");
+	  Thread.sleep (1000);
+	  driver.findElement(By.xpath("//input[@placeholder='Enter Pin Code']")).sendKeys("411041");
+	  Thread.sleep (1000);
+	  //calender code
+	  // Open calendar
+
+	//Adhar Number
+	  driver.findElement(By.xpath("//input[@placeholder='Enter Aadhar Number']")).sendKeys("123456789");
+	  Thread.sleep (1000);
+	//Enter Pan Number
+	  driver.findElement(By.xpath("//input[@placeholder='Enter PAN Number']")).sendKeys("AZVPK2525M");
+	  Thread.sleep (1000);
+	  WebElement element3 = driver.findElement(By.xpath("(//div[@class='col-2 col-lg-1']//span[@data-bs-target='#camera'])[1]"));
+	  JavascriptExecutor JSE3 = (JavascriptExecutor)driver;
+	  JSE1.executeScript("arguments[0].scrollIntoView(true);", element3);
+	  Thread.sleep (1000);
+	//input[@placeholder='Enter GST Number']
+	  driver.findElement(By.xpath("//input[@placeholder='Enter GST Number']")).sendKeys("GHJ151515");
+	  Thread.sleep (1000);
+	  //Camera Click
+	   driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();
+       Thread.sleep(1000);
+
+ 
+       WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+ 
+       // Wait for the Switch Camera button and click it
+       try {
+           WebElement switchCamBtn = wait1.until(ExpectedConditions.elementToBeClickable(
+               By.xpath("(//div[@class='col-2 col-lg-1']//span[@data-bs-target='#camera'])[1]")));
+           switchCamBtn.click();
+           System.out.println("Switch Camera button clicked.");
+       } catch (TimeoutException e) {
+           System.out.println("Switch Camera button not found or not clickable.");
+       }
+       Thread.sleep(5000);
+       // Wait for the Capture button and click it
+       try {
+           WebElement captureBtn = wait1.until(ExpectedConditions.elementToBeClickable(
+               By.xpath("(//button[@class='capture-button'])[3]")));
+           captureBtn.click();
+           System.out.println("Capture button clicked.");
+       } catch (TimeoutException e) {
+           System.out.println("Capture button not found or not clickable.");
+       }
+ 
+	  Thread.sleep(1000);
+	  
+	  driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[2]")).click();
+      Thread.sleep(1000);
+
+
+      WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+      // Wait for the Switch Camera button and click it
+      try {
+          WebElement switchCamBtn = wait2.until(ExpectedConditions.elementToBeClickable(
+              By.xpath("(//div[@class='col-2 col-lg-1']//span[@data-bs-target='#camera'])[1]")));
+          switchCamBtn.click();
+          System.out.println("Switch Camera button clicked.");
+      } catch (TimeoutException e) {
+          System.out.println("Switch Camera button not found or not clickable.");
+      }
+      Thread.sleep(5000);
+      // Wait for the Capture button and click it
+      try {
+          WebElement captureBtn = wait2.until(ExpectedConditions.elementToBeClickable(
+              By.xpath("(//button[@class='capture-button'])[3]")));
+          captureBtn.click();
+          System.out.println("Capture button clicked.");
+      } catch (TimeoutException e) {
+          System.out.println("Capture button not found or not clickable.");
+      }
+
+      Thread.sleep(1000);
+      
+      
+      driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[3]")).click();
+      Thread.sleep(1000);
+
+
+      WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+      // Wait for the Switch Camera button and click it
+      try {
+          WebElement switchCamBtn = wait3.until(ExpectedConditions.elementToBeClickable(
+              By.xpath("(//div[@class='col-2 col-lg-1']//span[@data-bs-target='#camera'])[1]")));
+          switchCamBtn.click();
+          System.out.println("Switch Camera button clicked.");
+      } catch (TimeoutException e) {
+          System.out.println("Switch Camera button not found or not clickable.");
+      }
+      Thread.sleep(5000);
+      // Wait for the Capture button and click it
+      try {
+          WebElement captureBtn = wait3.until(ExpectedConditions.elementToBeClickable(
+              By.xpath("(//button[@class='capture-button'])[3]")));
+          captureBtn.click();
+          System.out.println("Capture button clicked.");
+      } catch (TimeoutException e) {
+          System.out.println("Capture button not found or not clickable.");
+      }
+
+      Thread.sleep(1000);
+      
+      
+      
+      driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();
+      Thread.sleep(1000);
+       
+       
+       
+       
+	}	
+}

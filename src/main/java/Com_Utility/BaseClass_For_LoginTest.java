@@ -8,6 +8,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseClass_For_LoginTest {
 
 	
@@ -19,13 +21,21 @@ public class BaseClass_For_LoginTest {
 		 confiq=new Confiq_Data_Provider();
 		 excel=new Excel_Data_Provider();	   
 	}
+	
+	
 	@BeforeMethod
 	public void openbrowser() throws Exception {
-    System.setProperty("webdriver.chrome.driver", "C:\\Users\\10389\\eclipse-workspace\\FOSROC_Automation\\Driver_New_Version\\chromedriver.exe");
+	
+	//	System.setProperty("webdriver.chrome.driver", "C:\\COde\\test\\FOSROC_Automation\\chromedriver-win64\\chromedriver.exe");
        	//WebDriver driver = new ChromeDriver();
-		//WebDriverManager.chromedriver().setup();
-	  driver = new ChromeDriver();
-		driver.get("https://fosrocuat.hspldms.com");
+		
+		WebDriverManager.chromedriver().setup();
+		
+		driver = new ChromeDriver();
+	//	driver.get("https://fosrocuat.hspldms.com");
+		
+		driver.get("https://fosrocfsguat.hspldms.com");
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

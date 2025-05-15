@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-25T11:14:48 IST" name="Default suite" finished-at="2025-03-25T11:15:36 IST" duration-ms="48226">
+  <suite started-at="2025-05-15T12:12:51 IST" name="Default suite" finished-at="2025-05-15T12:14:21 IST" duration-ms="89775">
     <groups>
     </groups>
-    <test started-at="2025-03-25T11:14:48 IST" name="Default test" finished-at="2025-03-25T11:15:36 IST" duration-ms="48226">
-      <class name="HO_LoginPage.Login_Credential">
-        <test-method is-config="true" signature="Data_Provider()[pri:0, instance:HO_LoginPage.Login_Credential@77f80c04]" started-at="2025-03-25T11:14:46 IST" name="Data_Provider" finished-at="2025-03-25T11:14:48 IST" duration-ms="1675" status="PASS">
+    <test started-at="2025-05-15T12:12:51 IST" name="Default test" finished-at="2025-05-15T12:14:21 IST" duration-ms="89775">
+      <class name="SECR_Portal_Credential.New_Distributor_Cred">
+        <test-method is-config="true" signature="setupSuite()[pri:0, instance:SECR_Portal_Credential.New_Distributor_Cred@58ea606c]" started-at="2025-05-15T12:12:51 IST" name="setupSuite" finished-at="2025-05-15T12:12:51 IST" duration-ms="371" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Data_Provider -->
-        <test-method is-config="true" signature="openbrowser()[pri:0, instance:HO_LoginPage.Login_Credential@77f80c04]" started-at="2025-03-25T11:14:48 IST" name="openbrowser" finished-at="2025-03-25T11:15:02 IST" duration-ms="14158" status="PASS">
+        </test-method> <!-- setupSuite -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SECR_Portal_Credential.New_Distributor_Cred@58ea606c]" started-at="2025-05-15T12:12:51 IST" name="setUp" finished-at="2025-05-15T12:13:03 IST" duration-ms="11074" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openbrowser -->
-        <test-method signature="testloginpage()[pri:0, instance:HO_LoginPage.Login_Credential@77f80c04]" started-at="2025-03-25T11:15:02 IST" name="testloginpage" finished-at="2025-03-25T11:15:35 IST" duration-ms="33250" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="testOtpFlowAndRetailerInfo()[pri:0, instance:SECR_Portal_Credential.New_Distributor_Cred@58ea606c]" started-at="2025-05-15T12:13:03 IST" name="testOtpFlowAndRetailerInfo" finished-at="2025-05-15T12:14:20 IST" duration-ms="77702" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testloginpage -->
-        <test-method is-config="true" signature="close()[pri:0, instance:HO_LoginPage.Login_Credential@77f80c04]" started-at="2025-03-25T11:15:35 IST" name="close" finished-at="2025-03-25T11:15:36 IST" duration-ms="762" status="PASS">
+        </test-method> <!-- testOtpFlowAndRetailerInfo -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SECR_Portal_Credential.New_Distributor_Cred@58ea606c]" started-at="2025-05-15T12:14:20 IST" name="tearDown" finished-at="2025-05-15T12:14:21 IST" duration-ms="942" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- close -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:HO_LoginPage.Login_Credential@77f80c04]" started-at="2025-03-25T11:15:36 IST" name="afterSuite" finished-at="2025-03-25T11:15:37 IST" duration-ms="965" status="PASS">
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:SECR_Portal_Credential.New_Distributor_Cred@58ea606c]" started-at="2025-05-15T12:14:21 IST" name="tearDownSuite" finished-at="2025-05-15T12:14:31 IST" duration-ms="10199" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- HO_LoginPage.Login_Credential -->
+        </test-method> <!-- tearDownSuite -->
+      </class> <!-- SECR_Portal_Credential.New_Distributor_Cred -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

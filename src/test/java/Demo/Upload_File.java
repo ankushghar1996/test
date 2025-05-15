@@ -24,65 +24,63 @@ package Demo;
 				
 		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		    
-		   
+		    ObjectRepo.startTestAndLog_1_SS("Test Case 1", "Verify that user should Click on Master menu", () -> {
 			driver.findElement(By.xpath("//*[text()=\"Master\"]")).click();
-			ObjectRepo.startTestAndLog_1_SS("Test Case 1", "Verify that user should Click on Master menu");
+		    });
 			Thread.sleep(1000);
 			
 			
-			driver.findElement(By.xpath("//p[normalize-space()='Product Management']")).click();
-			ObjectRepo.startTestAndLog_1_SS("Test Case 2", "Verify that user should click on Product Management Submenu ");
+			ObjectRepo.startTestAndLog_1_SS("Test Case 2", "Verify that user should click on Product Management Submenu", () -> {
+			    driver.findElement(By.xpath("//p[normalize-space()='Product Management']")).click();
+			});
 			Thread.sleep(1000);
 
-			
-			driver.findElement(By.xpath("//p[normalize-space()='Product Image Upload']")).click();
-			ObjectRepo.startTestAndLog_1_SS("Test Case 3", "Verify that user should click on Product Image Upload menu");
+			ObjectRepo.startTestAndLog_1_SS("Test Case 3", "Verify that user should click on Product Image Upload menu", () -> {
+			    driver.findElement(By.xpath("//p[normalize-space()='Product Image Upload']")).click();
+			});
 			Thread.sleep(1000);
-			
-			
-			driver.findElement(By.xpath("//input[@id='ctl00_ParentMasterContentPlaceHolder1_ddlProducts_Input']")).click();
-			ObjectRepo.startTestAndLog_1_SS("Test Case 4", "Verify that user should click on Product Dropdown");
+
+			ObjectRepo.startTestAndLog_1_SS("Test Case 4", "Verify that user should click on Product Dropdown", () -> {
+			    driver.findElement(By.xpath("//input[@id='ctl00_ParentMasterContentPlaceHolder1_ddlProducts_Input']")).click();
+			});
 			Thread.sleep(1000);
-			
-			
-			driver.findElement(By.xpath("(//input[@type='checkbox'])[1]")).click();
-			ObjectRepo.startTestAndLog_1_SS("Test Case 5", "Verify that user should click on Checkbox value");
+
+			ObjectRepo.startTestAndLog_1_SS("Test Case 5", "Verify that user should click on Checkbox value", () -> {
+			    driver.findElement(By.xpath("(//input[@type='checkbox'])[1]")).click();
+			});
 			Thread.sleep(1000);
-			
-			
-			driver.findElement(By.xpath("//input[@id='ParentMasterContentPlaceHolder1_BtnView']")).click();
-			ObjectRepo.startTestAndLog_1_SS("Test Case 6", "Verify that user should click on View Button");
+
+			ObjectRepo.startTestAndLog_1_SS("Test Case 6", "Verify that user should click on View Button", () -> {
+			    driver.findElement(By.xpath("//input[@id='ParentMasterContentPlaceHolder1_BtnView']")).click();
+			});
 			Thread.sleep(1000);
-			
-			
-			driver.findElement(By.xpath("//input[@id='ctl00_ParentMasterContentPlaceHolder1_RadGrid1_ctl00_ctl04_btnUpload']")).click();
-			ObjectRepo.startTestAndLog_1_SS("Test Case 7", "Verify that user should click on Upload Button");
+
+			ObjectRepo.startTestAndLog_1_SS("Test Case 7", "Verify that user should click on Upload Button", () -> {
+			    driver.findElement(By.xpath("//input[@id='ctl00_ParentMasterContentPlaceHolder1_RadGrid1_ctl00_ctl04_btnUpload']")).click();
+			});
 			Thread.sleep(1000);
-			
-			
-			driver.findElement(By.xpath("//img[@id='ParentMasterContentPlaceHolder1_Image1']")).click();
-			ObjectRepo.startTestAndLog_1_SS("Test Case 8", "Verify that user should click on select image");
+
+			ObjectRepo.startTestAndLog_1_SS("Test Case 8", "Verify that user should click on select image", () -> {
+			    driver.findElement(By.xpath("//img[@id='ParentMasterContentPlaceHolder1_Image1']")).click();
+			});
 			Thread.sleep(1000);
-			
-			
-			 // Locate the file input element (hidden input of type file) and upload the file
-			ObjectRepo.startTestAndLog_1_SS("Test Case 9", "Verify that user should click on select image & Print Confirmation massage");
-	        WebElement fileInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='file']")));
-	        // Use JavaScript to make the file input visible if it's hidden
-	        ((JavascriptExecutor) driver).executeScript("arguments[0].style.display = 'block';", fileInput);
-	 
-	        // Get the project path dynamically (or specify a full path)
-	        String projectPath = System.getProperty("user.dir");
-	 
-	        // Concatenate the relative file path to projectPath
-	        fileInput.sendKeys(projectPath + "\\test-output\\Upload_Image\\Sample.jpg");
-	        
-	        
-	        // Print a success message once the image has been selected
-	       
-	        System.out.println("Image selected successfully: " + projectPath + "\\test-output\\Upload_Image\\image.jpg");
-	        ObjectRepo.startTestAndLog_1_SS("Test Case 10", "print image upload successfull massage");
-	        Thread.sleep(3000);
+
+			ObjectRepo.startTestAndLog_1_SS("Test Case 9", "Verify that user should click on select image & Print Confirmation message", () -> {
+			    WebElement fileInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='file']")));
+			    ((JavascriptExecutor) driver).executeScript("arguments[0].style.display = 'block';", fileInput);
+
+			    String projectPath = System.getProperty("user.dir");
+			    fileInput.sendKeys(projectPath + "\\test-output\\Upload_Image\\Sample.jpg");
+
+			    System.out.println("Image selected successfully: " + projectPath + "\\test-output\\Upload_Image\\image.jpg");
+			});
+			Thread.sleep(3000);
+
+			ObjectRepo.startTestAndLog_1_SS("Test Case 10", "Print image upload successful message", () -> {
+			    // You can add any additional code here if needed, or keep it empty
+			});
+			Thread.sleep(1000);
+
 	        
 	        
 	 
