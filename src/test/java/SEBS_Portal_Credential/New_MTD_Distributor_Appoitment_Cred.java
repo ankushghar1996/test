@@ -143,7 +143,6 @@ public class New_MTD_Distributor_Appoitment_Cred {
         Thread.sleep(1000);
        */
         
-        
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@formcontrolname='DistributorCategory']")));
         dropdown.click();

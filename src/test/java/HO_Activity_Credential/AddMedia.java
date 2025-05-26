@@ -159,23 +159,16 @@ public class AddMedia extends BaseClass{
 		Liabrary.custom_click(AM.getType_Dropdown_Select_Video(), null);
 		Thread.sleep(1000);
 		
-		
-		
 		Liabrary.custom_click(AM.getType_Dropdown_SelectValue2_Banner(), null);
 		Thread.sleep(1000);
-		
-		
 		
 		Liabrary.custom_click(AM.getCategory1_Dropdown_Select_Application_Video(), null);
 		Thread.sleep(1000);
 		
-		
-		
+	
 		Liabrary.custom_click(AM.getCategory_Dropdown_Select_Retailer(), null);
 		Thread.sleep(1000);
 
-
-		
 		driver.findElement(By.xpath("//*[@id='ParentMasterContentPlaceHolder1_txtTitle']")).sendKeys("Ankush");
 		Thread.sleep(1000);
 		

@@ -546,7 +546,7 @@ public class HO_FSG_Demo extends BaseClass{
 		});
 
 			
-			ObjectRepo.Print_Dynamic_Error_Massage(driver, "//span[contains(text(), 'Enter')]", "Test Case 24");
+			ObjectRepo.Print_Dynamic_Flash_Massage(driver, "//span[contains(text(), 'Enter')]", "Test Case 24");
 			Thread.sleep(1000);
 		
 		
@@ -655,7 +655,7 @@ public class HO_FSG_Demo extends BaseClass{
 		});
 
 			
-			ObjectRepo.Print_Dynamic_Error_Massage(driver, "//span[contains(text(), 'Enter')]", "Test Case 24");
+			ObjectRepo.Print_Dynamic_Flash_Massage(driver, "//span[contains(text(), 'Enter')]", "Test Case 24");
 			Thread.sleep(1000);
 		
 		

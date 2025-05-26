@@ -59,7 +59,9 @@ public class New_Retailer_cred_OTP {
 
         if (otp != null) {
             System.out.println("OTP fetched: " + otp);
+            
             driver.findElement(By.xpath("//input[@placeholder='Enter OTP']")).sendKeys(otp);
+            
             driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
             Thread.sleep(2000);
 

@@ -33,6 +33,8 @@ public class BaseClass_ASM {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://fosrocuat.hspldms.com/");
+        //initilize Driver 
+        ObjectRepo.driver = driver;	
  
         LoginPage login = PageFactory.initElements(driver, LoginPage.class);
  

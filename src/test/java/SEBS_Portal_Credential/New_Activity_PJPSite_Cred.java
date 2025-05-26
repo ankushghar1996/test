@@ -8,121 +8,119 @@ import org.testng.annotations.Test;
 
 import Com_Utility.BaseClass_SEBS_Portal;
 import Com_Utility.Liabrary;
+import Com_Utility.ObjectRepo;
 import SEBS_Portal.New_Site_Creation;
 
-public class New_Activity_PJPSite_Cred extends BaseClass_SEBS_Portal{
+public class New_Activity_PJPSite_Cred extends BaseClass_SEBS_Portal {
 
-	
-	@Test
-	public void SEBS_New_Activity_PJP_Cred() throws Exception {
-		
-		New_Site_Creation view = PageFactory.initElements(driver, New_Site_Creation.class);
-	
-		
-		Liabrary.custom_click(view.getActivity_Button(), null);
-		Thread.sleep(1000);
-	
-	
-		Liabrary.custom_click(view.getAdd1_Button(), null);
-		Thread.sleep(1000);
-	
-	
-		Liabrary.custom_click(view.getDistributor_Mapped(), null);
-		Thread.sleep(1000);
-		
-		
-		Liabrary.custom_click(view.getSelect_Distributor_Mapped(), null);
-		Thread.sleep(1000);
-		
-		
-		
-		
-		Liabrary.custom_click(view.getSelect_sales_Engineer_dropdown(), null);
-		Thread.sleep(1000);
-	
-		Liabrary.custom_click(view.getSelect_sales_Engineer(), null);
-		Thread.sleep(1000);
-		
-		
-	
-		Liabrary.custom_click(view.getSelect_Location_dropdown(), null);
-		Thread.sleep(1000);
-	
-	
-		Liabrary.custom_click(view.getSelect_Location(), null);
-		Thread.sleep(1000);
-		
-		
-		Liabrary.custom_click(view.getSelect_developer_Name_dropdown(), null);
-		Thread.sleep(1000);
-		
-		
-		Liabrary.custom_click(view.getSelect_developer_Name(), null);
-		Thread.sleep(1000);
-		
-		
-		WebElement scroll = driver.findElement(By.xpath("//label[normalize-space()='Site Name']"));
-    	JavascriptExecutor jse= (JavascriptExecutor)driver;
-    	jse.executeScript("arguments[0].scrollIntoView(true);", scroll);
-        Thread.sleep(1000);
-		
-		
-		
-		
-		driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("mukeshdelhi");
-		Thread.sleep(1000);
-		
-		
-		Liabrary.custom_click(view.getChcekbox_flexCheckDefault(), null);
-		Thread.sleep(1000);
-	
-		
+    @Test
+    public void SEBS_New_Activity_PJP_Cred() throws Exception {
 
-		WebElement scroll1 = driver.findElement(By.xpath("//label[normalize-space()='State']"));
-    	JavascriptExecutor jse1= (JavascriptExecutor)driver;
-    	jse1.executeScript("arguments[0].scrollIntoView(true);", scroll1);
+        New_Site_Creation view = PageFactory.initElements(driver, New_Site_Creation.class);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_01", "Click on Activity Button", () -> {
+            Liabrary.custom_click(view.getActivity_Button(), null);
+        });
         Thread.sleep(1000);
-		
-		
-		
-        Liabrary.custom_click(view.getDropdownMenuButton(), null);
-		Thread.sleep(1000);
-		
-		
-		Liabrary.custom_click(view.getCheckbox(), null);
-		Thread.sleep(4000);
-		
-		
-		WebElement scroll2 = driver.findElement(By.xpath("//label[normalize-space()='Contractor Name']"));
-    	JavascriptExecutor jse2= (JavascriptExecutor)driver;
-    	jse2.executeScript("arguments[0].scrollIntoView(true);", scroll2);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_02", "Click on Add Button", () -> {
+            Liabrary.custom_click(view.getAdd1_Button(), null);
+        });
         Thread.sleep(1000);
-		
-		
-		
-		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("raj");
-		Thread.sleep(1000);
-		
-		
-		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Contact Number.']")).sendKeys("9654120142");
-		Thread.sleep(1000);
-		
-	
-	
-		Liabrary.custom_click(view.getCANCEL_Button(), null);
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	}
-	
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_03", "Click on Distributor Mapped", () -> {
+            Liabrary.custom_click(view.getDistributor_Mapped(), null);
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_04", "Select Distributor Mapped", () -> {
+            Liabrary.custom_click(view.getSelect_Distributor_Mapped(), null);
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_05", "Select Sales Engineer Dropdown", () -> {
+            Liabrary.custom_click(view.getSelect_sales_Engineer_dropdown(), null);
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_06", "Select Sales Engineer", () -> {
+            Liabrary.custom_click(view.getSelect_sales_Engineer(), null);
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_07", "Select Location Dropdown", () -> {
+            Liabrary.custom_click(view.getSelect_Location_dropdown(), null);
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_08", "Select Location", () -> {
+            Liabrary.custom_click(view.getSelect_Location(), null);
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_09", "Select Developer Name Dropdown", () -> {
+            Liabrary.custom_click(view.getSelect_developer_Name_dropdown(), null);
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_10", "Select Developer Name", () -> {
+            Liabrary.custom_click(view.getSelect_developer_Name(), null);
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_11", "Scroll to Site Name field", () -> {
+            WebElement scroll = driver.findElement(By.xpath("//label[normalize-space()='Site Name']"));
+            JavascriptExecutor jse = (JavascriptExecutor) driver;
+            jse.executeScript("arguments[0].scrollIntoView(true);", scroll);
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_12", "Enter Site Name", () -> {
+            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("mukeshdelhi");
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_13", "Click on Flex Checkbox", () -> {
+            Liabrary.custom_click(view.getChcekbox_flexCheckDefault(), null);
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_14", "Scroll to State Dropdown", () -> {
+            WebElement scroll1 = driver.findElement(By.xpath("//label[normalize-space()='State']"));
+            JavascriptExecutor jse1 = (JavascriptExecutor) driver;
+            jse1.executeScript("arguments[0].scrollIntoView(true);", scroll1);
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_15", "Open State Dropdown", () -> {
+            Liabrary.custom_click(view.getDropdownMenuButton(), null);
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_16", "Select State Checkbox", () -> {
+            Liabrary.custom_click(view.getCheckbox(), null);
+        });
+        Thread.sleep(4000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_17", "Scroll to Contractor Name", () -> {
+            WebElement scroll2 = driver.findElement(By.xpath("//label[normalize-space()='Contractor Name']"));
+            JavascriptExecutor jse2 = (JavascriptExecutor) driver;
+            jse2.executeScript("arguments[0].scrollIntoView(true);", scroll2);
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_18", "Enter Contractor Name", () -> {
+            driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("raj");
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_19", "Enter Contractor Contact Number", () -> {
+            driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Contact Number.']")).sendKeys("9654120142");
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_20", "Click on Cancel Button", () -> {
+            Liabrary.custom_click(view.getCANCEL_Button(), null);
+        });
+    }
 }
