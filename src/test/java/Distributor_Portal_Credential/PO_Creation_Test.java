@@ -60,7 +60,7 @@ public class PO_Creation_Test extends Base_Class_Distributor {
         
         WebElement fileInput1 = driver.findElement(By.id("ParentMasterContentPlaceHolder1_schemeBannerFileUpload"));
         fileInput1.sendKeys("C:\\COde\\test-new\\test\\test-output\\Upload_Image\\sample_640×426.jpeg");
-
+//test
         Thread.sleep(1000);
 
         WebElement fileInput2 = driver.findElement(By.id("ParentMasterContentPlaceHolder1_schemeBannerFileUpload2"));
