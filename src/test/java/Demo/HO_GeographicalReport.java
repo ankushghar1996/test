@@ -170,7 +170,7 @@ public class HO_GeographicalReport extends BaseClass {
     	 } else {
     	     System.out.println("No error message displayed.");
     	 }	
-          ObjectRepo.Print_Dynamic_Error_Massage(driver,"//span[contains(text(), 'required.')]", "Test Case 5");
+          ObjectRepo.Print_Dynamic_Flash_Massage(driver,"//span[contains(text(), 'required.')]", "Test Case 5");
     }
 
 	
@@ -221,7 +221,7 @@ public class HO_GeographicalReport extends BaseClass {
 	  	 
 	  	 
 	  	//span[contains(text(), 'required.')]
-	  	 ObjectRepo.Print_Dynamic_Error_Massage(driver, "//span[contains(text(), 'required.')]", "test case ");
+	  	 ObjectRepo.Print_Dynamic_Flash_Massage(driver, "//span[contains(text(), 'required.')]", "test case ");
     	 Thread.sleep(1000);
 
    }

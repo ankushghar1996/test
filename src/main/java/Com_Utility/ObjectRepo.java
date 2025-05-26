@@ -82,34 +82,44 @@ public class ObjectRepo {
         try {
             // Perform the test action
             action.run();
-
-            // Capture screenshot after successful execution
-            String encodedScreenshot = takeScreenshot();
             test.pass(testDescription + " - Step Passed");
 
-            if (encodedScreenshot != null && !encodedScreenshot.isEmpty()) {
-                test.addScreenCaptureFromBase64String(encodedScreenshot, "Screenshot - Passed");
+            // Capture screenshot only if driver is initialized
+            if (driver != null) {
+                String encodedScreenshot = takeScreenshot();
+                if (encodedScreenshot != null && !encodedScreenshot.isEmpty()) {
+                    test.addScreenCaptureFromBase64String(encodedScreenshot, "Screenshot - Passed");
+                } else {
+                    test.warning("Screenshot could not be captured.");
+                }
             } else {
-                test.warning("Screenshot could not be captured.");
+                test.info("Driver not initialized — screenshot skipped.");
             }
 
         } catch (Exception e) {
-            // Capture screenshot on failure
-            String encodedScreenshot = null;
-            try {
-                encodedScreenshot = takeScreenshot();
-            } catch (IOException ioException) {
-                ioException.printStackTrace();
-            }
-
             test.fail(testDescription + " - Step Failed: " + e.getMessage());
-            if (encodedScreenshot != null && !encodedScreenshot.isEmpty()) {
-                test.addScreenCaptureFromBase64String(encodedScreenshot, "Screenshot - Failed");
+
+            // Capture screenshot only if driver is initialized
+            if (driver != null) {
+                try {
+                    String encodedScreenshot = takeScreenshot();
+                    if (encodedScreenshot != null && !encodedScreenshot.isEmpty()) {
+                        test.addScreenCaptureFromBase64String(encodedScreenshot, "Screenshot - Failed");
+                    } else {
+                        test.warning("Screenshot could not be captured on failure.");
+                    }
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                    test.warning("Screenshot capture failed with IOException.");
+                }
+            } else {
+                test.info("Driver not initialized — failure screenshot skipped.");
             }
 
             throw new RuntimeException(e); // Rethrow to fail the test
         }
     }
+
     
     
     
@@ -146,7 +156,7 @@ public class ObjectRepo {
         }
     }
 
-    public static void Print_Dynamic_Error_Massage(WebDriver driver, String xpathLocator, String testNumber_Print_Massage) {
+    public static void Print_Dynamic_Flash_Massage(WebDriver driver, String xpathLocator, String testNumber_Print_Massage) {
     	
         try {
         	
@@ -156,9 +166,9 @@ public class ObjectRepo {
                 for (WebElement errorMessage : errorMessageList) {
                     if (errorMessage.isDisplayed()) {
                         String errorText = errorMessage.getText();
-                        System.out.println("Error Message Print: " + errorText);
+                        System.out.println("Flash Message Print: " + errorText);
                         System.out.println("Test Case Number: " + testNumber_Print_Massage);
-                        test.pass("  Error Massage: " + errorText);
+                        test.pass("  Flash Massage: " + errorText);
                         logTestWithScreenshot("Error captured for  " + testNumber_Print_Massage);
                     }
                 }

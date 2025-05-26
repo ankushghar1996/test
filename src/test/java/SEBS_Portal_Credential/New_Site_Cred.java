@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import Com_Utility.BaseClass_SEBS_Portal;
 import Com_Utility.Liabrary;
+import Com_Utility.ObjectRepo;
 import SEBS_Portal.New_Site_Creation;
 
 public class New_Site_Cred extends BaseClass_SEBS_Portal{
@@ -18,36 +19,28 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		
 		New_Site_Creation view = PageFactory.initElements(driver, New_Site_Creation.class);
 	
-		
-		Liabrary.custom_click(view.getSEBS_Menu(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_01", "Click on SEBS Menu", () ->{
+		Liabrary.custom_click(view.getSEBS_Menu(), null);});
 		Thread.sleep(1000);
 		
-		
-		Liabrary.custom_click(view.getSite_Creation_SubMenu(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_01", "Click on SEBS Menu", () ->{
+		Liabrary.custom_click(view.getSite_Creation_SubMenu(), null);});
 		Thread.sleep(1000);
-		
 		
 		Liabrary.custom_click(view.getAdd_Menu(), null);
 		Thread.sleep(1000);
 		
-		
 		Liabrary.custom_click(view.getDistributor_Mapped(), null);
 		Thread.sleep(1000);
 		
-		
 		Liabrary.custom_click(view.getSelect_Distributor_Mapped(), null);
 		Thread.sleep(1000);
-		
-		
-		
 		
 		Liabrary.custom_click(view.getSelect_sales_Engineer_dropdown(), null);
 		Thread.sleep(1000);
 	
 		Liabrary.custom_click(view.getSelect_sales_Engineer(), null);
 		Thread.sleep(1000);
-		
-		
 	
 		Liabrary.custom_click(view.getSelect_Location_dropdown(), null);
 		Thread.sleep(1000);

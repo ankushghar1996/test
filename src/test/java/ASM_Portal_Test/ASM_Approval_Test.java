@@ -18,9 +18,6 @@ public class ASM_Approval_Test extends BaseClass_ASM {
 	@Test
 	public void Approval_Page() throws Exception {
 		
-		
-	ObjectRepo.driver = driver;	
-		
 	ASM_Approval_Page ASM = PageFactory.initElements(driver,ASM_Approval_Page.class);
 	
 	
@@ -28,8 +25,6 @@ public class ASM_Approval_Test extends BaseClass_ASM {
 	Liabrary.custom_click(ASM.getMaster(), "Click on Master");
 	});
 	Thread.sleep(1000);
-	
-	
 	
 	ObjectRepo.startTestAndLog_1_SS("ASM_ASM_Approval_Test_02", "Verify that user should click on ASM_Portal Distributor Master menu.", () -> {
 	    Liabrary.custom_click(ASM.getDistributor_Master(), "Click on Distributor Master");

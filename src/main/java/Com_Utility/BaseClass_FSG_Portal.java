@@ -30,7 +30,7 @@ public class BaseClass_FSG_Portal {
  
         // Initialize Extent Reports
     
-        //	ObjectRepo.initializeReport();
+        	ObjectRepo.initializeReport();
         	
         	
     }
@@ -48,7 +48,7 @@ public class BaseClass_FSG_Portal {
 	    driver.get("https://fosrocfsguat.hspldms.com");
 	    driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	    
+	    ObjectRepo.driver = driver;	
 	    
 	    FSG_Login login = PageFactory.initElements(driver, FSG_Login.class);
 
@@ -81,7 +81,7 @@ public class BaseClass_FSG_Portal {
     public void afterSuite() {
         // Finalize the report after all tests are executed
    
-    //	ObjectRepo.finalizeReport();
+    	ObjectRepo.finalizeReport();
         
         
     }

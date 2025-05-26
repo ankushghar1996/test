@@ -488,7 +488,7 @@ public class FSG_FSGMaster_AddPage extends BaseClass{
 			Liabrary.custom_click(FA.getSave_btn(), "save btn");
 			Thread.sleep(1000);
 			
-			ObjectRepo.Print_Dynamic_Error_Massage(driver, "//span[contains(text(), 'Enter')]", "Test Case 24");
+			ObjectRepo.Print_Dynamic_Flash_Massage(driver, "//span[contains(text(), 'Enter')]", "Test Case 24");
 			Thread.sleep(1000);
 		
 		
@@ -599,7 +599,7 @@ public class FSG_FSGMaster_AddPage extends BaseClass{
 			Liabrary.custom_click(FA.getSave_btn(), "save btn");
 			Thread.sleep(1000);
 			
-			ObjectRepo.Print_Dynamic_Error_Massage(driver, "//span[contains(text(), 'Enter')]", "Test Case 24");
+			ObjectRepo.Print_Dynamic_Flash_Massage(driver, "//span[contains(text(), 'Enter')]", "Test Case 24");
 			Thread.sleep(1000);
 			
 	

@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="DataBase_Fosroc.New_Distributor_Database_Conn">
+      <class name="Retailer_Credential.Logout">
         <methods>
+          <include name="tearDownExtentReport"/>
+          <include name="Media_Tab"/>
           <include name="tearDown"/>
-          <include name="verifyDistributorData"/>
           <include name="setUp"/>
+          <include name="setUpExtentReport"/>
         </methods>
-      </class> <!-- DataBase_Fosroc.New_Distributor_Database_Conn -->
+      </class> <!-- Retailer_Credential.Logout -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
