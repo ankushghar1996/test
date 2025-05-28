@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
  
 import Com_Utility.BaseClass_SECR_Portal;
 import Com_Utility.Liabrary;
+import Com_Utility.ObjectRepo;
 import SECR_Portal.SECR_Approval;
  
 public class SECR_Approval_Test extends  BaseClass_SECR_Portal {
@@ -19,8 +20,8 @@ public class SECR_Approval_Test extends  BaseClass_SECR_Portal {
 	   
 	SECR_Approval SECR = PageFactory.initElements(driver,SECR_Approval.class);
 	
-	
-	Liabrary.custom_click(SECR.getSECR_Menu(), "Click SECR Menu");
+	ObjectRepo.startTestAndLog_1_SS("SECR_Approval_Test_TC_01", "Click on SECR Menu", () -> {
+	Liabrary.custom_click(SECR.getSECR_Menu(), "Click SECR Menu"); });
 	Thread.sleep(1000);
 	
 	
