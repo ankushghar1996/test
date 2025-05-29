@@ -22,22 +22,31 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
   SEBS_New_Contractors SEBS = PageFactory.initElements(driver,SEBS_New_Contractors.class);
   Liabrary.custom_click(SEBS.getMenu(), "Click on Menu Button");
   Thread.sleep(1000);
+  
   Liabrary.custom_click(SEBS.getNew_Contractor_Creation(), "Click on new Contractor Creation");
-  Thread.sleep(1000);	
+  Thread.sleep(1000);
+  
   Liabrary.custom_click(SEBS.getCreation_Button(), "Click on new Contractor Creation Button");
   Thread.sleep(1000);
+  
   Liabrary.custom_click(SEBS.getSelect_Distributor_Dropdown(), "Click On Distributor Dropdown");
-  Thread.sleep(1000);	
+  Thread.sleep(1000);
+  
   Liabrary.custom_click(SEBS.getSelect_Distributor_Dropdown_Value(), "Click On Distributor Dropdown Value");
   Thread.sleep(1000);
+  
   Liabrary.custom_click(SEBS.getSales_Engineer_Dropdown(),"Click on Sales_Engineer_Dropdown");
   Thread.sleep(1000);
+  
   Liabrary.custom_click(SEBS.getSales_Engineer_Dropdown_Value(),"Click on Sales_Engineer_Dropdown Value");
   Thread.sleep(1000);
+  
   Liabrary.custom_click(SEBS.getRoute(),"Click on Route Button");
   Thread.sleep (1000);
+  
   Liabrary.custom_click(SEBS.getRoute_Value(), "Click on Route Button Value");
   Thread.sleep (1000);
+  
 //	//SE-Area Dropdown AND Value
 //  Liabrary.custom_click(null, null);
 //  Thread.sleep (1000);
@@ -182,13 +191,9 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
 
       Thread.sleep(1000);
       
-      
-      
       driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();
       Thread.sleep(1000);
-       
-       
-       
+        
        
 	}	
 }

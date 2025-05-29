@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import Com_Utility.BaseClass_SEBS_Portal;
 import Com_Utility.Liabrary;
+import Com_Utility.ObjectRepo;
 import SEBS_Portal.PJP_SEBS;
 
 public class PJP_Cred extends BaseClass_SEBS_Portal{
@@ -14,22 +15,18 @@ public class PJP_Cred extends BaseClass_SEBS_Portal{
 	public void PJP_Setting() throws Exception {
 		
 		PJP_SEBS pj = PageFactory.initElements(driver, PJP_SEBS.class);
-	
 		
-		Liabrary.custom_click(pj.getSEBS_Menu(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_PJP_Cred_TC_01", "Click on SEBS Menu", () ->{	
+		Liabrary.custom_click(pj.getSEBS_Menu(), null);});
 		Thread.sleep(1000);
-	
-	
-		Liabrary.custom_click(pj.getPJP_SubMenu(), null);
+		
+		ObjectRepo.startTestAndLog_1_SS("SEBS_PJP_Cred_TC_02", "Click on PJP Submenu", () ->{
+		Liabrary.custom_click(pj.getPJP_SubMenu(), null);});
 		Thread.sleep(3000);
 	
-	
-		Liabrary.custom_click(pj.getCLOSE_btn(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_PJP_Cred_TC_03", "Click on Close Button", () ->{
+		Liabrary.custom_click(pj.getCLOSE_btn(), null);});
 		Thread.sleep(2000);
-		
-	
-	
-	
 	
 	
 	}

@@ -54,6 +54,7 @@ public class New_Distributor_Appointment {
 	        String mobileNumber = "9547852018";
 
 	        // Login
+	        
 	        driver.get("https://fosrocsebsuat.hspldms.com/");
 	        
 	        driver.findElement(By.xpath("//input[@placeholder='User Name']")).sendKeys("SEBS-009");
@@ -62,10 +63,13 @@ public class New_Distributor_Appointment {
 	        
 	        driver.findElement(By.xpath("(//button[@type='button'])[1]")).click();
 	        Thread.sleep(1000);
+	        
 
 	        // Navigate
+	        
 	        driver.findElement(By.xpath("(//i[@class='fa fa-bars'])[1]")).click();
 	        Thread.sleep(1000);
+	        
 	        driver.findElement(By.xpath("//span[@class='canvas-title ms-4 fs-16'][normalize-space()='New Distributor Appointment']")).click();
 	        Thread.sleep(1000);
 
@@ -76,6 +80,7 @@ public class New_Distributor_Appointment {
 	        // Retailer Add
 	      
 	        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys(mobileNumber);
+	        
 	        driver.findElement(By.xpath("//button[normalize-space()='SEND OTP']")).click();
 
 	        Thread.sleep(3000);
@@ -87,14 +92,18 @@ public class New_Distributor_Appointment {
 	            driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
 	            Thread.sleep(2000);
 
+	            
 	            // ✅ Call Retailer Info method
+	            
 	            AddDistributorInfo();
 	        } else {
 	            System.out.println("❌ OTP not found.");
 	        }
 	    }
 
+	    
 	    // ✅ New method for entering Retailer Info
+	    
 	    private void AddDistributorInfo() throws InterruptedException {
 	    	
 	        System.out.println("Add Distributor Info...");
@@ -102,26 +111,20 @@ public class New_Distributor_Appointment {
 	        driver.findElement(By.xpath("//ng-select[@bindvalue='DistributorCode']//input[@type='text']")).click();
 	        Thread.sleep(1000);
 	        
-	        
 	        driver.findElement(By.xpath("//span[contains(text(),'New Annapurna')]")).click();
 	        Thread.sleep(1000);
-	        
 	        
 	        driver.findElement(By.xpath("//ng-select[@bindvalue='BeatCode']//input[@type='text']")).click();
 	        Thread.sleep(1000);
 	        
-	        
 	        driver.findElement(By.xpath("(//span[@class='ng-option-label ng-star-inserted'])[1]")).click();
 	        Thread.sleep(1000);
-	        
 	        
 	        driver.findElement(By.xpath("//ng-select[@bindvalue='AreaId']//input[@type='text']")).click();
 	        Thread.sleep(1000);
 	        
-	        
 	        driver.findElement(By.xpath("(//span[@class='ng-option-label ng-star-inserted'])[1]")).click();
 	        Thread.sleep(1000);
-	        
 	        
 	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name']")).sendKeys("vinay enterprises");
 	        Thread.sleep(1000);
@@ -232,11 +235,10 @@ public class New_Distributor_Appointment {
 	        
 	        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();
 	        Thread.sleep(1000);
-	        
-
 
 	        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 
+	        
 	        // Wait for the Switch Camera button and click it
 	        try {
 	            WebElement switchCamBtn = wait1.until(ExpectedConditions.elementToBeClickable(
