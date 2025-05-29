@@ -15,23 +15,16 @@ public class SEBS_Login_Cred extends BaseClass_SEBS_Portal{
 		
 		SEBS_Login login = PageFactory.initElements(driver, SEBS_Login.class);
 	
-		
 		Liabrary.custom_Sendkeys(login.getUserName(), excel.getStringdata2("Sheet1", 4, 0), "UserName Field");
 		Thread.sleep(1000);
-		
 		
 		Liabrary.custom_Sendkeys(login.getPassword(), excel.getStringdata2("Sheet1", 4, 1), "Passwod Field");
 		Thread.sleep(1000);
 		
-		
 		Liabrary.custom_click(login.getLogin_btn(), "Login Btn");
 		Thread.sleep(1000);
 	
-	
-	
-	
-	
-	
+
 	}
 	
 	

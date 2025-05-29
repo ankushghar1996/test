@@ -23,14 +23,16 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		Liabrary.custom_click(view.getSEBS_Menu(), null);});
 		Thread.sleep(1000);
 		
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_01", "Click on SEBS Menu", () ->{
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_02", "Click on SEBS Menu", () ->{
 		Liabrary.custom_click(view.getSite_Creation_SubMenu(), null);});
 		Thread.sleep(1000);
 		
-		Liabrary.custom_click(view.getAdd_Menu(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_03", "Click on Add Menu", () ->{
+		Liabrary.custom_click(view.getAdd_Menu(), null);});
 		Thread.sleep(1000);
 		
-		Liabrary.custom_click(view.getDistributor_Mapped(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_04", "Click on Add Menu", () ->{
+		Liabrary.custom_click(view.getDistributor_Mapped(), null);});
 		Thread.sleep(1000);
 		
 		Liabrary.custom_click(view.getSelect_Distributor_Mapped(), null);

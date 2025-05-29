@@ -74,8 +74,8 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 			Thread.sleep(1000);
 			
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_TC_14", "Select City Dropdown", () ->{	
-			Liabrary.custom_click(view.getSelect_City(), null); });
-			Thread.sleep(1000);
+		Liabrary.custom_click(view.getSelect_City(), null); });
+		Thread.sleep(1000);
 	        
 	        
 	   ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_TC_15", "Enter PIN Code", () ->{	
