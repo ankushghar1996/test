@@ -46,17 +46,11 @@ public class AddMedia extends BaseClass{
 		Liabrary.custom_click(AM.getType_Dropdown_Select_Video(), null);
 		Thread.sleep(1000);
 		
-		
-		
 		Liabrary.custom_click(AM.getType_Dropdown_SelectValue_Video(), null);
 		Thread.sleep(1000);
 		
-		
-		
 		Liabrary.custom_click(AM.getCategory1_Dropdown_Select_Application_Video(), null);
 		Thread.sleep(1000);
-		
-		
 		
 		Liabrary.custom_click(AM.getCategory1_Dropdown_SelectValue_Application_Video(), null);
 		Thread.sleep(1000);
@@ -71,8 +65,18 @@ public class AddMedia extends BaseClass{
 		Thread.sleep(3000);
 		
 		
+		
+		
 	}	
 		
+	
+	
+	
+	
+	
+	
+	
+	
 		
 	@Test(priority = 1)
 	public void Add_Media_Case2() throws Exception {
