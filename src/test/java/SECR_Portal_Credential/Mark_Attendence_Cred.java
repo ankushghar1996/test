@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import Com_Utility.BaseClass_SECR_Portal;
 import Com_Utility.Liabrary;
+import Com_Utility.ObjectRepo;
 import FSG_Portal.Mark_Attendance;
 
 public class Mark_Attendence_Cred extends BaseClass_SECR_Portal{
@@ -17,8 +18,10 @@ public class Mark_Attendence_Cred extends BaseClass_SECR_Portal{
 		
 		Mark_Attendance AM = PageFactory.initElements(driver, Mark_Attendance.class);
 	
-	
+		
+		ObjectRepo.startTestAndLog_1_SS("SECR_MA_TC01", "Verify that user clicks on Mark Attendance Button", () -> {
 		Liabrary.custom_click(AM.getMARK_ATTENDANCE(), null);
+		});
 		Thread.sleep(1000);
 	
 	
