@@ -33,8 +33,5 @@ public class PJP_Cred extends BaseClass_SEBS_Portal {
         });
         Thread.sleep(1000);
         
-        
-        
-        
     }
 }

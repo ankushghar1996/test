@@ -18,7 +18,7 @@ public class SEBS_Scheme_Test extends BaseClass_SEBS_Portal {
 	 Liabrary.custom_click(SECR.getScheme_Tab(), null);
 	 Thread.sleep(1000);
 	 
-	 Liabrary.custom_click(SECR.getScheme_Name(), null);
+	 Liabrary.custom_click(SECR.getScheme_Name(), null);   
 	 Thread.sleep(1000);
 	 
 	 Liabrary.custom_click(SECR.getScheme_Close(), null);

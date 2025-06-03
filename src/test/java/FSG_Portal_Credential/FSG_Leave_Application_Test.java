@@ -19,7 +19,6 @@ public class FSG_Leave_Application_Test extends BaseClass_FSG_Portal {
 	@Test
 	public void FSG_leave () throws Exception {
 		
-		
 	FSG_Leave_Application_Main FSG = PageFactory.initElements(driver , FSG_Leave_Application_Main.class);
 	
 	ObjectRepo.startTestAndLog_1_SS("FSG_Leave_Application_Test_01", "Verify that user Click On FSG Menu ", () ->{

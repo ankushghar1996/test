@@ -26,19 +26,14 @@ public class SEBS_Dashboard_Test extends BaseClass_SEBS_Portal {
 	JSE1.executeScript("arguments[0].scrollIntoView(true);", Scroll);
 	Thread.sleep(1000);
 	
-	
 	Liabrary.custom_click(SEBS.getArrow_Button(), "Click on Arrow Button ");
 	Thread.sleep(1000);
-	
-	
+		
 	Liabrary.custom_click(SEBS.getYTD_Button(), "Click on YTD Button");
 	Thread.sleep(1000);
-	
-	
+
 	Liabrary.custom_click(SEBS.getClose(), "Click on Close Button");
 	Thread.sleep(1000);
-	
-
 
 	}	
 }

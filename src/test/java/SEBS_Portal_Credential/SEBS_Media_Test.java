@@ -17,10 +17,8 @@ public class SEBS_Media_Test extends BaseClass_SEBS_Portal {
 	 Liabrary.custom_click(SECR.getMedia_Tab(), "Click on Media Tab");
 	 Thread.sleep(1000);
 	 
-	 
 	 Liabrary.custom_click(SECR.getMedia_Documents(), "Click on Media Documents");
 	 Thread.sleep(1000);
-	 
 	 
 	 Liabrary.custom_click(SECR.getDocuments_Search_Button(), "Click on Media Documents Search Button");
 	 Thread.sleep(1000);
