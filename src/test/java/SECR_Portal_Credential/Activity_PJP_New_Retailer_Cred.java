@@ -20,6 +20,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import Com_Utility.ObjectRepo;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Activity_PJP_New_Retailer_Cred {
@@ -53,31 +54,61 @@ public class Activity_PJP_New_Retailer_Cred {
 	        // Login
 	        driver.get("https://fosrocsecruat.hspldms.com/");
 	        
+	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_01", "Verify that user should be send SECR User Name.", () -> {
 	        driver.findElement(By.xpath("//input[@placeholder='User Name']")).sendKeys("SECR-008");
+	        });
 	        
+	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_02", "Verify that user should be SECR send Password.", () -> {
 	        driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("Fosroc@1");
+	        });
 	        
+	        
+	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_03", "Verify that user should be click on Continue Button.", () -> {
 	        driver.findElement(By.xpath("(//button[@type='button'])[1]")).click();
+	        });
 	        Thread.sleep(1000);
 
 	        // Navigate
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_04", "Verify that user should be click on Activity Menu Tab.", () -> {
 	        driver.findElement(By.xpath("//div[@routerlink='/activity']")).click();
+	        });
 	        Thread.sleep(1000);
+	        
+	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_05", "Verify that user should be click on Activity Add Button.", () -> {
 	        driver.findElement(By.xpath("//div[@class='circle-add']")).click();
+	        });
 	        Thread.sleep(1000);
 
-	        // Retailer Add
 	        
+	        // Retailer Add
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_06", "Verify that user should be send Mobile Number.", () -> {
 	        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys(mobileNumber);
+	        });
+	        
+	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_07", "Verify that user should be click on Send OTP Button.", () -> {
 	        driver.findElement(By.xpath("//button[normalize-space()='SEND OTP']")).click();
+	        });
+	        
 
 	        Thread.sleep(3000);
 	        String otp = getOtpFromDb(mobileNumber);
 
 	        if (otp != null) {
 	            System.out.println("OTP fetched: " + otp);
+	            
+	            ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_08", "Verify that user should be send OTP.", () -> {
 	            driver.findElement(By.xpath("//input[@placeholder='Enter OTP']")).sendKeys(otp);
+	            });
+	            
+	            
+	            ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_09", "Verify that user should be click on Continue Button.", () -> {
 	            driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
+	            });
 	            Thread.sleep(2000);
 
 	            // ✅ Call Retailer Info method
@@ -93,11 +124,15 @@ public class Activity_PJP_New_Retailer_Cred {
 	        System.out.println("Entering New Retailer Info...");
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_11", "Verify that user should be click on Distributor dropdown.", () -> {
 	        driver.findElement(By.xpath("//ng-select[@bindvalue='DistributorCode']")).click();
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_12", "Verify that user should be select Distributor in Distributordropdown.", () -> { 
 	        driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Chiranth Agencies [10001]']")).click();
+	    });
 	        Thread.sleep(1000);
 	        
 	        

@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Retailer_Credential.Logout">
+      <class name="SECR_Portal_Credential.SECR_MTD_Working_Test_DB">
         <methods>
-          <include name="tearDownExtentReport"/>
-          <include name="Media_Tab"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="setUpExtentReport"/>
+          <include name="openbrowser"/>
+          <include name="Data_Provider"/>
+          <include name="afterSuite"/>
+          <include name="MTD_Working"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- Retailer_Credential.Logout -->
+      </class> <!-- SECR_Portal_Credential.SECR_MTD_Working_Test_DB -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
