@@ -8,44 +8,45 @@ import Com_Utility.Liabrary;
 import Com_Utility.ObjectRepo;
 import SFA_Portal.Distributor_Approval1st_ViewPage;
 
-public class Dist_Approval1st_View_Cred extends BaseClass_SFA{
+public class Dist_Approval1st_View_Cred extends BaseClass_SFA {
 
-	
-	
-	@Test
-	public void Distributor_View() throws Exception {
-		
-		Distributor_Approval1st_ViewPage view = PageFactory.initElements(driver, Distributor_Approval1st_ViewPage.class);
-	
-		ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_View_Card_01", "click on SFA_Portal Master menu.", () -> {
-		Liabrary.custom_click(view.getMaster_Menu(), "Click Master Menu");});
-		Thread.sleep(1000);
-	
-		ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_View_Card_02", "click on SFA_Portal Distributor Master menu.", () -> {
-		Liabrary.custom_click(view.getDistributor_Master_Menu(), "Click Distributor Menu");});
-		Thread.sleep(1000);
-	
-		ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_View_Card_03", "click on SFA_Portal Distributor Approval menu.", () -> {
-		Liabrary.custom_click(view.getDistributor_Approval_Menu(), "Click Distributor Approval Menu");});
-		Thread.sleep(1000);
-		
-		ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_View_Card_04", "Select Grid List Value", () -> {
-		Liabrary.custom_click(view.getDistributor_View_Table(), "Select grid list Value");});
-		Thread.sleep(1000);
-		
-		ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_View_Card_05", "click on View Button", () -> {
-		Liabrary.custom_click(view.getView_btn(), "Click View Btn");});
-		Thread.sleep(1000);
-		
-		
-		
-		
-		
-		
-		
-		
-	
-	
-	}
-	
+
+    @Test
+    public void Distributor_View() throws Exception {
+
+        Distributor_Approval1st_ViewPage view = PageFactory.initElements(driver, Distributor_Approval1st_ViewPage.class);
+
+        ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_View_Cred_TC01", "Verify that user should be able to click on Master menu", () -> {
+            Liabrary.custom_click(view.getMaster_Menu(), "Click Master Menu");
+        });
+        Thread.sleep(1000);
+
+        
+        ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_View_Cred_TC02", "Verify that user should be able to click on Distributor Master menu", () -> {
+            Liabrary.custom_click(view.getDistributor_Master_Menu(), "Click Distributor Menu");
+        });
+        Thread.sleep(1000);
+
+        
+        ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_View_Cred_TC03", "Verify that user should be able to click on Distributor Approval menu", () -> {
+            Liabrary.custom_click(view.getDistributor_Approval_Menu(), "Click Distributor Approval Menu");
+        });
+        Thread.sleep(1000);
+
+        
+        ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_View_Cred_TC04", "Verify that user should be able to select a value from the grid", () -> {
+            Liabrary.custom_click(view.getDistributor_View_Table(), "Select grid list Value");
+        });
+        Thread.sleep(1000);
+
+        
+        ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_View_Cred_TC05", "Verify that user should be able to click the View button", () -> {
+            Liabrary.custom_click(view.getView_btn(), "Click View Btn");
+        });
+        Thread.sleep(1000);
+        
+        
+        
+    }
+
 }
