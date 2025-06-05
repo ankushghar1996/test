@@ -136,39 +136,57 @@ public class Activity_PJP_New_Retailer_Cred {
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_13", "Verify that user should be click on FSG Name dropdown.", () -> {
 	        driver.findElement(By.xpath("(//input[@type='text'])[2]")).click();
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_14", "Verify that user should be select FSG in FSG Name dropdown.", () -> { 
 	        driver.findElement(By.xpath("//span[normalize-space()='Aniket J']")).click();
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_15", "Verify that user should be click on Route dropdown.", () -> {
 	        driver.findElement(By.xpath("(//input[@type='text'])[3]")).click();
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_16", "Verify that user should be select Route in Route dropdown.", () -> {
 	        driver.findElement(By.xpath("//span[normalize-space()='Karve Nagar']")).click();
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_17", "Verify that user should be enter Firm Name.", () -> {
 	        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Vinay Paints");
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_18", "Verify that user should be click on Retailer Category dropdown.", () -> {
 	        driver.findElement(By.xpath("//select[@formcontrolname='RetailerCategory']")).click();
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_19", "Verify that user should be select Retailer in Retailer Category dropdown.", () -> {
 	        driver.findElement(By.xpath("//option[text()='Hardware ']")).click();
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_20", "Verify that user should be enter Contact Person Name.", () -> {
 	        driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("vinay shelke");
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_21", "Verify that user should be enter Email Address.", () -> {
 	        driver.findElement(By.xpath("//input[@placeholder='Enter Email Address']")).sendKeys("vinay123@gmail.com");
+	        });
 	        Thread.sleep(1000);
 	        
 	        
@@ -178,36 +196,52 @@ public class Activity_PJP_New_Retailer_Cred {
 	        Thread.sleep(1000);
 	        
 	        
-	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_22", "Verify that user should be enter Address Line 1.", () -> {
 	        driver.findElement(By.xpath("//input[@placeholder='Enter Address Line 1']")).sendKeys("civil lines");
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_23", "Verify that user should be click on State dropdown.", () -> {
 	        driver.findElement(By.xpath("//ng-select[@class='gray-background-y ng-select-searchable ng-select-clearable ng-select ng-select-single ng-untouched ng-pristine ng-valid']//input[@type='text']")).click();
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_24", "Verify that user should be select State in State dropdown.", () -> {
 	        driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Maharashtra']")).click();
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_25", "Verify that user should be click on City dropdown.", () -> {
 	        driver.findElement(By.xpath("(//input[@type='text'])[9]")).click();
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_26", "Verify that user should be select City in City dropdown.", () -> {
 	        driver.findElement(By.xpath("//span[normalize-space()='Ahmednagar']")).click();
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_27", "Verify that user should be enter Pin Code.", () -> {
 	        driver.findElement(By.xpath("//input[@placeholder='Enter Pin Code']")).sendKeys("411057");
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_28", "Verify that user should be enter PAN Number.", () -> {
 	        driver.findElement(By.xpath("//input[@placeholder='Enter PAN Number']")).sendKeys("DARDH4445K");
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_29", "Verify that user should be enter GST Number.", () -> {
 	        driver.findElement(By.xpath("//input[@placeholder='Enter GST Number']")).sendKeys("29AAACC1206D2ZB");
+	        });
 	        Thread.sleep(1000);
 	        
 	        
@@ -217,19 +251,27 @@ public class Activity_PJP_New_Retailer_Cred {
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_30", "Verify that user should be enter Total Business In CC.", () -> {
 	        driver.findElement(By.xpath("//input[@placeholder='Enter Total Business In CC']")).sendKeys("123456");
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_31", "Verify that user should be click on RetailerClass dropdown.", () -> {
 	        driver.findElement(By.xpath("(//select[@formcontrolname='RetailerClass'])[1]")).click();
+	        });
 	        Thread.sleep(1000);
 	        
 	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_32", "Verify that user should be select Retailer in RetailerClass dropdown.", () -> {
 	        driver.findElement(By.xpath("//select[@formcontrolname='RetailerClass']/option[text()='Platinum ']")).click();
+	        });
 	        Thread.sleep(1000);
 	        
 	  
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_33", "Verify that user should be click on Camera 1 button.", () -> {
 	        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();
+	        });
 	        Thread.sleep(1000);
 	        
 
