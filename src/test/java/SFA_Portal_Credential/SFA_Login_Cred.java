@@ -10,6 +10,7 @@ import SFA_Portal.SFA_Login;
 
 public class SFA_Login_Cred extends BaseClass_SFA {
 
+
     @Test
     public void testloginpage() throws Exception {
 
@@ -36,4 +37,5 @@ public class SFA_Login_Cred extends BaseClass_SFA {
         
         
     }
+
 }

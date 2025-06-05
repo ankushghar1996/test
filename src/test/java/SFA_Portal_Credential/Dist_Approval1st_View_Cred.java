@@ -10,6 +10,7 @@ import SFA_Portal.Distributor_Approval1st_ViewPage;
 
 public class Dist_Approval1st_View_Cred extends BaseClass_SFA {
 
+
     @Test
     public void Distributor_View() throws Exception {
 
@@ -47,4 +48,5 @@ public class Dist_Approval1st_View_Cred extends BaseClass_SFA {
         
         
     }
+
 }

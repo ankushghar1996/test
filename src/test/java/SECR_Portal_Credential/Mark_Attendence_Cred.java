@@ -18,10 +18,15 @@ public class Mark_Attendence_Cred extends BaseClass_SECR_Portal{
 		
 		Mark_Attendance AM = PageFactory.initElements(driver, Mark_Attendance.class);
 	
+
 		
 		ObjectRepo.startTestAndLog_1_SS("SECR_MA_TC01", "Verify that user clicks on Mark Attendance Button", () -> {
 		Liabrary.custom_click(AM.getMARK_ATTENDANCE(), null);
 		});
+
+		ObjectRepo.startTestAndLog_1_SS("SFA_Login_02", "enter Password", () -> {
+		Liabrary.custom_click(AM.getMARK_ATTENDANCE(), null);});
+
 		Thread.sleep(1000);
 	
 	

@@ -110,7 +110,6 @@ public class New_MTD_Distributor_Appoitment_Cred {
         driver.findElement(By.xpath("//ng-select[@bindvalue='DistributorCode']//input[@type='text']")).click();
         Thread.sleep(1000);
         
-        
         driver.findElement(By.xpath("//span[contains(text(),'New Annapurna')]")).click();
         Thread.sleep(1000);
         
@@ -148,9 +147,7 @@ public class New_MTD_Distributor_Appoitment_Cred {
         dropdown.click();
 
         Select select = new Select(dropdown);
-        select.selectByVisibleText("None");
-
-        
+        select.selectByVisibleText("None"); 
         
         driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("Vinay Thakur");
         Thread.sleep(1000);
@@ -165,22 +162,17 @@ public class New_MTD_Distributor_Appoitment_Cred {
         driver.findElement(By.xpath("//input[@placeholder='Enter Email Address']")).sendKeys("vinay1234@gmail.com");
         Thread.sleep(1000);
         
-        
         driver.findElement(By.xpath("//input[@placeholder='Enter Address Line 1']")).sendKeys("civil lines");
         Thread.sleep(1000);
         
-     
         driver.findElement(By.xpath("//input[@placeholder='Enter Address Line 2']")).sendKeys("Mata Mandir Chowk");
         Thread.sleep(1000);
-        
         
         driver.findElement(By.xpath("(//input[@type='text'])[9]")).click();
         Thread.sleep(1000);
         
-         
         driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Maharashtra']")).click();
-        Thread.sleep(1000);
-        
+        Thread.sleep(1000); 
        
      // Step 1: Click to open the dropdown
      /*
@@ -201,47 +193,35 @@ public class New_MTD_Distributor_Appoitment_Cred {
         driver.findElement(By.xpath("//ng-select[@class='ng-select-searchable ng-select-clearable ng-select ng-select-single ng-untouched ng-pristine ng-invalid']//input[@type='text']")).click();
         Thread.sleep(1000);
         
-        
         driver.findElement(By.xpath("//div[contains(@class, 'ng-option') and @role='option']//span[contains(@class, 'ng-option-label ng-star-inserted') and normalize-space()='Ahmednagar']")).click();
         Thread.sleep(1000);
-        
         
         driver.findElement(By.xpath("//input[@placeholder='Enter Pin Code']")).sendKeys("411041");
         Thread.sleep(1000);
         
-        
         driver.findElement(By.xpath("//input[@placeholder='Enter PAN Number']")).sendKeys("DAQUS4445J");
         Thread.sleep(1000);
         
-        
         driver.findElement(By.xpath("//input[@placeholder='Enter GST Number']")).sendKeys("29AAACC1206D2ZB");
         Thread.sleep(1000);
-        
         
         WebElement scroll1 = driver.findElement(By.xpath("//label[contains(text(),'Total Business In Construction Chemicals (In lakhs')]"));
     	JavascriptExecutor jse2= (JavascriptExecutor)driver;
     	jse2.executeScript("arguments[0].scrollIntoView(true);", scroll1);
         Thread.sleep(1000);
         
-       
-        
         driver.findElement(By.xpath("//input[contains(@placeholder,'Enter Total Business In CC (In lakhs)')]")).sendKeys("123456");
         Thread.sleep(1000);
-        
         
         driver.findElement(By.xpath("//select[@formcontrolname='DistributorClass']")).click();
         Thread.sleep(1000);
         
-        
         driver.findElement(By.xpath("//select[@formcontrolname='DistributorClass']//option[text()='Silver ']")).click();
         Thread.sleep(1000);
-        
         
         driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();
         Thread.sleep(1000);
         
-
-
         WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         // Wait for the Switch Camera button and click it
@@ -265,8 +245,6 @@ public class New_MTD_Distributor_Appoitment_Cred {
             System.out.println("Capture button not found or not clickable.");
         }
 
-        
-        
         Thread.sleep(5000);
     
         
@@ -276,17 +254,12 @@ public class New_MTD_Distributor_Appoitment_Cred {
         
 //        driver.findElement(By.xpath("//button[normalize-space()='CANCEL']")).click();
    //     Thread.sleep(1000);
-        
-        
-        
-        
-        
-        
+            
+       
         // You can add more fields here as needed
     }
 
-    
-    
+
     private static String getOtpFromDb(String mobileNumber) {
     	
         String otp = null;
@@ -330,12 +303,6 @@ public class New_MTD_Distributor_Appoitment_Cred {
             driver.quit();
             
         }
-    }
-
-
-
-
-	
-	
+    }	
 	
 }

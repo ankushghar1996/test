@@ -31,25 +31,30 @@ public class SEBS_Dashboard_Test extends BaseClass_SEBS_Portal {
 	JSE1.executeScript("arguments[0].scrollIntoView(true);", Scroll);
 	Thread.sleep(1000);
 	
+
 	
 	 ObjectRepo.startTestAndLog_1_SS("SEBS_Dashboard_Test_TC02", "Verify that user should be able to click on Arrow Button", () -> {
+
+
 	Liabrary.custom_click(SEBS.getArrow_Button(), "Click on Arrow Button ");
 	 });
 	Thread.sleep(1000);
+
 	
 	
 	 ObjectRepo.startTestAndLog_1_SS("SEBS_Dashboard_Test_TC03", "Verify that user should be able to click on YTD Button", () -> {
+
 	Liabrary.custom_click(SEBS.getYTD_Button(), "Click on YTD Button");
 	 });
 	Thread.sleep(1000);
+
 	
 	
 	 ObjectRepo.startTestAndLog_1_SS("SEBS_Dashboard_Test_TC04", "Verify that user should be able to click on Close Button", () -> {
+
 	Liabrary.custom_click(SEBS.getClose(), "Click on Close Button");
 	 });
 	Thread.sleep(1000);
-	
-
 
 	}	
 }

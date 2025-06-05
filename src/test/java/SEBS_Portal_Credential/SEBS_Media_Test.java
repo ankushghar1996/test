@@ -9,6 +9,7 @@ import SECR_Portal.SECR_Media_Main;
 
 public class SEBS_Media_Test extends BaseClass_SEBS_Portal {
 
+
     @Test
     public void Media() throws Exception {
     	
@@ -35,4 +36,5 @@ public class SEBS_Media_Test extends BaseClass_SEBS_Portal {
         
         
     }
+
 }

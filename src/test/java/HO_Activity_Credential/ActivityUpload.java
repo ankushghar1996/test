@@ -38,6 +38,7 @@ public class ActivityUpload extends BaseClass{
 
 		ObjectRepo.startTestAndLog_1_SS("SUPER_ActivityUpload_TC_03", "Verify that user should be select Activity Upload Page", () -> {
 		Liabrary.custom_click(AU.getActivity_Upload(), "select Activity Upload Page");
+		});
 		Thread.sleep(1000);
 			
 	//	ObjectRepo.test.log(Status.INFO, "Test Case 4 : Verify that user should be Target Upload Header Text.");
@@ -141,10 +142,10 @@ public class ActivityUpload extends BaseClass{
 	
 	
 	
+		
 	
 	
-	
-	}	
+		}	
 	
 	
 }

@@ -26,11 +26,9 @@ public class SEBS_New_Applicator_Creation_Test extends BaseClass_SEBS_Portal {
 	
 	  Liabrary.custom_click(SEBS.getMenu(), "Click on Menu Button");
 	  Thread.sleep(1000);
-	  
-	  
+	  	  
 	  Liabrary.custom_click(SEBS.getNew_Applicator_Creation(), "Click on new Applicator Creation");
 	  Thread.sleep(1000);	
-	  
 	  
 	  Liabrary.custom_click(SEBS.getCreation_Button(), "Click on new Contractor Creation Button");
 	  Thread.sleep(1000);
@@ -43,22 +41,17 @@ public class SEBS_New_Applicator_Creation_Test extends BaseClass_SEBS_Portal {
 	  Liabrary.custom_click(SEBS.getSelect_Distributor_Dropdown_Value(), "Click On Distributor Dropdown Value");
 	  Thread.sleep(1000);
 	  
-	  
 	  Liabrary.custom_click(SEBS.getSales_Engineer_Dropdown(),"Click on Sales_Engineer_Dropdown");
 	  Thread.sleep(1000);
-	  
 	  
 	  Liabrary.custom_click(SEBS.getSales_Engineer_Dropdown_Value(),"Click on Sales_Engineer_Dropdown Value");
 	  Thread.sleep(1000);
 	  
-	  
 	  Liabrary.custom_click(SEBS.getRoute(),"Click on Route Button");
 	  Thread.sleep (1000);
 	  
-	  
 	  Liabrary.custom_click(SEBS.getRoute_Value(), "Click on Route Button Value");
 	  Thread.sleep (1000);
-	  
 	  
 	  //Applicator Name
 		driver.findElement(By.xpath("//div[@class='col-12 mb-3']//input[@formcontrolname='ApplicatorName']")).sendKeys("HSPL ");
@@ -103,22 +96,17 @@ public class SEBS_New_Applicator_Creation_Test extends BaseClass_SEBS_Portal {
 		  driver.findElement(By.xpath("//input[@placeholder='Enter Address Line 2']")).sendKeys("Narhe");
 		  Thread.sleep (1000);
 		  
-		  
 		  Liabrary.custom_click(SEBS.getState_Dropdown(), "Click on State Drpopdown");
 		  Thread.sleep (1000);
-		  
 		  
 		  Liabrary.custom_click(SEBS.getState_Dropdown_Value(), "Click on State Drpopdown Value");
 		  Thread.sleep (1000);
 		  
-		  
 		  Liabrary.custom_click(SEBS.getCity_Dropdown(), "Click on City Dropdown");
 		  Thread.sleep (1000);
 		  
-		  
 		  Liabrary.custom_click(SEBS.getCity_Dropdown_Value(), "Click on City Dropdown Value");
 		  Thread.sleep (1000);
-		  
 		  
 		  driver.findElement(By.xpath("//input[@placeholder='Enter Pin Code']")).sendKeys("411041");
 		  Thread.sleep (1000);
@@ -208,7 +196,6 @@ public class SEBS_New_Applicator_Creation_Test extends BaseClass_SEBS_Portal {
 	       
 	       driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[3]")).click();
 	       Thread.sleep(1000);
-
  
 	       WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
  
@@ -234,13 +221,9 @@ public class SEBS_New_Applicator_Creation_Test extends BaseClass_SEBS_Portal {
 
 	       Thread.sleep(1000);
 	       
-	       
-	       
 	       driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();
 	       Thread.sleep(1000);
 	       
-
-
 
 	}
 }
