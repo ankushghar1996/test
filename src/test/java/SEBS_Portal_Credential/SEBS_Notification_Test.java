@@ -20,7 +20,7 @@ public class SEBS_Notification_Test extends BaseClass_SEBS_Portal{
 	Thread.sleep(1000);
 	
 	Liabrary.custom_click(SEBS.getClose_Button(),"Click on Close Button");
-	Thread.sleep(1000);
+	Thread.sleep(1000);                                                                                                
 
 
 
