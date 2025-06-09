@@ -10,99 +10,90 @@ import org.testng.annotations.Test;
 import Com_Utility.BaseClass;
 import Com_Utility.HomePage;
 import Com_Utility.Liabrary;
+import Com_Utility.ObjectRepo;
 import HO_Settings.Cluster_Creation;
 
-public class Test_Cluster_Creation extends BaseClass{
+public class Test_Cluster_Creation extends BaseClass {
 
-	
-	@Test
-	public void Role_Wise_Access () throws Exception{
-		HomePage hp =PageFactory.initElements(driver,HomePage.class);	
-		Cluster_Creation  CC= PageFactory.initElements(driver,Cluster_Creation.class); 	
-		
-		
-	   //ObjectRepo.test.log(Status.INFO, "Test Case 1 : Verify that user should be select Setting Menu.")
-		Liabrary.custom_click(hp.getSettings_Menu(),"Select Setting menu");
-		Thread.sleep(1000);
-		
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 2 : Verify that user should be select Configurations Sub menu.")
-		Liabrary.custom_click(hp.getConfigurations_SubMenu(),"Select Configurations Sub menu");
-		Thread.sleep(1000);
- 
- 
-	   //ObjectRepo.test.log(Status.INFO, "Test Case 3 : Verify that user should be Select Cluster Creation Page.");	
-		Liabrary.custom_click(CC.getCluster_Creation(),"Select Cluster_Creation Page");
-		Thread.sleep(1000);
-		
-		
-	  //ObjectRepo.test.log(Status.INFO, "Test Case 4 :Verify that Cluster Creation Header Text.");
-		WebElement User_Master_Header_TXT = driver.findElement(By.xpath("//span[text()='Cluster Creation']"));
-		String Actual_Text = User_Master_Header_TXT.getText();
-		System.out.println(Actual_Text);
-		String Expected_Text= "Cluster Creation";
-		Assert.assertEquals(Expected_Text,Actual_Text);
-		Thread.sleep(1000);
+    @Test
+    public void Role_Wise_Access() throws Exception {
+    	
+        HomePage hp = PageFactory.initElements(driver, HomePage.class);
+        Cluster_Creation CC = PageFactory.initElements(driver, Cluster_Creation.class);
 
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 5 : Verify that user should be Select Cluster_Dropdown.");	
-		Liabrary.custom_click(CC.getSelect_Cluster_Dropdown(),"Select Cluster_Dropdown");
-		Thread.sleep(1000);
-		
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 6 : Verify that user should be Select Cluster_Dropdown Value");	
-		Liabrary.custom_click(CC.getSelect_Cluster_Dropdown_Value(),"Select Cluster_Dropdown Value");
-		Thread.sleep(1000);
-		
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 7 : Verify that user should be Click on Search Button");	
-		Liabrary.custom_click(CC.getSearch_Button(),"Click on Search Button");
-		Thread.sleep(1000);
-		
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 8 : Verify that user should be Click on Cluster Add Button");	
-		Liabrary.custom_click(CC.getCluster_Add_BTN(),"Click on Cluster Add Button");
-		Thread.sleep(1000);
-		
-		
-		Actions Action = new Actions(driver);
-		WebElement Element = driver.findElement(By.xpath("//input[@id='ctl00_ParentMasterContentPlaceHolder1_ddlAreaType_Input']"));
-		Action.moveToElement(Element).click().perform();
-		Thread.sleep(2000);
-		
-		
-		driver.findElement(By.xpath("//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlAreaType_DropDown']//ul//li[text()='ZSM']")).click();
-		Thread.sleep(1000);
-		
-		
-		driver.findElement(By.xpath("//*[@id='ParentMasterContentPlaceHolder1_txtAreaName']")).sendKeys("New ZSM FOR TEST AUTO");
-		Thread.sleep(1000);
-		
-		
-	/*	//ObjectRepo.test.log(Status.INFO, "Test Case 9 : Verify that user should be Select Cluster Type Dropdown");	
-		Liabrary.custom_click(CC.getSelect_Cluster_Type_Dropdown(),"Select Cluster Type Dropdown");
-		Thread.sleep(1000);
-		//ObjectRepo.test.log(Status.INFO, "Test Case 9 : Verify that user should be Select Cluster Type Dropdown Value");	
-		Liabrary.custom_click(CC.getSelect_Cluster_Type_Dropdown(),"Select Cluster Type Dropdown Value");
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//*[@id='ParentMasterContentPlaceHolder1_txtAreaName']")).sendKeys("NEW AUTO TEST");
-		Thread.sleep(1000);
-	*/
-	driver.findElement(By.xpath("//*[@id='ParentMasterContentPlaceHolder1_btnCloseAreaCreation']")).click();
-	
-	
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+        
+        ObjectRepo.startTestAndLog_1_SS("SA_Test_Cluster_Creation_TC_01", "Select Setting menu.", () -> {
+            Liabrary.custom_click(hp.getSettings_Menu(), "Select Setting menu");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_Test_Cluster_Creation_TC_02", "Select Configurations Sub menu.", () -> {
+            Liabrary.custom_click(hp.getConfigurations_SubMenu(), "Select Configurations Sub menu");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_Test_Cluster_Creation_TC_03", "Select Cluster Creation Page.", () -> {
+            Liabrary.custom_click(CC.getCluster_Creation(), "Select Cluster Creation Page");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_Test_Cluster_Creation_TC_04", "Verify Cluster Creation Header Text.", () -> {
+            WebElement header = driver.findElement(By.xpath("//span[text()='Cluster Creation']"));
+            String actualText = header.getText();
+            System.out.println(actualText);
+            String expectedText = "Cluster Creation";
+            Assert.assertEquals(actualText, expectedText);
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_Test_Cluster_Creation_TC_05", "Select Cluster Dropdown.", () -> {
+            Liabrary.custom_click(CC.getSelect_Cluster_Dropdown(), "Select Cluster Dropdown");
+        });
+        Thread.sleep(1000);
+
+        
+        ObjectRepo.startTestAndLog_1_SS("SA_Test_Cluster_Creation_TC_06", "Select Cluster Dropdown Value.", () -> {
+            Liabrary.custom_click(CC.getSelect_Cluster_Dropdown_Value(), "Select Cluster Dropdown Value");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_Test_Cluster_Creation_TC_07", "Click on Search Button.", () -> {
+            Liabrary.custom_click(CC.getSearch_Button(), "Click on Search Button");
+        });
+        Thread.sleep(1000);
+
+        
+        ObjectRepo.startTestAndLog_1_SS("SA_Test_Cluster_Creation_TC_08", "Click on Cluster Add Button.", () -> {
+            Liabrary.custom_click(CC.getCluster_Add_BTN(), "Click on Cluster Add Button");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_Test_Cluster_Creation_TC_09", "Select Area Type from dropdown.", () -> {
+            Actions action = new Actions(driver);
+            WebElement element = driver.findElement(By.xpath("//input[@id='ctl00_ParentMasterContentPlaceHolder1_ddlAreaType_Input']"));
+            action.moveToElement(element).click().perform();
+            
+            driver.findElement(By.xpath("//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlAreaType_DropDown']//ul//li[text()='ZSM']")).click();
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_Test_Cluster_Creation_TC_10", "Enter Area Name.", () -> {
+            driver.findElement(By.xpath("//*[@id='ParentMasterContentPlaceHolder1_txtAreaName']")).sendKeys("New ZSM FOR TEST AUTO");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_Test_Cluster_Creation_TC_11", "Click Close Area Creation button.", () -> {
+            driver.findElement(By.xpath("//*[@id='ParentMasterContentPlaceHolder1_btnCloseAreaCreation']")).click();
+        });
+        Thread.sleep(1000);
+        
+    }
 }

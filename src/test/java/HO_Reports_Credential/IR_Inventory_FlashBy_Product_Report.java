@@ -9,126 +9,134 @@ import org.testng.annotations.Test;
 import Com_Utility.BaseClass;
 import Com_Utility.HomePage;
 import Com_Utility.Liabrary;
+import Com_Utility.ObjectRepo;
 import HO_Reports.IR_Inventory_FlashBy_Product_Report_Main;
 
-public class IR_Inventory_FlashBy_Product_Report extends BaseClass{
+public class IR_Inventory_FlashBy_Product_Report extends BaseClass {
 
-	
-	@Test
-	public void Inventory_FlashBy_Product_Report () throws Exception {
-		HomePage hp = PageFactory.initElements(driver,HomePage.class);
-		IR_Inventory_FlashBy_Product_Report_Main IR = PageFactory.initElements(driver,IR_Inventory_FlashBy_Product_Report_Main.class);
+    @Test
+    public void Inventory_FlashBy_Product_Report() throws Exception {
+    	
+        HomePage hp = PageFactory.initElements(driver, HomePage.class);
+        IR_Inventory_FlashBy_Product_Report_Main IR = PageFactory.initElements(driver, IR_Inventory_FlashBy_Product_Report_Main.class);
 
-	 
-	   //ObjectRepo.test.log(Status.INFO, "Test Case 1 : Verify that user should be click on Report Menu");	
-		Liabrary.custom_click(hp.getReports_Menu(),"Click On Reports menu");
-		Thread.sleep(1000);
-		//ObjectRepo.test.log(Status.INFO, "Test Case 2 : Verify that user should be Click On Inventory_Report_SubMenu");	
-		Liabrary.custom_click(hp.getInventory_Report_SubMenu(),"Click On Inventory_Report_SubMenu");
-		Thread.sleep(1000);
-		//ObjectRepo.test.log(Status.INFO, "Test Case 3 : Verify that user should be Click on Inventory Flash By Product Menu");	
-		Liabrary.custom_click(IR.getInventory_FlashBy_Product_Report_Menu(),"Click On Inventory Flash By Product Menu");
-		Thread.sleep(1000);
-		WebElement Dealer_Details_Approval = driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_headerpages']"));
-		String Actual_Text = Dealer_Details_Approval.getText();
-		System.out.println(Actual_Text);
-		String Expected_Text = "Inventory Flash By Product";
-		Assert.assertEquals(Expected_Text, Actual_Text);
-		//ObjectRepo.test.log(Status.INFO, "Test Case 4 : Verify that user should be Click On Product Dropdown ");	
-		Liabrary.custom_click(IR.getProduct_Dropdown(),"Click On Product Dropdown");
-		Thread.sleep(1000);
-		
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 5 : Verify that user should be Select Product Dropdown value ");	
-		Liabrary.custom_click(IR.getProduct_Dropdown_Value(),"Select Product Dropdown Value");
-		Thread.sleep(1000);
-		
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 6 : Verify that user should be Click On Sales Hierarchy Dropdown ");	
-		Liabrary.custom_click(IR.getSales_Hierarchy_Dropdown(),"Click On Sales Hierarchy Dropdown");
-		Thread.sleep(1000);
-		
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 7 : Verify that user should be Select Sales Hierarchy Dropdown Value");	
-		Liabrary.custom_click(IR.getSales_Hierarchy_Dropdown_Value(),"Select Sales Hierarchy Dropdown Value");
-		Thread.sleep(1000);
-		
-		
-		//Geography Hierarchy
-		//ObjectRepo.test.log(Status.INFO, "Test Case 8 : Verify that user should be Click On Geography Hierarchy Dropdown ");	
-		Liabrary.custom_click(IR.getGeography_Hierarchy_Dropdown(),"select Geography Hierarchy Dropdown ");
-		Thread.sleep(1000);
-		
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 9 : Verify that user should be Select Sales Hierarchy Dropdown Value");	
-		Liabrary.custom_click(IR.getGeography_Hierarchy_Dropdown_Value(),"select Geography Hierarchy Dropdown Value");
-		Thread.sleep(1000);
-		
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 10 : Verify that user should be Click On For Year Dropdown ");	
-		Liabrary.custom_click(IR.getFor_Year_Dropdown(),"select For Year Dropdown ");
-		Thread.sleep(1000);
-		
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 11 : Verify that user should be select For Year Dropdown Value");	
-		Liabrary.custom_click(IR.getFor_Year_Dropdown_Value(),"select For Year Dropdown Value");
-		Thread.sleep(1000);
-		
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 12: Verify that user should be Click On For Month Dropdown ");	
-		Liabrary.custom_click(IR.getFor_Month_Dropdown(),"select For Month Dropdown ");
-		Thread.sleep(1000);
-		
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 13 : Verify that user should be Select For Month Dropdown Value");	
-		Liabrary.custom_click(IR.getFor_Month_Dropdown_Value(),"select For Month Dropdown Value");
-		Thread.sleep(1000);
-		
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 14 : Verify that user should be select Report Level Dropdown ");	
-		Liabrary.custom_click(IR.getReport_Level_Dropdown(),"select Report Level Dropdown");
-		Thread.sleep(1000);
-		
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 15 : Verify that user should be select Report Level Dropdown Value");	
-		Liabrary.custom_click(IR.getReport_Level_Dropdown_Value(),"select Report Level Dropdown Value");
-		Thread.sleep(1000);
-		
-		
-	    //ObjectRepo.test.log(Status.INFO, "Test Case 16: Verify that user should be Click on View Button");	
-	     Liabrary.custom_click(IR.getView_Button(),"Click on View Button");
-	     Thread.sleep(1000);
-	     
-	     
-	     //ObjectRepo.test.log(Status.INFO, "Test Case 17 : Verify that user should be Select Grid Data Value");	
-	     Liabrary.custom_click(IR.getGrid_Button_Value(),"Select Grid Data value");
-	     Thread.sleep(1000);
-	     
-	     
-	   //ObjectRepo.test.log(Status.INFO, "Test Case 18 : Verify that user should be Click on Download button");	
-	     Liabrary.custom_click(IR.getDownload_Button(),"Click on Download button");
-	     Thread.sleep(1000);
+        
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC01", "Verify click on Report Menu", () -> {
+            Liabrary.custom_click(hp.getReports_Menu(), "Click on Report Menu");
+        });
+        Thread.sleep(1000);
 
-	 
-		}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+        
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC02", "Click on Inventory Report Submenu", () -> {
+            Liabrary.custom_click(hp.getInventory_Report_SubMenu(), "Click On Inventory_Report_SubMenu");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC03", "Click on Inventory Flash By Product Menu", () -> {
+            Liabrary.custom_click(IR.getInventory_FlashBy_Product_Report_Menu(), "Click On Inventory Flash By Product Menu");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC04", "Verify Page Title", () -> {
+            WebElement Dealer_Details_Approval = driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_headerpages']"));
+            String Actual_Text = Dealer_Details_Approval.getText();
+            System.out.println(Actual_Text);
+            String Expected_Text = "Inventory Flash By Product";
+            Assert.assertEquals(Expected_Text, Actual_Text);
+        });
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC05", "Click on Product Dropdown", () -> {
+            Liabrary.custom_click(IR.getProduct_Dropdown(), "Click On Product Dropdown");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC06", "Select Product Dropdown Value", () -> {
+            Liabrary.custom_click(IR.getProduct_Dropdown_Value(), "Select Product Dropdown Value");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC07", "Click on Sales Hierarchy Dropdown", () -> {
+            Liabrary.custom_click(IR.getSales_Hierarchy_Dropdown(), "Click On Sales Hierarchy Dropdown");
+        });
+        Thread.sleep(1000);
+
+        
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC08", "Select Sales Hierarchy Dropdown Value", () -> {
+            Liabrary.custom_click(IR.getSales_Hierarchy_Dropdown_Value(), "Select Sales Hierarchy Dropdown Value");
+        });
+        Thread.sleep(1000);
+
+        
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC09", "Click on Geography Hierarchy Dropdown", () -> {
+            Liabrary.custom_click(IR.getGeography_Hierarchy_Dropdown(), "Select Geography Hierarchy Dropdown");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC10", "Select Geography Hierarchy Dropdown Value", () -> {
+            Liabrary.custom_click(IR.getGeography_Hierarchy_Dropdown_Value(), "Select Geography Hierarchy Dropdown Value");
+        });
+        Thread.sleep(1000);
+
+        
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC11", "Click on For Year Dropdown", () -> {
+            Liabrary.custom_click(IR.getFor_Year_Dropdown(), "Select For Year Dropdown");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC12", "Select For Year Dropdown Value", () -> {
+            Liabrary.custom_click(IR.getFor_Year_Dropdown_Value(), "Select For Year Dropdown Value");
+        });
+        Thread.sleep(1000);
+
+        
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC13", "Click on For Month Dropdown", () -> {
+            Liabrary.custom_click(IR.getFor_Month_Dropdown(), "Select For Month Dropdown");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC14", "Select For Month Dropdown Value", () -> {
+            Liabrary.custom_click(IR.getFor_Month_Dropdown_Value(), "Select For Month Dropdown Value");
+        });
+        Thread.sleep(1000);
+
+        
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC15", "Click on Report Level Dropdown", () -> {
+            Liabrary.custom_click(IR.getReport_Level_Dropdown(), "Select Report Level Dropdown");
+        });
+        Thread.sleep(1000);
+
+        
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC16", "Select Report Level Dropdown Value", () -> {
+            Liabrary.custom_click(IR.getReport_Level_Dropdown_Value(), "Select Report Level Dropdown Value");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC17", "Click on View Button", () -> {
+            Liabrary.custom_click(IR.getView_Button(), "Click on View Button");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC18", "Select Grid Data Value", () -> {
+            Liabrary.custom_click(IR.getGrid_Button_Value(), "Select Grid Data Value");
+        });
+        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC19", "Click on Download Button", () -> {
+            Liabrary.custom_click(IR.getDownload_Button(), "Click on Download Button");
+        });
+        Thread.sleep(1000);
+        
+        
+    }
 }

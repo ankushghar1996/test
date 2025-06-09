@@ -122,5 +122,7 @@ public class New_Activity_PJPSite_Cred extends BaseClass_SEBS_Portal {
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_20", "Click on Cancel Button", () -> {
             Liabrary.custom_click(view.getCANCEL_Button(), null);
         });
+        
+        
     }
 }
