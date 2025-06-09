@@ -19,7 +19,7 @@ public class Demo_Mail {
        
             System.out.println("======= Sending Email with Extent Report Attachment =======");
             
-            String Report_Path = "C:\\COde\\test-new\\test\\test-output\\Extent_Reports\\TestReport.html";
+            String Report_Path = "C:\\COde\\test\\test-output\\Extent_Reports\\TestReport.html";
  
             // Create the attachment
             EmailAttachment attachment = new EmailAttachment();
@@ -45,7 +45,8 @@ public class Demo_Mail {
             email.setSubject("Automation Test Execution Report");
             email.setMsg("Please find the attached Automation Test Execution Report.");
             email.addTo("aniket.jadhav@heerasoftware.com");
- 
+            email.addTo("ankush.gharsele@heerasoftware.com");
+          
             // Attach the report with Extent html
             email.attach(attachment);
  

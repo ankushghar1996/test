@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="SECR_Portal_Credential.SECR_MTD_Working_Test_DB">
+      <class name="ASM_Portal_Test.ASM_Approval_Test">
         <methods>
-          <include name="openbrowser"/>
-          <include name="Data_Provider"/>
-          <include name="afterSuite"/>
-          <include name="MTD_Working"/>
-          <include name="close"/>
+          <include name="setUpDataProviders"/>
+          <include name="tearDown"/>
+          <include name="Approval_Page"/>
+          <include name="generateReport"/>
+          <include name="launchBrowserAndLogin"/>
         </methods>
-      </class> <!-- SECR_Portal_Credential.SECR_MTD_Working_Test_DB -->
+      </class> <!-- ASM_Portal_Test.ASM_Approval_Test -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
