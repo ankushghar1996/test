@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import Com_Utility.BaseClass;
 import Com_Utility.HomePage;
 import Com_Utility.Liabrary;
+import Com_Utility.ObjectRepo;
 import HO_Master.AM_SiteMaster;
 import HO_Master.AM_SiteMasterViewPage;
 
@@ -24,34 +25,34 @@ public class AccM_SiteMasterViewPage extends BaseClass{
 		AM_SiteMasterViewPage SMV = PageFactory.initElements(driver, AM_SiteMasterViewPage.class);
 		AM_SiteMaster SM = PageFactory.initElements(driver, AM_SiteMaster.class);
 	
-//		ObjectRepo.test.log(Status.INFO, "Test Case 1 : Verify that user should be select Master Menu.");
-		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");
+		ObjectRepo.startTestAndLog_1_SS("SA_SiteMaster_TC01", "Click Master Menu", () -> {
+		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");});
 		Thread.sleep(1000);
 		   
 			
-//		ObjectRepo.test.log(Status.INFO, "Test Case 2 : Verify that user should be select Distributor Master sub menu.");
-		Liabrary.custom_click(hp.getAccountMaster_SubMenu(), "select Account Master sub menu");
+		ObjectRepo.startTestAndLog_1_SS("SA_SiteMaster_TC02", "Click on Account Master SubMenu", () -> {
+		Liabrary.custom_click(hp.getAccountMaster_SubMenu(), "Account Master sub menu");});
+		Thread.sleep(1000);
+	
+		ObjectRepo.startTestAndLog_1_SS("SA_SiteMaster_TC03", "Click on Site_Master", () -> {
+		Liabrary.custom_click(SM.getSite_Master(), null);});
 		Thread.sleep(1000);
 	
 	
-		Liabrary.custom_click(SM.getSite_Master(), null);
-		Thread.sleep(1000);
-	
-	
-//		ObjectRepo.test.log(Status.INFO, "Test Case 4 : Verify that user should be Target Upload Header Text.");
+		ObjectRepo.startTestAndLog_1_SS("SA_SiteMaster_TC04", "Verify Site Master Header Text", () -> {
 			WebElement UploadText=driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_retailerHeader']"));
 			String Actual_Text=UploadText.getText();
 			System.out.println(Actual_Text);
 			String Expected_Text=" Site Master";
-			Assert.assertEquals(Expected_Text, Actual_Text);
+			Assert.assertEquals(Expected_Text, Actual_Text);});
 			Thread.sleep(2000);
 	
-	
-		Liabrary.custom_click(SMV.getSite_GridaDataTable(), Expected_Text);
+		ObjectRepo.startTestAndLog_1_SS("SA_SiteMaster_TC05", " Click on Site Grida Data Table", () -> {
+		Liabrary.custom_click(SMV.getSite_GridaDataTable(), null);});
 		Thread.sleep(1000);
 		
-		
-		Liabrary.custom_click(SMV.getView_btn(), "click on view button");
+		ObjectRepo.startTestAndLog_1_SS("SA_SiteMaster_TC06", " Click on View Button", () -> {
+		Liabrary.custom_click(SMV.getView_btn(), "click on view button");});
 		Thread.sleep(1000);
 		
 		

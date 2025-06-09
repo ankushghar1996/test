@@ -10,6 +10,7 @@ import Com_Utility.BaseClass;
 import Com_Utility.Common_Data;
 import Com_Utility.HomePage;
 import Com_Utility.Liabrary;
+import Com_Utility.ObjectRepo;
 import HO_Activity.Media_UploadMedia;
 import HO_Master.DM_DistributorApprove1;
 
@@ -23,36 +24,36 @@ public class DistM_DistributorApprove1 extends BaseClass{
 		DM_DistributorApprove1 DA = PageFactory.initElements(driver, DM_DistributorApprove1.class);;
 		Common_Data CD = PageFactory.initElements(driver, Common_Data.class);
 	
-//		ObjectRepo.test.log(Status.INFO, "Test Case 1 : Verify that user should be select Master Menu.");
-		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");
+		ObjectRepo.startTestAndLog_1_SS("SA_DistributorApprove1_TC01", "Click On Master Menu", () -> {
+		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");});
 		Thread.sleep(1000);
 		   
 			
-//		ObjectRepo.test.log(Status.INFO, "Test Case 2 : Verify that user should be select Distributor Master sub menu.");
-		Liabrary.custom_click(hp.getDistributorMaster_SubMenu(), "select Distributor Master sub menu");
+		ObjectRepo.startTestAndLog_1_SS("SA_DistributorApprove1_TC02", "Click On Distributor Master SubMenu", () -> {
+		Liabrary.custom_click(hp.getDistributorMaster_SubMenu(), "Distributor Master sub menu");});
+		Thread.sleep(1000);
+	
+		ObjectRepo.startTestAndLog_1_SS("SA_DistributorApprove1_TC03", "Click On Distributor Approval", () -> {
+		Liabrary.custom_click(DA.getDistributor_Approval(), null);});
 		Thread.sleep(1000);
 	
 	
-		Liabrary.custom_click(DA.getDistributor_Approval(), null);
-		Thread.sleep(1000);
-	
-	
-//		ObjectRepo.test.log(Status.INFO, "Test Case 4 : Verify that user should be Distributor Approval (1st) Header Text.");
+		ObjectRepo.startTestAndLog_1_SS("SA_DistributorApprove1_TC04", "Verify Distributor Approval (1st)Header Text", () -> {
 		WebElement UploadText=driver.findElement(By.xpath("//h4[normalize-space()='Distributor Approval (1st)']"));
 		String Actual_Text=UploadText.getText();
 		System.out.println(Actual_Text);
 		String Expected_Text="Distributor Approval (1st)";
-		Assert.assertEquals(Expected_Text, Actual_Text);
+		Assert.assertEquals(Expected_Text, Actual_Text);});
 		Thread.sleep(2000);
 	
-	
-		Liabrary.custom_click(CD.getView_Btn(), Expected_Text);
+		ObjectRepo.startTestAndLog_1_SS("SA_DistributorApprove1_TC05", "Click On View Button", () -> {
+		Liabrary.custom_click(CD.getView_Btn(), null);});
 		Thread.sleep(1000);
 		
 		
 		// show 1 to 10 of 30 (1909 Pages)
-		
-		String text =	driver.findElement(By.xpath("//div[Contains(text(),'Pages')]")).getText();
+		ObjectRepo.startTestAndLog_1_SS("SA_DistributorApprove1_TC06 to TC11", "Pagination Steps", () -> {
+		String text = driver.findElement(By.xpath("//div[Contains(text(),'Pages')]")).getText();
 			
 		//  Integer.parseInt() ---- convert string into the Integer 
 		
@@ -87,12 +88,12 @@ public class DistM_DistributorApprove1 extends BaseClass{
 					String status =driver.findElement(By.xpath("//table[@class='table table-borded table-hover']//tbody//tr["+r+"]/td[5]")).getText();
 					
 					
-					System.out.println(custmor_name+"\t"+email+"\t"+status);
+					System.out.println(custmor_name+"\t"+email+"\t"+status); 
 					
 				}
-				
-			}
 			
+			}
+		});
 		
 		}
 		

@@ -56,17 +56,22 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
 
 	driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("HSPL ");
 	  Thread.sleep (1000);
+	  
 	  WebElement element1 = driver.findElement(By.xpath("//div[@class='col-12 mb-3']//select[@aria-label='Default select example']"));
 	  JavascriptExecutor JSE1 = (JavascriptExecutor)driver;
 	  JSE1.executeScript("arguments[0].scrollIntoView(true);", element1);
 	  Thread.sleep(1000);
+	  
 	  Liabrary.custom_click(SEBS.getContractor_Type(), "Click on Contractor Type");
 	  Thread.sleep (1000);
+	  
 	  Liabrary.custom_click(SEBS.getContractor_Type_Value(), "Click on Contractor Type");
 	  Thread.sleep (1000);
+	  
 	  //Contact Number
 	  driver.findElement(By.xpath("//input[@placeholder='Enter Contact Number']")).sendKeys("123456789");
 	  Thread.sleep (1000);
+	  
 	  WebElement element2 = driver.findElement(By.xpath("//input[@placeholder='Enter Email Address']"));
 	  JavascriptExecutor JSE2 = (JavascriptExecutor)driver;
 	  JSE2.executeScript("arguments[0].scrollIntoView(true);", element2);
@@ -74,37 +79,49 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
 	  //Email
 	  driver.findElement(By.xpath("//input[@placeholder='Enter Email Address']")).sendKeys("HSPL@Test.com");
 	  Thread.sleep (1000);
+	  
 	  //Address Line 1
 	  driver.findElement(By.xpath("//input[@placeholder='Enter Address Line 1']")).sendKeys("Navle Bridge");
 	  Thread.sleep (1000);
+	  
 	  driver.findElement(By.xpath("//input[@placeholder='Enter Address Line 2']")).sendKeys("Narhe");
 	  Thread.sleep (1000);
+	  
 	  Liabrary.custom_click(SEBS.getState_Dropdown(), "Click on State Drpopdown");
 	  Thread.sleep (1000);
+	  
 	  Liabrary.custom_click(SEBS.getState_Dropdown_Value(), "Click on State Drpopdown Value");
 	  Thread.sleep (1000);
+	  
 	  Liabrary.custom_click(SEBS.getCity_Dropdown(), "Click on City Dropdown");
 	  Thread.sleep (1000);
+	  
 	  Liabrary.custom_click(SEBS.getCity_Dropdown_Value(), "Click on City Dropdown Value");
 	  Thread.sleep (1000);
+	  
 	  driver.findElement(By.xpath("//input[@placeholder='Enter Pin Code']")).sendKeys("411041");
 	  Thread.sleep (1000);
+	  
 	  //calender code
 	  // Open calendar
 
 	//Adhar Number
 	  driver.findElement(By.xpath("//input[@placeholder='Enter Aadhar Number']")).sendKeys("123456789");
 	  Thread.sleep (1000);
+	  
 	//Enter Pan Number
 	  driver.findElement(By.xpath("//input[@placeholder='Enter PAN Number']")).sendKeys("AZVPK2525M");
 	  Thread.sleep (1000);
+	  
 	  WebElement element3 = driver.findElement(By.xpath("(//div[@class='col-2 col-lg-1']//span[@data-bs-target='#camera'])[1]"));
 	  JavascriptExecutor JSE3 = (JavascriptExecutor)driver;
 	  JSE1.executeScript("arguments[0].scrollIntoView(true);", element3);
 	  Thread.sleep (1000);
+	  
 	//input[@placeholder='Enter GST Number']
 	  driver.findElement(By.xpath("//input[@placeholder='Enter GST Number']")).sendKeys("GHJ151515");
 	  Thread.sleep (1000);
+	  
 	  //Camera Click
 	   driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();
        Thread.sleep(1000);

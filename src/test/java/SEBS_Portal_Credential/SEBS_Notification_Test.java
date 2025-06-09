@@ -25,8 +25,12 @@ public class SEBS_Notification_Test extends BaseClass_SEBS_Portal{
 	
 	ObjectRepo.startTestAndLog_1_SS("SEBS_Notification_Test_TC02", "Verify that user should be able to click on Close Button", () -> {
 	Liabrary.custom_click(SEBS.getClose_Button(),"Click on Close Button");
+
+                                                                                               
+
 	});
 	Thread.sleep(1000);
+
 
 
 

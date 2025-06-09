@@ -26,26 +26,26 @@ public class AccM_SiteMaster extends BaseClass{
 		AM_SiteMaster SM = PageFactory.initElements(driver, AM_SiteMaster.class);
 		
 	
-//		ObjectRepo.test.log(Status.INFO, "Test Case 1 : Verify that user should be select Master Menu.");
-		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");
+		ObjectRepo.startTestAndLog_1_SS("SA_SiteMaster_TC01", "Click On Master Menu", () -> {
+		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");});
 		Thread.sleep(1000);
 		   
 			
-//		ObjectRepo.test.log(Status.INFO, "Test Case 2 : Verify that user should be select Account Master sub menu.");
-		Liabrary.custom_click(hp.getAccountMaster_SubMenu(), "select Account Master sub menu");
+		ObjectRepo.startTestAndLog_1_SS("SA_SiteMaster_TC02", "Click On Account Master SubMenu", () -> {
+		Liabrary.custom_click(hp.getAccountMaster_SubMenu(), "select Account Master sub menu");});
+		Thread.sleep(1000);
+	
+		ObjectRepo.startTestAndLog_1_SS("SA_SiteMaster_TC03", "Click On Site Master", () -> {
+		Liabrary.custom_click(SM.getSite_Master(), null);});
 		Thread.sleep(1000);
 	
 	
-		Liabrary.custom_click(SM.getSite_Master(), null);
-		Thread.sleep(1000);
-	
-	
-//		ObjectRepo.test.log(Status.INFO, "Test Case 4 : Verify that user should be Site Master Header Text.");
+		ObjectRepo.startTestAndLog_1_SS("SA_SiteMaster_TC04", "Verify Site Master Header Text", () -> {
 			WebElement UploadText=driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_retailerHeader']"));
 			String Actual_Text=UploadText.getText();
 			System.out.println(Actual_Text);
 			String Expected_Text="Site Master";
-			Assert.assertEquals(Expected_Text, Actual_Text);
+			Assert.assertEquals(Expected_Text, Actual_Text);});
 			Thread.sleep(2000);
 	
 	

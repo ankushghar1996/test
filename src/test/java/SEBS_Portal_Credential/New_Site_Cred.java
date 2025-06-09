@@ -31,32 +31,36 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		Liabrary.custom_click(view.getAdd_Menu(), null);});
 		Thread.sleep(1000);
 		
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_04", "Click on Add Menu", () ->{
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_04", "Click on Distributor_Mapped", () ->{
 		Liabrary.custom_click(view.getDistributor_Mapped(), null);});
 		Thread.sleep(1000);
 		
-		Liabrary.custom_click(view.getSelect_Distributor_Mapped(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_05", "Click on Select_Distributor_Mapped", () ->{
+		Liabrary.custom_click(view.getSelect_Distributor_Mapped(), null);});
 		Thread.sleep(1000);
 		
-		Liabrary.custom_click(view.getSelect_sales_Engineer_dropdown(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_06", "Click Select_sales_Engineer_dropdown", () ->{
+		Liabrary.custom_click(view.getSelect_sales_Engineer_dropdown(), null);});
 		Thread.sleep(1000);
 	
-		Liabrary.custom_click(view.getSelect_sales_Engineer(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_07", "Click Select_sales_Engineer", () ->{
+		Liabrary.custom_click(view.getSelect_sales_Engineer(), null);});
 		Thread.sleep(1000);
 	
-		Liabrary.custom_click(view.getSelect_Location_dropdown(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_08", "Click on Select_Location_dropdown", () ->{
+		Liabrary.custom_click(view.getSelect_Location_dropdown(), null);});
 		Thread.sleep(1000);
 	
-	
-		Liabrary.custom_click(view.getSelect_Location(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_09", "Click on Select_Location", () ->{
+		Liabrary.custom_click(view.getSelect_Location(), null);});
 		Thread.sleep(1000);
 		
-		
-		Liabrary.custom_click(view.getSelect_developer_Name_dropdown(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_10", "Click on Select_developer_Name_dropdown", () ->{
+		Liabrary.custom_click(view.getSelect_developer_Name_dropdown(), null);});
 		Thread.sleep(1000);
 		
-		
-		Liabrary.custom_click(view.getSelect_developer_Name(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_11", "Click on Select_developer_Name", () ->{
+		Liabrary.custom_click(view.getSelect_developer_Name(), null);});
 		Thread.sleep(1000);
 		
 		
@@ -67,12 +71,12 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		
 		
 		
-		
-		driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("mukeshdelhi");
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_12", "Send Site Name", () ->{
+		driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("mukeshdelhi");});
 		Thread.sleep(1000);
 		
-		
-		Liabrary.custom_click(view.getChcekbox_flexCheckDefault(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_13", "Click on Chcekbox_flexCheckDefault", () ->{
+		Liabrary.custom_click(view.getChcekbox_flexCheckDefault(), null);});
 		Thread.sleep(1000);
 	
 		
@@ -83,12 +87,12 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
         Thread.sleep(1000);
 		
 		
-		
-        Liabrary.custom_click(view.getDropdownMenuButton(), null);
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_14", "Click on Dropdown Menu Button", () ->{
+        Liabrary.custom_click(view.getDropdownMenuButton(), null);});
 		Thread.sleep(1000);
 		
-		
-		Liabrary.custom_click(view.getCheckbox(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_15", "Click on Checkbox", () ->{
+		Liabrary.custom_click(view.getCheckbox(), null);});
 		Thread.sleep(4000);
 		
 		
@@ -98,17 +102,17 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
         Thread.sleep(1000);
 		
 		
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_16", "Enter Contractor Name", () ->{
+		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("raj");});
+		Thread.sleep(1000);
 		
-		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("raj");
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_17", "Enter Contractor Contact Number", () ->{
+		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Contact Number.']")).sendKeys("9654120142");});
 		Thread.sleep(1000);
 		
 		
-		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Contact Number.']")).sendKeys("9654120142");
-		Thread.sleep(1000);
-		
-		
-		
-		Liabrary.custom_click(view.getCANCEL_Button(), null);
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_18", "Click on CANCEL_Button", () ->{
+		Liabrary.custom_click(view.getCANCEL_Button(), null);});
 		
 		
 		

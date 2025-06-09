@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import Com_Utility.BaseClass;
 import Com_Utility.HomePage;
 import Com_Utility.Liabrary;
+import Com_Utility.ObjectRepo;
 import HO_Master.AM_ApplicatiorMaster;
 import HO_Master.DM_DistributorTransfer;
 
@@ -23,26 +24,26 @@ public class AccM_ApplicatiorMaster extends BaseClass{
 		AM_ApplicatiorMaster AP = PageFactory.initElements(driver, AM_ApplicatiorMaster.class);
 		
 		
-//		ObjectRepo.test.log(Status.INFO, "Test Case 1 : Verify that user should be select Master Menu.");
-		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");
+		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC01", "Click On Master Menu", () -> {
+		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");});
 		Thread.sleep(1000);
 		   
 			
-//		ObjectRepo.test.log(Status.INFO, "Test Case 2 : Verify that user should be select Distributor Master sub menu.");
-		Liabrary.custom_click(hp.getAccountMaster_SubMenu(), "select Account Master sub menu");
+		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC02", "Click On Account Master SubMenu", () -> {
+		Liabrary.custom_click(hp.getAccountMaster_SubMenu(), "select Account Master sub menu");});
 		Thread.sleep(1000);
 	
-	
-		Liabrary.custom_click(AP.getApplicator_Master(), null);
+		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC03", "Click On Applicator Master", () -> {
+		Liabrary.custom_click(AP.getApplicator_Master(), null);});
 		Thread.sleep(1000);
 	
-	
+		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC04", "Click On Applicator Master", () -> {
 //		ObjectRepo.test.log(Status.INFO, "Test Case 4 : Verify that user should be Target Upload Header Text.");
 			WebElement UploadText=driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_pageHeader']"));
 			String Actual_Text=UploadText.getText();
 			System.out.println(Actual_Text);
 			String Expected_Text=" Applicator Master";
-			Assert.assertEquals(Expected_Text, Actual_Text);
+			Assert.assertEquals(Expected_Text, Actual_Text);});
 			Thread.sleep(2000);
 	
 	
