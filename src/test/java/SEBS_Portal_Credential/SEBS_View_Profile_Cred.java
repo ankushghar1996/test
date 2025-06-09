@@ -18,7 +18,8 @@ public class SEBS_View_Profile_Cred extends BaseClass_SEBS_Portal{
 		
 		SEBS_View_Profile_Main view = PageFactory.initElements(driver, SEBS_View_Profile_Main.class);
 	
-	
+		
+		
 		Liabrary.custom_click(view.getSECR_Menu(), null);
 		Thread.sleep(1000);
 	
