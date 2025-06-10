@@ -11,6 +11,7 @@ import Com_Utility.BaseClass;
 import Com_Utility.Common_Data;
 import Com_Utility.HomePage;
 import Com_Utility.Liabrary;
+import Com_Utility.ObjectRepo;
 import HO_Master.DLRM_Dealer_Approval_2nd;
 import HO_Master.DLRM_Dealer_Approval_2nd_View_Page;
 
@@ -26,37 +27,42 @@ public class DLRM_DLRM_Dealer_Approval_2nd_View_Page extends BaseClass{
 		Common_Data CD = PageFactory.initElements(driver,Common_Data.class);	
 		
 		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 1 : Verify that user should be select Master Menu.");
-		    Liabrary.custom_click(hp.getMaster_Menu(),"Select Master Menu");
+		   ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_2ndView_Page_TC01", "Click On Master Menu ", () -> {		
+		    Liabrary.custom_click(hp.getMaster_Menu(),"Master Menu");
+		    });
 			Thread.sleep(1000);
 			
 			
-		//ObjectRepo.test.log(Status.INFO, "Test Case 2 : Verify that user should be select Dealer Master sub menu.")
-			Liabrary.custom_click(hp.getOutletMaster_SubMenu(),"Select Dealer Master Submenu");
+		  ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_2ndView_Page_TC02", "Click On Outlet Master SubMenu", () -> {
+			Liabrary.custom_click(hp.getOutletMaster_SubMenu(),"Outlet Master SubMenu");
+		   });
 			Thread.sleep(1000);
 	 
 			
-			//ObjectRepo.test.log(Status.INFO, "Test Case 3 : Verify that user should be select Retailer Approval 2nd Page.");	
-			Liabrary.custom_click(DAA1.getRetailer_Approval_2nd_Menu(),"Select Retailer Approval 2nd Page");
+	        ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_2ndView_Page_TC03", "Click On Retailer Approval 2nd Menu", () -> {
+			Liabrary.custom_click(DAA1.getRetailer_Approval_2nd_Menu(),"Retailer Approval 2nd Page");
+	         });
 			Thread.sleep(1000);
 			
 			
-		//ObjectRepo.test.log(Status.INFO, "Test Case 4 : Verify that user should be Select Grid Data From Table");	
-		    Liabrary.custom_click(DAA2.getDealer_Name_2nd_Grid_Value(),"Select Grid Data From Table");
+			ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_2ndView_Page_TC04", "Click On Dealer Name 2nd Grid Value", () -> {	
+		    Liabrary.custom_click(DAA2.getDealer_Name_2nd_Grid_Value()," Grid Data From Table");
+			});
 		    Thread.sleep(1000);
 		    
 		    
-	    //ObjectRepo.test.log(Status.INFO, "Test Case 5 : Verify that user is able to click View Button");	
+		    ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_2ndView_Page_TC05", "Click On View Button", () -> {
 		    Liabrary.custom_click(DAA2.getDealer_Approval_2nd_View_Page(),"Click on View Button");
+		    });
 		    Thread.sleep(1000);		
 		    
 		    
-		  //ObjectRepo.test.log(Status.INFO, "Test Case 6 :Verify that Retailer Details Header Text.");	
+		    ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_2ndView_Page_TC06", "Verify Retailer Details Header Text", () -> {
 			WebElement Retailer_Details = driver.findElement(By.xpath("//*[text()='Retailer Details']"));
 			String Actual_Text = Retailer_Details.getText();
 			System.out.println(Actual_Text);
 			String Expected_Text = "Retailer Details";
-			Assert.assertEquals(Expected_Text, Actual_Text);
+			Assert.assertEquals(Expected_Text, Actual_Text);});
 			
 			
 			 WebElement scroll = driver.findElement(By.xpath("//*[text()='Documents']"));
@@ -65,23 +71,27 @@ public class DLRM_DLRM_Dealer_Approval_2nd_View_Page extends BaseClass{
 		  		Thread.sleep(1000);
 		  		
 		  		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 7 :Verify that user should download Document1");	
-			Liabrary.custom_click(DAA2.getDocument_1(), Expected_Text);
+		   ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_2ndView_Page_TC07", "Click On Document 1 Button", () -> {
+			Liabrary.custom_click(DAA2.getDocument_1(), null);
+		    });
 			Thread.sleep(1000);
 			
 			
-		//ObjectRepo.test.log(Status.INFO, "Test Case 8 :Verify that user should download Document1");	
-			Liabrary.custom_click(DAA2.getDocument_2(), Expected_Text);
+			ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_2ndView_Page_TC08", "Click On Document 2 Button", () -> {
+			Liabrary.custom_click(DAA2.getDocument_2(), null);
+			});
 			Thread.sleep(1000);
 			
 			
-		//ObjectRepo.test.log(Status.INFO, "Test Case 9 :Verify that user should download Document1");		
-			Liabrary.custom_click(DAA2.getDocument_3(), Expected_Text);
+			ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_2ndView_Page_TC09", "Click On Document 3 Button", () -> {		
+			Liabrary.custom_click(DAA2.getDocument_3(), null);
+			});
 			Thread.sleep(1000);
 			
 			
-		//ObjectRepo.test.log(Status.INFO, "Test Case 10 : Verify that user is able to click close Button");	
+			ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_2ndView_Page_TC10", "Click On Close Button", () -> {
 		    Liabrary.custom_click(CD.getClose_Btn(),"Click on Close Button");
+			});
 		    Thread.sleep(1000);	
 
 

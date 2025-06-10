@@ -7,6 +7,7 @@ import Com_Utility.BaseClass;
 import Com_Utility.Common_Data;
 import Com_Utility.HomePage;
 import Com_Utility.Liabrary;
+import Com_Utility.ObjectRepo;
 import HO_Master.PM_HSN_Master;
 
 public class PM_PM_HSN_Master extends BaseClass {
@@ -19,14 +20,19 @@ public class PM_PM_HSN_Master extends BaseClass {
 	Common_Data CD =PageFactory.initElements(driver,Common_Data.class);	
 	PM_HSN_Master HSN1 = PageFactory.initElements(driver, PM_HSN_Master.class);	
 	
-	
-	Liabrary.custom_click(hp.getMaster_Menu(),"Select Master Menu");	
+	ObjectRepo.startTestAndLog_1_SS("SA_PM_HSN_Master_TC01", "Click on Master Menu", () -> {
+	Liabrary.custom_click(hp.getMaster_Menu(),"Master Menu");	
+	});
 	Thread.sleep(1000);
 	
-	Liabrary.custom_click(hp.getProductMaster_SubMenu(),"Select Product Master Submenu");	
+	ObjectRepo.startTestAndLog_1_SS("SA_PM_HSN_Master_TC02", "Click on Product Master SubMenu", () -> {
+	Liabrary.custom_click(hp.getProductMaster_SubMenu(),"Product Master Submenu");	
+	});
 	Thread.sleep(1000);
 	
-	Liabrary.custom_click(HSN1.getHSN_Master_Menu(),"Select HSN Master Menu");	
+	ObjectRepo.startTestAndLog_1_SS("SA_PM_HSN_Master_TC03", "Click on HSN Master Menu", () -> {
+	Liabrary.custom_click(HSN1.getHSN_Master_Menu(),"HSN Master Menu");	
+	});
 	Thread.sleep(1000);
 
 

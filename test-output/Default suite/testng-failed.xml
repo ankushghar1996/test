@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SECR_Portal_Credential.SECR_MTD_Working_Test_DB">
+      <class name="HO_Master_Credential.FSG_FSGMaster_AddPage">
         <methods>
-          <include name="openbrowser"/>
-          <include name="Data_Provider"/>
-          <include name="afterSuite"/>
-          <include name="MTD_Working"/>
           <include name="close"/>
+          <include name="afterSuite"/>
+          <include name="openbrowser"/>
+          <include name="FSG_MasterHomepage"/>
+          <include name="Data_Provider"/>
         </methods>
-      </class> <!-- SECR_Portal_Credential.SECR_MTD_Working_Test_DB -->
+      </class> <!-- HO_Master_Credential.FSG_FSGMaster_AddPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

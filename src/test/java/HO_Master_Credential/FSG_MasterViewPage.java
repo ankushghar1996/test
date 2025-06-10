@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import Com_Utility.BaseClass;
 import Com_Utility.HomePage;
 import Com_Utility.Liabrary;
+import Com_Utility.ObjectRepo;
 import HO_Master.FSG_FSGMaster;
 import HO_Master.FSG_FSGMasterViewPage;
 
@@ -24,36 +25,41 @@ public class FSG_MasterViewPage extends BaseClass{
 		FSG_FSGMaster FSG = PageFactory.initElements(driver, FSG_FSGMaster.class);
 		
 	
-//		ObjectRepo.test.log(Status.INFO, "Test Case 1 : Verify that user should be select Master Menu.");
-		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");
+		ObjectRepo.startTestAndLog_1_SS("SA_MasterViewPage_TC01", "Click on Master Menu", () -> {
+		Liabrary.custom_click(hp.getMaster_Menu(), "Master Menu");
+		});
 		Thread.sleep(1000);
 		   
 			
-//		ObjectRepo.test.log(Status.INFO, "Test Case 2 : Verify that user should be select FSG Master sub menu.");
-		Liabrary.custom_click(hp.getFSGMaster_SubMenu(), "select Account Master sub menu");
+		ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_TC02", "Click on Master Menu", () -> {
+		Liabrary.custom_click(hp.getFSGMaster_SubMenu(), "FSG Master SubMenu");
+		});
 		Thread.sleep(1000);
 	
 	
-		
+		ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_TC03", "Click On FSG Master", () -> {		
 		Liabrary.custom_click(FSG.getFSG_Master(), null);
+		});
 		Thread.sleep(1000);
 	
 	
 	
-//		ObjectRepo.test.log(Status.INFO, "Test Case 4 : Verify that user should be Site Master Header Text.");
+		ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_TC04", "Verify FSG Master Header Text", () -> {
 			WebElement UploadText=driver.findElement(By.xpath("//h4[normalize-space()='FSG Master']"));
 			String Actual_Text=UploadText.getText();
 			System.out.println(Actual_Text);
 			String Expected_Text="FSG Master";
-			Assert.assertEquals(Expected_Text, Actual_Text);
+			Assert.assertEquals(Expected_Text, Actual_Text);});
 			Thread.sleep(2000);
 	
-	
-	Liabrary.custom_click(FV.getFSG_GridaDataTable(), Expected_Text);
+    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_TC05", "Click on FSG Grida Data Table", () -> {
+	Liabrary.custom_click(FV.getFSG_GridaDataTable(), null);
+    });
 	Thread.sleep(1000);
 	
-	
-	Liabrary.custom_click(FV.getView_btn(), Expected_Text);
+	ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_TC06", "Click on View Button", () -> {
+	Liabrary.custom_click(FV.getView_btn(),null);
+	});
 	Thread.sleep(1000);
 	
 	
