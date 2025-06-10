@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import Com_Utility.BaseClass;
 import Com_Utility.HomePage;
 import Com_Utility.Liabrary;
+import Com_Utility.ObjectRepo;
 import HO_Master.DLRM_Dealer_Approval_1st;
 
 public class DLRM_DLRM_Dealer_Approval_1st extends BaseClass{
@@ -19,27 +20,31 @@ public class DLRM_DLRM_Dealer_Approval_1st extends BaseClass{
     HomePage hp = PageFactory.initElements(driver,HomePage.class);
     DLRM_Dealer_Approval_1st DAA1 = PageFactory.initElements(driver,DLRM_Dealer_Approval_1st.class);
 
-	//ObjectRepo.test.log(Status.INFO, "Test Case 1 : Verify that user should be select Master Menu.");
+    ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_1st_TC01", "Click on Master Menu", () -> {
 	    Liabrary.custom_click(hp.getMaster_Menu(),"Select Master Menu");
+    });
 		Thread.sleep(1000);
 		
 		
-	//ObjectRepo.test.log(Status.INFO, "Test Case 2 : Verify that user should be select Dealer Master sub menu.")
-		Liabrary.custom_click(hp.getOutletMaster_SubMenu(),"Select Dealer Master Submenu");
+	ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_1st_TC02", "Click on Outlet Master SubMenu", () -> {
+		Liabrary.custom_click(hp.getOutletMaster_SubMenu(),"Dealer Master Submenu");
+	});
 		Thread.sleep(1000);
 		
 		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 3 : Verify that user should be select Dealer Approval 1st Page.");	
-		Liabrary.custom_click(DAA1.getDealer_Approval_1st_Menu(),"Select Dealer Approval 1st Page");
+		ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_1st_TC03", "Click on Dealer Approval 1st Menu", () -> {	
+		Liabrary.custom_click(DAA1.getDealer_Approval_1st_Menu(),"Dealer Approval 1st Page");
+		});
 		Thread.sleep(1000);
 		
 		
-	  //ObjectRepo.test.log(Status.INFO, "Test Case 4 :Verify that Retailer Approval Header Text.");	
+		ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_1st_TC04", "Verify Retailer Approval (1st) Header Text", () -> {	
 		WebElement Retailer_Details = driver.findElement(By.xpath("//*[text()='Retailer Approval (1st) ']"));
 		String Actual_Text = Retailer_Details.getText();
 		System.out.println(Actual_Text);
 		String Expected_Text = "Retailer Approval (1st)";
-		Assert.assertEquals(Expected_Text, Actual_Text);
+		Assert.assertEquals(Expected_Text, Actual_Text); 
+		});
 		
 		
 			

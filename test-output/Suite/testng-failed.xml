@@ -3,13 +3,15 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="DataBase_Fosroc.New_Distributor_Database_Conn">
+      <class name="ASM_Portal_Test.ASM_Approval_Test">
         <methods>
+          <include name="setUpDataProviders"/>
           <include name="tearDown"/>
-          <include name="verifyDistributorData"/>
-          <include name="setUp"/>
+          <include name="Approval_Page"/>
+          <include name="generateReport"/>
+          <include name="launchBrowserAndLogin"/>
         </methods>
-      </class> <!-- DataBase_Fosroc.New_Distributor_Database_Conn -->
+      </class> <!-- ASM_Portal_Test.ASM_Approval_Test -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

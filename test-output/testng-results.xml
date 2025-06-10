@@ -1,58 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-03T11:35:45 IST" name="Default suite" finished-at="2025-06-03T11:36:18 IST" duration-ms="33457">
+  <suite started-at="2025-06-09T15:22:21 IST" name="Suite" finished-at="2025-06-09T15:24:51 IST" duration-ms="149794">
     <groups>
     </groups>
-    <test started-at="2025-06-03T11:35:45 IST" name="Default test" finished-at="2025-06-03T11:36:18 IST" duration-ms="33457">
-      <class name="SECR_Portal_Credential.SECR_MTD_Working_Test_DB">
-        <test-method is-config="true" signature="Data_Provider()[pri:0, instance:SECR_Portal_Credential.SECR_MTD_Working_Test_DB@3098cf3b]" started-at="2025-06-03T11:35:44 IST" name="Data_Provider" finished-at="2025-06-03T11:35:45 IST" duration-ms="1280" status="PASS">
+    <test started-at="2025-06-09T15:22:21 IST" name="Test" finished-at="2025-06-09T15:24:51 IST" duration-ms="149794">
+      <class name="ASM_Portal_Test.ASM_Approval_Test">
+        <test-method is-config="true" signature="setUpDataProviders()[pri:0, instance:ASM_Portal_Test.ASM_Approval_Test@2b4bac49]" started-at="2025-06-09T15:22:19 IST" name="setUpDataProviders" finished-at="2025-06-09T15:22:21 IST" duration-ms="1413" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Data_Provider -->
-        <test-method is-config="true" signature="openbrowser()[pri:0, instance:SECR_Portal_Credential.SECR_MTD_Working_Test_DB@3098cf3b]" started-at="2025-06-03T11:35:45 IST" name="openbrowser" finished-at="2025-06-03T11:35:52 IST" duration-ms="7385" status="PASS">
+        </test-method> <!-- setUpDataProviders -->
+        <test-method is-config="true" signature="launchBrowserAndLogin()[pri:0, instance:ASM_Portal_Test.ASM_Approval_Test@2b4bac49]" started-at="2025-06-09T15:24:25 IST" name="launchBrowserAndLogin" finished-at="2025-06-09T15:24:29 IST" duration-ms="3769" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openbrowser -->
-        <test-method signature="MTD_Working()[pri:0, instance:SECR_Portal_Credential.SECR_MTD_Working_Test_DB@3098cf3b]" started-at="2025-06-03T11:35:52 IST" name="MTD_Working" finished-at="2025-06-03T11:36:18 IST" duration-ms="25719" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        </test-method> <!-- launchBrowserAndLogin -->
+        <test-method signature="Approval_Page()[pri:0, instance:ASM_Portal_Test.ASM_Approval_Test@2b4bac49]" started-at="2025-06-09T15:24:29 IST" name="Approval_Page" finished-at="2025-06-09T15:24:50 IST" duration-ms="20563" status="FAIL">
+          <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@class='col-10 col-lg-10']//span[text()='Download'])[2]"}
-  (Session info: chrome=136.0.7103.114)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Documents']"}
+  (Session info: chrome=137.0.7151.69)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b196ecb11eaf4af646c2b60338fe1edd, findElement {using=xpath, value=(//div[@class='col-10 col-lg-10']//span[text()='Download'])[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63676}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63676/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b196ecb11eaf4af646c2b60338fe1edd]]>
+Command: [9c0c5a67b80dc872b98dc5a2b0a035ce, findElement {using=xpath, value=//label[text()='Documents']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51685}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51685/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c0c5a67b80dc872b98dc5a2b0a035ce]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@class='col-10 col-lg-10']//span[text()='Download'])[2]"}
-  (Session info: chrome=136.0.7103.114)
+              <![CDATA[java.lang.RuntimeException: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Documents']"}
+  (Session info: chrome=137.0.7151.69)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b196ecb11eaf4af646c2b60338fe1edd, findElement {using=xpath, value=(//div[@class='col-10 col-lg-10']//span[text()='Download'])[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63676}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63676/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b196ecb11eaf4af646c2b60338fe1edd
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at SECR_Portal_Credential.SECR_MTD_Working_Test_DB.MTD_Working(SECR_MTD_Working_Test_DB.java:40)
+Command: [9c0c5a67b80dc872b98dc5a2b0a035ce, findElement {using=xpath, value=//label[text()='Documents']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51685}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51685/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c0c5a67b80dc872b98dc5a2b0a035ce
+at Com_Utility.ObjectRepo.startTestAndLog_1_SS(ObjectRepo.java:119)
+at ASM_Portal_Test.ASM_Approval_Test.Approval_Page(ASM_Approval_Test.java:53)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -79,21 +66,135 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Documents']"}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9c0c5a67b80dc872b98dc5a2b0a035ce, findElement {using=xpath, value=//label[text()='Documents']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51685}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51685/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c0c5a67b80dc872b98dc5a2b0a035ce
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at ASM_Portal_Test.ASM_Approval_Test.lambda$5(ASM_Approval_Test.java:54)
+at Com_Utility.ObjectRepo.startTestAndLog_1_SS(ObjectRepo.java:84)
+... 27 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- MTD_Working -->
-        <test-method is-config="true" signature="close()[pri:0, instance:SECR_Portal_Credential.SECR_MTD_Working_Test_DB@3098cf3b]" started-at="2025-06-03T11:36:18 IST" name="close" finished-at="2025-06-03T11:36:18 IST" duration-ms="315" status="PASS">
+        </test-method> <!-- Approval_Page -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ASM_Portal_Test.ASM_Approval_Test@2b4bac49]" started-at="2025-06-09T15:24:50 IST" name="tearDown" finished-at="2025-06-09T15:24:51 IST" duration-ms="749" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:ASM_Portal_Test.ASM_Approval_Test@2b4bac49]" started-at="2025-06-09T15:24:51 IST" name="generateReport" finished-at="2025-06-09T15:24:59 IST" duration-ms="8122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+      </class> <!-- ASM_Portal_Test.ASM_Approval_Test -->
+      <class name="DataBase_Fosroc.New_Distributor_Database_Conn">
+        <test-method is-config="true" signature="setupSuite()[pri:0, instance:DataBase_Fosroc.New_Distributor_Database_Conn@fd07cbb]" started-at="2025-06-09T15:22:21 IST" name="setupSuite" finished-at="2025-06-09T15:22:21 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSuite -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:DataBase_Fosroc.New_Distributor_Database_Conn@fd07cbb]" started-at="2025-06-09T15:24:51 IST" name="setUp" finished-at="2025-06-09T15:24:51 IST" duration-ms="140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyDistributorData()[pri:0, instance:DataBase_Fosroc.New_Distributor_Database_Conn@fd07cbb]" started-at="2025-06-09T15:24:51 IST" name="verifyDistributorData" finished-at="2025-06-09T15:24:51 IST" duration-ms="95" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDistributorData -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:DataBase_Fosroc.New_Distributor_Database_Conn@fd07cbb]" started-at="2025-06-09T15:24:51 IST" name="tearDown" finished-at="2025-06-09T15:24:51 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:DataBase_Fosroc.New_Distributor_Database_Conn@fd07cbb]" started-at="2025-06-09T15:25:12 IST" name="tearDownSuite" finished-at="2025-06-09T15:25:19 IST" duration-ms="6470" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSuite -->
+      </class> <!-- DataBase_Fosroc.New_Distributor_Database_Conn -->
+      <class name="SECR_Portal_Credential.New_Distributor_Cred">
+        <test-method is-config="true" signature="setupSuite()[pri:0, instance:SECR_Portal_Credential.New_Distributor_Cred@11fc564b]" started-at="2025-06-09T15:22:21 IST" name="setupSuite" finished-at="2025-06-09T15:22:21 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSuite -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SECR_Portal_Credential.New_Distributor_Cred@11fc564b]" started-at="2025-06-09T15:22:21 IST" name="setUp" finished-at="2025-06-09T15:22:24 IST" duration-ms="3061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testOtpFlowAndRetailerInfo()[pri:0, instance:SECR_Portal_Credential.New_Distributor_Cred@11fc564b]" started-at="2025-06-09T15:22:24 IST" name="testOtpFlowAndRetailerInfo" finished-at="2025-06-09T15:22:39 IST" duration-ms="14395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOtpFlowAndRetailerInfo -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SECR_Portal_Credential.New_Distributor_Cred@11fc564b]" started-at="2025-06-09T15:22:39 IST" name="tearDown" finished-at="2025-06-09T15:22:39 IST" duration-ms="802" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:SECR_Portal_Credential.New_Distributor_Cred@11fc564b]" started-at="2025-06-09T15:25:19 IST" name="tearDownSuite" finished-at="2025-06-09T15:25:25 IST" duration-ms="6471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSuite -->
+      </class> <!-- SECR_Portal_Credential.New_Distributor_Cred -->
+      <class name="HO_Portal_Credential.HO_Distributor_Approval_Page_Test">
+        <test-method is-config="true" signature="Data_Provider()[pri:0, instance:HO_Portal_Credential.HO_Distributor_Approval_Page_Test@32910148]" started-at="2025-06-09T15:22:21 IST" name="Data_Provider" finished-at="2025-06-09T15:22:21 IST" duration-ms="93" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Data_Provider -->
+        <test-method is-config="true" signature="openbrowser()[pri:0, instance:HO_Portal_Credential.HO_Distributor_Approval_Page_Test@32910148]" started-at="2025-06-09T15:22:39 IST" name="openbrowser" finished-at="2025-06-09T15:22:43 IST" duration-ms="4076" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openbrowser -->
+        <test-method signature="DistM_DistributorApprov()[pri:0, instance:HO_Portal_Credential.HO_Distributor_Approval_Page_Test@32910148]" started-at="2025-06-09T15:22:43 IST" name="DistM_DistributorApprov" finished-at="2025-06-09T15:23:02 IST" duration-ms="18661" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DistM_DistributorApprov -->
+        <test-method is-config="true" signature="close()[pri:0, instance:HO_Portal_Credential.HO_Distributor_Approval_Page_Test@32910148]" started-at="2025-06-09T15:23:02 IST" name="close" finished-at="2025-06-09T15:23:03 IST" duration-ms="730" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:SECR_Portal_Credential.SECR_MTD_Working_Test_DB@3098cf3b]" started-at="2025-06-03T11:36:18 IST" name="afterSuite" finished-at="2025-06-03T11:36:18 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:HO_Portal_Credential.HO_Distributor_Approval_Page_Test@32910148]" started-at="2025-06-09T15:24:59 IST" name="afterSuite" finished-at="2025-06-09T15:25:06 IST" duration-ms="6585" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- SECR_Portal_Credential.SECR_MTD_Working_Test_DB -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- HO_Portal_Credential.HO_Distributor_Approval_Page_Test -->
+      <class name="SFA_Portal_Credential.Dist_Approval1st_ApprPage_Cred">
+        <test-method is-config="true" signature="setUpDataProviders()[pri:0, instance:SFA_Portal_Credential.Dist_Approval1st_ApprPage_Cred@3f56875e]" started-at="2025-06-09T15:22:21 IST" name="setUpDataProviders" finished-at="2025-06-09T15:22:21 IST" duration-ms="61" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDataProviders -->
+        <test-method is-config="true" signature="launchBrowserAndLogin()[pri:0, instance:SFA_Portal_Credential.Dist_Approval1st_ApprPage_Cred@3f56875e]" started-at="2025-06-09T15:23:03 IST" name="launchBrowserAndLogin" finished-at="2025-06-09T15:23:07 IST" duration-ms="3719" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowserAndLogin -->
+        <test-method signature="Dist_ApprovePage()[pri:0, instance:SFA_Portal_Credential.Dist_Approval1st_ApprPage_Cred@3f56875e]" started-at="2025-06-09T15:23:07 IST" name="Dist_ApprovePage" finished-at="2025-06-09T15:24:25 IST" duration-ms="78169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Dist_ApprovePage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SFA_Portal_Credential.Dist_Approval1st_ApprPage_Cred@3f56875e]" started-at="2025-06-09T15:24:25 IST" name="tearDown" finished-at="2025-06-09T15:24:25 IST" duration-ms="774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:SFA_Portal_Credential.Dist_Approval1st_ApprPage_Cred@3f56875e]" started-at="2025-06-09T15:25:06 IST" name="generateReport" finished-at="2025-06-09T15:25:12 IST" duration-ms="6628" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+      </class> <!-- SFA_Portal_Credential.Dist_Approval1st_ApprPage_Cred -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
