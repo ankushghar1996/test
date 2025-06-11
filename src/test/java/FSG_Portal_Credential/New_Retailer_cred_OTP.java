@@ -214,7 +214,7 @@ public class New_Retailer_cred_OTP {
         Thread.sleep(1000);
         
         
-        ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_26", "Verify that user should be click on Cancel button.", () -> {
+        ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_27", "Verify that user should be click on Cancel button.", () -> {
         driver.findElement(By.xpath("//button[normalize-space()='CANCEL']")).click();
         });
         Thread.sleep(1000);

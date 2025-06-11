@@ -22,12 +22,14 @@ public class SECR_Pending_Order_DB_Test extends BaseClass_SECR_Portal {
         jse1.executeScript("arguments[0].scrollIntoView(true);", scroll);
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SECR_Pending_Order_DB_Test_TC01", "Verify that user should be able to click on Pending Approved button and search order", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SECR_Pending_Order_DB_Test_TC01", "Verify that user should be able to click on Pending Approved button ", () -> {
             Liabrary.custom_click(SECR.getPending_Order(), "Click On Pending Order");
         });
             Thread.sleep(1000);
 
+            ObjectRepo.startTestAndLog_1_SS("SECR_Pending_Order_DB_Test_TC02", "Verify that user should be able to click on Search by order no and search order", () -> {
             driver.findElement(By.xpath("//input[@placeholder='Search by order no']")).sendKeys("Pending Order");
+            });
             Thread.sleep(1000);
         
     }
