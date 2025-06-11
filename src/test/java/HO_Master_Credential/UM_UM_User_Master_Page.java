@@ -40,7 +40,7 @@ public class UM_UM_User_Master_Page extends BaseClass{
 		Thread.sleep(1000);	
 			
 	    //ObjectRepo.test.log(Status.INFO, "Test Case 4 :Verify that User Master Header Text.");
-		ObjectRepo.startTestAndLog_1_SS("SA_UM_User_Master_Page_TC_03", "Verify that User Master Header Text", () -> {
+		ObjectRepo.startTestAndLog_1_SS("SA_UM_User_Master_Page_TC_04", "Verify that User Master Header Text", () -> {
 			WebElement User_Master_Header_TXT = driver.findElement(By.xpath("(//*[text()='User Master'])[3]"));
 			String Actual_Text = User_Master_Header_TXT.getText();
 			System.out.println(Actual_Text);

@@ -34,6 +34,7 @@ public class UM_UM_User_Master_View_Page extends BaseClass{
 			
 		ObjectRepo.startTestAndLog_1_SS("SA_UM_User_Master_View_Page_TC02", "Click on User Master SubMenu", () -> {
 		 Liabrary.custom_click(hp.getUserMaster_SubMenu(),"User Master Submenu");
+		});
 		    Thread.sleep(1000);
 		    
 	 

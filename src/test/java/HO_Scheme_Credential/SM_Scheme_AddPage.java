@@ -158,75 +158,75 @@ public class SM_Scheme_AddPage extends BaseClass {
         
 
         // TC19 - Distributor Selection
-        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC19_01", "Click Distributor Selection", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC19", "Click Distributor Selection", () -> {
             Liabrary.custom_click(SMA.getDistributorSelection_btn(), "Click Distributor Selection");
         });
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC19_02", "Select Distributor State", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC20", "Select Distributor State", () -> {
             Liabrary.custom_click(SMA.getDistributorState_SelectCheckBox(), "Select Distributor State");
         });
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC19_03", "Select Distributor Town", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC21", "Select Distributor Town", () -> {
             Liabrary.custom_click(SMA.getDistributorTown_SelectCheckBox(), "Select Distributor Town");
         });
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC19_04", "Close Distributor Popup", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC22", "Close Distributor Popup", () -> {
             Liabrary.custom_click(SMA.getClose_btn(), "Close Distributor Popup");
         });
         Thread.sleep(1000);
         
 
         // TC20 - Outlet Type
-        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC20_01", "Click Outlet Type", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC23", "Click Outlet Type", () -> {
             Liabrary.custom_click(SMA.getOutletType_btn(), "Click Outlet Type");
         });
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC20_02", "Select Outlet Type", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC24", "Select Outlet Type", () -> {
             Liabrary.custom_click(SMA.getOutletType_SelectChecBox(), "Select Outlet Type");
         });
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC20_03", "Close Outlet Popup", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC25", "Close Outlet Popup", () -> {
             Liabrary.custom_click(SMA.getCloseScheme_btn(), "Close Outlet Popup");
         });
         Thread.sleep(1000);
         
         
         // TC21 - Slab & Points
-        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC21_01", "Click Slab Basis Dropdown", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC26", "Click Slab Basis Dropdown", () -> {
             Liabrary.custom_click(SMA.getSlabBasis_dropdown(), "Click Slab Basis Dropdown");
         });
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC21_02", "Select Slab Basis Value", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC27", "Select Slab Basis Value", () -> {
             Liabrary.custom_click(SMA.getSlabBasisSelect_dropdown(), "Select Slab Basis Value");
         });
         Thread.sleep(1000);
         
         
-        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC21_03", "Enter TxtOn", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC28", "Enter TxtOn", () -> {
             Liabrary.custom_Sendkeys(SMA.getTxtOn1_ChechBox(), excel.getNumericdata("HO_Scheme_Add", 1, 2), "Enter TxtOn");
         });
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC21_04", "Enter TxtPoint", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC29", "Enter TxtPoint", () -> {
             Liabrary.custom_Sendkeys(SMA.getTxtPoint1_ChechBox(), excel.getNumericdata("HO_Scheme_Add", 1, 3), "Enter TxtPoint");
         });
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC22", "Click Save Button", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC30", "Click Save Button", () -> {
             Liabrary.custom_click(SMA.getSave_btn(), "Click Save Button");
         });
         Thread.sleep(1000);
