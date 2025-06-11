@@ -54,8 +54,14 @@ public class Outlet_Approval_1st_Test extends Base_Class_Distributor {
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("DB_Outlet_Approval_TC_08", "Click on No button", () -> {
-            Liabrary.custom_click(DIST.getNo_Button(), "Click on No Btn");
+        ObjectRepo.startTestAndLog_1_SS("DB_Outlet_Approval_TC_08", "Click on Yes button", () -> {
+            Liabrary.custom_click(DIST.getYes_Button(), "Click on Yes Btn");
         });
+        
+//        ObjectRepo.startTestAndLog_1_SS("DB_Outlet_Approval_TC_08", "Click on No button", () -> {
+//            Liabrary.custom_click(DIST.getNo_Button(), "Click on No Btn");
+//        });
+        
+        
     }
 }
