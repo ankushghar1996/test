@@ -12,6 +12,7 @@ import Com_Utility.BaseClass;
 import Com_Utility.Common_Data;
 import Com_Utility.HomePage;
 import Com_Utility.Liabrary;
+import Com_Utility.ObjectRepo;
 import HO_Master.RM_Route_Master;
 
 public class RM_RM_Route_Master_Page extends BaseClass{
@@ -24,51 +25,61 @@ public class RM_RM_Route_Master_Page extends BaseClass{
 	Common_Data CD = PageFactory.initElements(driver,Common_Data.class);	
 	
 	
-	//ObjectRepo.test.log(Status.INFO, "Test Case 1 : Verify that user should be select Master Menu.");
-		Liabrary.custom_click(hp.getMaster_Menu(),"Select Master Menu");
-		Thread.sleep(1000);
+	ObjectRepo.startTestAndLog_1_SS("SA_RM_RM_Route_Master_Page_TC_01", "Verify click on Master Menu", () -> {
+        Liabrary.custom_click(hp.getMaster_Menu(), "Select Master Menu");
+    });
+    Thread.sleep(1000);
 		
 		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 2 : Verify that user should be select Route Master sub menu.")
+    ObjectRepo.startTestAndLog_1_SS("SA_RM_RM_Route_Master_Page_TC_02", "Verify click on Route Master Submenu", () -> {
 		Liabrary.custom_click(hp.getRouteMaster_SubMenu(),"Select Route Master Submenu");
+    });
 		Thread.sleep(1000);
 		
-		
-		//ObjectRepo.test.log(Status.INFO, "Test Case 3 : Verify that user should be select Route Master Page.");	
+			
+		ObjectRepo.startTestAndLog_1_SS("SA_RM_RM_Route_Master_Page_TC_03", "Select Route Master Page", () -> {
 		Liabrary.custom_click(RM1.getRoute_Master_Menu_Btn(),"Select Route Master Page");
+		});
 		Thread.sleep(1000);
 		
 		
-	   //ObjectRepo.test.log(Status.INFO, "Test Case 4 :Verify that Route Master Header Text.");
+		ObjectRepo.startTestAndLog_1_SS("SA_RM_RM_Route_Master_Page_TC_04", "Verify that Route Master Header Text", () -> {
 		WebElement PJP_Master_Header_Text = driver.findElement(By.xpath("//h4[text()='Route Master']"));
 		String Actual_Text= PJP_Master_Header_Text.getText();
 		System.out.println(Actual_Text);
 		String Expected_Text= "Route Master";
 		Assert.assertEquals(Expected_Text,Actual_Text);	
+		});
 
 		
-	 //ObjectRepo.test.log(Status.INFO, "Test Case 5 : Verify that user should be select Channel Type Dropdown");	
+	
+		ObjectRepo.startTestAndLog_1_SS("SA_RM_RM_Route_Master_Page_TC_05", "select Channel Type Dropdown", () -> {
 		Liabrary.custom_click(RM1.getChannel_Type_Dropdown(),"Select Channel Type Dropdown");
+		});
 		Thread.sleep(1000);
 		
 		
-	//ObjectRepo.test.log(Status.INFO, "Test Case 6 : Verify that user should be select Channel Type Dropdown Value");	
+		ObjectRepo.startTestAndLog_1_SS("SA_RM_RM_Route_Master_Page_TC_06", "select Channel Type Dropdown Value", () -> {
 		Liabrary.custom_click(RM1.getChannel_Type_Dropdown_Value(),"Select Channel Type Dropdown value");
+		});
 		Thread.sleep(1000);	
 		
 		
-	//ObjectRepo.test.log(Status.INFO, "Test Case 7 : Verify that user should be select Distributor Dropdown");	
+		ObjectRepo.startTestAndLog_1_SS("SA_RM_RM_Route_Master_Page_TC_07", "select Distributor Dropdown", () -> {
 		Liabrary.custom_click(RM1.getDistributor_Dropdown(),"Select Distributor Dropdown");
+		});
 		Thread.sleep(1000);
 		
 		
-	//ObjectRepo.test.log(Status.INFO, "Test Case 8 : Verify that user should be select Distributor Dropdown Value");	
+		ObjectRepo.startTestAndLog_1_SS("SA_RM_RM_Route_Master_Page_TC_08", "select Distributor Dropdown Value", () -> {
 		Liabrary.custom_click(RM1.getDistributor_Dropdown_Value(),"Select Distributor Dropdown value");
+		});
 		Thread.sleep(1000);
 		
-		
-	//ObjectRepo.test.log(Status.INFO, "Test Case 8 : Verify that user should be click on search Button");	
+			
+		ObjectRepo.startTestAndLog_1_SS("SA_RM_RM_Route_Master_Page_TC_09", "click on search Button", () -> {
 		Liabrary.custom_click(RM1.getSearch_Button(),"Click On Search Button");
+		});
 		Thread.sleep(1000);
 		
 		
@@ -107,24 +118,6 @@ public class RM_RM_Route_Master_Page extends BaseClass{
 		}
 		Liabrary.compare_value(RM1.getVerify_Text(),"Giri Nagar");
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
