@@ -126,10 +126,21 @@ public class OutletMaster_ApprovalPage {
     private WebElement Close_btn;
 	
 	
+	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_btnNo']")
+    private WebElement No_btn;
 	
 	
-	
-	
+	public WebElement getNo_btn() {
+		return No_btn;
+	}
+
+
+	public WebElement getYes_btn() {
+		return Yes_btn;
+	}
+
+	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_btnYes']")
+    private WebElement Yes_btn;
 	
 	
 	
