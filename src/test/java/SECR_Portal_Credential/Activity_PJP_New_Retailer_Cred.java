@@ -53,6 +53,7 @@ public class Activity_PJP_New_Retailer_Cred {
 
 	        // Login
 	        driver.get("https://fosrocsecruat.hspldms.com/");
+	        ObjectRepo.driver = driver;
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_01", "Verify that user should be send SECR User Name.", () -> {

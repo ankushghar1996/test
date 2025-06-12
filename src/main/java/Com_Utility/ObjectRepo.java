@@ -119,9 +119,6 @@ public class ObjectRepo {
             throw new RuntimeException(e); // Rethrow to fail the test
         }
     }
-
-    
-    
     
 
     public static void startTestAndLog_2(String testNumber, String testDescription) {
@@ -168,7 +165,7 @@ public class ObjectRepo {
                         String errorText = errorMessage.getText();
                         System.out.println("Flash Message Print: " + errorText);
                         System.out.println("Test Case Number: " + testNumber_Print_Massage);
-                        test.pass("  Flash Massage: " + errorText);
+                        test.fail("  Flash Massage: " + errorText);
                         logTestWithScreenshot("Error captured for  " + testNumber_Print_Massage);
                     }
                 }
@@ -230,7 +227,7 @@ public class ObjectRepo {
                 return;
             }
             Thread.sleep(5000);
-            Demo_Mail.sendReportEmail();
+           // Demo_Mail.sendReportEmail();
         } catch (Exception e) {
             System.out.println("❌ Failed to send email: " + e.getMessage());
             e.printStackTrace();

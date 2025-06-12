@@ -78,7 +78,7 @@ public class BaseClass_SECR_Portal {
             driver.quit();
         }
     }
- 
+   
     
     // AfterSuite to finalize the ExtentReports and generate the final report after all tests are executed
     @AfterSuite

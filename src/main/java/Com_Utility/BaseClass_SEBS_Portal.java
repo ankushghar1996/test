@@ -30,7 +30,7 @@ public class BaseClass_SEBS_Portal {
  
         // Initialize Extent Reports
     
-        //	ObjectRepo.initializeReport();
+        	ObjectRepo.initializeReport();
         	
         	
     }
@@ -48,7 +48,7 @@ public class BaseClass_SEBS_Portal {
 	    driver.get("https://fosrocsebsuat.hspldms.com/");
 	    driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	    
+	    ObjectRepo.driver = driver;
 	  
 	    SECR_Login login = PageFactory.initElements(driver, SECR_Login.class);
 
@@ -85,7 +85,7 @@ public class BaseClass_SEBS_Portal {
     public void afterSuite() {
         // Finalize the report after all tests are executed
    
-    //	ObjectRepo.finalizeReport();
+   	ObjectRepo.finalizeReport();
         
         
     }
