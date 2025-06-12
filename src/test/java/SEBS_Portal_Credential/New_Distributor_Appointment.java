@@ -19,7 +19,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import Com_Utility.ObjectRepo;
@@ -31,6 +33,16 @@ public class New_Distributor_Appointment {
 	
 	 	WebDriver driver;
 
+	 	
+	 	 @BeforeSuite
+	     public void setupSuite() {
+	 		
+	         ObjectRepo.initializeReport();  // Important: Initializes the Extent report
+	         
+	         
+	     }
+	 	
+	 	
 	    @BeforeClass
 	    public void setUp() {
 	        
@@ -44,6 +56,8 @@ public class New_Distributor_Appointment {
 
 	    	    driver = new ChromeDriver(options);
 	    	    driver.manage().window().maximize();
+	    	    
+	    	    ObjectRepo.driver = driver;
 	    	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	        
 	    }
@@ -52,7 +66,7 @@ public class New_Distributor_Appointment {
 	    @Test
 	    public void testOtpFlowAndRetailerInfo() throws Exception {
 	    	
-	        String mobileNumber = "9547852018";
+	        String mobileNumber = "9547853121";
 
 	        // Login
 	        
@@ -145,7 +159,7 @@ public class New_Distributor_Appointment {
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_016", "Send  Distributor Firm Name ", () -> {
-	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name']")).sendKeys("vinay enterprises");});
+	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name']")).sendKeys("Govinda enterprises");});
 	        Thread.sleep(1000);
 	        
 	       /* 
@@ -167,7 +181,7 @@ public class New_Distributor_Appointment {
 
 	        
 	      ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_018", "Enter Contact Person Name", ()-> {     
-	        driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("Vinay Thakur");});
+	        driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("govind Thakur");});
 	        Thread.sleep(1000);
 	        
 	       ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_019", "Enter Contact Number", ()-> {  
@@ -270,7 +284,7 @@ public class New_Distributor_Appointment {
 	            System.out.println("Switch Camera button not found or not clickable.");
 	        } });
 
-	        Thread.sleep(5000);
+	        Thread.sleep(2000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_035", "Select camera  and capture", ()-> { 
 	        	
@@ -288,8 +302,82 @@ public class New_Distributor_Appointment {
 	        Thread.sleep(5000);
 	       
 	    
+	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_036", "Click on camera button", ()-> {  
+		        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[2]")).click();});
+		        Thread.sleep(1000);
+
+		        
+		        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_037", "Select camera  and capture", ()-> {  
+		        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		        
+		        // Wait for the Switch Camera button and click it
+		        try {
+		            WebElement switchCamBtn = wait1.until(ExpectedConditions.elementToBeClickable(
+		                By.xpath("//div[@class='switch-cam']//button[1]")));
+		            switchCamBtn.click();
+		            System.out.println("Switch Camera button clicked.");
+		        } catch (TimeoutException e) {
+		            System.out.println("Switch Camera button not found or not clickable.");
+		        } });
+
+		        Thread.sleep(2000);
+		        
+		        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_038", "Select camera  and capture", ()-> { 
+		        	
+		        	 WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		        // Wait for the Capture button and click it
+		        try {
+		            WebElement captureBtn = wait2.until(ExpectedConditions.elementToBeClickable(
+		                By.xpath("(//button[@class='capture-button'])[3]")));
+		            captureBtn.click();
+		            System.out.println("Capture button clicked.");
+		        } catch (TimeoutException e) {
+		            System.out.println("Capture button not found or not clickable.");
+		        }
+		        });
+		        Thread.sleep(5000);
+		        
+		        
+		        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_39", "Click on camera button", ()-> {  
+			        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[3]")).click();});
+			        Thread.sleep(1000);
+
+			        
+			        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_40", "Select camera  and capture", ()-> {  
+			        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+			        
+			        // Wait for the Switch Camera button and click it
+			        try {
+			            WebElement switchCamBtn = wait1.until(ExpectedConditions.elementToBeClickable(
+			                By.xpath("//div[@class='switch-cam']//button[1]")));
+			            switchCamBtn.click();
+			            System.out.println("Switch Camera button clicked.");
+			        } catch (TimeoutException e) {
+			            System.out.println("Switch Camera button not found or not clickable.");
+			        } });
+
+			        Thread.sleep(5000);
+			        
+			        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_41", "Select camera  and capture", ()-> { 
+			        	
+			        	 WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+			        // Wait for the Capture button and click it
+			        try {
+			            WebElement captureBtn = wait2.until(ExpectedConditions.elementToBeClickable(
+			                By.xpath("(//button[@class='capture-button'])[3]")));
+			            captureBtn.click();
+			            System.out.println("Capture button clicked.");
+			        } catch (TimeoutException e) {
+			            System.out.println("Capture button not found or not clickable.");
+			        }
+			        });
+			        Thread.sleep(5000);
 	        
-	   //     driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();
+			        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_032", "click on save btn", ()-> {  
+	        driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();
+			        });
 	     //   Thread.sleep(1000);
 	        
 	        
@@ -320,7 +408,7 @@ public class New_Distributor_Appointment {
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
 
-	            String query = "select * from RegistrationPendingMaster where MobileNo=9547852018";
+	            String query = "select * from RegistrationPendingMaster where MobileNo=9547853121";
 	            
 	            ResultSet rs = stmt.executeQuery(query);
 	            
@@ -351,7 +439,14 @@ public class New_Distributor_Appointment {
 	        }
 	    }
 	
-	
+	    @AfterSuite
+	    public void tearDownSuite() {
+	    	
+	    	
+	        ObjectRepo.finalizeReport();  // Flushes the report
+	        
+	        
+	    }
 	
 	
 	

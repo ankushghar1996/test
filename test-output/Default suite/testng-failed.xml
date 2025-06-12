@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="HO_Portal_Credential.OutletMaster_ApprovalPageCred">
+      <class name="SECR_Portal_Credential.Activity_PJP_New_Retailer_Cred">
         <methods>
-          <include name="Data_Provider"/>
-          <include name="afterSuite"/>
-          <include name="openbrowser"/>
-          <include name="close"/>
-          <include name="OM_View"/>
+          <include name="tearDown"/>
+          <include name="setupSuite"/>
+          <include name="setUp"/>
+          <include name="testOtpFlowAndRetailerInfo"/>
+          <include name="tearDownSuite"/>
         </methods>
-      </class> <!-- HO_Portal_Credential.OutletMaster_ApprovalPageCred -->
+      </class> <!-- SECR_Portal_Credential.Activity_PJP_New_Retailer_Cred -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
