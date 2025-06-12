@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -30,7 +31,7 @@ public class BaseClass_SEBS_Portal {
  
         // Initialize Extent Reports
     
-        //	ObjectRepo.initializeReport();
+       	ObjectRepo.initializeReport();
         	
         	
     }
@@ -43,10 +44,18 @@ public class BaseClass_SEBS_Portal {
 	    
 		 WebDriverManager.chromedriver().setup();
 		
-	    driver = new ChromeDriver(); 
+		 ChromeOptions options = new ChromeOptions();
+ 	    options.addArguments("--use-fake-device-for-media-stream");
+ 	    options.addArguments("--use-fake-ui-for-media-stream");
+ 	    options.addArguments("--use-file-for-fake-video-capture=C:\\test\\sample-video.y4m"); // 👈 provide a real path
+		 
+	    driver = new ChromeDriver(options); 
 
 	    driver.get("https://fosrocsebsuat.hspldms.com/");
 	    driver.manage().window().maximize();
+	    
+	    ObjectRepo.driver = driver;
+	    
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
 	  
@@ -85,7 +94,7 @@ public class BaseClass_SEBS_Portal {
     public void afterSuite() {
         // Finalize the report after all tests are executed
    
-    //	ObjectRepo.finalizeReport();
+    	ObjectRepo.finalizeReport();
         
         
     }

@@ -22,9 +22,9 @@ public class New_Distributor_Database_Conn {
     ResultSet rs;
 
     // Expected values
-    String expectedName = "Pratik Thakur Enterprises and sons";
-    String expectedCode = "10041";
-    String expectedId = "31";
+    String expectedName = "Bramha Thakur Enterprises and sons";
+    String expectedCode = "10052";
+    String expectedId = "38";
     String expectedBeat = "Koregaon Park";
     
     
@@ -70,7 +70,7 @@ public class New_Distributor_Database_Conn {
 
             if (expectedName.equals(name) && expectedCode.equals(code)
                     && expectedId.equals(id) && expectedBeat.equals(beat)) {
-            	System.out.println("Test Pass: Data Matched Successfully  && Pratik Thakur Enterprises and sons | 10041 | 31 | Koregaon Park");
+            	System.out.println("Test Pass: Data Matched Successfully  && Bramha Thakur Enterprises and sons and sons | 10052 | 38 | Koregaon Park");
                 matchFound = true;
                 break;
                 

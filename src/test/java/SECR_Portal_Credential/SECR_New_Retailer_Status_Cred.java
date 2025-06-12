@@ -17,7 +17,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import Com_Utility.ObjectRepo;
@@ -28,6 +30,16 @@ public class SECR_New_Retailer_Status_Cred {
 	
 	 WebDriver driver;
 
+	 @BeforeSuite
+     public void setupSuite() {
+ 		
+         ObjectRepo.initializeReport();  // Important: Initializes the Extent report
+         
+         
+     }
+	 
+	 
+	 
 	    @BeforeClass
 	    public void setUp() {
 	        
@@ -41,6 +53,10 @@ public class SECR_New_Retailer_Status_Cred {
 
 	   	    driver = new ChromeDriver(options);
 	   	    driver.manage().window().maximize();
+	   	    
+	   	 ObjectRepo.driver = driver;
+	   	    
+	   	    
 	   	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	   	    
 	   	    
@@ -367,7 +383,15 @@ public class SECR_New_Retailer_Status_Cred {
 	        }
 	    }
 	
-	
+	    @AfterSuite
+	    public void tearDownSuite() {
+	    	
+	    	
+	        ObjectRepo.finalizeReport();  // Flushes the report
+	        
+	        
+	    }
+	    
 	
 	
 }

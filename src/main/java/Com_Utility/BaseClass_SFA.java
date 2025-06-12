@@ -34,6 +34,9 @@ public class BaseClass_SFA {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://fosrocuat.hspldms.com/");
+        
+        ObjectRepo.driver = driver;
+        
  
         LoginPage login = PageFactory.initElements(driver, LoginPage.class);
  

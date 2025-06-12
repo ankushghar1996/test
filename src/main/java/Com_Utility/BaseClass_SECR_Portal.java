@@ -30,7 +30,7 @@ public class BaseClass_SECR_Portal {
  
         // Initialize Extent Reports
     
-        //	ObjectRepo.initializeReport();
+        	ObjectRepo.initializeReport();
         	
         	
     }
@@ -47,6 +47,9 @@ public class BaseClass_SECR_Portal {
 
 	    driver.get("https://fosrocsecruat.hspldms.com/");
 	    driver.manage().window().maximize();
+	    
+	    ObjectRepo.driver = driver;
+	    
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
 	  
@@ -85,7 +88,7 @@ public class BaseClass_SECR_Portal {
     public void afterSuite() {
         // Finalize the report after all tests are executed
    
-    //	ObjectRepo.finalizeReport();
+   	ObjectRepo.finalizeReport();
         
         
     }

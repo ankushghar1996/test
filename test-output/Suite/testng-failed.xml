@@ -3,6 +3,15 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="SEBS_Portal_Credential.New_Site_Cred">
+        <methods>
+          <include name="SEBS_New_Site_Cred"/>
+          <include name="afterSuite"/>
+          <include name="openbrowser"/>
+          <include name="close"/>
+          <include name="Data_Provider"/>
+        </methods>
+      </class> <!-- SEBS_Portal_Credential.New_Site_Cred -->
       <class name="ASM_Portal_Test.ASM_Approval_Test">
         <methods>
           <include name="setUpDataProviders"/>
@@ -12,6 +21,60 @@
           <include name="launchBrowserAndLogin"/>
         </methods>
       </class> <!-- ASM_Portal_Test.ASM_Approval_Test -->
+      <class name="SEBS_Portal_Credential.New_Distributor_Appointment">
+        <methods>
+          <include name="tearDownSuite"/>
+          <include name="setupSuite"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testOtpFlowAndRetailerInfo"/>
+        </methods>
+      </class> <!-- SEBS_Portal_Credential.New_Distributor_Appointment -->
+      <class name="DataBase_Fosroc.New_Distributor_Database_Conn">
+        <methods>
+          <include name="tearDownSuite"/>
+          <include name="setupSuite"/>
+          <include name="tearDown"/>
+          <include name="verifyDistributorData"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- DataBase_Fosroc.New_Distributor_Database_Conn -->
+      <class name="SEBS_Portal_Credential.SEBS_New_Contractors_Test">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="openbrowser"/>
+          <include name="close"/>
+          <include name="New_Contractors"/>
+          <include name="Data_Provider"/>
+        </methods>
+      </class> <!-- SEBS_Portal_Credential.SEBS_New_Contractors_Test -->
+      <class name="SEBS_Portal_Credential.SEBS_New_Applicator_Creation_Test">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="openbrowser"/>
+          <include name="Applicator_creation"/>
+          <include name="close"/>
+          <include name="Data_Provider"/>
+        </methods>
+      </class> <!-- SEBS_Portal_Credential.SEBS_New_Applicator_Creation_Test -->
+      <class name="SFA_Portal_Credential.Dist_Approval1st_ApprPage_Cred">
+        <methods>
+          <include name="tearDown"/>
+          <include name="Dist_ApprovePage"/>
+          <include name="setUpDataProviders"/>
+          <include name="launchBrowserAndLogin"/>
+          <include name="generateReport"/>
+        </methods>
+      </class> <!-- SFA_Portal_Credential.Dist_Approval1st_ApprPage_Cred -->
+      <class name="SECR_Portal_Credential.Activity_PJP_New_Retailer_Cred">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setupSuite"/>
+          <include name="setUp"/>
+          <include name="testOtpFlowAndRetailerInfo"/>
+          <include name="tearDownSuite"/>
+        </methods>
+      </class> <!-- SECR_Portal_Credential.Activity_PJP_New_Retailer_Cred -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -47,6 +47,9 @@ public class BaseClass_Retailer_Portal {
 
 	    driver.get("https://fosrocretaileruat.hspldms.com/");
 	    driver.manage().window().maximize();
+	    
+	    ObjectRepo.driver = driver;
+	    
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
 	  /*
