@@ -69,7 +69,7 @@ public class New_Distributor_Cred {
 	 	@Test
 	 	public void testOtpFlowAndRetailerInfo() throws Exception {
 	 	    
-	 	    String mobileNumber = "8678412433";
+	 	    String mobileNumber = "9854265536";
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_01", "Verify that user should be send SECR User Name.", () -> {
 	 	        driver.findElement(By.xpath("//input[@placeholder='User Name']")).sendKeys("SECR-008");
@@ -186,7 +186,7 @@ public class New_Distributor_Cred {
 	 	    
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_17", "Verify that user should be send Distributor Firm Name.", () -> {
-	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name*']")).sendKeys("Bramha Thakur Enterprises and sons");
+	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name*']")).sendKeys("Abhilash Thakur Enterprises and sons");
 	 	    });
 	 	    Thread.sleep(1000);
 	        
@@ -217,7 +217,7 @@ public class New_Distributor_Cred {
 	 	    
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_20", "Verify that user should be send Contact Person Name.", () -> {
-	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("Bramha Thakur");
+	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("Abhi Thakur");
 	 	    });
 	 	    Thread.sleep(1000);
 	        
@@ -448,41 +448,45 @@ public class New_Distributor_Cred {
 
 	    
 	    
-	    private static String getOtpFromDb(String mobileNumber) {
-	    	
-	        String otp = null;
+	 	 private static String getOtpFromDb(String mobileNumber) {
+		    	
+		        String otp = null;
 
-	        String url = "jdbc:sqlserver://172.25.0.74:1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
-	        String username = "Test_Team";
-	        String password = "Pass@2025";
+		        String url = "jdbc:sqlserver://172.25.0.74:1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
+		        String username = "Test_Team";
+		        String password = "Pass@2025";
 
-	        try {
-	        	
-	            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-	            Connection conn = DriverManager.getConnection(url, username, password);
-	            Statement stmt = conn.createStatement();
+		        try {
+		        	
+		            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		            Connection conn = DriverManager.getConnection(url, username, password);
+		            Statement stmt = conn.createStatement();
 
-	            String query = "select * from RegistrationPendingMaster where MobileNo=8678412433";
-	            
-	            ResultSet rs = stmt.executeQuery(query);
-	            
-	            if (rs.next()) {
-	            	
-	                otp = rs.getString("otp");
-	                
-	            }
-	            conn.close();
-	            
-	        } catch (Exception e) {
-	        	
-	            e.printStackTrace();
-	            
-	        }
+		            String query = "select * from RegistrationPendingMaster where MobileNo='9854265536'";
+		            
+		            ResultSet rs = stmt.executeQuery(query);
+		            
+		            if (rs.next()) {
+		            	
+		                otp = rs.getString("otp");
+		                
+		            }
+		            conn.close();
+		            
+		        } catch (Exception e) {
+		        	
+		            e.printStackTrace();
+		            
+		        }
 
-	        return otp;
-	        
-	    }
-
+		        return otp;
+		        
+		    
+	 	}
+	 	 
+	 	 
+	 	 
+	 	 
 	    @AfterMethod
 	    public void tearDown() {
 	    	

@@ -41,7 +41,7 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		Thread.sleep(1000);
 		
 		
-		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9854126326");
+		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9854165870");
 		Thread.sleep(1000);
 		
 		driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
@@ -88,7 +88,7 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		
 		
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_12", "Send Site Name", () ->{
-		driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("raja sharma");});
+		driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("sahil dev");});
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_13", "Click on Chcekbox_flexCheckDefault", () ->{
@@ -119,11 +119,11 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		
 		
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_16", "Enter Contractor Name", () ->{
-		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("raja");});
+		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("sahil");});
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_17", "Enter Contractor Contact Number", () ->{
-		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Contact Number.']")).sendKeys("9654120120");});
+		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Contact Number.']")).sendKeys("9654120165");});
 		Thread.sleep(1000);
 		
 		
