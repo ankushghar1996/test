@@ -35,8 +35,25 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
             Liabrary.custom_click(SEBS.getCreation_Button(), "Creation Button");
         });
         Thread.sleep(1000);
+        
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC04", "Click on Add Button", () -> {
+        driver.findElement(By.xpath("(//div[@class='circle-add'])[1]")).click();
+        });
+        Thread.sleep(1000);
+        
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC05", "enter mobile number", () -> {
+        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9547821540");
+        });
+        Thread.sleep(1000);
+        
+        
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC04", "Click on CONTINUE Button", () -> {
+        driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
+        });
+        Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC04", "Click on Distributor Dropdown", () -> {
+        
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC05", "Click on Distributor Dropdown", () -> {
             Liabrary.custom_click(SEBS.getSelect_Distributor_Dropdown(), "Distributor Dropdown");
         });
         Thread.sleep(1000);
@@ -67,7 +84,7 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC10", "Enter Contractor Name", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("HSPL ");
+            driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("Ajay Bhatiya");
         });
         Thread.sleep(1000);
 
@@ -86,7 +103,7 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC13", "Enter Contact Number", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Contact Number']")).sendKeys("123456789");
+            driver.findElement(By.xpath("//input[@placeholder='Enter Contact Number']")).sendKeys("9874569874");
         });
         Thread.sleep(1000);
 
@@ -135,7 +152,7 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC22", "Enter Aadhaar Number", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Aadhar Number']")).sendKeys("123456789");
+            driver.findElement(By.xpath("//input[@placeholder='Enter Aadhar Number']")).sendKeys("803756789012");
         });
         Thread.sleep(1000);
 
@@ -149,12 +166,12 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC24", "Enter GST Number", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter GST Number']")).sendKeys("GHJ151515");
+            driver.findElement(By.xpath("//input[@placeholder='Enter GST Number']")).sendKeys("27AAAPA1234A1Z5");
         });
         Thread.sleep(1000);
 
-        // Camera Clicks
-        for (int i = 1; i <= 3; i++) {
+        /* Camera Clicks
+        for (int i = 1; i <= 2; i++) {
             final int index = i;
             ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC2" + (4 + i), "Capture Document Image " + index, () -> {
                 driver.findElement(By.xpath("(//div[@class='upload-documents-container']//span[@class='circle-camera'])[" + index + "]")).click();
@@ -191,6 +208,86 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
             });
             Thread.sleep(1000);
         }
+
+*/
+
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC_033", "Click on camera button", ()-> {  
+	        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();});
+	        Thread.sleep(1000);
+
+	        
+	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC_034", "Select camera  and capture", ()-> {  
+	        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	        
+	        // Wait for the Switch Camera button and click it
+	        try {
+	            WebElement switchCamBtn = wait1.until(ExpectedConditions.elementToBeClickable(
+	                By.xpath("//div[@class='switch-cam']//button[1]")));
+	            switchCamBtn.click();
+	            System.out.println("Switch Camera button clicked.");
+	        } catch (TimeoutException e) {
+	            System.out.println("Switch Camera button not found or not clickable.");
+	        } });
+
+	        Thread.sleep(2000);
+	        
+	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC_035", "Select camera  and capture", ()-> { 
+	        	
+	        	 WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+	        // Wait for the Capture button and click it
+	        try {
+	            WebElement captureBtn = wait2.until(ExpectedConditions.elementToBeClickable(
+	                By.xpath("(//button[@class='capture-button'])[3]")));
+	            captureBtn.click();
+	            System.out.println("Capture button clicked.");
+	        } catch (TimeoutException e) {
+	            System.out.println("Capture button not found or not clickable.");
+	        }
+	        });
+	        Thread.sleep(5000);
+        
+        
+        
+	        ObjectRepo.startTestAndLog_1_SS("SEBSNew_Contractors_Test_033", "Click on camera button", ()-> {  
+		        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[2]")).click();});
+		        Thread.sleep(1000);
+
+		        
+		        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC_034", "Select camera  and capture", ()-> {  
+		        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		        
+		        // Wait for the Switch Camera button and click it
+		        try {
+		            WebElement switchCamBtn = wait1.until(ExpectedConditions.elementToBeClickable(
+		                By.xpath("//div[@class='switch-cam']//button[1]")));
+		            switchCamBtn.click();
+		            System.out.println("Switch Camera button clicked.");
+		        } catch (TimeoutException e) {
+		            System.out.println("Switch Camera button not found or not clickable.");
+		        } });
+
+		        Thread.sleep(2000);
+		        
+		        ObjectRepo.startTestAndLog_1_SS("SEBS_New_New_Contractors_Test_TC_035", "Select camera  and capture", ()-> { 
+		        	
+		        	 WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		        // Wait for the Capture button and click it
+		        try {
+		            WebElement captureBtn = wait2.until(ExpectedConditions.elementToBeClickable(
+		                By.xpath("(//button[@class='capture-button'])[3]")));
+		            captureBtn.click();
+		            System.out.println("Capture button clicked.");
+		        } catch (TimeoutException e) {
+		            System.out.println("Capture button not found or not clickable.");
+		        }
+		        });
+		        Thread.sleep(5000);
+	        
+	        
+	        
+	        
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC28", "Click on SAVE button", () -> {
             driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();

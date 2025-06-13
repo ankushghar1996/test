@@ -44,6 +44,9 @@ public class BaseClass_HO_Portal {
 
 	    driver.get("https://fosrocuat.hspldms.com");
 	    driver.manage().window().maximize();
+	    
+	    ObjectRepo.driver = driver;
+	    
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
 	   

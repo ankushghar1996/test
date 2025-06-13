@@ -69,7 +69,7 @@ public class New_Distributor_Cred {
 	 	@Test
 	 	public void testOtpFlowAndRetailerInfo() throws Exception {
 	 	    
-	 	    String mobileNumber = "8678412403";
+	 	    String mobileNumber = "8678412433";
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_01", "Verify that user should be send SECR User Name.", () -> {
 	 	        driver.findElement(By.xpath("//input[@placeholder='User Name']")).sendKeys("SECR-008");
@@ -186,7 +186,7 @@ public class New_Distributor_Cred {
 	 	    
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_17", "Verify that user should be send Distributor Firm Name.", () -> {
-	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name*']")).sendKeys("vansh Thakur Enterprises and sons");
+	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name*']")).sendKeys("Bramha Thakur Enterprises and sons");
 	 	    });
 	 	    Thread.sleep(1000);
 	        
@@ -217,7 +217,7 @@ public class New_Distributor_Cred {
 	 	    
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_20", "Verify that user should be send Contact Person Name.", () -> {
-	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("Pratik Thakur");
+	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("Bramha Thakur");
 	 	    });
 	 	    Thread.sleep(1000);
 	        
@@ -462,7 +462,7 @@ public class New_Distributor_Cred {
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
 
-	            String query = "select * from RegistrationPendingMaster where MobileNo=8678412403";
+	            String query = "select * from RegistrationPendingMaster where MobileNo=8678412433";
 	            
 	            ResultSet rs = stmt.executeQuery(query);
 	            

@@ -1,9 +1,14 @@
 package SEBS_Portal_Credential;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import Com_Utility.BaseClass_SEBS_Portal;
@@ -19,6 +24,10 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		
 		New_Site_Creation view = PageFactory.initElements(driver, New_Site_Creation.class);
 	
+		
+		
+		
+		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_01", "Click on SEBS Menu", () ->{
 		Liabrary.custom_click(view.getSEBS_Menu(), null);});
 		Thread.sleep(1000);
@@ -29,6 +38,13 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_03", "Click on Add Menu", () ->{
 		Liabrary.custom_click(view.getAdd_Menu(), null);});
+		Thread.sleep(1000);
+		
+		
+		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9854126326");
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_04", "Click on Distributor_Mapped", () ->{
@@ -72,7 +88,7 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		
 		
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_12", "Send Site Name", () ->{
-		driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("mukeshdelhi");});
+		driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("raja sharma");});
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_13", "Click on Chcekbox_flexCheckDefault", () ->{
@@ -103,17 +119,66 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		
 		
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_16", "Enter Contractor Name", () ->{
-		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("raj");});
+		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("raja");});
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_17", "Enter Contractor Contact Number", () ->{
-		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Contact Number.']")).sendKeys("9654120142");});
+		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Contact Number.']")).sendKeys("9654120120");});
 		Thread.sleep(1000);
 		
 		
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_18", "Click on CANCEL_Button", () ->{
-		Liabrary.custom_click(view.getCANCEL_Button(), null);});
+		 ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_39", "Click on camera button", ()-> {  
+		        driver.findElement(By.xpath("(//div[@class='new-retailer-container o-hidden']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();});
+		        Thread.sleep(1000);
+
+		        
+		        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_40", "Select camera  and capture", ()-> {  
+		        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		        
+		        // Wait for the Switch Camera button and click it
+		        try {
+		            WebElement switchCamBtn = wait1.until(ExpectedConditions.elementToBeClickable(
+		                By.xpath("//div[@class='switch-cam']//button[1]")));
+		            switchCamBtn.click();
+		            System.out.println("Switch Camera button clicked.");
+		        } catch (TimeoutException e) {
+		            System.out.println("Switch Camera button not found or not clickable.");
+		        } });
+
+		        Thread.sleep(5000);
+		        
+		        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_41", "Select camera  and capture", ()-> { 
+		        	
+		        	 WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		        // Wait for the Capture button and click it
+		        try {
+		            WebElement captureBtn = wait2.until(ExpectedConditions.elementToBeClickable(
+		                By.xpath("(//button[@class='capture-button'])[3]")));
+		            captureBtn.click();
+		            System.out.println("Capture button clicked.");
+		        } catch (TimeoutException e) {
+		            System.out.println("Capture button not found or not clickable.");
+		        }
+		        });
+		        Thread.sleep(5000);
 		
+		
+		
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_18", "Click on Save_Button", () ->{
+		Liabrary.custom_click(view.getSAVE_Button(), "Save Button");
+		});
+		Thread.sleep(8000);
+		
+		
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_19", "Click on Okay Button", () ->{
+		driver.findElement(By.xpath("//button[normalize-space()='OKAY']")).click();		
+	});
+		Thread.sleep(4000);
+		
+//		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_18", "Click on CANCEL_Button", () ->{
+//		Liabrary.custom_click(view.getCANCEL_Button(), null);});
+//		
 		
 		
 		

@@ -30,6 +30,9 @@ public class BaseClass_Retailer {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://fosrocretaileruat.hspldms.com");
+        
+        ObjectRepo.driver = driver;
+        
        // ObjectRepo.driver = driver;
         Thread.sleep(1000);
         driver.findElement(By.xpath("//button[text()='Get Started']")).click();

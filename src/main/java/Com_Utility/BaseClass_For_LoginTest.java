@@ -37,6 +37,8 @@ public class BaseClass_For_LoginTest {
 		driver.get("https://fosrocfsguat.hspldms.com");
 		
 		driver.manage().window().maximize();
+		ObjectRepo.driver = driver;
+		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}

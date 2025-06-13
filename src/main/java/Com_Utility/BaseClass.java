@@ -47,6 +47,9 @@ public class BaseClass {
         driver = new ChromeDriver();
         driver.get("https://fosrocuat.hspldms.com");
         driver.manage().window().maximize();
+        
+        ObjectRepo.driver = driver;
+        
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
  
         // Initialize the LoginPage object using PageFactory

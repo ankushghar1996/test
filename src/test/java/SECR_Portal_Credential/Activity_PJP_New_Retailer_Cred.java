@@ -17,7 +17,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import Com_Utility.ObjectRepo;
@@ -28,6 +30,17 @@ public class Activity_PJP_New_Retailer_Cred {
 	
 	 WebDriver driver;
 
+	 
+	 @BeforeSuite
+     public void setupSuite() {
+ 		
+         ObjectRepo.initializeReport();  // Important: Initializes the Extent report
+         
+         
+     }
+	 
+	 
+	 
 	    @BeforeClass
 	    public void setUp() {
 	        
@@ -41,6 +54,9 @@ public class Activity_PJP_New_Retailer_Cred {
 
 	   	    driver = new ChromeDriver(options);
 	   	    driver.manage().window().maximize();
+	   	    
+	   	 ObjectRepo.driver = driver;
+	   	    
 	   	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	   	    
 	   	    
@@ -49,7 +65,7 @@ public class Activity_PJP_New_Retailer_Cred {
 
 	    @Test
 	    public void testOtpFlowAndRetailerInfo() throws Exception {
-	        String mobileNumber = "8245854511";
+	        String mobileNumber = "8245854436";
 
 	        // Login
 	        driver.get("https://fosrocsecruat.hspldms.com/");
@@ -162,7 +178,7 @@ public class Activity_PJP_New_Retailer_Cred {
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_17", "Verify that user should be enter Firm Name.", () -> {
-	        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Vinay Paints");
+	        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Vansh Paints");
 	        });
 	        Thread.sleep(1000);
 	        
@@ -289,7 +305,7 @@ public class Activity_PJP_New_Retailer_Cred {
 	            System.out.println("Switch Camera button not found or not clickable.");
 	        }
 
-	        Thread.sleep(5000);
+	        Thread.sleep(2000);
 	        // Wait for the Capture button and click it
 	        try {
 	            WebElement captureBtn = wait1.until(ExpectedConditions.elementToBeClickable(
@@ -302,11 +318,91 @@ public class Activity_PJP_New_Retailer_Cred {
 
 	        
 	        
-	        Thread.sleep(5000);
+	        Thread.sleep(4000);
+	        
+	        
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_34", "Verify that user should be click on Camera 1 button.", () -> {
+		        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[2]")).click();
+		        });
+		        Thread.sleep(1000);
+		        
+
+
+		        WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		        // Wait for the Switch Camera button and click it
+		        try {
+		            WebElement switchCamBtn = wait2.until(ExpectedConditions.elementToBeClickable(
+		                By.xpath("//div[@class='switch-cam']//button[1]")));
+		            switchCamBtn.click();
+		            System.out.println("Switch Camera button clicked.");
+		        } catch (TimeoutException e) {
+		            System.out.println("Switch Camera button not found or not clickable.");
+		        }
+
+		        Thread.sleep(2000);
+		        // Wait for the Capture button and click it
+		        try {
+		            WebElement captureBtn = wait2.until(ExpectedConditions.elementToBeClickable(
+		                By.xpath("(//button[@class='capture-button'])[3]")));
+		            captureBtn.click();
+		            System.out.println("Capture button clicked.");
+		        } catch (TimeoutException e) {
+		            System.out.println("Capture button not found or not clickable.");
+		        }
+
+		        
+		        
+		        Thread.sleep(4000);
+		        
+		        
+		        
+		        WebElement scroll2 = driver.findElement(By.xpath("//span[normalize-space()='Upload Shop Image']"));
+		    	JavascriptExecutor jse2= (JavascriptExecutor)driver;
+		    	jse2.executeScript("arguments[0].scrollIntoView(true);", scroll2);
+		        Thread.sleep(1000);
+		        
+	        
+	        
+		        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_34", "Verify that user should be click on Camera 1 button.", () -> {
+			        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[3]")).click();
+			        });
+			        Thread.sleep(1000);
+			        
+
+
+			        WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+			        // Wait for the Switch Camera button and click it
+			        try {
+			            WebElement switchCamBtn = wait3.until(ExpectedConditions.elementToBeClickable(
+			                By.xpath("//div[@class='switch-cam']//button[1]")));
+			            switchCamBtn.click();
+			            System.out.println("Switch Camera button clicked.");
+			        } catch (TimeoutException e) {
+			            System.out.println("Switch Camera button not found or not clickable.");
+			        }
+
+			        Thread.sleep(2000);
+			        // Wait for the Capture button and click it
+			        try {
+			            WebElement captureBtn = wait3.until(ExpectedConditions.elementToBeClickable(
+			                By.xpath("(//button[@class='capture-button'])[3]")));
+			            captureBtn.click();
+			            System.out.println("Capture button clicked.");
+			        } catch (TimeoutException e) {
+			            System.out.println("Capture button not found or not clickable.");
+			        }
+
+			        
+			        
+			        Thread.sleep(4000);
 	        
 	        
 	        
-	        //     driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_34", "Verify that user should be click on yes btn.", () -> {
+	            driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();
+	        });
 	         //    Thread.sleep(1000);
 	             
 	             
@@ -337,7 +433,7 @@ public class Activity_PJP_New_Retailer_Cred {
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
 
-	            String query = "select * from RegistrationPendingMaster where MobileNo=8245854511";
+	            String query = "select * from RegistrationPendingMaster where MobileNo=8245854436";
 	            
 	            ResultSet rs = stmt.executeQuery(query);
 	            
@@ -369,6 +465,16 @@ public class Activity_PJP_New_Retailer_Cred {
 	    }
 	
 	
+	    @AfterSuite
+	    public void tearDownSuite() {
+	    	
+	    	
+	        ObjectRepo.finalizeReport();  // Flushes the report
+	        
+	        
+	    }
+	    
+	    
 	
 	
 }

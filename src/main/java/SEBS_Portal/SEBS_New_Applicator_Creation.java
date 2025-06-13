@@ -47,7 +47,7 @@ public class SEBS_New_Applicator_Creation {
   @FindBy (how=How.XPATH,using = "//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Maharashtra']")
   private WebElement State_Dropdown_Value;
  
-  @FindBy (how=How.XPATH,using = "(//div[@class='ng-input'])[6]")
+  @FindBy (how=How.XPATH,using = "//ng-select[@bindvalue='TownId']//input[@type='text']")
   private WebElement City_Dropdown ;
  
   @FindBy (how=How.XPATH,using = "//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Ahmednagar']")

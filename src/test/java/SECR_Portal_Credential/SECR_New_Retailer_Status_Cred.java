@@ -32,10 +32,23 @@ public class SECR_New_Retailer_Status_Cred {
 	 @BeforeSuite
 	    public void Data_Provider() throws Exception {
 
+
 	        // Initialize Extent Reports
 	       ObjectRepo.initializeReport();
 	    
 	 }
+
+	 @BeforeSuite
+     public void setupSuite() {
+ 		
+         ObjectRepo.initializeReport();  // Important: Initializes the Extent report
+         
+         
+     }
+	 
+	 
+	 
+
 	    @BeforeClass
 	    public void setUp() {
 	        
@@ -49,6 +62,10 @@ public class SECR_New_Retailer_Status_Cred {
 
 	   	    driver = new ChromeDriver(options);
 	   	    driver.manage().window().maximize();
+	   	    
+	   	 ObjectRepo.driver = driver;
+	   	    
+	   	    
 	   	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	   	 ObjectRepo.driver = driver;
 	   	    
@@ -344,6 +361,7 @@ public class SECR_New_Retailer_Status_Cred {
 	            
 	        }
 	    }
+
 	   
 	    @AfterSuite
 	    public void afterSuite() {
@@ -354,6 +372,18 @@ public class SECR_New_Retailer_Status_Cred {
 	        
 	    }
 	
+
+	
+	    @AfterSuite
+	    public void tearDownSuite() {
+	    	
+	    	
+	        ObjectRepo.finalizeReport();  // Flushes the report
+	        
+	        
+	    }
+	    
+
 	
 	
 }
