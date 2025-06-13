@@ -46,7 +46,7 @@ public class Demo_Mail {
             email.setMsg("Please find the attached Automation Test Execution Report.");
             email.addTo("aniket.jadhav@heerasoftware.com");
             email.addTo("ankush.gharsele@heerasoftware.com");
-        
+           
             
             
             // Attach the report with Extent html

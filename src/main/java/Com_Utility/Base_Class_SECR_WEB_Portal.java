@@ -49,8 +49,7 @@ package Com_Utility;
 	       ObjectRepo.initializeReport();
 
 
-	        // Initialize Extent Reports
-	       ObjectRepo.initializeReport();
+	     
 
 
 	    }
@@ -74,21 +73,10 @@ package Com_Utility;
 
 		    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		    driver.manage().window().maximize();
-		    
-		    ObjectRepo.driver = driver;
-		    
-		    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		    SECR_Login login = PageFactory.initElements(driver, SECR_Login.class);
  
 
-			Liabrary.custom_Sendkeys(login.getUserName(), excel.getStringdata2("Sheet1", 4, 0), "UserName Field");
-
-
-			Liabrary.custom_Sendkeys(login.getPassword(), excel.getStringdata2("Sheet1", 4, 1), "Passwod Field");
- 
-			Liabrary.custom_click(login.getLogin_btn(), "Login Btn");
 
 			Liabrary.custom_Sendkeys(login.getUserName(), excel.getStringdata2("Sheet1", 4, 0), "UserName Field");
 

@@ -66,7 +66,7 @@ public class New_Distributor_Appointment {
 	    @Test
 	    public void testOtpFlowAndRetailerInfo() throws Exception {
 	    	
-	        String mobileNumber = "9547853121";
+	        String mobileNumber = "9547852541";
 
 	        // Login
 	        
@@ -159,7 +159,7 @@ public class New_Distributor_Appointment {
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_016", "Send  Distributor Firm Name ", () -> {
-	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name']")).sendKeys("Govinda enterprises");});
+	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name']")).sendKeys("Sahil khan enterprises");});
 	        Thread.sleep(1000);
 	        
 	       /* 
@@ -181,7 +181,7 @@ public class New_Distributor_Appointment {
 
 	        
 	      ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_018", "Enter Contact Person Name", ()-> {     
-	        driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("govind Thakur");});
+	        driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("sahil Thakur");});
 	        Thread.sleep(1000);
 	        
 	       ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_019", "Enter Contact Number", ()-> {  
@@ -408,7 +408,7 @@ public class New_Distributor_Appointment {
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
 
-	            String query = "select * from RegistrationPendingMaster where MobileNo=9547853121";
+	            String query = "select * from RegistrationPendingMaster where MobileNo='9547852541'";
 	            
 	            ResultSet rs = stmt.executeQuery(query);
 	            

@@ -227,7 +227,7 @@ public class ObjectRepo {
                 return;
             }
             Thread.sleep(5000);
-           // Demo_Mail.sendReportEmail();
+            Demo_Mail.sendReportEmail();
         } catch (Exception e) {
             System.out.println("❌ Failed to send email: " + e.getMessage());
             e.printStackTrace();

@@ -4,11 +4,17 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
@@ -50,7 +56,7 @@ public class Market_Non_PJP_New_Retailer_Creation {
 
     @Test
     public void testOtpFlowAndRetailerInfo() throws Exception {
-        String mobileNumber = "9145854144";
+        String mobileNumber = "9145854404";
 
         // Login
         driver.get("https://fosrocfsguat.hspldms.com");
@@ -133,7 +139,7 @@ public class Market_Non_PJP_New_Retailer_Creation {
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_Market_Non_PJP_New_Retailer_Creation_TC_11", "Verify that user should be Enter Retailer Firm Name/Outlet Name.", () -> {
-        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Aniket varma Paints and Hardware");
+        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("rupesh baghel Paints and Hardware");
         });
         Thread.sleep(1000);
         
@@ -227,6 +233,124 @@ public class Market_Non_PJP_New_Retailer_Creation {
         });
         Thread.sleep(1000);
         
+        WebElement scroll3 = driver.findElement(By.xpath("//span[normalize-space()='Upload Document 1']"));
+    	JavascriptExecutor jse3= (JavascriptExecutor)driver;
+    	jse3.executeScript("arguments[0].scrollIntoView(true);", scroll3);
+        Thread.sleep(1000);
+        
+        
+        ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_27", "Verify that user should be click on Camera 1 button.", () -> {
+	        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();
+	        });
+	        Thread.sleep(1000);
+	        
+
+
+	        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	        // Wait for the Switch Camera button and click it
+	        try {
+	            WebElement switchCamBtn = wait1.until(ExpectedConditions.elementToBeClickable(
+	                By.xpath("//div[@class='switch-cam']//button[1]")));
+	            switchCamBtn.click();
+	            System.out.println("Switch Camera button clicked.");
+	        } catch (TimeoutException e) {
+	            System.out.println("Switch Camera button not found or not clickable.");
+	        }
+
+	        Thread.sleep(2000);
+	        // Wait for the Capture button and click it
+	        try {
+	            WebElement captureBtn = wait1.until(ExpectedConditions.elementToBeClickable(
+	                By.xpath("(//button[@class='capture-button'])[3]")));
+	            captureBtn.click();
+	            System.out.println("Capture button clicked.");
+	        } catch (TimeoutException e) {
+	            System.out.println("Capture button not found or not clickable.");
+	        }
+
+	        
+	        
+	        Thread.sleep(3000);
+	        
+	        
+	        ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_28", "Verify that user should be click on Camera 1 button.", () -> {
+		        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[2]")).click();
+		        });
+		        Thread.sleep(1000);
+		        
+
+
+		        WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		        // Wait for the Switch Camera button and click it
+		        try {
+		            WebElement switchCamBtn = wait2.until(ExpectedConditions.elementToBeClickable(
+		                By.xpath("//div[@class='switch-cam']//button[1]")));
+		            switchCamBtn.click();
+		            System.out.println("Switch Camera button clicked.");
+		        } catch (TimeoutException e) {
+		            System.out.println("Switch Camera button not found or not clickable.");
+		        }
+
+		        Thread.sleep(2000);
+		        // Wait for the Capture button and click it
+		        try {
+		            WebElement captureBtn = wait2.until(ExpectedConditions.elementToBeClickable(
+		                By.xpath("(//button[@class='capture-button'])[3]")));
+		            captureBtn.click();
+		            System.out.println("Capture button clicked.");
+		        } catch (TimeoutException e) {
+		            System.out.println("Capture button not found or not clickable.");
+		        }
+
+		        
+		        
+		        Thread.sleep(3000);
+		        
+		        
+		        
+		        WebElement scroll2 = driver.findElement(By.xpath("//span[normalize-space()='Upload Shop Image']"));
+		    	JavascriptExecutor jse2= (JavascriptExecutor)driver;
+		    	jse2.executeScript("arguments[0].scrollIntoView(true);", scroll2);
+		        Thread.sleep(1000);
+		        
+	        
+	        
+		        ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_29", "Verify that user should be click on Camera 1 button.", () -> {
+			        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[3]")).click();
+			        });
+			        Thread.sleep(1000);
+			        
+
+
+			        WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+			        // Wait for the Switch Camera button and click it
+			        try {
+			            WebElement switchCamBtn = wait3.until(ExpectedConditions.elementToBeClickable(
+			                By.xpath("//div[@class='switch-cam']//button[1]")));
+			            switchCamBtn.click();
+			            System.out.println("Switch Camera button clicked.");
+			        } catch (TimeoutException e) {
+			            System.out.println("Switch Camera button not found or not clickable.");
+			        }
+
+			        Thread.sleep(2000);
+			        // Wait for the Capture button and click it
+			        try {
+			            WebElement captureBtn = wait3.until(ExpectedConditions.elementToBeClickable(
+			                By.xpath("(//button[@class='capture-button'])[3]")));
+			            captureBtn.click();
+			            System.out.println("Capture button clicked.");
+			        } catch (TimeoutException e) {
+			            System.out.println("Capture button not found or not clickable.");
+			        }
+
+			        
+			        
+			        Thread.sleep(3000);
+        
         
         ObjectRepo.startTestAndLog_1_SS("FSG_Market_Non_PJP_New_Retailer_Creation_TC_27", "Verify that user should be click on SAVE button.", () -> {
        driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();
@@ -263,7 +387,7 @@ public class Market_Non_PJP_New_Retailer_Creation {
             Connection conn = DriverManager.getConnection(url, username, password);
             Statement stmt = conn.createStatement();
 
-            String query = "select * from RegistrationPendingMaster where MobileNo=9145854144";
+            String query = "select * from RegistrationPendingMaster where MobileNo='9145854404'";
             
             ResultSet rs = stmt.executeQuery(query);
             

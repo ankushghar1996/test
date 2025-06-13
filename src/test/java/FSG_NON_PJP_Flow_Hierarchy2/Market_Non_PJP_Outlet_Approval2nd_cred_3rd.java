@@ -1,4 +1,4 @@
-package SECR_Web_Portal_Credential;
+package FSG_NON_PJP_Flow_Hierarchy2;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
@@ -8,7 +8,7 @@ import Com_Utility.Liabrary;
 import Com_Utility.ObjectRepo;
 import SCER_Web_Portal.OM_Outlet_Approval2nd_main;
 
-public class OM_Outlet_Approval2nd_cred extends BaseClass_SECR_WebPortal{
+public class Market_Non_PJP_Outlet_Approval2nd_cred_3rd extends BaseClass_SECR_WebPortal{
 
 	
 	@Test
