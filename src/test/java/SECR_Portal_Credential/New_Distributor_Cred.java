@@ -69,7 +69,9 @@ public class New_Distributor_Cred {
 	 	@Test
 	 	public void testOtpFlowAndRetailerInfo() throws Exception {
 	 	    
+
 	 	    String mobileNumber = "9854265536";
+
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_01", "Verify that user should be send SECR User Name.", () -> {
 	 	        driver.findElement(By.xpath("//input[@placeholder='User Name']")).sendKeys("SECR-008");
@@ -447,7 +449,8 @@ public class New_Distributor_Cred {
 	    }
 
 	    
-	    
+
+
 	 	 private static String getOtpFromDb(String mobileNumber) {
 		    	
 		        String otp = null;

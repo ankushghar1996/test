@@ -56,9 +56,9 @@ public class BaseClass {
         LoginPage loginelements = PageFactory.initElements(driver, LoginPage.class);
  
         // Use custom methods to send keys and clicks, replace Liabrary with Library
-        Liabrary.custom_Sendkeys(loginelements.getUserName(), excel.getStringdata("Sheet1", 1, 0), "UserName Field");
+        Liabrary.custom_Sendkeys(loginelements.getUserName(), excel.getStringdata("Sheet1", 9, 0), "UserName Field");
         Thread.sleep(1000);
-        Liabrary.custom_Sendkeys(loginelements.getPassword(), excel.getStringdata("Sheet1", 1, 1), "Password Field");
+        Liabrary.custom_Sendkeys(loginelements.getPassword(), excel.getStringdata("Sheet1", 9, 1), "Password Field");
         Thread.sleep(3000);
         Liabrary.custom_click(loginelements.getLogin_Btn(), "Login Btn");
         Thread.sleep(3000);

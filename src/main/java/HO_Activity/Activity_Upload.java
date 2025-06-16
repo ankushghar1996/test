@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class ActivityMaster_ActivityUpload {
+public class Activity_Upload {
 
 WebDriver driver;
 	
@@ -17,7 +17,7 @@ WebDriver driver;
 		return Activity_Upload;
 	}
 
-	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlUserType_DropDown']")
+	@FindBy(how = How.XPATH, using = "//input[@id='ctl00_ParentMasterContentPlaceHolder1_ddlUserType_Input']")
 	private WebElement UserType1_Dropdown;
 	
 	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlDivision_DropDown']")

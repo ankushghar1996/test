@@ -152,6 +152,13 @@ public class ObjectRepo {
             test.fail(additionalInfo);
         }
     }
+    
+    public static void Headlines_logOnlyDescription(String testDescription) {
+        test = extent.createTest(testDescription);
+        test.info("📝 " + testDescription);
+        System.out.println("🖨️ Logged Only Description: " + testDescription);
+    }
+
 
     public static void Print_Dynamic_Flash_Massage(WebDriver driver, String xpathLocator, String testNumber_Print_Massage) {
     	
