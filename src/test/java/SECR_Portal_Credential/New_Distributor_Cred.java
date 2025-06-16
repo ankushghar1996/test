@@ -69,7 +69,7 @@ public class New_Distributor_Cred {
 	 	@Test
 	 	public void testOtpFlowAndRetailerInfo() throws Exception {
 	 	    
-	 	    String mobileNumber = "8678412433";
+	 	    String mobileNumber = "8678412430";
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_01", "Verify that user should be send SECR User Name.", () -> {
 	 	        driver.findElement(By.xpath("//input[@placeholder='User Name']")).sendKeys("SECR-008");
@@ -462,7 +462,7 @@ public class New_Distributor_Cred {
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
 
-	            String query = "select * from RegistrationPendingMaster where MobileNo=8678412433";
+	            String query = "select * from RegistrationPendingMaster where MobileNo='8678412430'";
 	            
 	            ResultSet rs = stmt.executeQuery(query);
 	            
