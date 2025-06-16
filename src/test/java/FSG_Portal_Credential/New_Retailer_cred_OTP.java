@@ -53,7 +53,7 @@ public class New_Retailer_cred_OTP {
 
     @Test
     public void testOtpFlowAndRetailerInfo() throws Exception {
-        String mobileNumber = "9145851206";
+        String mobileNumber = "9145851208";
 
         // Login
         driver.get("https://fosrocfsguat.hspldms.com");
@@ -136,7 +136,7 @@ public class New_Retailer_cred_OTP {
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_11", "Verify that user should be Enter Retailer Firm Name/Outlet Name.", () -> {
-        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("rahul kulkarni Paints and Hardware");
+        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Kanchan kulkarni Paints and Hardware");
         });
         Thread.sleep(1000);
         
@@ -386,7 +386,7 @@ public class New_Retailer_cred_OTP {
             Connection conn = DriverManager.getConnection(url, username, password);
             Statement stmt = conn.createStatement();
 
-            String query = "select * from RegistrationPendingMaster where MobileNo='9145851206'";
+            String query = "select * from RegistrationPendingMaster where MobileNo='9145851208'";
             
             ResultSet rs = stmt.executeQuery(query);
             

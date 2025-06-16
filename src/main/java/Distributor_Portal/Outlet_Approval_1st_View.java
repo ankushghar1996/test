@@ -17,7 +17,7 @@ public class Outlet_Approval_1st_View {
 	private WebElement Outlet_Approval_1st ;
 	
 	
-	@FindBy(how=How.XPATH,using="(//div[@id='ctl00_ParentMasterContentPlaceHolder1_radGrid2ndApprovalList_GridData']//table//tr)[2]")
+	@FindBy(how=How.XPATH,using="(//div[@id='ctl00_ParentMasterContentPlaceHolder1_radGridRetailer1stApproval']//table//tr)[4]")
 	private WebElement Grid_Data ;
 	
 	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_BtnView']")
