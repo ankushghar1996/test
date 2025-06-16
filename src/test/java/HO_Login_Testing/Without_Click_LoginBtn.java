@@ -5,9 +5,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import Com_PageObjectModel.LoginPage;
-import Com_Utility.BaseClass_For_LoginTest;
 import Com_Utility.Liabrary;
 import Com_Utility.ObjectRepo;
+import Com_Utility_NegativeScenario_BaseClass.BaseClass_For_LoginTest;
 
 public class Without_Click_LoginBtn extends BaseClass_For_LoginTest {
 

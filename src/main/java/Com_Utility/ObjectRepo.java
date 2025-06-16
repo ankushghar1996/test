@@ -74,7 +74,7 @@ public class ObjectRepo {
     }
     */
     
-    
+    /*
     public static void startTestAndLog_1_SS(String testNumber, String testDescription, Runnable action) {
         // Start the test
         test = extent.createTest(testNumber, testDescription);
@@ -119,6 +119,79 @@ public class ObjectRepo {
             throw new RuntimeException(e); // Rethrow to fail the test
         }
     }
+    */
+    
+ // 🔁 NEW METHOD: Flash message support version
+    public static void startTestAndLog_1_SS(String testNumber, String testDescription, Runnable action) {
+        test = extent.createTest(testNumber, testDescription); // ✅ Same as original
+
+        try {
+            test.info(testDescription); // ✅ Log the step
+
+            action.run(); // ✅ Run the user step
+
+            // 🔁 NEW: Flash message check after action
+            List<WebElement> flashMessages = driver.findElements(By.xpath("//div[@id='toast-container']"));
+            boolean flashFound = false;
+
+            for (WebElement msg : flashMessages) {
+                if (msg.isDisplayed()) {
+                    String messageText = msg.getText();
+                    test.fail("❌ Flash Message Detected: " + messageText); // 🔁 NEW: Log flash failure
+                    flashFound = true;
+
+                    // 🔁 NEW: Screenshot for flash error
+                    if (driver != null) {
+                        try {
+                            String screenshot = takeScreenshot();
+                            if (screenshot != null && !screenshot.isEmpty()) {
+                                test.addScreenCaptureFromBase64String(screenshot, "Screenshot - Flash Error");
+                            }
+                        } catch (IOException e) {
+                            test.warning("Screenshot capture failed: " + e.getMessage());
+                        }
+                    }
+                }
+            }
+
+            // 🔁 NEW: Mark pass if no flash
+            if (!flashFound) {
+                test.pass("✅ " + testDescription);
+
+                if (driver != null) {
+                    try {
+                        String screenshot = takeScreenshot();
+                        if (screenshot != null && !screenshot.isEmpty()) {
+                            test.addScreenCaptureFromBase64String(screenshot, "Screenshot - Passed");
+                        }
+                    } catch (IOException e) {
+                        test.warning("Screenshot capture failed: " + e.getMessage());
+                    }
+                }
+            } else {
+                // 🔁 NEW: Force test to fail in TestNG if flash was shown
+                throw new RuntimeException("Flash error found — test failed.");
+            }
+
+        } catch (Exception e) {
+            test.fail("❌ Exception in step: " + testDescription + " | " + e.getMessage()); // ✅ Same
+
+            // ✅ Screenshot on exception
+            if (driver != null) {
+                try {
+                    String screenshot = takeScreenshot();
+                    if (screenshot != null && !screenshot.isEmpty()) {
+                        test.addScreenCaptureFromBase64String(screenshot, "Screenshot - Exception");
+                    }
+                } catch (IOException ioException) {
+                    test.warning("Screenshot capture failed: " + ioException.getMessage());
+                }
+            }
+
+            throw new RuntimeException(e); // ✅ Keep fail status in TestNG
+        }
+    }
+
     
 
     public static void startTestAndLog_2(String testNumber, String testDescription) {

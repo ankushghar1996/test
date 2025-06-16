@@ -9,12 +9,11 @@ public class IR_Geographical_Hierarchy_Report_Main {
 
 	WebDriver driver;
 	
-	
 	@FindBy(how=How.XPATH,using = "//p[text()='Geographical Hierarchy']")
 	private WebElement Geographical_Hierarchy_Menu ;
 
-	//p[text()='Geographical Hierarchy']
-//Product, Sales_Hierarchy_Dropdown, Geography_Hierarchy_Dropdown, For_Year_Dropdown, For_Month_Dropdown, Report_Level_Dropdown
+   //p[text()='Geographical Hierarchy']
+   //Product, Sales_Hierarchy_Dropdown, Geography_Hierarchy_Dropdown, For_Year_Dropdown, For_Month_Dropdown, Report_Level_Dropdown
    @FindBy(how=How.XPATH,using = "//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlproductHierarchy_Input']")
    private WebElement Product_Dropdown;
    
