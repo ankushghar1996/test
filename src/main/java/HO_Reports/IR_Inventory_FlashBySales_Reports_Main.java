@@ -9,9 +9,7 @@ public class IR_Inventory_FlashBySales_Reports_Main {
 
 	
 	WebDriver driver;
-	
-	
-	
+		
 	@FindBy(how=How.XPATH,using = "//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlproductHierarchy_Input']")
 	private WebElement Product_Dropdown;
 	 
@@ -119,23 +117,6 @@ public class IR_Inventory_FlashBySales_Reports_Main {
 	 
 	}
 	 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

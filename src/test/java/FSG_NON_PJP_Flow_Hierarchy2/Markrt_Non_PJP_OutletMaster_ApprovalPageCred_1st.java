@@ -52,23 +52,18 @@ public class Markrt_Non_PJP_OutletMaster_ApprovalPageCred_1st extends BaseClass_
         });
         Thread.sleep(1000);
 
-       
-        
-        
+  
         ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC08", "Click ProceedForApproval Button", () -> {
             Liabrary.custom_click(Appr.getProceedForApproval_btn(), "Click ProceedForApproval Button");
         });
         Thread.sleep(1000);
         
-        
-        
+
         ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC09", "Click Yes Button", () -> {
             Liabrary.custom_click(Appr.getYes_btn(), "Click Yes Button");
         });
         Thread.sleep(1000);
-        
-        
-        
+   
 
 //        ObjectRepo.startTestAndLog_1_SS("OM_AP_TC08", "Click Close Button", () -> {
 //            Liabrary.custom_click(Appr.getClose_btn(), null);

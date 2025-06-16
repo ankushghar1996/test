@@ -1,4 +1,4 @@
-package Com_Utility;
+package Com_Utility_NegativeScenario_BaseClass;
 
 import java.util.concurrent.TimeUnit;
 
@@ -8,6 +8,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import Com_Utility.Confiq_Data_Provider;
+import Com_Utility.Excel_Data_Provider;
+import Com_Utility.ObjectRepo;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass_For_LoginTest {
@@ -32,7 +35,6 @@ public class BaseClass_For_LoginTest {
 		WebDriverManager.chromedriver().setup();
 		
 		driver = new ChromeDriver();
-	//	driver.get("https://fosrocuat.hspldms.com");
 		
 		driver.get("https://fosrocfsguat.hspldms.com");
 		
@@ -42,7 +44,6 @@ public class BaseClass_For_LoginTest {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
-
 
 	
 	@AfterMethod
