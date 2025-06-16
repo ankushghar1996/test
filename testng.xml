@@ -1,103 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-
   <test thread-count="5" name="Test">
     <classes>
 
-    
-     <!--	<class name="SECR_Portal_Credential.Mark_Attendence_Cred"/>    -->
-
-    <!-- SECR new distributor creation -->
+      <!-- SECR New Distributor Creation Flow -->
       <class name="SECR_Portal_Credential.New_Distributor_Cred"/>
       <class name="HO_Portal_Credential.HO_Distributor_Approval_Page_Test"/>
       <class name="SFA_Portal_Credential.Dist_Approval1st_ApprPage_Cred"/>
       <class name="ASM_Portal_Test.ASM_Approval_Test"/>
       <class name="DataBase_Fosroc.New_Distributor_Database_Conn"/>
-      
-   <!-- SECR Activity PJP new retailer creation -->
-	<class name="SECR_Portal_Credential.Activity_PJP_New_Retailer_Cred"/>
-	<class name="HO_Portal_Credential.HO_Distributor_Approval_Page_Test"/>
-	<class name="Distributor_Portal_Credential.Outlet_Approval_1st_Test"/>
-        <class name="SECR_Web_Portal_Credential.OM_Outlet_Approval2nd_cred"/>
 
+      <!-- SECR New Retailer Creation Flow -->
+      <class name="SECR_Portal_Credential.SECR_New_Retailer_Status_Cred"/>
+      <class name="HO_Portal_Credential.OutletMaster_ApprovalPageCred"/>
+      <class name="Distributor_Portal_Credential.Outlet_Approval_1st_Test"/>
+      <class name="SECR_Web_Portal_Credential.OM_Outlet_Approval2nd_cred"/>
 
-<!-- SECR Activity Non PJP new retailer creation -->
-	<class name="SECR_Portal_Credential.Activity_Non_PJP_New_Retailer_Cred"/>
-	<class name="HO_Portal_Credential.HO_Distributor_Approval_Page_Test"/>
-	<class name="Distributor_Portal_Credential.Outlet_Approval_1st_Test"/>
-        <class name="SECR_Web_Portal_Credential.OM_Outlet_Approval2nd_cred"/>
+      <!-- SECR Activity PJP New Retailer Creation Flow -->
+      <class name="SECR_Portal_Credential.Activity_PJP_New_Retailer_Cred"/>
+      <class name="SECR_Activity_PJP_Hierarchy_1.Activity_PJP_OutletMaster_ApprovalPageCred_1st"/>
+      <class name="SECR_Activity_PJP_Hierarchy_1.Activity_PJP_Outlet_Approval_1st_Test_2nd"/>
+      <class name="SECR_Activity_PJP_Hierarchy_1.Activity_PJP_OM_Outlet_Approval2nd_cred_3rd"/>
 
-	<class name="SECR_Portal_Credential.PJP_Cred"/>
-	<class name="SECR_Portal_Credential.SECR_Notification_Cred"/>
-	<class name="SECR_Portal_Credential.SECR_Scheme_Test"/>
-	<class name="SECR_Portal_Credential.SECR_View_Profile_Cred"/>
-	
-    <!-- // FSG new retailer creation -->
+      <!-- SECR Activity Non-PJP New Retailer Creation Flow -->
+      <class name="SECR_Portal_Credential.Activity_Non_PJP_New_Retailer_Cred"/>
+      <class name="SECR_Activity_Non_PJP_Hierarchy2.Activity_Non_PJP_OutletMaster_ApprovalPageCred_1st"/>
+      <class name="SECR_Activity_Non_PJP_Hierarchy2.Activity_Non_PJP_Outlet_Approval_1st_Test"/>
+      <class name="SECR_Activity_Non_PJP_Hierarchy2.Activity_Non_PJP_OM_Outlet_Approval2nd_cred"/>
 
-    <!--  <class name="FSG_Portal_Credential.Mark_Attendance_Cred"/>    -->
+      <!-- SECR Other Functionalities -->
+      <class name="SECR_Portal_Credential.PJP_Cred"/>
+      <class name="SECR_Portal_Credential.SECR_Notification_Cred"/>
+      <class name="SECR_Portal_Credential.SECR_Scheme_Test"/>
+      <class name="SECR_Portal_Credential.SECR_View_Profile_Cred"/>
 
-	<class name="FSG_Portal_Credential.New_Retailer_cred_OTP"/>
-	<class name="HO_Portal_Credential.OutletMaster_ApprovalPageCred"/>
-	<class name="Distributor_Portal_Credential.Outlet_Approval_1st_Test"/>
-	<class name="SECR_Web_Portal_Credential.OM_Outlet_Approval2nd_cred"/>
-
-	<class name="FSG_Portal_Credential.FSG_Leave_Application_Test"/>
-	<class name="SECR_Portal_Credential.SECR_Leave_Approval_Test"/>
-
-	
-<!-- // FSG Market PJP new retailer creation  -->
-	<class name="FSG_Portal_Credential.New_Retailer_cred_OTP"/>
-	<class name="HO_Portal_Credential.OutletMaster_ApprovalPageCred"/>
-	<class name="Distributor_Portal_Credential.Outlet_Approval_1st_Test"/>
-	<class name="SECR_Web_Portal_Credential.OM_Outlet_Approval2nd_cred"/>
-	
-	<class name="FSG_Portal_Credential.FSG_PJP_Test"/>
-
- <!-- SEBS new distributor creation -->   
-
-   <!--	<class name="SEBS_Portal_Credential.Mark_Attendance_Cred"/>   -->
-
-
-      <class name="SEBS_Portal_Credential.New_Distributor_Appointment"/>
-      <class name="HO_Portal_Credential.HO_Distributor_Approval_Page_Test"/>
-      <class name="SFA_Portal_Credential.Dist_Approval1st_ApprPage_Cred"/>
-      <class name="ASM_Portal_Test.ASM_Approval_Test"/>
-
- <!-- SEBS new Developer creation --> 
-	<class name="SEBS_Portal_Credential.New_Developer_Cred"/>
-
-
- <!-- SEBS new Site creation --> 
-	<class name="SEBS_Portal_Credential.New_Site_Cred"/>
-
-
- <!-- SEBS new Contractors creation --> 
-	<class name="SEBS_Portal_Credential.SEBS_New_Contractors_Test"/>
-
- <!-- SEBS new Applicator creation --> 
-	<class name="SEBS_Portal_Credential.SEBS_New_Applicator_Creation_Test"/>
-
-      
-      
-
-
-      
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </test>
+</suite>

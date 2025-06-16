@@ -30,8 +30,9 @@ public class BaseClass_SEBS_Portal {
         excel = new Excel_Data_Provider();
  
         // Initialize Extent Reports
-    
+
        	ObjectRepo.initializeReport();
+
         	
         	
     }
@@ -57,7 +58,7 @@ public class BaseClass_SEBS_Portal {
 	    ObjectRepo.driver = driver;
 	    
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	    
+	    ObjectRepo.driver = driver;
 	  
 	    SECR_Login login = PageFactory.initElements(driver, SECR_Login.class);
 
@@ -69,9 +70,7 @@ public class BaseClass_SEBS_Portal {
 		
 		
 		Liabrary.custom_click(login.getLogin_btn(), "Login Btn");
-		
-	    
-	    
+   
 	    
 	}
 
@@ -94,8 +93,9 @@ public class BaseClass_SEBS_Portal {
     public void afterSuite() {
         // Finalize the report after all tests are executed
    
-    	ObjectRepo.finalizeReport();
-        
+
+   	ObjectRepo.finalizeReport();
+
         
     }
 

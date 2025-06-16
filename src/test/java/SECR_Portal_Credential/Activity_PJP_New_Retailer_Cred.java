@@ -65,10 +65,11 @@ public class Activity_PJP_New_Retailer_Cred {
 
 	    @Test
 	    public void testOtpFlowAndRetailerInfo() throws Exception {
-	        String mobileNumber = "8245854436";
+	        String mobileNumber = "8245854466";
 
 	        // Login
 	        driver.get("https://fosrocsecruat.hspldms.com/");
+	        ObjectRepo.driver = driver;
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_01", "Verify that user should be send SECR User Name.", () -> {
@@ -177,7 +178,7 @@ public class Activity_PJP_New_Retailer_Cred {
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_17", "Verify that user should be enter Firm Name.", () -> {
-	        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Vansh Paints");
+	        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Abhay Paints");
 	        });
 	        Thread.sleep(1000);
 	        
@@ -195,7 +196,7 @@ public class Activity_PJP_New_Retailer_Cred {
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_PJP_New_Retailer_Cred_TC_20", "Verify that user should be enter Contact Person Name.", () -> {
-	        driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("vinay shelke");
+	        driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("Abhi shelke");
 	        });
 	        Thread.sleep(1000);
 	        
@@ -432,7 +433,7 @@ public class Activity_PJP_New_Retailer_Cred {
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
 
-	            String query = "select * from RegistrationPendingMaster where MobileNo=8245854436";
+	            String query = "select * from RegistrationPendingMaster where MobileNo='8245854466'";
 	            
 	            ResultSet rs = stmt.executeQuery(query);
 	            

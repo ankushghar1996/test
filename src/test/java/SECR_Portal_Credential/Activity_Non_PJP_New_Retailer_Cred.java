@@ -66,7 +66,7 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 	    @Test
 	    public void testOtpFlowAndRetailerInfo() throws Exception {
 	    	
-	        String mobileNumber = "6245855523";
+	        String mobileNumber = "6245855588";
 
 	        // Login
 	        driver.get("https://fosrocsecruat.hspldms.com/");
@@ -177,7 +177,7 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 		        
 		        
 		        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_17", "Verify that user should be enter Firm Name.", () -> {
-		        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("kunal Paints");
+		        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("raj punavale Paints");
 		        });
 		        Thread.sleep(1000);
 		        
@@ -195,7 +195,7 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 		        
 		        
 		        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_20", "Verify that user should be enter Contact Person Name.", () -> {
-		        driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("vinay shelke");
+		        driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("shubham shelke");
 		        });
 		        Thread.sleep(1000);
 		        
@@ -388,8 +388,9 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 	        Thread.sleep(5000);
 	        
 	        
-	        
-	        //     driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();
+	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_34", "Verify that user should be click on Save btn.", () -> {
+	           driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();
+	        });
 	         //    Thread.sleep(1000);
 	             
 	             
@@ -415,7 +416,7 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
 
-	            String query = "select * from RegistrationPendingMaster where MobileNo=6245855523";
+	            String query = "select * from RegistrationPendingMaster where MobileNo='6245855588'";
 	            
 	            ResultSet rs = stmt.executeQuery(query);
 	            

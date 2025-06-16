@@ -39,7 +39,7 @@ public class SEBS_New_Applicator_Creation_Test extends BaseClass_SEBS_Portal {
 	
 		    
 		    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Applicator_Creat TC04", "Enter Mobile Number", () -> {
-		    driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9658741250");
+		    driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9658741696");
 		    });
 		    Thread.sleep(1000);
 		    
@@ -82,7 +82,7 @@ public class SEBS_New_Applicator_Creation_Test extends BaseClass_SEBS_Portal {
 		
 
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Applicator_Creat TC12", "Enter Applicator Name", () -> {
-		    driver.findElement(By.xpath("//div[@class='col-12 mb-3']//input[@formcontrolname='ApplicatorName']")).sendKeys("Roshna sharma");});
+		    driver.findElement(By.xpath("//div[@class='col-12 mb-3']//input[@formcontrolname='ApplicatorName']")).sendKeys("sahil khanna");});
 		    Thread.sleep(1000);
 		
 
@@ -104,7 +104,7 @@ public class SEBS_New_Applicator_Creation_Test extends BaseClass_SEBS_Portal {
 		
 
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Applicator_Creat TC16", "Enter Contact Number", () -> {
-		    driver.findElement(By.xpath("//input[@placeholder='Enter Contact Number']")).sendKeys("123456789");});
+		    driver.findElement(By.xpath("//input[@placeholder='Enter Contact Number']")).sendKeys("9658741696");});
 		    Thread.sleep(1000);
 	
 
