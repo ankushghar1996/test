@@ -70,7 +70,7 @@ public class Distributor_Approval1st_ViewPage {
 	
 	
 	
-	@FindBy(how = How.XPATH, using = "(//table[@id='ctl00_ParentMasterContentPlaceHolder1_radGridSFAApprovalList_ctl00']//tr//td)[1]")
+	@FindBy(how = How.XPATH, using = "(//table[@id='ctl00_ParentMasterContentPlaceHolder1_radGridSFAApprovalList_ctl00']//tr//td)[2]")
 	private WebElement Distributor_View_Table;
 	
 	

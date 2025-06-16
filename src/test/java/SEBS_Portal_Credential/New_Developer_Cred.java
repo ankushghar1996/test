@@ -149,7 +149,7 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_29", "Send Mobile number ", () ->{
-		driver.findElement(By.xpath("//input[contains(@placeholder,'Contact Number.')]")).sendKeys("9854788944"); });
+		driver.findElement(By.xpath("//input[contains(@placeholder,'Contact Number.')]")).sendKeys("9854788931"); });
 		Thread.sleep(3000);
 		
 		

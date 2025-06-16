@@ -66,7 +66,7 @@ public class New_Distributor_Appointment {
 	    @Test
 	    public void testOtpFlowAndRetailerInfo() throws Exception {
 	    	
-	        String mobileNumber = "9547852541";
+	        String mobileNumber = "9547852557";
 
 	        // Login
 	        
@@ -147,7 +147,7 @@ public class New_Distributor_Appointment {
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_013", "Click on Distributor Area Name", () -> {
-	        driver.findElement(By.xpath("(//span[@class='ng-option-label ng-star-inserted'])[1]")).click();});
+	        driver.findElement(By.xpath("(//span[contains(text(),'Koregaon Park')])[2]")).click();});
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_014", "Click on SE Area ", () -> {
@@ -155,11 +155,11 @@ public class New_Distributor_Appointment {
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_015", "Click on SE Area Name ", () -> {
-	        driver.findElement(By.xpath("(//span[@class='ng-option-label ng-star-inserted'])[1]")).click();});
+	        driver.findElement(By.xpath("//span[contains(text(),'Pune')]")).click();});
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_016", "Send  Distributor Firm Name ", () -> {
-	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name']")).sendKeys("Sahil khan enterprises");});
+	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name']")).sendKeys("komal jha enterprises");});
 	        Thread.sleep(1000);
 	        
 	       /* 
@@ -207,7 +207,7 @@ public class New_Distributor_Appointment {
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_024", "Select state", ()-> {  
-	        driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Maharashtra']")).click();});
+	        driver.findElement(By.xpath("(//span[contains(text(),'Maharashtra')])[2]")).click();});
 	        Thread.sleep(1000);
 	        
 	       
@@ -231,7 +231,7 @@ public class New_Distributor_Appointment {
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_026", "Select City From Dropdown", ()-> {  
-	        driver.findElement(By.xpath("//div[contains(@class, 'ng-option') and @role='option']//span[contains(@class, 'ng-option-label ng-star-inserted') and normalize-space()='Ahmednagar']")).click();});
+	        driver.findElement(By.xpath("(//span[contains(text(),'Ahmednagar')])[1]")).click();});
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_027", "Enter Pin Code", ()-> {  
@@ -301,6 +301,13 @@ public class New_Distributor_Appointment {
 	        });
 	        Thread.sleep(5000);
 	       
+	        
+	        WebElement scroll3 = driver.findElement(By.xpath("//span[normalize-space()='Upload Document 2']"));
+	    	JavascriptExecutor jse3= (JavascriptExecutor)driver;
+	    	jse3.executeScript("arguments[0].scrollIntoView(true);", scroll3);
+	        Thread.sleep(1000);
+	        
+	        
 	    
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_036", "Click on camera button", ()-> {  
 		        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[2]")).click();});
@@ -408,7 +415,7 @@ public class New_Distributor_Appointment {
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
 
-	            String query = "select * from RegistrationPendingMaster where MobileNo='9547852541'";
+	            String query = "select * from RegistrationPendingMaster where MobileNo='9547852557'";
 	            
 	            ResultSet rs = stmt.executeQuery(query);
 	            

@@ -18,10 +18,6 @@ public class OM_Outlet_Approval2nd_cred extends BaseClass_SECR_WebPortal{
 	
 
 		
-		
-		
-		
-		
 		ObjectRepo.startTestAndLog_1_SS("SECR_Web_OM_Outlet_Approval2nd_cred_TC01", "Verify that user should be click on master Menu", () -> {
             Liabrary.custom_click(SECR.getMaster_Menu(), "Click Master Menu");
         });

@@ -29,54 +29,54 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_01", "Click on SEBS Menu", () ->{
-		Liabrary.custom_click(view.getSEBS_Menu(), null);});
+		Liabrary.custom_click(view.getSEBS_Menu(), "Click on SEBS Menu");});
 		Thread.sleep(1000);
 		
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_02", "Click on SEBS Menu", () ->{
-		Liabrary.custom_click(view.getSite_Creation_SubMenu(), null);});
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_02", "Click on Site Creation Menu", () ->{
+		Liabrary.custom_click(view.getSite_Creation_SubMenu(), "Click on Site Creation Menu");});
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_03", "Click on Add Menu", () ->{
-		Liabrary.custom_click(view.getAdd_Menu(), null);});
+		Liabrary.custom_click(view.getAdd_Menu(), "Click on Add Menu");});
 		Thread.sleep(1000);
 		
 		
-		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9854165870");
+		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9854165879");
 		Thread.sleep(1000);
 		
 		driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_04", "Click on Distributor_Mapped", () ->{
-		Liabrary.custom_click(view.getDistributor_Mapped(), null);});
+		Liabrary.custom_click(view.getDistributor_Mapped(), "Click on Distributor_Mapped");});
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_05", "Click on Select_Distributor_Mapped", () ->{
-		Liabrary.custom_click(view.getSelect_Distributor_Mapped(), null);});
+		Liabrary.custom_click(view.getSelect_Distributor_Mapped(), "Click on Select_Distributor_Mapped");});
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_06", "Click Select_sales_Engineer_dropdown", () ->{
-		Liabrary.custom_click(view.getSelect_sales_Engineer_dropdown(), null);});
+		Liabrary.custom_click(view.getSelect_sales_Engineer_dropdown(), "Click Select_sales_Engineer_dropdown");});
 		Thread.sleep(1000);
 	
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_07", "Click Select_sales_Engineer", () ->{
-		Liabrary.custom_click(view.getSelect_sales_Engineer(), null);});
+		Liabrary.custom_click(view.getSelect_sales_Engineer(), "Click Select_sales_Engineer");});
 		Thread.sleep(1000);
 	
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_08", "Click on Select_Location_dropdown", () ->{
-		Liabrary.custom_click(view.getSelect_Location_dropdown(), null);});
+		Liabrary.custom_click(view.getSelect_Location_dropdown(), "Click on Select_Location_dropdown");});
 		Thread.sleep(1000);
 	
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_09", "Click on Select_Location", () ->{
-		Liabrary.custom_click(view.getSelect_Location(), null);});
+		Liabrary.custom_click(view.getSelect_Location(), "Click on Select_Location");});
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_10", "Click on Select_developer_Name_dropdown", () ->{
-		Liabrary.custom_click(view.getSelect_developer_Name_dropdown(), null);});
+		Liabrary.custom_click(view.getSelect_developer_Name_dropdown(), "Click on Select_developer_Name_dropdown");});
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_11", "Click on Select_developer_Name", () ->{
-		Liabrary.custom_click(view.getSelect_developer_Name(), null);});
+		Liabrary.custom_click(view.getSelect_developer_Name(), "Click on Select_developer_Name");});
 		Thread.sleep(1000);
 		
 		
@@ -88,11 +88,11 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		
 		
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_12", "Send Site Name", () ->{
-		driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("sahil dev");});
+		driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("sunil shetty");});
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_13", "Click on Chcekbox_flexCheckDefault", () ->{
-		Liabrary.custom_click(view.getChcekbox_flexCheckDefault(), null);});
+		Liabrary.custom_click(view.getChcekbox_flexCheckDefault(), "Click on Chcekbox_flexCheckDefault");});
 		Thread.sleep(1000);
 	
 		
@@ -104,11 +104,11 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		
 		
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_14", "Click on Dropdown Menu Button", () ->{
-        Liabrary.custom_click(view.getDropdownMenuButton(), null);});
+        Liabrary.custom_click(view.getDropdownMenuButton(), "Click on Dropdown Menu Button");});
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_15", "Click on Checkbox", () ->{
-		Liabrary.custom_click(view.getCheckbox(), null);});
+		Liabrary.custom_click(view.getCheckbox(), "Click on Checkbox");});
 		Thread.sleep(4000);
 		
 		
