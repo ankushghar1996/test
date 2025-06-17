@@ -74,27 +74,40 @@
 
 <!-- SEBS New Distributor Creation -->
 <class name="SEBS_Portal_Credential.New_Distributor_Appointment"/>
-<class name="SEBS_Distributor_Hierarchy.Distributor_Hierar_HO_Distributor_Approval_Page_Test_1st"/>
-<class name="SEBS_Distributor_Hierarchy.Distributor_Hierar_Dist_Approval1st_ApprPage_Cred_2nd"/>
-<class name="SEBS_Distributor_Hierarchy.Distributor_Hierar_ASM_Approval_Test_3rd"/>
+
+<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_HO_Distributor_Approval_View_Test_1"/>
+<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_HO_Distributor_Approval_Page_Test_1st"/>
+<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_Activity_PJP_SFA_Dist_Approval1st_View_Cred_2nd"/>
+<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_Dist_Approval1st_ApprPage_Cred_2nd"/>
+<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_Activity_PJP_Dist_Approval_ASM_2ndApproval_View_Test_3rd"/>
+<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_ASM_Approval_Test_3rd"/>
 
 <!-- SEBS Activity PJP New Retailer Creation Flow -->
 <class name="SEBS_Portal_Credential.New_Activity_PJPSite_Cred"/>
-<class name="SEBS_Activitry_PJP_Hierarchy_1.Activity_PJP_HO_Distributor_Approval_Page_Test_1st"/>
-<class name="SEBS_Activitry_PJP_Hierarchy_1.Activity_PJP_Dist_Approval1st_ApprPage_Cred_2nd"/>
-<class name="SEBS_Activitry_PJP_Hierarchy_1.SEBS_ASM_Approval_Test_3rd"/>
+<class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_HO_Distributor_Approval_View_Test_1"/>
+<class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_HO_Distributor_Approval_Page_Test_1st"/>
+<class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_SFA_Dist_Approval1st_View_Cred_2nd"/>
+<class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_SFA_Dist_Approval1st_ApprPage_Cred_2nd"/>
+<class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_Dist_Approval_ASM_2ndApproval_View_Test_3rd"/>
+<class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_ASM_2ndApproval_Test_3rd"/>
 
 <!-- SEBS Activity NON PJP New Retailer Creation Flow -->
 <class name="SEBS_Portal_Credential.New_Activity_NonPJPSite_Cred"/>
-<class name="SEBS_Activity_Non_PJP_Hierarchy.Activity_Non_PJP_HO_Distributor_Approval_Page_Test_1st"/>
-<class name="SEBS_Activity_Non_PJP_Hierarchy.Activity_Non_PJP_Dist_Approval1st_ApprPage_Cred_2nd"/>
-<class name="SEBS_Activity_Non_PJP_Hierarchy.Activity_Non_PJP_ASM_Approval_Test_3rd"/>
+<class name="SEBS_Distributor_Activity_Non_PJP_Hierarchy_2.Distributor_Activity_Non_PJP_HO_Distributor_Approval_View_Test_1"/>
+<class name="SEBS_Distributor_Activity_Non_PJP_Hierarchy_2.Distributor_Activity_Non_PJP_HO_Distributor_Approval_Page_Test_1st"/>
+<class name="SEBS_Distributor_Activity_Non_PJP_Hierarchy_2.Distributor_Activity_Non_PJP_SFA_Dist_Approval1st_View_Cred_2nd"/>
+<class name="SEBS_Distributor_Activity_Non_PJP_Hierarchy_2.Distributor_Activity_Non_PJP_SFA_Dist_Approval1st_ApprPage_Cred_2nd"/>
+<class name="SEBS_Distributor_Activity_Non_PJP_Hierarchy_2.Distributor_Activity_Non_PJP_ASM_Dist_2ndApproval_View_Test_3rd"/>
+<class name="SEBS_Distributor_Activity_Non_PJP_Hierarchy_2.Distributor_Activity_Non_PJP_ASM_2ndApproval_Test_3rd"/>
 
 <!-- SEBS Developer, Site, Contractor, Applicator -->
 <class name="SEBS_Portal_Credential.New_Developer_Cred"/>
 <class name="SEBS_Portal_Credential.New_Site_Cred"/>
 <class name="SEBS_Portal_Credential.SEBS_New_Contractors_Test"/>
 <class name="SEBS_Portal_Credential.SEBS_New_Applicator_Creation_Test"/>
+
+
+
 
       
 

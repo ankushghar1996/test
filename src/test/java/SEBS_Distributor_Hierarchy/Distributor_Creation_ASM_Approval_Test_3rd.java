@@ -12,7 +12,7 @@ import Com_Utility.BaseClass_ASM;
 import Com_Utility.Liabrary;
 import Com_Utility.ObjectRepo;
  
-public class Distributor_Hierar_ASM_Approval_Test_3rd extends BaseClass_ASM {
+public class Distributor_Creation_ASM_Approval_Test_3rd extends BaseClass_ASM {
 	
 	
 	@Test
@@ -21,36 +21,36 @@ public class Distributor_Hierar_ASM_Approval_Test_3rd extends BaseClass_ASM {
 	ASM_Approval_Page ASM = PageFactory.initElements(driver,ASM_Approval_Page.class);
 	
 	
-	ObjectRepo.startTestAndLog_1_SS("Distributor_Hierar_ASM_Approval_Test_3rd_TC_01", "Verify that user should be click on ASM_Portal Master menu.", () -> {
+	ObjectRepo.startTestAndLog_1_SS("SEBS_DistCreation_ASM_2ndApproval_Test_01", "Verify that user should be click on ASM_Portal Master menu.", () -> {
 	Liabrary.custom_click(ASM.getMaster(), "Click on Master");
 	});
 	Thread.sleep(1000);
 	
-	ObjectRepo.startTestAndLog_1_SS("Distributor_Hierar_ASM_Approval_Test_3rd_TC_02", "Verify that user should click on ASM_Portal Distributor Master menu.", () -> {
+	ObjectRepo.startTestAndLog_1_SS("SEBS_DistCreation_ASM_2ndApproval_Test_02", "Verify that user should click on ASM_Portal Distributor Master menu.", () -> {
 	    Liabrary.custom_click(ASM.getDistributor_Master(), "Click on Distributor Master");
 	});
 	Thread.sleep(1000);
 	
 
-	ObjectRepo.startTestAndLog_1_SS("Distributor_Hierar_ASM_Approval_Test_3rd_TC_03", "Verify that user should click on ASM_Portal Distributor 2nd Approval menu.", () -> {
+	ObjectRepo.startTestAndLog_1_SS("SEBS_DistCreation_ASM_2ndApproval_Test_03", "Verify that user should click on ASM_Portal Distributor 2nd Approval menu.", () -> {
 	    Liabrary.custom_click(ASM.getDistributor_Approval_2nd(), "Click Distributor Approval 2nd");
 	});
 	Thread.sleep(1000);
 	
 
-	ObjectRepo.startTestAndLog_1_SS("Distributor_Hierar_ASM_Approval_Test_3rd_TC_04", "Verify that user should select Distributor Approval grid row.", () -> {
+	ObjectRepo.startTestAndLog_1_SS("SEBS_DistCreation_ASM_2ndApproval_Test_04", "Verify that user should select Distributor Approval grid row.", () -> {
 	    Liabrary.custom_click(ASM.getGrid_Data(), "Select Grid Data From Grid Table");
 	});
 	Thread.sleep(1000);
 	
 
-	ObjectRepo.startTestAndLog_1_SS("Distributor_Hierar_ASM_Approval_Test_3rd_TC_05", "Verify that user should click on Approval button.", () -> {
+	ObjectRepo.startTestAndLog_1_SS("SEBS_DistCreation_ASM_2ndApproval_Test_05", "Verify that user should click on Approval button.", () -> {
 	    Liabrary.custom_click(ASM.getApproval_Page_Button(), "Click on Approval Button");
 	});
 	Thread.sleep(1000);
 	
 
-	ObjectRepo.startTestAndLog_1_SS("Distributor_Hierar_ASM_Approval_Test_3rd_TC_06", "Scroll to Documents section on Approval page.", () -> {
+	ObjectRepo.startTestAndLog_1_SS("SEBS_DistCreation_ASM_2ndApproval_Test_06", "Scroll to Documents section on Approval page.", () -> {
 	    WebElement scroll = driver.findElement(By.xpath("//label[text()='Documents']"));
 	    JavascriptExecutor jse1 = (JavascriptExecutor) driver;
 	    jse1.executeScript("arguments[0].scrollIntoView(true);", scroll);
@@ -58,13 +58,13 @@ public class Distributor_Hierar_ASM_Approval_Test_3rd extends BaseClass_ASM {
 	Thread.sleep(1000);
 	
 
-	ObjectRepo.startTestAndLog_1_SS("Distributor_Hierar_ASM_Approval_Test_3rd_TC_07", "Verify that user should click on Approve button.", () -> {
+	ObjectRepo.startTestAndLog_1_SS("SEBS_DistCreation_ASM_2ndApproval_Test_07", "Verify that user should click on Approve button.", () -> {
 	    Liabrary.custom_click(ASM.getApprove_Button(), "Click on Approve Button");
 	});
 	Thread.sleep(1000);
 	
 
-	ObjectRepo.startTestAndLog_1_SS("Distributor_Hierar_ASM_Approval_Test_3rd_TC_08", "Verify that user should click on Yes button.", () -> {
+	ObjectRepo.startTestAndLog_1_SS("SEBS_DistCreation_ASM_2ndApproval_Test_08", "Verify that user should click on Yes button.", () -> {
 	    Liabrary.custom_click(ASM.getYes_Button(), "Click on Yes Btn");
 	});
 
