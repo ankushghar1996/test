@@ -20,13 +20,13 @@ public class SECR_LogOut_Cred extends BaseClass_SECR_Portal {
         ObjectRepo.startTestAndLog_1_SS("SECR_LogOut_TC01", "Verify that user should be able to click on SECR Menu", () -> {
             Liabrary.custom_click(secr.getSECR_Menu(), "Click SECR Menu");
         });
-        Thread.sleep(1000);
+   
         
 
         ObjectRepo.startTestAndLog_1_SS("SECR_LogOut_TC02", "Verify that user should be able to click on Logout Button", () -> {
             Liabrary.custom_click(secr.getLogout_Button(), "Click Logout Button");
         });
-        Thread.sleep(1000);
+      
         
         
 

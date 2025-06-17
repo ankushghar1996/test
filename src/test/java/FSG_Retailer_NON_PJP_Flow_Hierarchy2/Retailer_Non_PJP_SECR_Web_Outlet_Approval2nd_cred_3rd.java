@@ -1,4 +1,4 @@
-package SECR_Activity_PJP_Hierarchy_1;
+package FSG_Retailer_NON_PJP_Flow_Hierarchy2;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
@@ -8,7 +8,7 @@ import Com_Utility.Liabrary;
 import Com_Utility.ObjectRepo;
 import SCER_Web_Portal.OM_Outlet_Approval2nd_main;
 
-public class Activity_PJP_OM_Outlet_Approval2nd_cred_3rd extends BaseClass_SECR_WebPortal{
+public class Retailer_Non_PJP_SECR_Web_Outlet_Approval2nd_cred_3rd extends BaseClass_SECR_WebPortal{
 
 	
 	@Test
@@ -16,11 +16,7 @@ public class Activity_PJP_OM_Outlet_Approval2nd_cred_3rd extends BaseClass_SECR_
 
 		OM_Outlet_Approval2nd_main SECR = PageFactory.initElements(driver, OM_Outlet_Approval2nd_main.class);
 	
-
-		
-		
-		
-		
+		 // Package name + login name + class name + test case nmbr
 		
 		ObjectRepo.startTestAndLog_1_SS("SECR_Web_OM_Outlet_Approval2nd_cred_TC01", "Verify that user should be click on master Menu", () -> {
             Liabrary.custom_click(SECR.getMaster_Menu(), "Click Master Menu");

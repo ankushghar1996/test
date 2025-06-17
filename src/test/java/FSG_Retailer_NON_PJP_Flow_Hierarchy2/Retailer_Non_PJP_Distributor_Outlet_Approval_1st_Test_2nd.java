@@ -1,4 +1,4 @@
-package SECR_Activity_PJP_Hierarchy_1;
+package FSG_Retailer_NON_PJP_Flow_Hierarchy2;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,7 +10,7 @@ import Com_Utility.Liabrary;
 import Com_Utility.ObjectRepo;
 import Distributor_Portal.Outlet_Approval_1st;
 
-public class Activity_PJP_Outlet_Approval_1st_Test_2nd extends Base_Class_Distributor {
+public class Retailer_Non_PJP_Distributor_Outlet_Approval_1st_Test_2nd extends Base_Class_Distributor {
 
     @Test
     public void Outlet_Test() throws Exception {
