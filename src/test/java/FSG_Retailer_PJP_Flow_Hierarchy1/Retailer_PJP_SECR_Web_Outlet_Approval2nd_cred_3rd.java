@@ -1,4 +1,4 @@
-package SECR_Activity_Non_PJP_Hierarchy2;
+package FSG_Retailer_PJP_Flow_Hierarchy1;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
@@ -8,7 +8,7 @@ import Com_Utility.Liabrary;
 import Com_Utility.ObjectRepo;
 import SCER_Web_Portal.OM_Outlet_Approval2nd_main;
 
-public class Activity_Non_PJP_OM_Outlet_Approval2nd_cred extends BaseClass_SECR_WebPortal{
+public class Retailer_PJP_SECR_Web_Outlet_Approval2nd_cred_3rd extends BaseClass_SECR_WebPortal{
 
 	
 	@Test
@@ -16,32 +16,28 @@ public class Activity_Non_PJP_OM_Outlet_Approval2nd_cred extends BaseClass_SECR_
 
 		OM_Outlet_Approval2nd_main SECR = PageFactory.initElements(driver, OM_Outlet_Approval2nd_main.class);
 	
-
+		// Package name + login name + class name + test case nmbr
 		
-		
-		
-		
-		
-		ObjectRepo.startTestAndLog_1_SS("SECR_Web_OM_Outlet_Approval2nd_cred_TC01", "Verify that user should be click on master Menu", () -> {
+		ObjectRepo.startTestAndLog_1_SS("FSG_SECR_Web_OM_Outlet_Approval2nd_cred_TC01", "Verify that user should be click on master Menu", () -> {
             Liabrary.custom_click(SECR.getMaster_Menu(), "Click Master Menu");
         });
         Thread.sleep(1000);
 		
 		
-        ObjectRepo.startTestAndLog_1_SS("SECR_Web_OM_Outlet_Approval2nd_cred_TC02", "Verify that user should be click on Outlet master Menu", () -> {
+        ObjectRepo.startTestAndLog_1_SS("FSG_SECR_Web_OM_Outlet_Approval2nd_cred_TC02", "Verify that user should be click on Outlet master Menu", () -> {
             Liabrary.custom_click(SECR.getOutlet_Master_SubMenu(), "Click Outlet Master Menu");
         });
         Thread.sleep(1000);
         
         
-        ObjectRepo.startTestAndLog_1_SS("SECR_Web_OM_Outlet_Approval2nd_cred_TC03", "Verify that user should be click on Outlet Approval master Menu", () -> {
+        ObjectRepo.startTestAndLog_1_SS("FSG_SECR_Web_OM_Outlet_Approval2nd_cred_TC03", "Verify that user should be click on Outlet Approval master Menu", () -> {
             Liabrary.custom_click(SECR.getOutlet_Approval_SubMenu(), "Click Outlet Approval Menu");
         });
         Thread.sleep(1000);
         
         
         
-        ObjectRepo.startTestAndLog_1_SS("SECR_Web_OM_Outlet_Approval2nd_cred_TC04", "Verify that user should be click Grid data", () -> {
+        ObjectRepo.startTestAndLog_1_SS("FSG_SECR_Web_OM_Outlet_Approval2nd_cred_TC04", "Verify that user should be click Grid data", () -> {
             Liabrary.custom_click(SECR.getDistributor_Approval_Grid_Page(), "click Grid data");
         });
         Thread.sleep(1000);

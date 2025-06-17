@@ -1,4 +1,4 @@
-package SECR_Activity_PJP_Hierarchy_1;
+package FSG_Retailer_NON_PJP_Flow_Hierarchy2;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,7 +11,7 @@ import Com_Utility.Liabrary;
 import Com_Utility.ObjectRepo;
 import HO_Portal_Main.OutletMaster_ApprovalPage;
 
-public class Activity_PJP_OutletMaster_ApprovalPageCred_1st extends BaseClass_HO_Portal {
+public class Retailer_Non_PJP_HO_OutletMaster_ApprovalPageCred_1st extends BaseClass_HO_Portal {
 
     @Test
     public void OM_View() throws Exception {
@@ -52,23 +52,18 @@ public class Activity_PJP_OutletMaster_ApprovalPageCred_1st extends BaseClass_HO
         });
         Thread.sleep(1000);
 
-       
-        
-        
+  
         ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC08", "Click ProceedForApproval Button", () -> {
             Liabrary.custom_click(Appr.getProceedForApproval_btn(), "Click ProceedForApproval Button");
         });
         Thread.sleep(1000);
         
-        
-        
+
         ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC09", "Click Yes Button", () -> {
             Liabrary.custom_click(Appr.getYes_btn(), "Click Yes Button");
         });
         Thread.sleep(1000);
-        
-        
-        
+   
 
 //        ObjectRepo.startTestAndLog_1_SS("OM_AP_TC08", "Click Close Button", () -> {
 //            Liabrary.custom_click(Appr.getClose_btn(), null);
