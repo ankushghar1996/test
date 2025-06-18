@@ -117,6 +117,19 @@ public class OutletMaster_ApprovalPage {
 	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_btnProceedForApproval']")
     private WebElement ProceedForApproval_btn;
 	
+	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_btnProceedForApproval']")
+    private WebElement ProceedForReject_btn;
+	
+	@FindBy(how=How.XPATH,using="//span[@id='ctl00_ParentMasterContentPlaceHolder1_ddlRejectReason_Arrow']")
+    private WebElement Reject_Reason_Dropdown;
+	
+	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_btnRejectYes']")
+    private WebElement Reject_Yes_Button;
+	
+	@FindBy(how=How.XPATH,using="//div[@class='rcbSlide']//ul//li[text()='Wrong PI Information']")
+    private WebElement Reject_Reason_Dropdown_Value;
+	
+	//span[@id='ctl00_ParentMasterContentPlaceHolder1_ddlRejectReason_Arrow']
 	
 	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_btnReject']")
     private WebElement Reject_btn;
@@ -141,6 +154,31 @@ public class OutletMaster_ApprovalPage {
 
 	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_btnYes']")
     private WebElement Yes_btn;
+
+
+	public WebElement getProceedForReject_btn() {
+		return ProceedForReject_btn;
+	}
+
+
+	public WebElement getProceedForReject() {
+		return Reject_Reason_Dropdown;
+	}
+
+
+	public WebElement getReject_Reason_Dropdown() {
+		return Reject_Reason_Dropdown;
+	}
+
+
+	public WebElement getReject_Reason_Dropdown_Value() {
+		return Reject_Reason_Dropdown_Value;
+	}
+
+
+	public WebElement getReject_Yes_Button() {
+		return Reject_Yes_Button;
+	}
 	
 	
 	

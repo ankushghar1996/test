@@ -46,25 +46,7 @@ public class AccM_ContractorMaster extends BaseClass{
 			String Expected_Text=" Contractor Master";
 			Assert.assertEquals(Expected_Text, Actual_Text);});
 			Thread.sleep(2000);
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 	
 	
 	}
