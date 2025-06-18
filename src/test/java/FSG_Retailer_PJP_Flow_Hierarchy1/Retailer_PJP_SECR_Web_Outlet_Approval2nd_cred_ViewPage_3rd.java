@@ -34,8 +34,7 @@ public class Retailer_PJP_SECR_Web_Outlet_Approval2nd_cred_ViewPage_3rd extends 
             Liabrary.custom_click(SECR.getOutlet_Approval_SubMenu(), "Click Outlet Approval Menu");
         });
         Thread.sleep(1000);
-        
-        
+         
         
         ObjectRepo.startTestAndLog_1_SS("SECR_Web_OM_Outlet_Approval2nd_cred_ViewPage_TC_04", "Verify that user should be click Grid data", () -> {
             Liabrary.custom_click(SECR.getDistributor_Approval_Grid_Page(), "click Grid data");

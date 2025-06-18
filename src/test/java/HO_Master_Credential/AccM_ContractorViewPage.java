@@ -56,51 +56,10 @@ public class AccM_ContractorViewPage extends BaseClass{
 		Liabrary.custom_click(CMV.getView_btn(), null);});
 		Thread.sleep(1000);
 		
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }
