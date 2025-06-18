@@ -8,7 +8,7 @@ import Com_Utility.Liabrary;
 import Com_Utility.ObjectRepo;
 import SFA_Portal.Distributor_Approval1st_ApprovalPage;
 
-public class Distributor_Creation_Dist_Approval1st_ApprPage_Cred_2nd extends BaseClass_SFA {
+public class Distributor_Creation_SFA_Approval1st_ApprPage_Cred_2nd extends BaseClass_SFA {
 
 	
 	

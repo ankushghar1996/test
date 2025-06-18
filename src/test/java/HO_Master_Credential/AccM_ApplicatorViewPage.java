@@ -19,7 +19,7 @@ public class AccM_ApplicatorViewPage extends BaseClass{
 	@Test(priority=0)
 	public void Distributor_Transfer1() throws Exception {
 		
-		
+	
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		AM_ApplicatorViewPage APV = PageFactory.initElements(driver, AM_ApplicatorViewPage.class);
 		AM_ApplicatiorMaster AP = PageFactory.initElements(driver, AM_ApplicatiorMaster.class);
@@ -56,8 +56,10 @@ public class AccM_ApplicatorViewPage extends BaseClass{
 	Liabrary.custom_click(APV.getView_Btn(), null);});
 	Thread.sleep(1000);
 	
+	}
+	
 	@Test(priority=1)
-	public void Distributor_Transfer1() throws Exception {
+	public void Distributor_Transfer2() throws Exception {
 		
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
