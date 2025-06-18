@@ -12,7 +12,7 @@ import Com_Utility.BaseClass_ASM;
 import Com_Utility.Liabrary;
 import Com_Utility.ObjectRepo;
  
-public class Distributor_Creation_ASM_Approval_Test_3rd extends BaseClass_ASM {
+public class Distributor_Creation_ASM_Dist_Approval_Test_3rd extends BaseClass_ASM {
 	
 	
 	@Test
