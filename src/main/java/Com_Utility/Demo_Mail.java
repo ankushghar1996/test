@@ -3,10 +3,9 @@ package Com_Utility;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.MultiPartEmail;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+
+import java.io.*;
+import java.nio.file.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -17,23 +16,24 @@ public class Demo_Mail {
     }
 
     public static void sendReportEmail() throws Exception {
+        System.out.println("======= Sending Email with Extent Report OneDrive Link =======");
 
-        System.out.println("======= Sending Email with Extent Report ZIP Attachment =======");
-
-        // Path to the HTML report
+        // Step 1: Path to the HTML report
         String reportPath = "C:\\COde\\test\\test-output\\Extent_Reports\\TestReport.html";
 
-        // Zip the HTML report
+        // Step 2: Zip the HTML report
         String zipPath = zipReport(reportPath);
 
-        // Create the attachment
-        EmailAttachment attachment = new EmailAttachment();
-        attachment.setPath(zipPath);
-        attachment.setDisposition(EmailAttachment.ATTACHMENT);
-        attachment.setDescription("Automation Test Extent Report (Zipped)");
-        attachment.setName("Extent_Test_Report.zip");
+        // Step 3: Copy ZIP to shared OneDrive folder
+        String sharedDrivePath = "S:\\Heera_Common_Shared\\Ankush\\Automation Test Reports";
+        // Optional: Use UNC path if S: mapping fails
+        // String sharedDrivePath = "\\\\heerasoftware0.sharepoint.com@SSL\\DavWWWRoot\\sites\\HSPL_Testing_Team\\Shared Documents\\HSPL_Testing_Team\\Common\\Ankush Gharsele\\Automation Test Reports Result";
+        String copiedPath = copyToSharedFolder(zipPath, sharedDrivePath);
 
-        // Create the email message
+        // Step 4: Public OneDrive link
+        String oneDriveLink = "https://heerasoftware0.sharepoint.com/:f:/r/sites/HSPL_Testing_Team/Shared%20Documents/HSPL_Testing_Team/Common/Ankush%20Gharsele/Automation%20Test%20Reports%20Result?csf=1&web=1&e=wJu7zc";
+
+        // Step 5: Compose email
         MultiPartEmail email = new MultiPartEmail();
         email.setHostName("smtp.office365.com");
         email.setSmtpPort(587);
@@ -43,23 +43,32 @@ public class Demo_Mail {
         email.setSSLOnConnect(false);
 
         email.setFrom("qaautomation@heerasoftware.com");
-        email.setSubject("Automation Test Execution Report (Zipped)");
-        email.setMsg("Please find the attached ZIPPED Automation Test Execution Report.");
+        email.setSubject("Automation Test Execution Report - OneDrive Link + Backup Attachment");
+
+        email.setMsg("Hi Team,\n\n"
+                + "The Automation Test Report has been uploaded to OneDrive.\n\n"
+                + "🔗 OneDrive Link: " + oneDriveLink + "\n\n"
+                + "📄 File Name: " + new File(copiedPath).getName() + "\n"
+                + "📂 Copied To: " + copiedPath + "\n\n"
+                + "Also attached as a backup.\n\n"
+                + "Regards,\nAutomation Team");
+
         email.addTo("aniket.jadhav@heerasoftware.com");
         email.addTo("ankush.gharsele@heerasoftware.com");
-       
-       
-        
-        // Attach the zipped report
+
+        // Step 6: Attach ZIP report as backup
+        EmailAttachment attachment = new EmailAttachment();
+        attachment.setPath(zipPath);
+        attachment.setDisposition(EmailAttachment.ATTACHMENT);
+        attachment.setName(new File(zipPath).getName());
         email.attach(attachment);
 
-        // Send the email
+        // Step 7: Send email
         email.send();
-
-        System.out.println("✅ Email sent successfully with zipped report!");
+        System.out.println("✅ Email sent successfully with OneDrive link and attachment!");
     }
 
-    // Utility method to zip the report
+    // Zip the report HTML file
     public static String zipReport(String filePath) throws IOException {
         String zipFilePath = filePath.replace(".html", ".zip");
 
@@ -77,6 +86,23 @@ public class Demo_Mail {
             }
         }
 
+        System.out.println("✅ Report zipped: " + zipFilePath);
         return zipFilePath;
+    }
+
+    // Copy ZIP to OneDrive shared folder
+    public static String copyToSharedFolder(String sourcePath, String sharedDrivePath) throws IOException {
+        File sourceFile = new File(sourcePath);
+        Path targetPath = Paths.get(sharedDrivePath, sourceFile.getName());
+
+        try {
+            Files.copy(sourceFile.toPath(), targetPath, StandardCopyOption.REPLACE_EXISTING);
+            System.out.println("✅ Report copied to OneDrive shared folder: " + targetPath);
+        } catch (IOException e) {
+            System.err.println("❌ Failed to copy to shared folder: " + e.getMessage());
+            throw e;
+        }
+
+        return targetPath.toString();
     }
 }
