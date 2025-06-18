@@ -67,16 +67,16 @@ public class HO_Distributor_Reject_Cred extends BaseClass_HO_Portal {
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("HO_DR_TC10", "Click Yes Button", () -> {
-            Liabrary.custom_click(APP.getYes_btn(), null);
-        });
-        Thread.sleep(1000);
+//        ObjectRepo.startTestAndLog_1_SS("HO_DR_TC10", "Click Yes Button", () -> {
+//            Liabrary.custom_click(APP.getYes_btn(), null);
+//        });
+//        Thread.sleep(1000);
 
-        /*
+        
         ObjectRepo.startTestAndLog_1_SS("HO_DR_TC11", "Click No Button", () -> {
             Liabrary.custom_click(APP.getNo_btn(), null);
         });
         Thread.sleep(1000);
-        */
+       
     }
 }

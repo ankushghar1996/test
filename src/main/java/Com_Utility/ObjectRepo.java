@@ -123,12 +123,11 @@ public class ObjectRepo {
     
  // 🔁 NEW METHOD: Flash message support version
     public static void startTestAndLog_1_SS(String testNumber, String testDescription, Runnable action) {
-        test = extent.createTest(testNumber, testDescription); // ✅ Same as original
+        test = extent.createTest(testNumber, testDescription); // ✅ Create test
 
         try {
             test.info(testDescription); // ✅ Log the step
-
-            action.run(); // ✅ Run the user step
+            action.run(); // ✅ Run the step
 
             // 🔁 NEW: Flash message check after action
             List<WebElement> flashMessages = driver.findElements(By.xpath("//div[@id='toast-container']"));
@@ -136,25 +135,49 @@ public class ObjectRepo {
 
             for (WebElement msg : flashMessages) {
                 if (msg.isDisplayed()) {
-                    String messageText = msg.getText();
-                    test.fail("❌ Flash Message Detected: " + messageText); // 🔁 NEW: Log flash failure
-                    flashFound = true;
+                    String messageText = msg.getText().trim().toLowerCase();
 
-                    // 🔁 NEW: Screenshot for flash error
-                    if (driver != null) {
-                        try {
-                            String screenshot = takeScreenshot();
-                            if (screenshot != null && !screenshot.isEmpty()) {
-                                test.addScreenCaptureFromBase64String(screenshot, "Screenshot - Flash Error");
+                    // ✅ Allow safe/positive messages
+                    if (messageText.contains("successfully") ||
+                        messageText.contains("record saved") ||
+                        messageText.contains("submitted") ||
+                        messageText.equals("okay") ||
+                        messageText.equals("yes")) {
+
+                        test.pass("✅ Flash Message: " + messageText);
+
+                        // Screenshot for success flash
+                        if (driver != null) {
+                            try {
+                                String screenshot = takeScreenshot();
+                                if (screenshot != null && !screenshot.isEmpty()) {
+                                    test.addScreenCaptureFromBase64String(screenshot, "Screenshot - Flash Success");
+                                }
+                            } catch (IOException e) {
+                                test.warning("Screenshot capture failed: " + e.getMessage());
                             }
-                        } catch (IOException e) {
-                            test.warning("Screenshot capture failed: " + e.getMessage());
+                        }
+                    } else {
+                        // ❌ Error flash message
+                        test.fail("❌ Flash Message Detected: " + messageText);
+                        flashFound = true;
+
+                        // Screenshot for error flash
+                        if (driver != null) {
+                            try {
+                                String screenshot = takeScreenshot();
+                                if (screenshot != null && !screenshot.isEmpty()) {
+                                    test.addScreenCaptureFromBase64String(screenshot, "Screenshot - Flash Error");
+                                }
+                            } catch (IOException e) {
+                                test.warning("Screenshot capture failed: " + e.getMessage());
+                            }
                         }
                     }
                 }
             }
 
-            // 🔁 NEW: Mark pass if no flash
+            // ✅ Mark test as pass if no error flash found
             if (!flashFound) {
                 test.pass("✅ " + testDescription);
 
@@ -169,14 +192,14 @@ public class ObjectRepo {
                     }
                 }
             } else {
-                // 🔁 NEW: Force test to fail in TestNG if flash was shown
+                // ❌ Force fail in TestNG if flash was an error
                 throw new RuntimeException("Flash error found — test failed.");
             }
 
         } catch (Exception e) {
-            test.fail("❌ Exception in step: " + testDescription + " | " + e.getMessage()); // ✅ Same
+            test.fail("❌ Exception in step: " + testDescription + " | " + e.getMessage());
 
-            // ✅ Screenshot on exception
+            // Screenshot on exception
             if (driver != null) {
                 try {
                     String screenshot = takeScreenshot();
@@ -191,6 +214,7 @@ public class ObjectRepo {
             throw new RuntimeException(e); // ✅ Keep fail status in TestNG
         }
     }
+
 
     
 
