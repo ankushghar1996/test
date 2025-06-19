@@ -1,5 +1,7 @@
 package Distributor_Portal_Credential;
 
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -10,12 +12,16 @@ import Com_Utility.Liabrary;
 import Com_Utility.ObjectRepo;
 import Distributor_Portal.Outlet_Approval_1st;
 
-public class Outlet_Approval_Reject_1st_Test extends Base_Class_Distributor {
 
+
+ 
+public class Outlet_Approval_Reject_1st_Test extends Base_Class_Distributor {
+ 
     @Test
     public void Outlet_Test() throws Exception {
-
+ 
         Outlet_Approval_1st DIST = PageFactory.initElements(driver, Outlet_Approval_1st.class);
+ 
 
         ObjectRepo.startTestAndLog_1_SS("DB_Outlet_Approval_TC_01", "Click on Master menu", () -> {
             Liabrary.custom_click(DIST.getMaster(), "Click on Master");
@@ -31,7 +37,7 @@ public class Outlet_Approval_Reject_1st_Test extends Base_Class_Distributor {
             Liabrary.custom_click(DIST.getOutlet_Approval_1st(), "Click Outlet Approval 1st");
         });
         Thread.sleep(1000);
-
+      
         ObjectRepo.startTestAndLog_1_SS("DB_Outlet_Approval_TC_04", "Select Grid Data From Grid Table", () -> {
             Liabrary.custom_click(DIST.getGrid_Data(), "Select Grid Data From Grid Table");
         });
@@ -54,11 +60,14 @@ public class Outlet_Approval_Reject_1st_Test extends Base_Class_Distributor {
         });
         Thread.sleep(1000);
 
-        
         ObjectRepo.startTestAndLog_1_SS("DB_Outlet_Approval_TC_08", "Click on No button", () -> {
             Liabrary.custom_click(DIST.getNo_Button(), "Click on No Btn");
         });
+
         
         
     }
 }
+
+
+
