@@ -53,13 +53,13 @@ public class FSG_Leave_Application_Test extends BaseClass_FSG_Portal {
 	driver.findElement(By.xpath("//*[@formcontrolname='Reason']")).sendKeys("i am feeling unwell and need to rest and recover."); });
 	Thread.sleep(1000);
 	
-	ObjectRepo.startTestAndLog_1_SS("FSG_Leave_Application_Test_09", "Verify that user can Click On Leave type Dropdown value", () -> {
-	Liabrary.custom_click(FSG.getApply_Button(), "Click On Apply Button");  });
-    Thread.sleep(1000);
-    
-//    ObjectRepo.startTestAndLog_1_SS("FSG_Leave_Application_Test_10", "Verify that user can Click On Leave type Dropdown value", () -> {
-//    Liabrary.custom_click(FSG.getCancled_Leave(), "Click on cancle leave Button");  });
+//	ObjectRepo.startTestAndLog_1_SS("FSG_Leave_Application_Test_09", "Verify that user can Click On Leave type Dropdown value", () -> {
+//	Liabrary.custom_click(FSG.getApply_Button(), "Click On Apply Button");  });
 //    Thread.sleep(1000);
+    
+    ObjectRepo.startTestAndLog_1_SS("FSG_Leave_Application_Test_10", "Verify that user can Click On Leave type Dropdown value", () -> {
+    Liabrary.custom_click(FSG.getCancled_Leave(), "Click on cancle leave Button");  });
+    Thread.sleep(1000);
     
     
 }

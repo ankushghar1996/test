@@ -12,8 +12,6 @@ import HO_Master.PM_HSN_Master;
 
 public class PM_PM_HSN_Master extends BaseClass {
 
-	
-	
 	@Test
 	public void PM_HSN_MASTER () throws Exception{
 	HomePage hp = PageFactory.initElements(driver,HomePage.class);	

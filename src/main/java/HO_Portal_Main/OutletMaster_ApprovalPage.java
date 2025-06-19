@@ -126,6 +126,9 @@ public class OutletMaster_ApprovalPage {
 	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_btnRejectYes']")
     private WebElement Reject_Yes_Button;
 	
+	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_Button1']")
+    private WebElement Reject_NO_Button;
+	
 	@FindBy(how=How.XPATH,using="//div[@class='rcbSlide']//ul//li[text()='Wrong PI Information']")
     private WebElement Reject_Reason_Dropdown_Value;
 	
@@ -178,6 +181,11 @@ public class OutletMaster_ApprovalPage {
 
 	public WebElement getReject_Yes_Button() {
 		return Reject_Yes_Button;
+	}
+
+
+	public WebElement getReject_NO_Button() {
+		return Reject_NO_Button;
 	}
 	
 	

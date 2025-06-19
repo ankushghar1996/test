@@ -57,18 +57,21 @@ public class OutletMaster_Reject_PageCred extends BaseClass_HO_Portal {
             Liabrary.custom_click(Appr.getReject_Reason_Dropdown(), "Reject reason Dropdown");
         });
         Thread.sleep(1000);
-        
-        
-        
+                
         ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC08", "Click Reject reason Dropdown Value", () -> {
             Liabrary.custom_click(Appr.getReject_Reason_Dropdown_Value(), "Reject reason Dropdown Value");
         });
         Thread.sleep(1000);
+         
         
-        ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC09", "Click Reject Yes Button", () -> {
-            Liabrary.custom_click(Appr.getReject_Yes_Button(), "Reject Yes Button");
+        ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC09", "Click Reject No Button", () -> {
+            Liabrary.custom_click(Appr.getNo_btn(), "Reject No Button");
         });
-        Thread.sleep(1000);
+        
+//        ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC09", "Click Reject Yes Button", () -> {
+//            Liabrary.custom_click(Appr.getReject_Yes_Button(), "Reject Yes Button");
+//        });
+//        Thread.sleep(1000);
         
 
 //        ObjectRepo.startTestAndLog_1_SS("OM_AP_TC08", "Click Close Button", () -> {
