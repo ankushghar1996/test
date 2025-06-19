@@ -32,7 +32,7 @@ public class BaseClass_ASM {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://fosrocuat.hspldms.com/");
+        driver.get("https://fosrocuatlocal.hspldms.com");
         //initilize Driver 
         ObjectRepo.driver = driver;	
  

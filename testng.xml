@@ -5,7 +5,7 @@
     <classes>
 
 
-
+<class name="SECR_Portal_Credential.Mark_Attendence_Cred"/>
       <!-- SECR New Distributor Creation Flow -->
 <class name="SECR_Portal_Credential.New_Distributor_Cred"/>
 <class name="HO_Portal_Credential.HO_Distributor_Approval_View_Test"/>
@@ -19,6 +19,7 @@
 <class name="ASM_Portal_Test.ASM_Approval_Test"/>
 
 
+
 <!-- SECR New Retailer Creation Flow -->
 <class name="SECR_Portal_Credential.SECR_New_Retailer_Status_Cred"/>
 <class name="HO_Portal_Credential.OutletMaster_ViewPageCred"/>
@@ -30,6 +31,7 @@
 <class name="SECR_Web_Portal_Credential.OM_Outlet_Approval2nd_cred_ViewPage"/>
 <class name="SECR_Web_Portal_Credential.OM_Outlet_Approval_Reject2nd_cred"/>
 <class name="SECR_Web_Portal_Credential.OM_Outlet_Approval2nd_cred"/>
+
 
 <!-- SECR Activity PJP New Retailer Creation Flow -->
 <class name="SECR_Portal_Credential.Activity_PJP_New_Retailer_Cred"/>
@@ -69,6 +71,7 @@
 <class name="SECR_Portal_Credential.SECR_LogOut_Cred"/>
 
 
+<class name="FSG_Portal_Credential.Mark_Attendance_Cred"/>
 <!-- FSG New Retailer Creation Flow -->
 <class name="FSG_Portal_Credential.New_Retailer_cred_OTP"/>
 <class name="FSG_Retailer_Hierarchy.Retailer_HO_OutletMaster_ViewPageCred_1st"/>

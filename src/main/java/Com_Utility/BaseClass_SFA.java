@@ -33,7 +33,7 @@ public class BaseClass_SFA {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://fosrocuat.hspldms.com/");
+        driver.get("https://fosrocuatlocal.hspldms.com");
         
         ObjectRepo.driver = driver;
         

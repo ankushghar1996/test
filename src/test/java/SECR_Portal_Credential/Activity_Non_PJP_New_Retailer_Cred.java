@@ -66,7 +66,7 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 	    @Test
 	    public void testOtpFlowAndRetailerInfo() throws Exception {
 	    	
-	        String mobileNumber = "6245855517";
+	        String mobileNumber = "7777888850";
 
 	        // Login
 	        driver.get("https://fosrocsecruat.hspldms.com/");
@@ -177,7 +177,7 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 		        
 		        
 		        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_17", "Verify that user should be enter Firm Name.", () -> {
-		        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Komalswami punavale Paints");
+		        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Ram shastri Paints");
 		        });
 		        Thread.sleep(1000);
 		        
@@ -416,7 +416,7 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
 
-	            String query = "select * from RegistrationPendingMaster where MobileNo='6245855517'";
+	            String query = "select * from RegistrationPendingMaster where MobileNo='7777888850'";
 	            
 	            ResultSet rs = stmt.executeQuery(query);
 	            

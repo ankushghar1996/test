@@ -301,6 +301,11 @@ public class ObjectRepo {
         // Convert the byte array to a Base64 encoded string
         return Base64.getEncoder().encodeToString(fileContent);
     }
+    public static void startTestAndLog_1_NS(String testDescription) {
+        test = extent.createTest("❌ Negative Scenario");
+        test.info("🔸 " + testDescription);
+        System.out.println("🖨️ Negative Scenario Logged: " + testDescription);
+    }
 
     public static void logTestWithScreenshot(String logMessage) {
         try {
