@@ -4,6 +4,8 @@
   <test thread-count="5" name="Test">
     <classes>
 
+
+
       <!-- SECR New Distributor Creation Flow -->
 <class name="SECR_Portal_Credential.New_Distributor_Cred"/>
 <class name="HO_Portal_Credential.HO_Distributor_Approval_View_Test"/>
@@ -57,6 +59,11 @@
 <class name="SECR_Portal_Credential.PJP_Cred"/>
 <class name="SECR_Portal_Credential.SECR_Notification_Cred"/>
 <class name="SECR_Portal_Credential.SECR_Scheme_Test"/>
+<class name="SECR_Portal_Credential.SECR_Media_Test"/>
+<class name="SECR_Portal_Credential.SECR_Pending_Order_DB_Test"/>
+<class name="SECR_Portal_Credential.SECR_Pending_Approval_DB_Test"/>
+<class name="SECR_Portal_Credential.SECR_Pending_Leave_Approval_DB_Test"/>
+<class name="SECR_Portal_Credential.SECR_Approval_Test"/>
 <class name="SECR_Portal_Credential.SECR_View_Profile_Cred"/>
 <class name="SECR_Portal_Credential.SECR_YTD_Working_Test"/>
 <class name="SECR_Portal_Credential.SECR_LogOut_Cred"/>
@@ -152,6 +159,12 @@
 <class name="SEBS_Portal_Credential.SEBS_New_Applicator_Creation_Test"/>
 
 
+<class name="Retailer_Credential.Retailer_Points_Test"/>
+<class name="Retailer_Credential.Media_Test"/>
+<class name="Retailer_Credential.Logout"/>
+<class name="Retailer_Credential.Product_Wise_Purchase_Test"/>
+<class name="Retailer_Credential.Retailer_Scheme_Test"/>
+<class name="Retailer_Credential.View_Profile_Test"/>
 
 
     </classes>
