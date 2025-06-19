@@ -42,7 +42,7 @@ public class BaseClass_HO_Portal {
 	    
 	    driver = new ChromeDriver(); // ✅ FIXED
 
-	    driver.get("https://fosrocuat.hspldms.com");
+	    driver.get("https://fosrocuatlocal.hspldms.com");
 	    driver.manage().window().maximize();
 	    
 	    ObjectRepo.driver = driver;

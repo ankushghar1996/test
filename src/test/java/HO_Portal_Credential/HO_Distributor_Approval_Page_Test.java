@@ -91,6 +91,8 @@ public class HO_Distributor_Approval_Page_Test extends BaseClass_HO_Portal{
 		
 		HO_Distributor_Approval_Page_Main APP = PageFactory.initElements(driver, HO_Distributor_Approval_Page_Main.class);
 
+		ObjectRepo.startTestAndLog_1_NS("Header Text Change As Outlet Approval");
+		
 		ObjectRepo.startTestAndLog_1_SS("HO_HO_Distributor_Approval_Page_Test_01", "Verify that user should be click on HO_Portal Master menu.", () -> {
 		Liabrary.custom_click(APP.getMaster(), "select Master Menu");
 		});
@@ -151,6 +153,8 @@ public class HO_Distributor_Approval_Page_Test extends BaseClass_HO_Portal{
 		
 		HO_Distributor_Approval_Page_Main APP = PageFactory.initElements(driver, HO_Distributor_Approval_Page_Main.class);
 
+		ObjectRepo.startTestAndLog_1_NS("Proceed click Approve button without Selecting Grid Data");
+		
 		ObjectRepo.startTestAndLog_1_SS("HO_HO_Distributor_Approval_Page_Test_01", "Verify that user should be click on HO_Portal Master menu.", () -> {
 		Liabrary.custom_click(APP.getMaster(), "select Master Menu");
 		});
