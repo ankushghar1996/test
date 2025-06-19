@@ -14,10 +14,8 @@ public class AR_Activity_Reports_Main {
 	@FindBy(how=How.XPATH,using = "//ul[@class=\"nav nav-treeview\"]//ul//li//p[text()='Activity Report']")
 	private WebElement Activity_Report_Menu;
 	
-	
 	@FindBy(how=How.XPATH,using = "")
 	private WebElement Activity_Details_Report_Header_Text;	
-	
 	
 	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_Button1']")
 	private WebElement View_Button;
@@ -30,9 +28,7 @@ public class AR_Activity_Reports_Main {
 	//input[@id='ParentMasterContentPlaceHolder1_btnDownload']
 	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_btnDownload']")
 	private WebElement Download_Button;
-	
-	
-	 
+
 	public WebElement getActivity_Report_Menu() {
 		return Activity_Report_Menu;
 	}
