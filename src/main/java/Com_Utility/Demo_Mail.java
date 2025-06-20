@@ -19,7 +19,8 @@ public class Demo_Mail {
         System.out.println("======= Sending Email with Extent Report OneDrive Link =======");
 
         // Step 1: Path to the HTML report
-      String reportPath = "C:\\COde\\test\\test-output\\Extent_Reports\\TestReport.html";
+      String reportPath = "C:\\COde\\test-new\\test\\test-output\\Extent_Reports\\TestReport.html";
+    //  C:\\COde\\test-new\\test\\test-output\\Extent_Reports
         
     //  String reportPath ="FSRC_PR\\test-output\\Extent_Reports\\TestReport.html";
     

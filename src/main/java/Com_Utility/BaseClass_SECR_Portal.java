@@ -45,7 +45,7 @@ public class BaseClass_SECR_Portal {
 		
 	    driver = new ChromeDriver(); 
 
-	    driver.get("https://fosrocsecruat.hspldms.com/");
+	    driver.get("https://fosrocsecruatlocal.hspldms.com/");
 	    driver.manage().window().maximize();
 	    
 	    ObjectRepo.driver = driver;

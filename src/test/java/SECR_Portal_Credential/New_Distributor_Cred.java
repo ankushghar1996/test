@@ -70,7 +70,7 @@ public class New_Distributor_Cred {
 	 	public void testOtpFlowAndRetailerInfo() throws Exception {
 	 	    
 
-	 	    String mobileNumber = "7777545401";
+	 	    String mobileNumber = "9403582554";
 
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_01", "Verify that user should be send SECR User Name.", () -> {
@@ -455,8 +455,8 @@ public class New_Distributor_Cred {
 		    	
 		        String otp = null;
 
-		        String url = "jdbc:sqlserver://172.25.0.74:1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
-		        String username = "Test_Team";
+		        String url = "jdbc:sqlserver://192.168.2.206,1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
+		        String username = "sqlservices";
 		        String password = "Pass@2025";
 
 		        try {
@@ -465,7 +465,7 @@ public class New_Distributor_Cred {
 		            Connection conn = DriverManager.getConnection(url, username, password);
 		            Statement stmt = conn.createStatement();
 
-		            String query = "select * from RegistrationPendingMaster where MobileNo='7777545401'";
+		            String query = "select * from RegistrationPendingMaster where MobileNo='7777545556'";
 		            
 		            ResultSet rs = stmt.executeQuery(query);
 		            
