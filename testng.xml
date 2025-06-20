@@ -5,7 +5,7 @@
     <classes>
 
 
-<class name="SECR_Portal_Credential.Mark_Attendence_Cred"/>
+<!-- <class name="SECR_Portal_Credential.Mark_Attendence_Cred"/> -->
       <!-- SECR New Distributor Creation Flow -->
 <class name="SECR_Portal_Credential.New_Distributor_Cred"/>
 <class name="HO_Portal_Credential.HO_Distributor_Approval_View_Test"/>
@@ -71,7 +71,7 @@
 <class name="SECR_Portal_Credential.SECR_LogOut_Cred"/>
 
 
-<class name="FSG_Portal_Credential.Mark_Attendance_Cred"/>
+<!-- <class name="FSG_Portal_Credential.Mark_Attendance_Cred"/> -->
 <!-- FSG New Retailer Creation Flow -->
 <class name="FSG_Portal_Credential.New_Retailer_cred_OTP"/>
 <class name="FSG_Retailer_Hierarchy.Retailer_HO_OutletMaster_ViewPageCred_1st"/>
@@ -91,7 +91,7 @@
 <!-- FSG Market PJP New Retailer Creation -->
 <class name="FSG_Portal_Credential.Market_PJP_New_Retailer_Creation"/>
 <class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_HO_OutletMaster_ViewPageCred_1st"/>
-<class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_Non_PJP_HO_OutletMaster_Reject_PageCred_1st"/>
+<class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_HO_OutletMaster_Reject_PageCred_1st"/>
 <class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_HO_OutletMaster_ApprovalPageCred_1st"/>
 <class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_Distributor_Outlet_Approval_1st_View_Test_2nd"/>
 <class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_Non_PJP_Distributor_Outlet_Approval_Reject_1st_Test_2nd"/>
@@ -103,7 +103,7 @@
 <!-- FSG Market Non-PJP New Retailer Creation -->
 <class name="FSG_Portal_Credential.Market_Non_PJP_New_Retailer_Creation"/>
 <class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_HO_OutletMaster_ViewPageCred_1st"/>
-<class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_PJP_HO_OutletMaster_Reject_PageCred_1st"/>
+<class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_HO_OutletMaster_Reject_PageCred_1st"/>
 <class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_HO_OutletMaster_ApprovalPageCred_1st"/>
 <class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_Distributor_Outlet_Approval_1st_View_Test_2nd"/>
 <class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_PJP_Distributor_Outlet_Approval_Reject_1st_Test_2nd"/>

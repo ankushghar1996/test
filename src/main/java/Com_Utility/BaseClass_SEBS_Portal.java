@@ -52,7 +52,7 @@ public class BaseClass_SEBS_Portal {
 		 
 	    driver = new ChromeDriver(options); 
 
-	    driver.get("https://fosrocsebsuat.hspldms.com/");
+	    driver.get("https://fosrocsebsuatlocal.hspldms.com");
 	    driver.manage().window().maximize();
 	    
 	    ObjectRepo.driver = driver;

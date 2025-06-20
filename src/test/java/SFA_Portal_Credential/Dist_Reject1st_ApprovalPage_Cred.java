@@ -57,16 +57,17 @@ public class Dist_Reject1st_ApprovalPage_Cred extends BaseClass_SFA {
 
 		// Optional No button step, uncomment if needed:
 		 ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_ApprPage_Cred_07", "Verify that user should click on No button.", () -> {
-		     Liabrary.custom_click(view.getNo_btn(), "Click No btn");
+		     Liabrary.custom_click(view.getNo_btn(), "Click No btn");});
 
 //		ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_ApprPage_Cred_07", "Verify that user should click on Yes button.", () -> {
 //		    Liabrary.custom_click(view.getYes_btn(), "Click Yes btn");
 //		});
 	
-	
-	
-	
 	}
-	
-	
 }
+	
+	
+	
+
+	
+
