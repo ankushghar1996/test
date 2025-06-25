@@ -19,25 +19,22 @@ public class Demo_Mail {
         System.out.println("======= Sending Email with Extent Report OneDrive Link =======");
 
         // Step 1: Path to the HTML report
-      String reportPath = "C:\\COde\\test-new\\test\\test-output\\Extent_Reports\\TestReport.html";
-    //  C:\\COde\\test-new\\test\\test-output\\Extent_Reports
-        
-    //  String reportPath ="FSRC_PR\\test-output\\Extent_Reports\\TestReport.html";
-    
+        String reportPath = "C:\\COde\\test-new\\test\\test-output\\Extent_Reports\\TestReport.html";
 
         // Step 2: Zip the HTML report
         String zipPath = zipReport(reportPath);
 
-        // Step 3: Copy ZIP to shared OneDrive folder
-        String sharedDrivePath = "S:\\Heera_Common_Shared\\Ankush\\Automation Test Reports";
-        // Optional: Use UNC path if S: mapping fails
-        // String sharedDrivePath = "\\\\heerasoftware0.sharepoint.com@SSL\\DavWWWRoot\\sites\\HSPL_Testing_Team\\Shared Documents\\HSPL_Testing_Team\\Common\\Ankush Gharsele\\Automation Test Reports Result";
-        String copiedPath = copyToSharedFolder(zipPath, sharedDrivePath);
-
-        // Step 4: Public OneDrive link
+        // Step 3: Public OneDrive link (used for email reference)
         String oneDriveLink = "https://heerasoftware0.sharepoint.com/:f:/r/sites/HSPL_Testing_Team/Shared%20Documents/HSPL_Testing_Team/Common/Ankush%20Gharsele/Automation%20Test%20Reports%20Result?csf=1&web=1&e=AcjdO1";
 
-        // Step 5: Compose email
+        // Step 4: UNC path to shared folder (not a mapped drive like S:\ or Z:\)
+        String sharedDrivePath = "C:\\Users\\10389\\OneDrive - Heera Software Private Limited (HSPL)\\Automation_Report";
+
+        //Ankush Path = S:\Heera_Common_Shared\Ankush\Automation Test Reports
+        
+        String copiedPath = copyToSharedFolder(zipPath, sharedDrivePath, oneDriveLink);
+
+        // Step 5: Compose and send email
         MultiPartEmail email = new MultiPartEmail();
         email.setHostName("smtp.office365.com");
         email.setSmtpPort(587);
@@ -58,7 +55,7 @@ public class Demo_Mail {
                 + "Regards,\nAutomation Team");
 
         email.addTo("aniket.jadhav@heerasoftware.com");
-        email.addTo("ankush.gharsele@heerasoftware.com");
+     //   email.addTo("ankush.gharsele@heerasoftware.com");
 
         // Step 6: Attach ZIP report as backup
         EmailAttachment attachment = new EmailAttachment();
@@ -95,15 +92,18 @@ public class Demo_Mail {
     }
 
     // Copy ZIP to OneDrive shared folder
-    public static String copyToSharedFolder(String sourcePath, String sharedDrivePath) throws IOException {
+    public static String copyToSharedFolder(String sourcePath, String sharedDrivePath, String oneDriveLink) throws IOException {
         File sourceFile = new File(sourcePath);
-        Path targetPath = Paths.get(sharedDrivePath, sourceFile.getName());
+        Path targetDir = Paths.get(sharedDrivePath);
+        Path targetPath = targetDir.resolve(sourceFile.getName());
 
         try {
+            Files.createDirectories(targetDir); // Ensure directory exists
             Files.copy(sourceFile.toPath(), targetPath, StandardCopyOption.REPLACE_EXISTING);
-            System.out.println("✅ Report copied to OneDrive shared folder: " + targetPath);
+            System.out.println("✅ Report copied to shared folder: " + targetPath);
         } catch (IOException e) {
             System.err.println("❌ Failed to copy to shared folder: " + e.getMessage());
+            System.out.println("📌 Please manually check OneDrive link: " + oneDriveLink);
             throw e;
         }
 

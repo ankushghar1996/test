@@ -13,6 +13,7 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
@@ -38,17 +39,25 @@ public class New_Retailer_cred_OTP {
     @BeforeClass
     public void setUp() {
         
-    	WebDriverManager.chromedriver().setup();
     	
-    //	System.setProperty("webdriver.chrome.driver", "C:\\COde\\test\\FOSROC_Automation\\chromedriver-win64\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        
-        ObjectRepo.driver = driver;
-        
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        
-        
+    	 WebDriverManager.chromedriver().setup();
+
+         ChromeOptions options = new ChromeOptions();
+         options.addArguments("--use-fake-ui-for-media-stream"); // ✅ use real camera, auto-accept permissions
+
+         // ❌ Do not use this if you want real webcam
+         // options.addArguments("--use-file-for-fake-video-capture=C:\\test\\sample-video.y4m");
+
+         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+         options.setExperimentalOption("useAutomationExtension", false);
+         options.addArguments("start-maximized");
+
+         // ✅ FIX: Assign directly to the class-level driver
+         driver = new ChromeDriver(options);
+         driver.manage().window().maximize();
+         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+         ObjectRepo.driver = driver; // Store driver in central repo
     }
 
     @Test
@@ -56,7 +65,7 @@ public class New_Retailer_cred_OTP {
         String mobileNumber = "8585906050";
 
         // Login
-        driver.get("https://fosrocfsguat.hspldms.com");
+        driver.get("https://fosrocfsguatlocal.hspldms.com");
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_01", "Verify that user should be send FSG User Name.", () -> {
@@ -376,8 +385,8 @@ public class New_Retailer_cred_OTP {
     	
         String otp = null;
 
-        String url = "jdbc:sqlserver://172.25.0.74:1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
-        String username = "Test_Team";
+        String url = "jdbc:sqlserver://192.168.2.206:1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
+        String username = "sqlservices";
         String password = "Pass@2025";
 
         try {
