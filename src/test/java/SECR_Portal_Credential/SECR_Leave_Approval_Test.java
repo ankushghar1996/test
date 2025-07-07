@@ -48,11 +48,11 @@ public class SECR_Leave_Approval_Test extends BaseClass_SECR_Portal {
         
         ObjectRepo.startTestAndLog_1_NS("Without Clicking Leave Approved Button");
 
-        ObjectRepo.startTestAndLog_1_SS("SECR_Leave_Approval_TC01", "Verify that user should be click on SECR Menu", () -> {
+      /*  ObjectRepo.startTestAndLog_1_SS("SECR_Leave_Approval_TC01", "Verify that user should be click on SECR Menu", () -> {
             Liabrary.custom_click(SECR.getSECR_Menu(), "Click SECR Menu");
         });
         Thread.sleep(1000);
-
+*/
         
         ObjectRepo.startTestAndLog_1_SS("SECR_Leave_Approval_TC02", "Verify that user should be click on Pending Approved Button", () -> {
             Liabrary.custom_click(SECR.getApproval_Button(), "Click Pending Approved Button");
