@@ -1,5 +1,6 @@
 package SECR_Portal;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,6 +31,9 @@ public class SECR_Login {
 		return Login_btn;
 	}
 
+	public WebElement getErrorMessage() {
+	    return driver.findElement(By.xpath("//div[contains(text(), 'Invalid')]")); // Modify as per actual app
+	}
 
 	@FindBy(how = How.XPATH, using = "//input[@placeholder='User Name']")
 	private WebElement UserName;
@@ -41,6 +45,9 @@ public class SECR_Login {
 	
 	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[1]")
 	private WebElement Login_btn;
+
+
+	
 	
 	
 	

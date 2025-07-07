@@ -34,4 +34,28 @@ public class SECR_Scheme_Test extends BaseClass_SECR_Portal {
         
         
     }
+    @Test(priority=1)
+    public void Scheme_NS01() throws Exception {
+
+        SECR_Scheme_Main SECR = PageFactory.initElements(driver, SECR_Scheme_Main.class);
+
+        //Without Click Scheme Name
+        
+        ObjectRepo.startTestAndLog_1_SS("SECR_Scheme_Test_TC01", "Verify that user should be able to click on Scheme Tab", () -> {
+            Liabrary.custom_click(SECR.getScheme_Tab(), "Click Scheme Tab");
+        });
+        Thread.sleep(1000);
+
+        
+//        ObjectRepo.startTestAndLog_1_SS("SECR_Scheme_Test_TC02", "Verify that user should be able to click on Scheme Name", () -> {
+//            Liabrary.custom_click(SECR.getScheme_Name(), "Click Scheme Name");
+//        });
+//        Thread.sleep(1000);
+
+        
+        ObjectRepo.startTestAndLog_1_SS("SECR_Scheme_Test_TC03", "Verify that user should be able to click on Scheme Close button", () -> {
+            Liabrary.custom_click(SECR.getScheme_Close(), "Click Scheme Close Button");
+        });
+        Thread.sleep(1000);
+}
 }

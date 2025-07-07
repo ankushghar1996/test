@@ -25,9 +25,6 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		New_Site_Creation view = PageFactory.initElements(driver, New_Site_Creation.class);
 	
 		
-		
-		
-		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_01", "Click on SEBS Menu", () ->{
 		Liabrary.custom_click(view.getSEBS_Menu(), "Click on SEBS Menu");});
 		Thread.sleep(1000);
@@ -128,12 +125,12 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		
 		
 		 ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_39", "Click on camera button", ()-> {  
-		        driver.findElement(By.xpath("(//div[@class='new-retailer-container o-hidden']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();});
-		        Thread.sleep(1000);
+		 driver.findElement(By.xpath("(//div[@class='new-retailer-container o-hidden']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();});
+		 Thread.sleep(1000);
 
 		        
-		        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_40", "Select camera  and capture", ()-> {  
-		        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_40", "Select camera  and capture", ()-> {  
+	    WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 		        
 		        // Wait for the Switch Camera button and click it
@@ -173,17 +170,12 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_19", "Click on Okay Button", () ->{
 		driver.findElement(By.xpath("//button[normalize-space()='OKAY']")).click();		
-	});
+	     });
 		Thread.sleep(4000);
 		
 //		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_18", "Click on CANCEL_Button", () ->{
 //		Liabrary.custom_click(view.getCANCEL_Button(), null);});
 //		
-		
-		
-		
-		
-		
 		
 	
 	}

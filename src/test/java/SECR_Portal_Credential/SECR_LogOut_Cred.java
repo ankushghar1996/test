@@ -21,14 +21,11 @@ public class SECR_LogOut_Cred extends BaseClass_SECR_Portal {
             Liabrary.custom_click(secr.getSECR_Menu(), "Click SECR Menu");
         });
    
-        
 
         ObjectRepo.startTestAndLog_1_SS("SECR_LogOut_TC02", "Verify that user should be able to click on Logout Button", () -> {
             Liabrary.custom_click(secr.getLogout_Button(), "Click Logout Button");
         });
       
-        
-        
 
         ObjectRepo.startTestAndLog_1_SS("SECR_LogOut_TC03", "Verify that user should be able to confirm logout by clicking 'Yes'", () -> {
             WebElement yes_Button = driver.findElement(By.xpath("//button[normalize-space()='Yes']"));

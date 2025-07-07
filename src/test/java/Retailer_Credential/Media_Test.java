@@ -10,7 +10,7 @@ import Retailer_Portal.Media;
 
 public class Media_Test extends BaseClass_Retailer {
 
-    @Test
+    @Test(priority=0)
     public void Media_Tab() throws Exception {
 
         Media MDI = PageFactory.initElements(driver, Media.class);
@@ -36,5 +36,60 @@ public class Media_Test extends BaseClass_Retailer {
         Thread.sleep(1000);
         
         
+    }
+    
+    @Test(priority=1)
+    public void Media_Tab_NS01() throws Exception {
+
+        Media MDI = PageFactory.initElements(driver, Media.class);
+        
+        ObjectRepo.startTestAndLog_1_NS("Without Clicking Media Button");
+
+        ObjectRepo.startTestAndLog_1_SS("Retailer_Media_TC01", "Click On Menu button", () -> {
+            Liabrary.custom_click(MDI.getMenu(), "Click On Menu button");
+        });
+        Thread.sleep(1000);
+
+//        ObjectRepo.startTestAndLog_1_SS("Retailer_Media_TC02", "Click on Media Button", () -> {
+//            Liabrary.custom_click(MDI.getMedia(), "Click on Media Button");
+//        });
+//        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("Retailer_Media_TC03", "Click on Documents", () -> {
+            Liabrary.custom_click(MDI.getDocuments(), "Click on Documents");
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("Retailer_Media_TC04", "Click on Back Button", () -> {
+            Liabrary.custom_click(MDI.getBack_Arrow_Button(), "Click on Back Button");
+        });
+        Thread.sleep(1000);
+}
+    @Test(priority=2)
+    public void Media_Tab_NS02() throws Exception {
+
+        Media MDI = PageFactory.initElements(driver, Media.class);
+        
+        ObjectRepo.startTestAndLog_1_NS("Without Clicking Menu Button");
+
+//        ObjectRepo.startTestAndLog_1_SS("Retailer_Media_TC01", "Click On Menu button", () -> {
+//            Liabrary.custom_click(MDI.getMenu(), "Click On Menu button");
+//        });
+//        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("Retailer_Media_TC02", "Click on Media Button", () -> {
+            Liabrary.custom_click(MDI.getMedia(), "Click on Media Button");
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("Retailer_Media_TC03", "Click on Documents", () -> {
+            Liabrary.custom_click(MDI.getDocuments(), "Click on Documents");
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("Retailer_Media_TC04", "Click on Back Button", () -> {
+            Liabrary.custom_click(MDI.getBack_Arrow_Button(), "Click on Back Button");
+        });
+        Thread.sleep(1000);
     }
 }
