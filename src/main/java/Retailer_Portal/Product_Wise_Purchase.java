@@ -14,6 +14,13 @@ public class Product_Wise_Purchase {
 	
 	@FindBy(how=How.XPATH,using="//img[contains(@src,'arrow.svg')]")
 	private WebElement Product_Wise_Purchase_Back_Button;
+	@FindBy(xpath = "//h1[contains(text(), 'Product Wise Purchase')]")
+	private WebElement productWisePurchaseTitle;
+
+	public WebElement getProduct_Wise_Purchase_Title() {
+	    return productWisePurchaseTitle;
+	}
+
 	
  
 	public WebElement getProduct_Wise_Purchase() {
@@ -26,6 +33,12 @@ public class Product_Wise_Purchase {
  
 	public WebElement getMenu() {
 		return Menu;
+	}
+
+
+
+	public WebElement getProductWisePurchaseTitle() {
+		return productWisePurchaseTitle;
 	}
 
 

@@ -2,6 +2,7 @@ package Com_Utility;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Base64;
 import java.util.List;
 
@@ -126,92 +127,68 @@ public class ObjectRepo {
         test = extent.createTest(testNumber, testDescription); // ✅ Create test
 
         try {
-            test.info(testDescription); // ✅ Log the step
-            action.run(); // ✅ Run the step
+            test.info(testDescription); // ✅ Log step
+            action.run(); // ✅ Execute action
 
-            // 🔁 NEW: Flash message check after action
+            // ✅ Flash message check after action
             List<WebElement> flashMessages = driver.findElements(By.xpath("//div[@id='toast-container']"));
             boolean flashFound = false;
+
+            // ✅ Safe flash keywords (including OTP success cases)
+            List<String> safeFlashKeywords = Arrays.asList(
+                "successfully", 
+                "record saved", 
+                "submitted", 
+                "otp has been sent", 
+                "otp sent", 
+                "otp sent successfully", 
+                "success otp", 
+                "otp dispatched", 
+                "okay", 
+                "yes"
+            );
 
             for (WebElement msg : flashMessages) {
                 if (msg.isDisplayed()) {
                     String messageText = msg.getText().trim().toLowerCase();
+                    boolean isSafe = safeFlashKeywords.stream().anyMatch(messageText::contains);
 
-                    // ✅ Allow safe/positive messages
-                    if (messageText.contains("successfully") ||
-                        messageText.contains("record saved") ||
-                        messageText.contains("submitted") ||
-                        messageText.equals("okay") ||
-                        messageText.equals("yes")) {
-
+                    if (isSafe) {
                         test.pass("✅ Flash Message: " + messageText);
-
-                        // Screenshot for success flash
-                        if (driver != null) {
-                            try {
-                                String screenshot = takeScreenshot();
-                                if (screenshot != null && !screenshot.isEmpty()) {
-                                    test.addScreenCaptureFromBase64String(screenshot, "Screenshot - Flash Success");
-                                }
-                            } catch (IOException e) {
-                                test.warning("Screenshot capture failed: " + e.getMessage());
-                            }
-                        }
+                        captureScreenshot("Screenshot - Flash Success");
                     } else {
-                        // ❌ Error flash message
                         test.fail("❌ Flash Message Detected: " + messageText);
                         flashFound = true;
-
-                        // Screenshot for error flash
-                        if (driver != null) {
-                            try {
-                                String screenshot = takeScreenshot();
-                                if (screenshot != null && !screenshot.isEmpty()) {
-                                    test.addScreenCaptureFromBase64String(screenshot, "Screenshot - Flash Error");
-                                }
-                            } catch (IOException e) {
-                                test.warning("Screenshot capture failed: " + e.getMessage());
-                            }
-                        }
+                        captureScreenshot("Screenshot - Flash Error");
                     }
                 }
             }
 
-            // ✅ Mark test as pass if no error flash found
+            // ✅ Final decision
             if (!flashFound) {
                 test.pass("✅ " + testDescription);
-
-                if (driver != null) {
-                    try {
-                        String screenshot = takeScreenshot();
-                        if (screenshot != null && !screenshot.isEmpty()) {
-                            test.addScreenCaptureFromBase64String(screenshot, "Screenshot - Passed");
-                        }
-                    } catch (IOException e) {
-                        test.warning("Screenshot capture failed: " + e.getMessage());
-                    }
-                }
+                captureScreenshot("Screenshot - Passed");
             } else {
-                // ❌ Force fail in TestNG if flash was an error
                 throw new RuntimeException("Flash error found — test failed.");
             }
 
         } catch (Exception e) {
             test.fail("❌ Exception in step: " + testDescription + " | " + e.getMessage());
+            captureScreenshot("Screenshot - Exception");
+            throw new RuntimeException(e);
+        }
+    }
 
-            // Screenshot on exception
-            if (driver != null) {
-                try {
-                    String screenshot = takeScreenshot();
-                    if (screenshot != null && !screenshot.isEmpty()) {
-                        test.addScreenCaptureFromBase64String(screenshot, "Screenshot - Exception");
-                    }
-                } catch (IOException ioException) {
-                    test.warning("Screenshot capture failed: " + ioException.getMessage());
+    private static void captureScreenshot(String label) {
+        if (driver != null) {
+            try {
+                String screenshot = takeScreenshot();
+                if (screenshot != null && !screenshot.isEmpty()) {
+                    test.addScreenCaptureFromBase64String(screenshot, label);
                 }
+            } catch (IOException e) {
+                test.warning("Screenshot capture failed: " + e.getMessage());
             }
-
-            throw new RuntimeException(e); // ✅ Keep fail status in TestNG
         }
     }
 

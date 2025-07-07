@@ -94,10 +94,10 @@
 <class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_HO_OutletMaster_Reject_PageCred_1st"/>
 <class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_HO_OutletMaster_ApprovalPageCred_1st"/>
 <class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_Distributor_Outlet_Approval_1st_View_Test_2nd"/>
-<class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_Non_PJP_Distributor_Outlet_Approval_Reject_1st_Test_2nd"/>
+<class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_Distributor_Outlet_Approval_Reject_1st_Test_2nd"/>
 <class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_Distributor_Outlet_Approval_1st_Test2nd"/>
 <class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_SECR_Web_Outlet_Approval2nd_cred_ViewPage_3rd"/>
-<class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_Non_PJP_SECR_Web_Outlet_Approval_Reject2nd_cred_3rd"/>
+<class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_SECR_Web_Outlet_Approval_Reject2nd_cred_3rd"/>
 <class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_SECR_Web_Outlet_Approval2nd_cred_3rd"/>
 
 <!-- FSG Market Non-PJP New Retailer Creation -->
@@ -106,10 +106,10 @@
 <class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_HO_OutletMaster_Reject_PageCred_1st"/>
 <class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_HO_OutletMaster_ApprovalPageCred_1st"/>
 <class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_Distributor_Outlet_Approval_1st_View_Test_2nd"/>
-<class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_PJP_Distributor_Outlet_Approval_Reject_1st_Test_2nd"/>
+<class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_Distributor_Outlet_Approval_Reject_1st_Test_2nd"/>
 <class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_Distributor_Outlet_Approval_1st_Test_2nd"/>
 <class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_SECR_Web_Outlet_Approval2nd_cred_ViewPage_3rd"/>
-<class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_PJP_SECR_Web_Outlet_Approval_Reject2nd_cred_3rd"/>
+<class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_SECR_Web_Outlet_Approval_Reject2nd_cred_3rd"/>
 <class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_SECR_Web_Outlet_Approval2nd_cred_3rd"/>
 
 <!-- FSG Other Functionalities -->

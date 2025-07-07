@@ -33,4 +33,25 @@ public class SECR_Pending_Order_DB_Test extends BaseClass_SECR_Portal {
             Thread.sleep(1000);
         
     }
+    @Test(priority=01)
+    public void pending_order_DB_NS01() throws Exception {
+        SECR_Pending_Order_DB SECR = PageFactory.initElements(driver, SECR_Pending_Order_DB.class);
+
+           //Without click on pending order
+        WebElement scroll = driver.findElement(By.xpath("//div[@class='pending-retailer']//span[normalize-space()='New Retailer Created']"));
+        JavascriptExecutor jse1 = (JavascriptExecutor) driver;
+        jse1.executeScript("arguments[0].scrollIntoView(true);", scroll);
+        Thread.sleep(1000);
+
+//        ObjectRepo.startTestAndLog_1_SS("SECR_Pending_Order_DB_Test_TC01", "Verify that user should be able to click on Pending Approved button ", () -> {
+//            Liabrary.custom_click(SECR.getPending_Order(), "Click On Pending Order");
+//        });
+//            Thread.sleep(1000);
+
+            ObjectRepo.startTestAndLog_1_SS("SECR_Pending_Order_DB_Test_TC02", "Verify that user should be able to click on Search by order no and search order", () -> {
+            driver.findElement(By.xpath("//input[@placeholder='Search by order no']")).sendKeys("Pending Order");
+            });
+            Thread.sleep(1000);
+        
+    }
 }

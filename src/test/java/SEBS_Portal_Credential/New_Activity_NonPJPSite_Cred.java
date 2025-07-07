@@ -182,7 +182,7 @@ public class New_Activity_NonPJPSite_Cred extends BaseClass_SEBS_Portal {
 	
 	ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_25", "Click on Okay Button", () ->{
 	driver.findElement(By.xpath("//button[normalize-space()='OKAY']")).click();		
-});
+     });
 	Thread.sleep(4000);
         
         

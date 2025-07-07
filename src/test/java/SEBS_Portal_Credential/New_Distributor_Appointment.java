@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -28,8 +29,6 @@ import Com_Utility.ObjectRepo;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class New_Distributor_Appointment {
-
-	
 	
 	 	WebDriver driver;
 
@@ -47,18 +46,23 @@ public class New_Distributor_Appointment {
 	    public void setUp() {
 	        
 	    	WebDriverManager.chromedriver().setup();
-	    	
-	    	
-	    	 ChromeOptions options = new ChromeOptions();
-	    	    options.addArguments("--use-fake-device-for-media-stream");
-	    	    options.addArguments("--use-fake-ui-for-media-stream");
-	    	    options.addArguments("--use-file-for-fake-video-capture=C:\\test\\sample-video.y4m"); // 👈 provide a real path
 
-	    	    driver = new ChromeDriver(options);
-	    	    driver.manage().window().maximize();
-	    	    
-	    	    ObjectRepo.driver = driver;
-	    	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	         ChromeOptions options = new ChromeOptions();
+	         options.addArguments("--use-fake-ui-for-media-stream"); // ✅ use real camera, auto-accept permissions
+
+	         // ❌ Do not use this if you want real webcam
+	         // options.addArguments("--use-file-for-fake-video-capture=C:\\test\\sample-video.y4m");
+
+	         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+	         options.setExperimentalOption("useAutomationExtension", false);
+	         options.addArguments("start-maximized");
+
+	         // ✅ FIX: Assign directly to the class-level driver
+	         driver = new ChromeDriver(options);
+	         driver.manage().window().maximize();
+	         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+	         ObjectRepo.driver = driver; // Store driver in central repo
 	        
 	    }
 	    
@@ -66,11 +70,11 @@ public class New_Distributor_Appointment {
 	    @Test
 	    public void testOtpFlowAndRetailerInfo() throws Exception {
 	    	
-	        String mobileNumber = "9547852557";
+	        String mobileNumber = "9082956060";
 
 	        // Login
 	        
-	        driver.get("https://fosrocsebsuat.hspldms.com/");
+	        driver.get("https://fosrocsebsuatlocal.hspldms.com");
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC01", "Send Username", () -> {
 	        driver.findElement(By.xpath("//input[@placeholder='User Name']")).sendKeys("SEBS-009");
@@ -101,32 +105,48 @@ public class New_Distributor_Appointment {
 	        
 	        // Retailer Add
 	      
-	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC07", "Enter Mobile Number", () -> {
-	        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys(mobileNumber);});
-	        Thread.sleep(1000);
-	        
-	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC08", "Click button", () -> {
-	        driver.findElement(By.xpath("//button[normalize-space()='SEND OTP']")).click();});
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-	        Thread.sleep(3000);
+	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC07", "Enter Mobile Number", () -> {
+	            WebElement mobileInput = wait.until(ExpectedConditions.visibilityOfElementLocated(
+	                By.xpath("//input[@placeholder='Enter Mobile Number']")));
+	            mobileInput.sendKeys(mobileNumber);
+	        });
+
+	        Thread.sleep(1000);
+	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC08", "Click SEND OTP button", () -> {
+	        WebElement sendOtpBtn =   driver.findElement(By.xpath("//button[normalize-space()='SEND OTP']"));
+	        sendOtpBtn.click();
+	        });
+
+	        
+	        // Small wait to allow backend to generate OTP
+	        Thread.sleep(3000);  // You can later replace this with a polling mechanism
+
 	        String otp = getOtpFromDb(mobileNumber);
 
 	        if (otp != null) {
-	        	ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC09", "send OTP", () -> {
-	            System.out.println("OTP fetched: " + otp);
-	            driver.findElement(By.xpath("//input[@placeholder='Enter OTP']")).sendKeys(otp);
-	            driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click(); });
-	            Thread.sleep(2000);
+	            ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC09", "Enter OTP and click CONTINUE", () -> {
+	                System.out.println("OTP fetched: " + otp);
+	                
+	                WebElement otpInput = wait.until(ExpectedConditions.visibilityOfElementLocated(
+	                    By.xpath("//input[@placeholder='Enter OTP']")));
+	                otpInput.sendKeys(otp);
 
-	            
-	            // ✅ Call Retailer Info method
-	            
+	                
+	                WebElement continueBtn = wait.until(ExpectedConditions.elementToBeClickable(
+	                    By.xpath("//button[normalize-space()='CONTINUE']")));
+	                continueBtn.click();
+	            });
+
+	            Thread.sleep(2000); // optional wait after navigation
 	            AddDistributorInfo();
+
 	        } else {
 	            System.out.println("❌ OTP not found.");
 	        }
-	    }
 
+	    }
 	    
 	    // ✅ New method for entering Retailer Info
 	    
@@ -147,7 +167,7 @@ public class New_Distributor_Appointment {
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_013", "Click on Distributor Area Name", () -> {
-	        driver.findElement(By.xpath("(//span[contains(text(),'Koregaon Park')])[2]")).click();});
+	        driver.findElement(By.xpath("//span[contains(text(),'Koregaon Park')]")).click();});
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_014", "Click on SE Area ", () -> {
@@ -265,127 +285,164 @@ public class New_Distributor_Appointment {
 	        driver.findElement(By.xpath("//select[@formcontrolname='DistributorClass']//option[text()='Silver ']")).click();});
 	        Thread.sleep(1000);
 	        
-	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_033", "Click on camera button", ()-> {  
-	        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();});
-	        Thread.sleep(1000);
+	        
+		     // ✅ Camera 1
+		        ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_33", "Verify that user should be click on Camera 1.", () -> {
+		            By cam1 = By.xpath("(//div[@class='upload-documents-container']//span[@class='circle-camera'])[1]");
+		            WebElement camera1 = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(cam1));
+		            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", camera1);
+		            try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					} // Optional wait
+		            try {
+		                camera1.click();
+		            } catch (ElementClickInterceptedException e) {
+		                System.out.println("⚠️ Camera 1 click intercepted, trying JS click...");
+		                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", camera1);
+		            }
+		        });
+		        Thread.sleep(1000); // Optional
 
-	        
-	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_034", "Select camera  and capture", ()-> {  
-	        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-	        
-	        // Wait for the Switch Camera button and click it
-	        try {
-	            WebElement switchCamBtn = wait1.until(ExpectedConditions.elementToBeClickable(
-	                By.xpath("//div[@class='switch-cam']//button[1]")));
-	            switchCamBtn.click();
-	            System.out.println("Switch Camera button clicked.");
-	        } catch (TimeoutException e) {
-	            System.out.println("Switch Camera button not found or not clickable.");
-	        } });
-
-	        Thread.sleep(2000);
-	        
-	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_035", "Select camera  and capture", ()-> { 
-	        	
-	        	 WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
-	        // Wait for the Capture button and click it
-	        try {
-	            WebElement captureBtn = wait2.until(ExpectedConditions.elementToBeClickable(
-	                By.xpath("(//button[@class='capture-button'])[3]")));
-	            captureBtn.click();
-	            System.out.println("Capture button clicked.");
-	        } catch (TimeoutException e) {
-	            System.out.println("Capture button not found or not clickable.");
-	        }
-	        });
-	        Thread.sleep(5000);
-	       
-	        
-	        WebElement scroll3 = driver.findElement(By.xpath("//span[normalize-space()='Upload Document 2']"));
-	    	JavascriptExecutor jse3= (JavascriptExecutor)driver;
-	    	jse3.executeScript("arguments[0].scrollIntoView(true);", scroll3);
-	        Thread.sleep(1000);
-	        
-	        
-	    
-	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_036", "Click on camera button", ()-> {  
-		        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[2]")).click();});
-		        Thread.sleep(1000);
-
-		        
-		        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_037", "Select camera  and capture", ()-> {  
+		        // ✅ Switch & Capture Camera 1
 		        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-		        
-		        // Wait for the Switch Camera button and click it
 		        try {
-		            WebElement switchCamBtn = wait1.until(ExpectedConditions.elementToBeClickable(
-		                By.xpath("//div[@class='switch-cam']//button[1]")));
-		            switchCamBtn.click();
+		            wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='switch-cam']//button[1]"))).click();
 		            System.out.println("Switch Camera button clicked.");
 		        } catch (TimeoutException e) {
-		            System.out.println("Switch Camera button not found or not clickable.");
-		        } });
-
+		            System.out.println("Switch Camera button not clickable.");
+		        }
 		        Thread.sleep(2000);
-		        
-		        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_038", "Select camera  and capture", ()-> { 
-		        	
-		        	 WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
-		        // Wait for the Capture button and click it
 		        try {
-		            WebElement captureBtn = wait2.until(ExpectedConditions.elementToBeClickable(
-		                By.xpath("(//button[@class='capture-button'])[3]")));
-		            captureBtn.click();
+		            wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[@class='capture-button'])[3]"))).click();
 		            System.out.println("Capture button clicked.");
 		        } catch (TimeoutException e) {
-		            System.out.println("Capture button not found or not clickable.");
+		            System.out.println("Capture button not clickable.");
 		        }
+		        Thread.sleep(1000);
+
+		        // ✅ Camera 2
+		        WebElement scroll3 = driver.findElement(By.xpath("//span[normalize-space()='Upload Document 2']"));
+		        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", scroll3);
+		        Thread.sleep(1000); // Optional
+
+		        //Click cam 2
+		        ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_34", "Verify that user should be click on Camera 2.", () -> {
+		            By cam2 = By.xpath("(//div[@class='upload-documents-container']//span[@class='circle-camera'])[2]");
+		            WebElement camera2 = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(cam2));
+		            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", camera2);
+		            try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					} // Optional
+		            try {
+		                camera2.click();
+		            } catch (ElementClickInterceptedException e) {
+		                System.out.println("⚠️ Camera 2 click intercepted, trying JS click...");
+		                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", camera2);
+		            }
 		        });
-		        Thread.sleep(5000);
-		        
-		        
-		        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_39", "Click on camera button", ()-> {  
-			        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[3]")).click();});
-			        Thread.sleep(1000);
+		        Thread.sleep(1000);
 
-			        
-			        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_40", "Select camera  and capture", ()-> {  
-			        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		        // ✅ Switch & Capture Camera 2
+		        WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		        try {
+		            wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='switch-cam']//button[1]"))).click();
+		            System.out.println("Switch Camera button clicked.");
+		        } catch (TimeoutException e) {
+		            System.out.println("Switch Camera button not clickable.");
+		        }
+		        Thread.sleep(2000);
+		        try {
+		            wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[@class='capture-button'])[3]"))).click();
+		            System.out.println("Capture button clicked.");
+		        } catch (TimeoutException e) {
+		            System.out.println("Capture button not clickable.");
+		        }
+		        Thread.sleep(1000);
 
-			        
-			        // Wait for the Switch Camera button and click it
-			        try {
-			            WebElement switchCamBtn = wait1.until(ExpectedConditions.elementToBeClickable(
-			                By.xpath("//div[@class='switch-cam']//button[1]")));
-			            switchCamBtn.click();
-			            System.out.println("Switch Camera button clicked.");
-			        } catch (TimeoutException e) {
-			            System.out.println("Switch Camera button not found or not clickable.");
-			        } });
+		        // ✅ Camera 3
+		        ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_35", "Verify that user should be click on Camera 3.", () -> {
+		            By cam3 = By.xpath("(//div[@class='upload-documents-container']//span[@class='circle-camera'])[3]");
+		            WebElement camera3 = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(cam3));
+		            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", camera3);
+		            try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					} // Optional
+		            try {
+		                camera3.click();
+		            } catch (ElementClickInterceptedException e) {
+		                System.out.println("⚠️ Camera 3 click intercepted, trying JS click...");
+		                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", camera3);
+		            }
+		        });
+		        Thread.sleep(1000);
 
-			        Thread.sleep(5000);
-			        
-			        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_41", "Select camera  and capture", ()-> { 
-			        	
-			        	 WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
-			        // Wait for the Capture button and click it
-			        try {
-			            WebElement captureBtn = wait2.until(ExpectedConditions.elementToBeClickable(
-			                By.xpath("(//button[@class='capture-button'])[3]")));
-			            captureBtn.click();
-			            System.out.println("Capture button clicked.");
-			        } catch (TimeoutException e) {
-			            System.out.println("Capture button not found or not clickable.");
-			        }
-			        });
-			        Thread.sleep(5000);
-	        
-			        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_032", "click on save btn", ()-> {  
-	        driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();
-			        });
-	     //   Thread.sleep(1000);
+		        // ✅ Switch & Capture Camera 3
+		        WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		        try {
+		            wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='switch-cam']//button[1]"))).click();
+		            System.out.println("Switch Camera button clicked.");
+		        } catch (TimeoutException e) {
+		            System.out.println("Switch Camera button not clickable.");
+		        }
+		        Thread.sleep(2000);
+		        try {
+		            wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[@class='capture-button'])[3]"))).click();
+		            System.out.println("Capture button clicked.");
+		        } catch (TimeoutException e) {
+		            System.out.println("Capture button not clickable.");
+		        }
+
+		        // ✅ SAVE BUTTON - Wait until modal disappears, then proceed
+		        ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_36", "Verify that user should be click on Save Button.", () -> {
+		            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
+		            int retries = 0;
+		            while (retries < 10) {
+		                try {
+		                    // ✅ Check if modal disappeared
+		                    if (driver.findElements(By.xpath("//div[contains(@class,'modal-body')]")).isEmpty()) break;
+		                    if (wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[contains(@class,'modal-body')]")))) break;
+		                } catch (Exception e) {
+		                    break; // Already gone
+		                }
+		                try {
+							Thread.sleep(1000);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} // ⏳ Wait before rechecking
+		                retries++;
+		            }
+
+		            // ✅ Proceed with SAVE
+		            WebElement saveBtn = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(
+		                By.xpath("//button[normalize-space()='SAVE']")));
+		            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", saveBtn);
+		            try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					} // Optional
+
+		            try {
+		                saveBtn.click();
+		            } catch (ElementClickInterceptedException e) {
+		                System.out.println("⚠️ Save button click intercepted, trying JS click...");
+		                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", saveBtn);
+		            }
+		        });
+
+		        Thread.sleep(4000); // Final wait
+
 	        
 	        
 	//        driver.findElement(By.xpath("//button[normalize-space()='CANCEL']")).click();
@@ -405,8 +462,8 @@ public class New_Distributor_Appointment {
 	    	
 	        String otp = null;
 
-	        String url = "jdbc:sqlserver://172.25.0.74:1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
-	        String username = "Test_Team";
+	        String url = "jdbc:sqlserver://192.168.2.206:1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
+	        String username = "sqlservices";
 	        String password = "Pass@2025";
 
 	        try {
@@ -415,7 +472,7 @@ public class New_Distributor_Appointment {
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
 
-	            String query = "select * from RegistrationPendingMaster where MobileNo='9547852557'";
+	            String query = "select * from RegistrationPendingMaster where MobileNo='9082956060'";
 	            
 	            ResultSet rs = stmt.executeQuery(query);
 	            
@@ -434,7 +491,10 @@ public class New_Distributor_Appointment {
 
 	        return otp;
 	        
-	    }
+	    
+ 	}
+
+
 
 	    @AfterClass
 	    public void tearDown() {
