@@ -250,8 +250,7 @@ public class New_Retailer_cred_OTP {
 	        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();
 	        });
 	        Thread.sleep(1000);
-	        
-
+	       
 
 	        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 

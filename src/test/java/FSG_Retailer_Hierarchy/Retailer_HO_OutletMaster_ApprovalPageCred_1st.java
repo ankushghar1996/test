@@ -19,8 +19,7 @@ public class Retailer_HO_OutletMaster_ApprovalPageCred_1st extends BaseClass_HO_
         OutletMaster_ApprovalPage Appr = PageFactory.initElements(driver, OutletMaster_ApprovalPage.class);
 
      // Package name + login name + class name + test case nmbr
-		
-        
+		      
         ObjectRepo.startTestAndLog_1_SS("FSG_Retailer_OutletMaster_ApprovalPageCred_1st_TC_01", "Click Master Menu", () -> {
             Liabrary.custom_click(Appr.getMaster_Menu(), "Click Master Menu");
         });
@@ -54,23 +53,16 @@ public class Retailer_HO_OutletMaster_ApprovalPageCred_1st extends BaseClass_HO_
             Liabrary.custom_click(Appr.getApproval_btn(), "Click Approval Button");
         });
         Thread.sleep(1000);
-
-       
-        
-        
+  
         ObjectRepo.startTestAndLog_1_SS("FSG_Retailer_OutletMaster_ApprovalPageCred_1st_TC_08", "Click ProceedForApproval Button", () -> {
             Liabrary.custom_click(Appr.getProceedForApproval_btn(), "Click ProceedForApproval Button");
         });
         Thread.sleep(1000);
-        
-        
-        
+              
         ObjectRepo.startTestAndLog_1_SS("FSG_Retailer_OutletMaster_ApprovalPageCred_1st_TC_09", "Click Yes Button", () -> {
             Liabrary.custom_click(Appr.getYes_btn(), "Click Yes Button");
         });
         Thread.sleep(1000);
-        
-        
         
 
 //        ObjectRepo.startTestAndLog_1_SS("OM_AP_TC08", "Click Close Button", () -> {

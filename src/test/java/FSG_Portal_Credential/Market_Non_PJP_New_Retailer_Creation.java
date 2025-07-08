@@ -267,10 +267,7 @@ public class Market_Non_PJP_New_Retailer_Creation {
 	            System.out.println("Capture button clicked.");
 	        } catch (TimeoutException e) {
 	            System.out.println("Capture button not found or not clickable.");
-	        }
-
-	        
-	        
+	        }  
 	        Thread.sleep(3000);
 	        
 	        
@@ -279,8 +276,6 @@ public class Market_Non_PJP_New_Retailer_Creation {
 		        });
 		        Thread.sleep(1000);
 		        
-
-
 		        WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 		        // Wait for the Switch Camera button and click it
@@ -303,27 +298,19 @@ public class Market_Non_PJP_New_Retailer_Creation {
 		        } catch (TimeoutException e) {
 		            System.out.println("Capture button not found or not clickable.");
 		        }
-
-		        
-		        
 		        Thread.sleep(3000);
 		        
-		        
-		        
+        
 		        WebElement scroll2 = driver.findElement(By.xpath("//span[normalize-space()='Upload Shop Image']"));
 		    	JavascriptExecutor jse2= (JavascriptExecutor)driver;
 		    	jse2.executeScript("arguments[0].scrollIntoView(true);", scroll2);
 		        Thread.sleep(1000);
-		        
-	        
-	        
+
 		        ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_29", "Verify that user should be click on Camera 1 button.", () -> {
 			        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[3]")).click();
 			        });
 			        Thread.sleep(1000);
 			        
-
-
 			        WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 			        // Wait for the Switch Camera button and click it
@@ -346,16 +333,13 @@ public class Market_Non_PJP_New_Retailer_Creation {
 			        } catch (TimeoutException e) {
 			            System.out.println("Capture button not found or not clickable.");
 			        }
-
-			        
-			        
-			        Thread.sleep(3000);
+		        Thread.sleep(3000);
         
         
-        ObjectRepo.startTestAndLog_1_SS("FSG_Market_Non_PJP_New_Retailer_Creation_TC_27", "Verify that user should be click on SAVE button.", () -> {
+       ObjectRepo.startTestAndLog_1_SS("FSG_Market_Non_PJP_New_Retailer_Creation_TC_27", "Verify that user should be click on SAVE button.", () -> {
        driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();
-        });
-        Thread.sleep(1000);
+       });
+       Thread.sleep(1000);
         
         
 //        ObjectRepo.startTestAndLog_1_SS("FSG_Market_PJP_New_Retailer_Creation_TC_27", "Verify that user should be click on Cancel button.", () -> {
@@ -373,12 +357,12 @@ public class Market_Non_PJP_New_Retailer_Creation {
 
     
     
-    private static String getOtpFromDb(String mobileNumber) {
+ private static String getOtpFromDb(String mobileNumber) {
     	
         String otp = null;
 
-        String url = "jdbc:sqlserver://172.25.0.74:1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
-        String username = "Test_Team";
+        String url = "jdbc:sqlserver://192.168.2.206:1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
+        String username = "sqlservices";
         String password = "Pass@2025";
 
         try {
@@ -387,7 +371,7 @@ public class Market_Non_PJP_New_Retailer_Creation {
             Connection conn = DriverManager.getConnection(url, username, password);
             Statement stmt = conn.createStatement();
 
-            String query = "select * from RegistrationPendingMaster where MobileNo='9150662032'";
+            String query = "select * from RegistrationPendingMaster where MobileNo='8585906050'";
             
             ResultSet rs = stmt.executeQuery(query);
             
@@ -407,6 +391,8 @@ public class Market_Non_PJP_New_Retailer_Creation {
         return otp;
         
     }
+        
+    
 
     @AfterClass
     public void tearDown() {
