@@ -340,7 +340,7 @@ public class New_Activity_PJPSite_Cred extends BaseClass_SEBS_Portal {
 	driver.findElement(By.xpath("//button[normalize-space()='OKAY']")).click();		
       });
 	Thread.sleep(4000);
-}
+    }
     @Test(priority=2)
     public void SEBS_New_Activity_PJP_Cred_NS02() throws Exception {
 

@@ -18,8 +18,7 @@ public class Retailer_Distributor_Outlet_Approval_1st_View_Test_2nd extends Base
         Outlet_Approval_1st_View DIST = PageFactory.initElements(driver, Outlet_Approval_1st_View.class);
 
      // Package name + login name + class name + test case nmbr
-		
-        
+		  
         ObjectRepo.startTestAndLog_1_SS("FSG_Retailer_Outlet_Approval_1st_View_Test_2nd_TC_01", "Click on DIST_Portal Master menu", () -> {
             Liabrary.custom_click(DIST.getMaster(), "Click on Master");
         });

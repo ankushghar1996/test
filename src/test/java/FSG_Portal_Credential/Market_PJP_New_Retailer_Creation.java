@@ -78,22 +78,22 @@ public class Market_PJP_New_Retailer_Creation {
 
         // Navigate
         ObjectRepo.startTestAndLog_1_SS("FSG_Market_PJP_New_Retailer_Creation_TC_04", "Verify that user should be click on  Market Tab.", () -> {
-            driver.findElement(By.xpath("//div[@routerlink='/market']")).click();
-            });
-            Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@routerlink='/market']")).click();
+        });
+        Thread.sleep(1000);
             
             
-            ObjectRepo.startTestAndLog_1_SS("FSG_Market_PJP_New_Retailer_Creation_TC_05", "Verify that user should be click on  PJP Retailers  Menu.", () -> {
-            driver.findElement(By.xpath("//div[@class='col-6 fw-bold opacity-75 text-center market-tabs active-tab']")).click();
-            });
-            Thread.sleep(1000);
+        ObjectRepo.startTestAndLog_1_SS("FSG_Market_PJP_New_Retailer_Creation_TC_05", "Verify that user should be click on  PJP Retailers  Menu.", () -> {
+        driver.findElement(By.xpath("//div[@class='col-6 fw-bold opacity-75 text-center market-tabs active-tab']")).click();
+        });
+        Thread.sleep(1000);
 
             
             // Retailer Add
-            ObjectRepo.startTestAndLog_1_SS("FSG_Market_PJP_New_Retailer_Creation_TC_06", "Verify that user should be click on Add button.", () -> {
-            driver.findElement(By.xpath("//img[@src='../../../../../assets/icons/common-icons/retailer-add.svg']")).click();
-            });
-            Thread.sleep(1000);
+         ObjectRepo.startTestAndLog_1_SS("FSG_Market_PJP_New_Retailer_Creation_TC_06", "Verify that user should be click on Add button.", () -> {
+         driver.findElement(By.xpath("//img[@src='../../../../../assets/icons/common-icons/retailer-add.svg']")).click();
+         });
+         Thread.sleep(1000);
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_Market_PJP_New_Retailer_Creation_TC_07", "Verify that user should be send Mobile Number.", () -> {
@@ -375,12 +375,12 @@ public class Market_PJP_New_Retailer_Creation {
 
     
     
-    private static String getOtpFromDb(String mobileNumber) {
+ private static String getOtpFromDb(String mobileNumber) {
     	
         String otp = null;
 
-        String url = "jdbc:sqlserver://172.25.0.74:1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
-        String username = "Test_Team";
+        String url = "jdbc:sqlserver://192.168.2.206:1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
+        String username = "sqlservices";
         String password = "Pass@2025";
 
         try {
@@ -389,7 +389,7 @@ public class Market_PJP_New_Retailer_Creation {
             Connection conn = DriverManager.getConnection(url, username, password);
             Statement stmt = conn.createStatement();
 
-            String query = "select * from RegistrationPendingMaster where MobileNo='9040526350'";
+            String query = "select * from RegistrationPendingMaster where MobileNo='8585906050'";
             
             ResultSet rs = stmt.executeQuery(query);
             
@@ -409,6 +409,8 @@ public class Market_PJP_New_Retailer_Creation {
         return otp;
         
     }
+        
+    
 
     @AfterClass
     public void tearDown() {

@@ -324,27 +324,6 @@ public class ActivityUpload extends BaseClass {
         Thread.sleep(1000);
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+               
 }
 }
