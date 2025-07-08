@@ -79,7 +79,6 @@ public class New_Retailer_MTD_YTD_Test extends BaseClass_FSG_Portal {
     public void FSG_YTD_NS01() throws Exception {
 
         New_Retailer_MTD_YTD_Main FSG = PageFactory.initElements(driver, New_Retailer_MTD_YTD_Main.class);
-
         WebElement scroll = driver.findElement(By.xpath("//div[@class='capsule']//span[text()='MTD Working']"));
         JavascriptExecutor jse1 = (JavascriptExecutor) driver;
         jse1.executeScript("arguments[0].scrollIntoView(true);", scroll);

@@ -45,7 +45,7 @@ public class BaseClass_FSG_Portal {
 		
 	    driver = new ChromeDriver(); 
 
-	    driver.get("https://fosrocuatlocal.hspldms.com");
+	    driver.get("https://fosrocfsguatlocal.hspldms.com");
 	    driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    ObjectRepo.driver = driver;	

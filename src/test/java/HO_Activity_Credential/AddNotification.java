@@ -540,26 +540,6 @@ public void Notification_setting_NS01() throws Exception {
          Thread.sleep(3000);
     
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
 
 }
