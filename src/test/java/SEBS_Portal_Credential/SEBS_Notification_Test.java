@@ -30,7 +30,9 @@ public class SEBS_Notification_Test extends BaseClass_SEBS_Portal{
 	Thread.sleep(1000);
 
 	 }
-	@Test(priority=1)
+	
+	
+	@Test(priority = 1)
 	public void New_Notification_NS01() throws Exception {
 		
 	SEBS_Notification SEBS = PageFactory.initElements(driver,SEBS_Notification.class);

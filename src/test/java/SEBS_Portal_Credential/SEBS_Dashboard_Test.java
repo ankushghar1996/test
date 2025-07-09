@@ -14,7 +14,7 @@ import SEBS_Portal.SEBS_DashBoard;
  
 public class SEBS_Dashboard_Test extends BaseClass_SEBS_Portal {
  
-	@Test(priority=0)
+	@Test(priority = 0)
 	public void Dashboard () throws Exception {
 		
 	SEBS_DashBoard SEBS = PageFactory.initElements(driver,SEBS_DashBoard.class);

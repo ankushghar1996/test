@@ -403,39 +403,31 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 
 	  
 	    private static String getOtpFromDb(String mobileNumber) {
-	    	
 	        String otp = null;
-
-	        String url = "jdbc:sqlserver://172.25.0.74:1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
-	        String username = "Test_Team";
+	 
+	        String url = "jdbc:sqlserver://192.168.2.206:1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
+	        String username = "sqlservices";
 	        String password = "Pass@2025";
-
+	 
 	        try {
-	        	
 	            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
-
-	            String query = "select * from RegistrationPendingMaster where MobileNo='7777888850'";
-	            
+	 
+	            String query = "select * from RegistrationPendingMaster where MobileNo='8585906050'";
 	            ResultSet rs = stmt.executeQuery(query);
-	            
 	            if (rs.next()) {
-	            	
 	                otp = rs.getString("otp");
-	                
 	            }
 	            conn.close();
-	            
 	        } catch (Exception e) {
-	        	
 	            e.printStackTrace();
-	            
 	        }
-
+	 
 	        return otp;
-	        
 	    }
+	    
+	    
 
 	    @AfterClass
 	    public void tearDown() {
