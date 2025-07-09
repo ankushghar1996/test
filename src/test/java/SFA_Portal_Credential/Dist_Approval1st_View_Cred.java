@@ -43,9 +43,11 @@ public class Dist_Approval1st_View_Cred extends BaseClass_SFA {
         ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_View_Cred_TC05", "Verify that user should be able to click the View button", () -> {
             Liabrary.custom_click(view.getView_btn(), "Click View Btn");
         });
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         
         
+        ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_View_Cred_TC05", "Verify that user should be able to click the Close button", () -> {
+        Liabrary.custom_click(view.getClose_btn(), "Click Close Btn");});
         
     }
     

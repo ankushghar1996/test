@@ -56,7 +56,10 @@ public class SECR_View_Profile_Cred extends BaseClass_SECR_Portal{
        
 
     }
-    @Test(priority=1)
+    
+    
+    
+    @Test(priority = 1)
     public void SECR_ViewProfile_NS01() throws Exception {
 
         SECR_View_Profile_Main view = PageFactory.initElements(driver, SECR_View_Profile_Main.class);
@@ -100,7 +103,10 @@ public class SECR_View_Profile_Cred extends BaseClass_SECR_Portal{
 
 
     }
-    @Test(priority=2)
+    
+    
+    
+    @Test(priority = 2)
     public void SECR_ViewProfile_NS02() throws Exception {
 
         SECR_View_Profile_Main view = PageFactory.initElements(driver, SECR_View_Profile_Main.class);
@@ -131,16 +137,7 @@ public class SECR_View_Profile_Cred extends BaseClass_SECR_Portal{
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("SECR_LogOut_TC05", "Enter Mobile Number", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("Vinay@2025");
-        });
-        Thread.sleep(1000);
-        
-
-        ObjectRepo.startTestAndLog_1_SS("SECR_LogOut_TC06", "Enter New Password", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Re-Enter New Password']")).sendKeys("Vinay@2025");
-        });
-        Thread.sleep(1000);
+      
         
 
        

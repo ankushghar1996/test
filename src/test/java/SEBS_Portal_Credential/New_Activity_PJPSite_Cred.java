@@ -81,7 +81,7 @@ public class New_Activity_PJPSite_Cred extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_12", "Enter Site Name", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("kailash thakur");
+            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("Nilesh thakur");
         });
         Thread.sleep(1000);
 
@@ -106,6 +106,12 @@ public class New_Activity_PJPSite_Cred extends BaseClass_SEBS_Portal {
             Liabrary.custom_click(view.getCheckbox(), "Select State Checkbox");
         });
         Thread.sleep(4000);
+        
+        
+        
+        
+        
+        
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_17", "Scroll to Contractor Name", () -> {
             WebElement scroll2 = driver.findElement(By.xpath("//label[normalize-space()='Contractor Name']"));
@@ -115,7 +121,7 @@ public class New_Activity_PJPSite_Cred extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_18", "Enter Contractor Name", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("komal");
+            driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("nilesh");
         });
         Thread.sleep(1000);
 

@@ -78,11 +78,11 @@ public class AccM_ContractorMaster extends BaseClass{
 			String Expected_Text=" Contractor Master";
 			Assert.assertEquals(Expected_Text, Actual_Text);});
 			Thread.sleep(2000);
-		
+	}
 	
 
-	@Test(priority=1)
-	public void Contractor_MasterHomepage_NS1() throws Exception {
+	@Test(priority=2)
+	public void Contractor_MasterHomepage_NS2() throws Exception {
 
 		
 		
@@ -115,5 +115,5 @@ public class AccM_ContractorMaster extends BaseClass{
 	
 }
 	
-}
+
 }

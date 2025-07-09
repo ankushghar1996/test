@@ -34,7 +34,9 @@ public class SECR_Scheme_Test extends BaseClass_SECR_Portal {
         
         
     }
-    @Test(priority=1)
+    
+    
+    @Test(priority = 1)
     public void Scheme_NS01() throws Exception {
 
         SECR_Scheme_Main SECR = PageFactory.initElements(driver, SECR_Scheme_Main.class);
@@ -57,5 +59,8 @@ public class SECR_Scheme_Test extends BaseClass_SECR_Portal {
             Liabrary.custom_click(SECR.getScheme_Close(), "Click Scheme Close Button");
         });
         Thread.sleep(1000);
+        
 }
+    
+    
 }

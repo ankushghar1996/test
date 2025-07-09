@@ -58,10 +58,12 @@ public class New_Activity_NonPJPSite_Cred extends BaseClass_SEBS_Portal {
         });
         Thread.sleep(1000);
 
+        
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC08", "Click Location Dropdown", () -> {
             Liabrary.custom_click(view.getSelect_Location_dropdown(), null);
         });
         Thread.sleep(1000);
+        
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC09", "Select Location", () -> {
             Liabrary.custom_click(view.getSelect_Location(), null);
@@ -94,6 +96,11 @@ public class New_Activity_NonPJPSite_Cred extends BaseClass_SEBS_Portal {
             Liabrary.custom_click(view.getChcekbox_flexCheckDefault(), null);
         });
         Thread.sleep(1000);
+        
+        
+        
+        
+        
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC15", "Scroll to State", () -> {
             WebElement scroll1 = driver.findElement(By.xpath("//label[normalize-space()='State']"));
@@ -139,12 +146,12 @@ public class New_Activity_NonPJPSite_Cred extends BaseClass_SEBS_Portal {
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_21", "Click on camera button", ()-> {  
 	        driver.findElement(By.xpath("(//div[@class='new-retailer-container o-hidden']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();});
 	        Thread.sleep(1000);
-
+	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_22", "Select camera  and capture", ()-> {  
 	        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
-
 	        
+	        	
 	        // Wait for the Switch Camera button and click it
 	        try {
 	            WebElement switchCamBtn = wait1.until(ExpectedConditions.elementToBeClickable(

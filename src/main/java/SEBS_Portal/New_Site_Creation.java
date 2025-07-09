@@ -164,7 +164,7 @@ public class New_Site_Creation {
 	
 	
 	
-	@FindBy(how=How.XPATH,using="//button[@id='dropdownMenuButton']")
+	@FindBy(how=How.XPATH,using="(//button[normalize-space()='Select Influencer'])[1]")
     private WebElement dropdownMenuButton;
 	
 	@FindBy(how=How.XPATH,using="(//input[@type='checkbox'])[2]")
@@ -192,6 +192,36 @@ public class New_Site_Creation {
 	
 	@FindBy(how=How.XPATH,using="(//div[@routerlink='/activity'])[1]")
     private WebElement Activity_Button;
+	
+	
+	@FindBy(how=How.XPATH,using="//input[@placeholder='Enter Project Funnel (lakhs) of Site']")
+	private WebElement Enter_Project_Funnel_lakhs_of_Site;
+	
+	
+	public WebElement getEnter_Project_Funnel_lakhs_of_Site() {
+		return Enter_Project_Funnel_lakhs_of_Site;
+	}
+
+
+	public WebElement getEnter_Sales_Funnel_lakhs_of_Site() {
+		return Enter_Sales_Funnel_lakhs_of_Site;
+	}
+
+
+	public WebElement getEnter_Fosroc_Expected_sales_in_2025() {
+		return Enter_Fosroc_Expected_sales_in_2025;
+	}
+
+
+	@FindBy(how=How.XPATH,using="(//input[@placeholder='Enter Sales Funnel (lakhs) of Site'])[1]")
+	private WebElement Enter_Sales_Funnel_lakhs_of_Site;
+	
+	
+	@FindBy(how=How.XPATH,using="//input[@placeholder='Enter Fosroc Expected sales in 2025']")
+	private WebElement Enter_Fosroc_Expected_sales_in_2025;
+	
+	//  deluxe sea view room 
+
 	
 	
 	public WebElement getActivity_Button() {
