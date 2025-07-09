@@ -11,7 +11,11 @@
 <class name="HO_Portal_Credential.HO_Distributor_Approval_View_Test"/>
 <class name="HO_Portal_Credential.HO_Distributor_Reject_Cred"/>
 <class name="HO_Portal_Credential.HO_Distributor_Approval_Page_Test"/>
-<class name="SFA_Portal_Credential.Dist_Approval1st_View_Cred"/>
+<class name="SFA_Portal_Credential.Dist_Approval1st_View_Cred">
+			<methods>
+        <include name="Leave_Approval"/>
+    </methods>
+    </class>
 <class name="SFA_Portal_Credential.Dist_Reject1st_ApprovalPage_Cred"/>
 <class name="SFA_Portal_Credential.Dist_Approval1st_ApprPage_Cred"/>
 <class name="ASM_Portal_Test.ASM_Approval_View_Test"/>

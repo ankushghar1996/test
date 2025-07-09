@@ -80,17 +80,16 @@ public class AccM_ContractorMaster extends BaseClass{
 			Thread.sleep(2000);
 		
 	
-	
-}
+
 	@Test(priority=1)
-	public void Contractor_MasterHomepage_NS02() throws Exception {
+	public void Contractor_MasterHomepage_NS1() throws Exception {
+
 		
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		AM_ContractorMaster CM = PageFactory.initElements(driver, AM_ContractorMaster.class);
 		
-		ObjectRepo.startTestAndLog_1_NS("Without Click on Contractor Master");
-		
+	
 		ObjectRepo.startTestAndLog_1_SS("SA_Contractor_Master_TC01", "Click on Master Menu", () -> {
 		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");});
 		Thread.sleep(1000);
@@ -112,8 +111,9 @@ public class AccM_ContractorMaster extends BaseClass{
 			String Expected_Text=" Contractor Master";
 			Assert.assertEquals(Expected_Text, Actual_Text);});
 			Thread.sleep(2000);
-		
 	
+	
+}
 	
 }
 }

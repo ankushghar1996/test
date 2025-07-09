@@ -56,7 +56,6 @@ public class Retailer_Distributor_Outlet_Approval_Reject_1st_Test_2nd extends Ba
         });
         Thread.sleep(1000);
  
-        
         ObjectRepo.startTestAndLog_1_SS("FSG_DB_Outlet_Approval_TC_08", "Click on No button", () -> {
             Liabrary.custom_click(DIST.getNo_Button(), "Click on No Btn");
         });
