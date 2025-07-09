@@ -10,7 +10,7 @@ import SECR_Portal.SECR_Scheme_Main;
 
 public class SEBS_Scheme_Test extends BaseClass_SEBS_Portal {
 
-	@Test(priority=0)
+	@Test(priority = 0)
     public void Scheme() throws Exception {
 
         SECR_Scheme_Main SECR = PageFactory.initElements(driver, SECR_Scheme_Main.class);
@@ -35,7 +35,7 @@ public class SEBS_Scheme_Test extends BaseClass_SEBS_Portal {
         
         
     }
-    @Test(priority=1)
+    @Test(priority = 1)
     public void Scheme_Ns01() throws Exception {
 
         SECR_Scheme_Main SECR = PageFactory.initElements(driver, SECR_Scheme_Main.class);
@@ -59,7 +59,7 @@ public class SEBS_Scheme_Test extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);                
     }
     
-    @Test(priority=2)
+    @Test(priority = 2)
     public void Scheme_Ns02() throws Exception {
 
         SECR_Scheme_Main SECR = PageFactory.initElements(driver, SECR_Scheme_Main.class);

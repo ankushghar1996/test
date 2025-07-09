@@ -11,12 +11,12 @@ import SEBS_Portal.SEBS_View_Profile_Main;
 
 public class SEBS_View_Profile_Cred extends BaseClass_SEBS_Portal {
 
-	@Test(priority=0)
+	@Test(priority = 0)
     public void SECR_ViewProfile() throws Exception {
 
         SEBS_View_Profile_Main view = PageFactory.initElements(driver, SEBS_View_Profile_Main.class);
         
-        //
+       
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_View_Profile_Cred_TC01", "Click on SECR Menu", () -> {
             Liabrary.custom_click(view.getSECR_Menu(), "Click on SECR Menu");
@@ -56,7 +56,9 @@ public class SEBS_View_Profile_Cred extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
         */
     }
-    @Test(priority=1)
+	
+	
+    @Test(priority = 1)
     public void SECR_ViewProfile_NS01() throws Exception {
 
         SEBS_View_Profile_Main view = PageFactory.initElements(driver, SEBS_View_Profile_Main.class);
@@ -101,7 +103,9 @@ public class SEBS_View_Profile_Cred extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
         */
     }
-    @Test(priority=2)
+    
+    
+    @Test(priority = 2)
     public void SECR_ViewProfile_NS02() throws Exception {
 
         SEBS_View_Profile_Main view = PageFactory.initElements(driver, SEBS_View_Profile_Main.class);

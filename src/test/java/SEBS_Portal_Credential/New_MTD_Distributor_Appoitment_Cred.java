@@ -267,7 +267,7 @@ public class New_MTD_Distributor_Appoitment_Cred {
 
         Thread.sleep(5000);
         // Wait for the Capture button and click it
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_035", "Select camera  and capture", ()-> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_036", "Select camera  and capture", ()-> {
         	 WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
         
         try {
@@ -282,7 +282,9 @@ public class New_MTD_Distributor_Appoitment_Cred {
         Thread.sleep(5000);
     
         
-   //     driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();
+        ObjectRepo.startTestAndLog_1_SS("SEBS_MTDAppointment_TC_037", "Select camera  and capture", ()-> {
+      driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();
+        });
      //   Thread.sleep(1000);
         
         
@@ -295,38 +297,28 @@ public class New_MTD_Distributor_Appoitment_Cred {
 
 
     private static String getOtpFromDb(String mobileNumber) {
-    	
         String otp = null;
-
-        String url = "jdbc:sqlserver://172.25.0.74:1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
-        String username = "Test_Team";
+ 
+        String url = "jdbc:sqlserver://192.168.2.206:1433;databaseName=Fosroc_UAT;encrypt=true;trustServerCertificate=true";
+        String username = "sqlservices";
         String password = "Pass@2025";
-
+ 
         try {
-        	
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             Connection conn = DriverManager.getConnection(url, username, password);
             Statement stmt = conn.createStatement();
-
-            String query = "select * from RegistrationPendingMaster where MobileNo=7447852010";
-            
+ 
+            String query = "select * from RegistrationPendingMaster where MobileNo='8585906050'";
             ResultSet rs = stmt.executeQuery(query);
-            
             if (rs.next()) {
-            	
                 otp = rs.getString("otp");
-                
             }
             conn.close();
-            
         } catch (Exception e) {
-        	
             e.printStackTrace();
-            
         }
-
+ 
         return otp;
-        
     }
 
     @AfterClass

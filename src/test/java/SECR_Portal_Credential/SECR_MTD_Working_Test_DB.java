@@ -78,7 +78,7 @@ public class SECR_MTD_Working_Test_DB extends BaseClass_SECR_Portal {
         
     }
     
-    @Test(priority=1)
+    @Test(priority = 1)
     public void MTD_Working_NS01() throws Exception {
 
         SECR_MTD_Working_Main SECR = PageFactory.initElements(driver, SECR_MTD_Working_Main.class);
@@ -144,7 +144,7 @@ public class SECR_MTD_Working_Test_DB extends BaseClass_SECR_Portal {
         
         
     }
-    @Test(priority=2)
+    @Test(priority = 2)
     public void MTD_Working_NS02() throws Exception {
 
         SECR_MTD_Working_Main SECR = PageFactory.initElements(driver, SECR_MTD_Working_Main.class);
