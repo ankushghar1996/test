@@ -42,4 +42,66 @@ public class DLRM_DLRM_Dealer_Master_Page extends BaseClass {
             Assert.assertEquals(Expected_Text, Actual_Text);
         });
     }
+    
+    @Test(priority=1)
+    public void Dealer_Master_Page_NS01() throws Exception {
+        HomePage hp = PageFactory.initElements(driver, HomePage.class);
+        DLRM_Dealer_Master DM1 = PageFactory.initElements(driver, DLRM_Dealer_Master.class);
+        
+        ObjectRepo.startTestAndLog_1_NS("Without Click on dealer master menu page");
+
+        ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Master_Page_TC01", "Click Master Menu", () -> {
+            Liabrary.custom_click(hp.getMaster_Menu(), "Select Master Menu");
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Master_Page_TC02", "Click Dealer Master SubMenu", () -> {
+            Liabrary.custom_click(hp.getOutletMaster_SubMenu(), "Select Dealer Master SubMenu");
+        });
+        Thread.sleep(1000);
+
+//        ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Master_Page_TC03", "Click Dealer Master Menu", () -> {
+//            Liabrary.custom_click(DM1.getDealer_Master_Menu(), "Select Dealer Master Menu Page");
+//        });
+//        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Master_Page_TC04", "Verify Dealer Master List Header Text", () -> {
+            WebElement Dealer_Master_List = driver.findElement(By.xpath("//*[text()='Outlet Master List']"));
+            String Actual_Text = Dealer_Master_List.getText();
+            System.out.println(Actual_Text);
+            String Expected_Text = "Outlet Master List";
+            Assert.assertEquals(Expected_Text, Actual_Text);
+        });
+    }
+    
+    @Test(priority=2)
+    public void Dealer_Master_Page_NS2() throws Exception {
+        HomePage hp = PageFactory.initElements(driver, HomePage.class);
+        DLRM_Dealer_Master DM1 = PageFactory.initElements(driver, DLRM_Dealer_Master.class);
+        
+        ObjectRepo.startTestAndLog_1_NS("Without Click on Dealer Master SubMenu");
+
+        ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Master_Page_TC01", "Click Master Menu", () -> {
+            Liabrary.custom_click(hp.getMaster_Menu(), "Select Master Menu");
+        });
+        Thread.sleep(1000);
+
+//        ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Master_Page_TC02", "Click Dealer Master SubMenu", () -> {
+//            Liabrary.custom_click(hp.getOutletMaster_SubMenu(), "Select Dealer Master SubMenu");
+//        });
+//        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Master_Page_TC03", "Click Dealer Master Menu", () -> {
+            Liabrary.custom_click(DM1.getDealer_Master_Menu(), "Select Dealer Master Menu Page");
+        });
+        Thread.sleep(1000);
+
+        ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Master_Page_TC04", "Verify Dealer Master List Header Text", () -> {
+            WebElement Dealer_Master_List = driver.findElement(By.xpath("//*[text()='Outlet Master List']"));
+            String Actual_Text = Dealer_Master_List.getText();
+            System.out.println(Actual_Text);
+            String Expected_Text = "Outlet Master List";
+            Assert.assertEquals(Expected_Text, Actual_Text);
+        });
+    }
 }

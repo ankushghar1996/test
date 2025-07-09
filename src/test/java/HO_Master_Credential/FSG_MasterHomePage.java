@@ -20,6 +20,8 @@ public class FSG_MasterHomePage extends BaseClass {
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         FSG_FSGMaster FSG = PageFactory.initElements(driver, FSG_FSGMaster.class);
         Common_Data CD = PageFactory.initElements(driver, Common_Data.class);
+        
+        ObjectRepo.startTestAndLog_1_NS("Without Click on FSG Master Page");
 
         ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_TC01", "Click on Master Menu", () -> {
             Liabrary.custom_click(hp.getMaster_Menu(), " Master Menu");
@@ -31,10 +33,10 @@ public class FSG_MasterHomePage extends BaseClass {
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_TC03", "Click onFSG Master Page", () -> {
-            Liabrary.custom_click(FSG.getFSG_Master(), " FSG Master Page");
-        });
-        Thread.sleep(1000);
+//        ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_TC03", "Click onFSG Master Page", () -> {
+//            Liabrary.custom_click(FSG.getFSG_Master(), " FSG Master Page");
+//        });
+//        Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_TC04", "Verify FSG Master Header Text", () -> {
             WebElement FSG_Master_Header_TXT = driver.findElement(By.xpath("//h4[normalize-space()='FSG Master']"));
