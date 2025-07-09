@@ -30,9 +30,7 @@ public class SECR_Media_Test extends BaseClass_SECR_Portal {
         ObjectRepo.startTestAndLog_1_SS("SECR_Media_TC03", "Verify that user should be able to click on Media Documents Search Button", () -> {
             Liabrary.custom_click(SECR.getDocuments_Search_Button(), "Click on Media Documents Search Button");
         });
-        Thread.sleep(1000);
-      
-        
+        Thread.sleep(1000);  
     }
     
     @Test(priority=1)
@@ -57,6 +55,7 @@ public class SECR_Media_Test extends BaseClass_SECR_Portal {
             Liabrary.custom_click(SECR.getDocuments_Search_Button(), "Click on Media Documents Search Button");
         });
         Thread.sleep(1000);
+        
 }
     @Test(priority=2)
     public void Media_NS02() throws Exception {
@@ -69,7 +68,6 @@ public class SECR_Media_Test extends BaseClass_SECR_Portal {
         });
         Thread.sleep(1000);
 
-  
         ObjectRepo.startTestAndLog_1_SS("SECR_Media_TC02", "Verify that user should be able to click on Media Documents", () -> {
             Liabrary.custom_click(SECR.getMedia_Documents(), "Click on Media Documents");
         });

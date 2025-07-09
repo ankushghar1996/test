@@ -10,9 +10,10 @@ import SFA_Portal.Distributor_Approval1st_ApprovalPage;
 
 public class Dist_Approval1st_ApprPage_Cred extends BaseClass_SFA {
 
-	
+
 	
 	@Test(priority = 0)
+
 	public void Dist_ApprovePage() throws Exception {
 		
 		ObjectRepo.driver = driver;
@@ -63,10 +64,7 @@ public class Dist_Approval1st_ApprPage_Cred extends BaseClass_SFA {
 		ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_ApprPage_Cred_07", "Verify that user should click on Yes button.", () -> {
 		    Liabrary.custom_click(view.getYes_btn(), "Click Yes btn");
 		});
-	
-	
-	
-	
+
 	}
 	
 	
@@ -126,10 +124,7 @@ public class Dist_Approval1st_ApprPage_Cred extends BaseClass_SFA {
 		ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_ApprPage_Cred_07", "Verify that user should click on Yes button.", () -> {
 		    Liabrary.custom_click(view.getYes_btn(), "Click Yes btn");
 		});
-	
-	
-	
-	
+
 	}
 	
 	

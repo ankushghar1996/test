@@ -508,6 +508,8 @@ public class New_Distributor_Cred {
 
 		            String query = "select * from RegistrationPendingMaster where MobileNo='9403582580'";
 		            
+		            //select * from RegistrationPendingMaster where MobileNo='9403582580'
+		            
 		            ResultSet rs = stmt.executeQuery(query);
 		            
 		            if (rs.next()) {

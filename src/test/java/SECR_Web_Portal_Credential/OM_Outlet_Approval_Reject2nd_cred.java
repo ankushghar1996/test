@@ -114,9 +114,7 @@ public class OM_Outlet_Approval_Reject2nd_cred extends BaseClass_SECR_WebPortal{
             Liabrary.custom_click(SECR.getNo_btn(), "click No btn");
         });
         Thread.sleep(1000);
-        
- 
-	
+       
 	}
 	
 	
@@ -180,6 +178,7 @@ public class OM_Outlet_Approval_Reject2nd_cred extends BaseClass_SECR_WebPortal{
  
         
 	
+
 	}
 	
 	

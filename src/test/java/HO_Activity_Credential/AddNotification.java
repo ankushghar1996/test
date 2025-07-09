@@ -203,7 +203,8 @@ public void Notification_setting_NS01() throws Exception {
     NotificationMaster_AddNotification AN = PageFactory.initElements(driver, NotificationMaster_AddNotification.class);
     Common_Data CD = PageFactory.initElements(driver, Common_Data.class);
 
-    ObjectRepo.Headlines_logOnlyDescription("NS01= ");
+    ObjectRepo.startTestAndLog_1_NS("NS_01 Without Click Add Button");
+    
     ObjectRepo.startTestAndLog_1_SS("SA_AddNotification_TC_01", "Verify click on Activity Menu", () -> {
         Liabrary.custom_click(hp.getActivity_Menu(), "select Activity Menu");
     });
@@ -222,10 +223,10 @@ public void Notification_setting_NS01() throws Exception {
         Thread.sleep(1000);
    
 
-    ObjectRepo.startTestAndLog_1_SS("SA_AddNotification_TC_04", "Verify click on Add button", () -> {
-        Liabrary.custom_click(CD.getAdd_Btn(), "select Add btn");
-    });
-        Thread.sleep(1000);
+//    ObjectRepo.startTestAndLog_1_SS("SA_AddNotification_TC_04", "Verify click on Add button", () -> {
+//        Liabrary.custom_click(CD.getAdd_Btn(), "select Add btn");
+//    });
+//        Thread.sleep(1000);
    
 
     ObjectRepo.startTestAndLog_1_SS("SA_AddNotification_TC_05", "Verify Notification Title Assertion", () -> {
@@ -379,7 +380,8 @@ public void Notification_setting_NS01() throws Exception {
  NotificationMaster_AddNotification AN = PageFactory.initElements(driver, NotificationMaster_AddNotification.class);
  Common_Data CD = PageFactory.initElements(driver, Common_Data.class);
 	
-     ObjectRepo.Headlines_logOnlyDescription("NS01= ");
+     ObjectRepo.startTestAndLog_1_NS("NS02= Without selecting From User Dropdown Value ");
+     
      ObjectRepo.startTestAndLog_1_SS("SA_AddNotification_TC_01", "Verify click on Activity Menu", () -> {
          Liabrary.custom_click(hp.getActivity_Menu(), "select Activity Menu");
      });
@@ -431,10 +433,10 @@ public void Notification_setting_NS01() throws Exception {
          Thread.sleep(1000);
     
 
-     ObjectRepo.startTestAndLog_1_SS("SA_AddNotification_TC_09", "Select value from User dropdown", () -> {
-         Liabrary.custom_click(AN.getSelectValue_User_CheckBox(), "select value on User dropdown");
-     });
-         Thread.sleep(1000);
+//     ObjectRepo.startTestAndLog_1_SS("SA_AddNotification_TC_09", "Select value from User dropdown", () -> {
+//         Liabrary.custom_click(AN.getSelectValue_User_CheckBox(), "select value From User dropdown");
+//     });
+//         Thread.sleep(1000);
     
 
      ObjectRepo.startTestAndLog_1_SS("SA_AddNotification_TC_10", "Click on Division dropdown", () -> {

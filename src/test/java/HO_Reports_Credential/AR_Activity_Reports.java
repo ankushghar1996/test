@@ -71,6 +71,8 @@ public class AR_Activity_Reports extends BaseClass {
         AR_Activity_Reports_Main AR = PageFactory.initElements(driver, AR_Activity_Reports_Main.class);
 
         
+        ObjectRepo.startTestAndLog_1_NS("Without Click on Activity Report Menu");
+        
         ObjectRepo.startTestAndLog_1_SS("SA_AR_Activity_Reports_TC_01", "Verify click on Report Menu", () -> {
             Liabrary.custom_click(hp.getReports_Menu(), "Click on Report Menu");
         });
@@ -121,6 +123,7 @@ public class AR_Activity_Reports extends BaseClass {
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         AR_Activity_Reports_Main AR = PageFactory.initElements(driver, AR_Activity_Reports_Main.class);
 
+        ObjectRepo.startTestAndLog_1_NS("Without Click on Activity Report SubMenu");
         
         ObjectRepo.startTestAndLog_1_SS("SA_AR_Activity_Reports_TC_01", "Verify click on Report Menu", () -> {
             Liabrary.custom_click(hp.getReports_Menu(), "Click on Report Menu");
@@ -128,16 +131,16 @@ public class AR_Activity_Reports extends BaseClass {
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("SA_AR_Activity_Reports_TC_02", "Verify click on Activity Report Submenu", () -> {
-            Liabrary.custom_click(hp.getActivity_Report_SubMenu(), "Click on Activity Report Submenu");
-        });
-        Thread.sleep(1000);
-        
-
-//        ObjectRepo.startTestAndLog_1_SS("SA_AR_Activity_Reports_TC_03", "Verify click on Activity Report Menu", () -> {
-//            Liabrary.custom_click(AR.getActivity_Report_Menu(), "Click on Activity Report Menu");
+//        ObjectRepo.startTestAndLog_1_SS("SA_AR_Activity_Reports_TC_02", "Verify click on Activity Report Submenu", () -> {
+//            Liabrary.custom_click(hp.getActivity_Report_SubMenu(), "Click on Activity Report Submenu");
 //        });
 //        Thread.sleep(1000);
+        
+
+        ObjectRepo.startTestAndLog_1_SS("SA_AR_Activity_Reports_TC_03", "Verify click on Activity Report Menu", () -> {
+            Liabrary.custom_click(AR.getActivity_Report_Menu(), "Click on Activity Report Menu");
+        });
+        Thread.sleep(1000);
         
 
         ObjectRepo.startTestAndLog_1_SS("SA_AR_Activity_Reports_TC_04", "Enter From Date", () -> {

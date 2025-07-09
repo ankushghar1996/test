@@ -171,11 +171,13 @@ public class ActivityUpload extends BaseClass {
     }
     
     @Test(priority = 1)
-    public void Target_Upload_NS01() throws Exception {
+    public void Activity_Upload_NS01() throws Exception {
 
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         Activity_Upload AU = PageFactory.initElements(driver, Activity_Upload.class);
         Common_Data CD = PageFactory.initElements(driver, Common_Data.class);
+        
+        ObjectRepo.startTestAndLog_1_NS("Without Click Activity Upload Page");
         
         ObjectRepo.startTestAndLog_1_SS("HOAct_ActivityUpload_TC_01", "Verify that user should be select Activity Menu", () -> {
             Liabrary.custom_click(hp.getActivity_Menu(), "select Activity Menu");
@@ -189,10 +191,10 @@ public class ActivityUpload extends BaseClass {
         Thread.sleep(1000);
 
         
-        ObjectRepo.startTestAndLog_1_SS("HOAct_ActivityUpload_TC_03", "Verify that user should be select Activity Upload Page", () -> {
-            Liabrary.custom_click(AU.getActivity_Upload(), "select Activity Upload Page");
-        });
-        Thread.sleep(1000);
+//        ObjectRepo.startTestAndLog_1_SS("HOAct_ActivityUpload_TC_03", "Verify that user should be select Activity Upload Page", () -> {
+//            Liabrary.custom_click(AU.getActivity_Upload(), "select Activity Upload Page");
+//        });
+//        Thread.sleep(1000);
 
         
         ObjectRepo.startTestAndLog_1_SS("HOAct_ActivityUpload_TC_04", "Verify Activity Upload header text", () -> {
