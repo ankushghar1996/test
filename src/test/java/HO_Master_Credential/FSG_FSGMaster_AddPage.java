@@ -146,6 +146,135 @@ public class FSG_FSGMaster_AddPage extends BaseClass{
 	    });
 	    Thread.sleep(1000);
 	}
+	
+	@Test(priority = 1)
+	public void FSG_MasterHomepage_NS01() throws Exception {
+
+	    HomePage hp = PageFactory.initElements(driver, HomePage.class);
+	    FSG_AddFSGMaster FA = PageFactory.initElements(driver, FSG_AddFSGMaster.class);
+	    FSG_FSGMaster FSG = PageFactory.initElements(driver, FSG_FSGMaster.class);
+	    
+	    ObjectRepo.startTestAndLog_1_NS("Without click on add Button");
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC01", "Click Master Menu", () -> {
+	        Liabrary.custom_click(hp.getMaster_Menu(), " Master Menu");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC02", "Click On FSG Master SubMenu", () -> {
+	        Liabrary.custom_click(hp.getFSGMaster_SubMenu(), "select FSG Master sub menu");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC03", "Click on FSG Master", () -> {
+	        Liabrary.custom_click(FSG.getFSG_Master(), "FSG Master menu");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC04", "Verify FSG Master header Text", () -> {
+	        WebElement UploadText = driver.findElement(By.xpath("//h4[normalize-space()='FSG Master']"));
+	        String Actual_Text = UploadText.getText();
+	        System.out.println(Actual_Text);
+	        String Expected_Text = "FSG Master";
+	        Assert.assertEquals(Expected_Text, Actual_Text);
+	    });
+	    Thread.sleep(2000);
+
+//	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC05", "Click Add button", () -> {
+//	        Liabrary.custom_click(FA.getAdd_btn(), "Add btn");
+//	    });
+//	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC06", "Click Channel Type Dropdown", () -> {
+	        Liabrary.custom_click(FA.getChannelType_Dropdown(), "Channeltype dropdown");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC07", "Select Channel Type Value", () -> {
+	        Liabrary.custom_click(FA.getChannelTypeValue_Dropdown(), "ChannelTypeValue Dropdown");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC08", "Click FSG Type Dropdown", () -> {
+	        Liabrary.custom_click(FA.getFSGType_Dropdown(), "FSGType Dropdown");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC09", "Select FSG Type Value", () -> {
+	        Liabrary.custom_click(FA.getFSGTypeValue_Dropdown(), "FSGTypeValue Dropdown");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC10", "Click Distributor Dropdown", () -> {
+	        Liabrary.custom_click(FA.getDistributor_Dropdown(), "Distributor Dropdown");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC11", "Select Distributor Value", () -> {
+	        Liabrary.custom_click(FA.getDistributorValue_Dropdown(), "DistributorValue Dropdown");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC12", "Enter Employee Code", () -> {
+	        Liabrary.custom_Sendkeys(FA.getEmployee_Code_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 0), "Employee Code Textbox");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC13", "Enter FSG Name", () -> {
+	        Liabrary.custom_Sendkeys(FA.getFSG_Name_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 1), "FSG Name Textbox");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC14", "Enter Address 1", () -> {
+	        Liabrary.custom_Sendkeys(FA.getAddress1_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 2), "Address1 Textbox");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC15", "Click State Dropdown", () -> {
+	        Liabrary.custom_click(FA.getState_Dropdown(), "State Dropdown");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC16", "Select State Value", () -> {
+	        Liabrary.custom_click(FA.getStateValue_Dropdown(), "StateValue Dropdown");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC17", "Click Town Dropdown", () -> {
+	        Liabrary.custom_click(FA.getTown_Dropdown(), "Town Dropdown");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC18", "Select Town Value", () -> {
+	        Liabrary.custom_click(FA.getTownValue_Dropdown(), "TownValue Dropdown");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC19", "Enter Email ID", () -> {
+	        Liabrary.custom_Sendkeys(FA.getEmail_ID_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 3), "Email ID Textbox");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC20", "Enter Pin Code", () -> {
+	        Liabrary.custom_Sendkeys(FA.getPinCode_Textbox(), excel.getNumericdata("HO_ADD_FSG", 1, 4), "PinCode Textbox");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC21", "Enter Mobile Number", () -> {
+	        Liabrary.custom_Sendkeys(FA.getMobileNo_Textbox(), excel.getNumericdata("HO_ADD_FSG", 1, 5), "MobileNo Textbox");
+	    });
+	    Thread.sleep(1000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC22", "Enter PAN Number", () -> {
+	        Liabrary.custom_Sendkeys(FA.getPanNo_Textbox(), excel.getStringdata("HO_ADD_FSG", 1, 6), "PanNo Textbox");
+	    });
+	    Thread.sleep(3000);
+
+	    ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_AddPage_TC23", "Click Close Button", () -> {
+	        Liabrary.custom_click(FA.getClose_btn(), "Close btn");
+	    });
+	    Thread.sleep(1000);
+	}
 }
 
 			

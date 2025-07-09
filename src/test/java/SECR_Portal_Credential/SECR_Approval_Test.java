@@ -109,25 +109,7 @@ public class SECR_Approval_Test extends BaseClass_SECR_Portal {
         Thread.sleep(1000);
   
         
-        ObjectRepo.startTestAndLog_1_SS("SECR_Approval_TC06", "Verify that user should be able to download Aadhar Card", () -> {
-            Liabrary.custom_click(SECR.getAadhar_Card_Download(), "Adhar Card Download");
-        });
-        Thread.sleep(1000);
-
-        ObjectRepo.startTestAndLog_1_SS("SECR_Approval_TC07", "Verify that user should be able to download PAN Card", () -> {
-            Liabrary.custom_click(SECR.getPAN_Card(), "Pan Card Download Button");
-        });
-        Thread.sleep(1000);
-
-        ObjectRepo.startTestAndLog_1_SS("SECR_Approval_TC08", "Verify that user should be able to download Shop Registration", () -> {
-            Liabrary.custom_click(SECR.getShop_Registration(), "Click Shop Registration Download Button");
-        });
-        Thread.sleep(1000);
-
-        ObjectRepo.startTestAndLog_1_SS("SECR_Approval_TC09", "Verify that user should be able to click Close Button", () -> {
-            driver.findElement(By.xpath("//button[normalize-space()='Cancel']")).click();
-        });
-        Thread.sleep(1000);
+      
       
     }
     

@@ -170,6 +170,10 @@ public class DistM_ADD_SFADistributor extends BaseClass{
 		Thread.sleep(1000);
 		
 		
+		
+		
+		
+		
 		/*
 		Actions act = new Actions(driver);
 		act.doubleClick(driver.findElement(By.xpath("//button[@class='btn btn-link btn-block text-left label_default']"))).build().perform();
