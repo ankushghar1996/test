@@ -11,7 +11,6 @@ import HO_Master.PM_Project_Image_Upload;
 public class PM_PM_Project_Image_Upload extends BaseClass{
 
 	
-	
 	@Test
 		public void Project_Image_Upload() throws Exception{
 		HomePage hp = PageFactory.initElements(driver,HomePage.class);	

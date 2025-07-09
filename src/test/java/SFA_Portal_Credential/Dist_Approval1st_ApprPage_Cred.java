@@ -10,8 +10,6 @@ import SFA_Portal.Distributor_Approval1st_ApprovalPage;
 
 public class Dist_Approval1st_ApprPage_Cred extends BaseClass_SFA {
 
-	
-	
 	@Test
 	public void Dist_ApprovePage() throws Exception {
 		

@@ -19,9 +19,7 @@ import HO_Master.RM_PJPMaster;
 import HO_Master.RM_PJPMaster_ViewPage;
 
 public class FSG_FSGMaster_AddPage extends BaseClass{
-	
-	
-	
+
 	@Test(priority = 0)
 	public void FSG_MasterHomepage() throws Exception {
 

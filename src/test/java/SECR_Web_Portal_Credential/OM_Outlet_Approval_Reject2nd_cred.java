@@ -53,9 +53,7 @@ public class OM_Outlet_Approval_Reject2nd_cred extends BaseClass_SECR_WebPortal{
         });
         Thread.sleep(1000);
         
- 
-        
-	
+
 	}
 	
 }

@@ -80,6 +80,8 @@ public class AddMedia extends BaseClass {
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         Media_UploadMedia UM = PageFactory.initElements(driver, Media_UploadMedia.class);
         Media_Add_Media AM = PageFactory.initElements(driver, Media_Add_Media.class);
+        
+        ObjectRepo.startTestAndLog_1_NS("Without Click on Add Button");
 
         ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_09", "Select Activity Menu", () -> {
             Liabrary.custom_click(hp.getActivity_Menu(), "select Activity Menu");
@@ -99,10 +101,10 @@ public class AddMedia extends BaseClass {
         Thread.sleep(1000);
 
         
-        ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_12", "Click on Add button", () -> {
-            Liabrary.custom_click(UM.getAdd_Btn(), "click on Add btn");
-        });
-        Thread.sleep(1000);
+//        ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_12", "Click on Add button", () -> {
+//            Liabrary.custom_click(UM.getAdd_Btn(), "click on Add btn");
+//        });
+//        Thread.sleep(1000);
 
         
         ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_13", "Select Document from Type dropdown", () -> {
@@ -141,6 +143,8 @@ public class AddMedia extends BaseClass {
         Media_UploadMedia UM = PageFactory.initElements(driver, Media_UploadMedia.class);
         Media_Add_Media AM = PageFactory.initElements(driver, Media_Add_Media.class);
 
+        ObjectRepo.startTestAndLog_1_NS("Without Select Banner type dropdown");
+        
         ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_17", "Select Activity Menu", () -> {
             Liabrary.custom_click(hp.getActivity_Menu(), "select Activity Menu");
         });
@@ -164,13 +168,13 @@ public class AddMedia extends BaseClass {
         });
         Thread.sleep(1000);
 
-        
-        ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_21", "Select Banner from Type dropdown", () -> {
-            Liabrary.custom_click(AM.getType_Dropdown_Select_Video(), null);
-            Liabrary.custom_click(AM.getType_Dropdown_SelectValue2_Banner(), null);
-        });
-        Thread.sleep(1000);
-        
+//        
+//        ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_21", "Select Banner from Type dropdown", () -> {
+//            Liabrary.custom_click(AM.getType_Dropdown_Select_Video(), null);
+//            Liabrary.custom_click(AM.getType_Dropdown_SelectValue2_Banner(), null);
+//        });
+//        Thread.sleep(1000);
+//        
 
         ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_22", "Select Retailer category", () -> {
             Liabrary.custom_click(AM.getCategory1_Dropdown_Select_Application_Video(), null);

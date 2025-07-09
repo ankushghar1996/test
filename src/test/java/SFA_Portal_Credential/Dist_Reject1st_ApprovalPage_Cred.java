@@ -54,6 +54,8 @@ public class Dist_Reject1st_ApprovalPage_Cred extends BaseClass_SFA {
 		    Liabrary.custom_click(view.getReject_btn(), "Click Reject btn");
 		});
 		Thread.sleep(1000);
+		
+		
 
 		// Optional No button step, uncomment if needed:
 		 ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_ApprPage_Cred_07", "Verify that user should click on No button.", () -> {

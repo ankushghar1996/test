@@ -58,7 +58,7 @@ public class SM_scheme_Homepage extends BaseClass {
         Scheme_Master_Homepage SMH = PageFactory.initElements(driver, Scheme_Master_Homepage.class);
         Common_Data CD = PageFactory.initElements(driver, Common_Data.class);
         
-        ObjectRepo.Headlines_logOnlyDescription("Header text Change");
+        ObjectRepo.startTestAndLog_1_NS("Without Select Scheme Master Sub Menu");
 
         ObjectRepo.startTestAndLog_1_SS("SA_SM_scheme_Homepage_TC01", "Select Master Menu", () -> {
             Liabrary.custom_click(hp.getScheme_Menu(), "Select Master Menu");
@@ -72,10 +72,10 @@ public class SM_scheme_Homepage extends BaseClass {
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("SA_SM_scheme_Homepage_TC03", "Select Scheme Master Sub Menu", () -> {
-            Liabrary.custom_click(SMH.getScheme_Master_Menu(), "Select Scheme Master Sub Menu");
-        });
-        Thread.sleep(1000);
+//        ObjectRepo.startTestAndLog_1_SS("SA_SM_scheme_Homepage_TC03", "Select Scheme Master Sub Menu", () -> {
+//            Liabrary.custom_click(SMH.getScheme_Master_Menu(), "Select Scheme Master Sub Menu");
+//        });
+//        Thread.sleep(1000);
 
         
         ObjectRepo.startTestAndLog_1_SS("SA_SM_scheme_Homepage_TC04", "Verify Scheme Master Header Text", () -> {
@@ -95,7 +95,7 @@ public void Route_Master_Page_NS02() throws Exception {
        Scheme_Master_Homepage SMH = PageFactory.initElements(driver, Scheme_Master_Homepage.class);
        Common_Data CD = PageFactory.initElements(driver, Common_Data.class);
        
-       ObjectRepo.Headlines_logOnlyDescription("without click scheme setup Menu");
+       ObjectRepo.startTestAndLog_1_NS("without click scheme setup Menu");
 
        ObjectRepo.startTestAndLog_1_SS("SA_SM_scheme_Homepage_TC01", "Select Master Menu", () -> {
            Liabrary.custom_click(hp.getScheme_Menu(), "Select Master Menu");
