@@ -43,7 +43,9 @@ public class SECR_Pending_Leave_Approval_DB_Test extends BaseClass_SECR_Portal {
         
         
     }
-    @Test(priority=1)
+    
+    
+    @Test(priority = 1)
     public void Leave_Approval_DB_NS01() throws Exception {
 
         SECR_Pending_Leave_Approval_DB SECR = PageFactory.initElements(driver, SECR_Pending_Leave_Approval_DB.class);
@@ -75,7 +77,9 @@ public class SECR_Pending_Leave_Approval_DB_Test extends BaseClass_SECR_Portal {
         
         
     }
-    @Test(priority=2)
+    
+    
+    @Test(priority = 2)
     public void Leave_Approval_DB_NS02() throws Exception {
 
         SECR_Pending_Leave_Approval_DB SECR = PageFactory.initElements(driver, SECR_Pending_Leave_Approval_DB.class);

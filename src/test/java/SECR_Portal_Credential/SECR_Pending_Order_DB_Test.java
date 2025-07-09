@@ -33,7 +33,9 @@ public class SECR_Pending_Order_DB_Test extends BaseClass_SECR_Portal {
             Thread.sleep(1000);
         
     }
-    @Test(priority=01)
+    
+    
+    @Test(priority = 01)
     public void pending_order_DB_NS01() throws Exception {
         SECR_Pending_Order_DB SECR = PageFactory.initElements(driver, SECR_Pending_Order_DB.class);
 

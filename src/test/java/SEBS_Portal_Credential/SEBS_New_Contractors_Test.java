@@ -49,7 +49,7 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         
         
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC04", "Click on CONTINUE Button", () -> {
-        driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
+        driver.findElement(By.xpath("(//button[normalize-space()='CONTINUE'])[1]")).click();
         });
         Thread.sleep(1000);
 
