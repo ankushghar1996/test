@@ -1,5 +1,8 @@
 package Retailer_Credential;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -23,6 +26,11 @@ public class Logout extends BaseClass_Retailer {
         ObjectRepo.startTestAndLog_1_SS("Retailer_Logout_TC02", "Click on Logout", () -> {
             Liabrary.custom_click(OUT.getLogout(), "Click on Logout");
         });
+        Thread.sleep(1000);
+        
+        WebElement scroll3 = driver.findElement(By.xpath("//span[normalize-space()='Upload Document 1']"));
+    	JavascriptExecutor jse3= (JavascriptExecutor)driver;
+    	jse3.executeScript("arguments[0].scrollIntoView(true);", scroll3);
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("Retailer_Logout_TC03", "Click on Yes button", () -> {

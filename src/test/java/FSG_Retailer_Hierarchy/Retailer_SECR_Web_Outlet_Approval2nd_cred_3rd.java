@@ -1,19 +1,19 @@
 package FSG_Retailer_Hierarchy;
-
+ 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
+ 
 import Com_Utility.BaseClass_SECR_WebPortal;
 import Com_Utility.Liabrary;
 import Com_Utility.ObjectRepo;
 import SCER_Web_Portal.OM_Outlet_Approval2nd_main;
-
+ 
 public class Retailer_SECR_Web_Outlet_Approval2nd_cred_3rd extends BaseClass_SECR_WebPortal{
-
+ 
 	
 	@Test
-    public void Outlet_Approval() throws Exception {
-
+    public void Leave_Approval() throws Exception {
+ 
 		OM_Outlet_Approval2nd_main SECR = PageFactory.initElements(driver, OM_Outlet_Approval2nd_main.class);
 	
 		// Package name + login name + class name + test case nmbr
@@ -76,3 +76,5 @@ public class Retailer_SECR_Web_Outlet_Approval2nd_cred_3rd extends BaseClass_SEC
 	}
 	
 }
+ 
+ 
