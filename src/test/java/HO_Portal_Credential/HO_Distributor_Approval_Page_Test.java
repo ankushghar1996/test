@@ -22,7 +22,7 @@ public class HO_Distributor_Approval_Page_Test extends BaseClass_HO_Portal{
  
 	
 	@Test(priority=0)
-	public void DistM_DistributorApprov() throws Exception {
+	public void DistM_DistributorApprovPage() throws Exception {
 		
 		ObjectRepo.driver = driver;
 		

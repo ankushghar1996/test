@@ -14,7 +14,7 @@ import HO_Portal_Main.OutletMaster_ApprovalPage;
 public class Retailer_PJP_HO_OutletMaster_ApprovalPageCred_1st extends BaseClass_HO_Portal {
 
     @Test
-    public void OM_View() throws Exception {
+    public void OM_ApprovalPageCred() throws Exception {
 
         OutletMaster_ApprovalPage Appr = PageFactory.initElements(driver, OutletMaster_ApprovalPage.class);
 

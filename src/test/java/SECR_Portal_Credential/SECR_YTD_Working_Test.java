@@ -14,7 +14,7 @@ import SECR_Portal.SECR_YTD_Working;
 public class SECR_YTD_Working_Test extends BaseClass_SECR_Portal {
 
     @Test 
-    public void pending_order_DB() throws Exception {
+    public void YTD_Working_Test() throws Exception {
 
         SECR_YTD_Working SECR = PageFactory.initElements(driver, SECR_YTD_Working.class);
 
@@ -85,7 +85,7 @@ public class SECR_YTD_Working_Test extends BaseClass_SECR_Portal {
     
     
     @Test (priority=01)
-    public void pending_order_DB_NS01() throws Exception {
+    public void YTD_Working_Test_NS01() throws Exception {
 
         SECR_YTD_Working SECR = PageFactory.initElements(driver, SECR_YTD_Working.class);
         //Without Clicking YTD Retailer
@@ -156,7 +156,7 @@ public class SECR_YTD_Working_Test extends BaseClass_SECR_Portal {
 
     }
     @Test (priority=02)
-    public void pending_order_DB_NS02() throws Exception {
+    public void YTD_Working_Test_NS02() throws Exception {
 
         SECR_YTD_Working SECR = PageFactory.initElements(driver, SECR_YTD_Working.class);
         //Without Clicking YTD Retailer

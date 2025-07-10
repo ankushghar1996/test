@@ -14,7 +14,7 @@ public class Dist_Reject1st_ApprovalPage_Cred extends BaseClass_SFA {
 	
 	
 	@Test(priority = 0)
-	public void Dist_ApprovePage() throws Exception {
+	public void Dist_RejectPage() throws Exception {
 		
 		ObjectRepo.driver = driver;
 		

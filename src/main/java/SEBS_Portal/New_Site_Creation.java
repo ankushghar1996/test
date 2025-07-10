@@ -220,10 +220,16 @@ public class New_Site_Creation {
 	@FindBy(how=How.XPATH,using="//input[@placeholder='Enter Fosroc Expected sales in 2025']")
 	private WebElement Enter_Fosroc_Expected_sales_in_2025;
 	
-	//  deluxe sea view room 
+	@FindBy(how=How.XPATH,using="//input[@placeholder='Enter YTD Sales (lakhs)']")
+	private WebElement Enter_YTD_Sales;
 
 	
 	
+	public WebElement getEnter_YTD_Sales() {
+		return Enter_YTD_Sales;
+	}
+
+
 	public WebElement getActivity_Button() {
 		return Activity_Button;
 	}

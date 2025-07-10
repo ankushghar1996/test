@@ -15,7 +15,7 @@ import Com_Utility.ObjectRepo;
 public class ASM_Approval_Test extends BaseClass_ASM {
 	
 	@Test(priority=0)
-	public void Approval_Page() throws Exception {
+	public void Approval_Test() throws Exception {
 		
 	ASM_Approval_Page ASM = PageFactory.initElements(driver,ASM_Approval_Page.class);
 	

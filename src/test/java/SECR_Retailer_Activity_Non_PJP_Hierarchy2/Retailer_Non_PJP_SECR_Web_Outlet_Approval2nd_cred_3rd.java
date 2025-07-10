@@ -12,7 +12,7 @@ public class Retailer_Non_PJP_SECR_Web_Outlet_Approval2nd_cred_3rd extends BaseC
 
 	
 	@Test
-    public void Leave_Approval() throws Exception {
+    public void Outlet_Approval() throws Exception {
 
 		OM_Outlet_Approval2nd_main SECR = PageFactory.initElements(driver, OM_Outlet_Approval2nd_main.class);
 	
