@@ -12,7 +12,7 @@ public class Retailer_SECR_Web_Outlet_Approval2nd_cred_ViewPage_3rd extends Base
 
 	
 	@Test
-    public void Outlet_Approval() throws Exception {
+    public void Outlet_ViewPage() throws Exception {
 
 		OM_Outlet_Approval2nd_View SECR = PageFactory.initElements(driver, OM_Outlet_Approval2nd_View.class);
 	

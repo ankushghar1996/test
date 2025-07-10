@@ -99,6 +99,28 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
     	jse1.executeScript("arguments[0].scrollIntoView(true);", scroll1);
         Thread.sleep(1000);
 		
+        
+        
+        driver.findElement(By.xpath("//input[@placeholder='Enter Project Funnel (lakhs) of Site']")).sendKeys("40");
+        Thread.sleep(1000);
+        
+        
+        driver.findElement(By.xpath("(//input[@placeholder='Enter Sales Funnel (lakhs) of Site'])[1]")).sendKeys("521");
+        Thread.sleep(1000);
+        
+        
+        driver.findElement(By.xpath("//input[@placeholder='Enter Fosroc Expected sales in 2025']")).sendKeys("5142");
+        Thread.sleep(1000);
+        
+        WebElement scroll3 = driver.findElement(By.xpath("//label[normalize-space()='YTD Sales (lakhs)']"));
+    	JavascriptExecutor jse3= (JavascriptExecutor)driver;
+    	jse3.executeScript("arguments[0].scrollIntoView(true);", scroll3);
+        Thread.sleep(1000);
+        
+        
+        driver.findElement(By.xpath("//input[@placeholder='Enter YTD Sales (lakhs)']")).sendKeys("3214");
+        Thread.sleep(1000);
+        
 		
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_14", "Click on Dropdown Menu Button", () ->{
         Liabrary.custom_click(view.getDropdownMenuButton(), "Click on Dropdown Menu Button");});

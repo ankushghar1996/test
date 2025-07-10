@@ -11,7 +11,7 @@ import SECR_Portal.SECR_Notification_Main;
 public class SECR_Notification_Cred extends BaseClass_SECR_Portal {
 
     @Test
-    public void Logout() throws Exception {
+    public void Notification() throws Exception {
 
         SECR_Notification_Main note = PageFactory.initElements(driver, SECR_Notification_Main.class);
 
@@ -29,7 +29,7 @@ public class SECR_Notification_Cred extends BaseClass_SECR_Portal {
         
     }
     @Test(priority=1)
-    public void Logout_NS01() throws Exception {
+    public void Notification_NS01() throws Exception {
 
         SECR_Notification_Main note = PageFactory.initElements(driver, SECR_Notification_Main.class);
         //withoutclick on close button
