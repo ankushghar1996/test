@@ -67,17 +67,21 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 		});
 		Thread.sleep(1000);
 		
+		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_11", "Enter contact Number", () ->{
 		Liabrary.custom_Sendkeys(view.getEnter_Contact_Number(), excel.getNumericdata("SEBS_Devloper", 1, 1), null);});
 		Thread.sleep(1000);
+		
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_12", "Enter Email Address", () ->{
 		Liabrary.custom_Sendkeys(view.getEnter_Email_Address(), excel.getStringdata("SEBS_Devloper", 1, 2), null);});
 		Thread.sleep(1000);
 		
+		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_13", "Enter Email Address", () ->{
 		Liabrary.custom_Sendkeys(view.getEnter_Address_Line_1(), excel.getStringdata("SEBS_Devloper", 1, 3), null); });
 		Thread.sleep(1000);
+		
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_14", "Scroll in to Address Line", () ->{
 			WebElement scroll = driver.findElement(By.xpath("//label[normalize-space()='Address Line 2']"));

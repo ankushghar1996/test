@@ -13,7 +13,7 @@ import Distributor_Portal.Outlet_Approval_1st;
 public class Outlet_Approval_1st_Test extends Base_Class_Distributor {
 
     @Test(priority=0)
-    public void Outlet_Test() throws Exception {
+    public void Outlet_ApprovalTest() throws Exception {
 
         Outlet_Approval_1st DIST = PageFactory.initElements(driver, Outlet_Approval_1st.class);
 

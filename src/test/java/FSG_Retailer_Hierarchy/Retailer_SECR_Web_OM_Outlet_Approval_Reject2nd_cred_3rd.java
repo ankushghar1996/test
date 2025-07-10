@@ -15,7 +15,12 @@ import SCER_Web_Portal.OM_Outlet_Approval2nd_main;
 public class Retailer_SECR_Web_OM_Outlet_Approval_Reject2nd_cred_3rd extends BaseClass_SECR_WebPortal{
 
 	@Test
+<<<<<<< Aniket_10
     public void Leave_Approval() throws Exception {
+=======
+
+    public void Outlet_Reject() throws Exception {
+>>>>>>> main
  
 		OM_Outlet_Approval2nd_main SECR = PageFactory.initElements(driver, OM_Outlet_Approval2nd_main.class);
 

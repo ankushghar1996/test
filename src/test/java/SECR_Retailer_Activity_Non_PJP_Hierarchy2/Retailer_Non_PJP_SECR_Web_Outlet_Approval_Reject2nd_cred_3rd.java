@@ -16,7 +16,7 @@ public class Retailer_Non_PJP_SECR_Web_Outlet_Approval_Reject2nd_cred_3rd extend
 
 	@Test
 
-    public void Leave_Approval() throws Exception {
+    public void Outlet_Reject() throws Exception {
  
 		OM_Outlet_Approval2nd_main SECR = PageFactory.initElements(driver, OM_Outlet_Approval2nd_main.class);
 
