@@ -15,7 +15,7 @@ import Com_Utility.ObjectRepo;
 public class Retailer_PJP_HO_OutletMaster_ViewPageCred_1st extends BaseClass_HO_Portal {
 
     @Test
-    public void OM_View() throws Exception {
+    public void OM_ViewPageCred() throws Exception {
 
         OutletMaster_ViewPage view = PageFactory.initElements(driver, OutletMaster_ViewPage.class);
 

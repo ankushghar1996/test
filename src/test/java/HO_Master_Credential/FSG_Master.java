@@ -94,7 +94,7 @@ public class FSG_Master extends BaseClass {
         ObjectRepo.startTestAndLog_1_NS("Without Click on FSG Master Submenu");
 
         ObjectRepo.startTestAndLog_1_SS("SA_FSGMaster_TC01", "Click on Master Menu", () -> {
-        Liabrary.custom_click(hp.getMaster_Menu(), " Master Menu");
+        Liabrary.custom_click(hp.getMaster_Menu(), " Master Menu");});
 
         ObjectRepo.startTestAndLog_1_NS("Without click on FSG Master Page");
 
