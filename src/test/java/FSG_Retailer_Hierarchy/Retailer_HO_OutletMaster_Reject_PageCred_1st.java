@@ -20,6 +20,8 @@ public class Retailer_HO_OutletMaster_Reject_PageCred_1st extends BaseClass_HO_P
  
      // Package name + login name + class name + test case nmbr
         
+        
+        
         ObjectRepo.startTestAndLog_1_SS("FSG_HO_OutletMaster_ApprovalPageCred_TC01", "Click Master Menu", () -> {
             Liabrary.custom_click(Appr.getMaster_Menu(), "Click Master Menu");
         });

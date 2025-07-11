@@ -66,7 +66,7 @@ public class New_Distributor_Cred {
 	 	    
 	 		 driver.get("https://fosrocsecruatlocal.hspldms.com");
 	 		 
-	 	    String mobileNumber = "9403582580";
+	 	    String mobileNumber = "9403582588";
 
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_01", "Verify that user should be send SECR User Name.", () -> {
@@ -154,7 +154,7 @@ public class New_Distributor_Cred {
 	 	    
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_12", "Verify that user should be select SFA in SFA dropdown.", () -> {
-	 	        driver.findElement(By.xpath("//span[contains(text(),'New Annapurna')]")).click();
+	 	        driver.findElement(By.xpath("(//span[@class='ng-option-label ng-star-inserted'][contains(text(),'New Annapurna')])[2]")).click();
 	 	    });
 	 	    Thread.sleep(1000);
 	 	    
@@ -184,7 +184,7 @@ public class New_Distributor_Cred {
 	 	    
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_17", "Verify that user should be send Distributor Firm Name.", () -> {
-	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name*']")).sendKeys("Ram Thakur Enterprises and sons");
+	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name*']")).sendKeys("Ram pawar Enterprises and sons");
 	 	    });
 	 	    Thread.sleep(1000);
 	        
@@ -215,7 +215,7 @@ public class New_Distributor_Cred {
 	 	    
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_20", "Verify that user should be send Contact Person Name.", () -> {
-	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("Abhi Thakur");
+	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Contact Person Name']")).sendKeys("Abhilash ramesh Thakur");
 	 	    });
 	 	    Thread.sleep(1000);
 	        
@@ -506,7 +506,7 @@ public class New_Distributor_Cred {
 		            Connection conn = DriverManager.getConnection(url, username, password);
 		            Statement stmt = conn.createStatement();
 
-		            String query = "select * from RegistrationPendingMaster where MobileNo='9403582580'";
+		            String query = "select * from RegistrationPendingMaster where MobileNo='9403582588'";
 		            
 		            //select * from RegistrationPendingMaster where MobileNo='9403582580'
 		            

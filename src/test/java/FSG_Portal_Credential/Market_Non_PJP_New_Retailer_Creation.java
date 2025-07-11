@@ -56,7 +56,7 @@ public class Market_Non_PJP_New_Retailer_Creation {
 
     @Test
     public void testOtpFlowAndRetailerInfo() throws Exception {
-        String mobileNumber = "9150662032";
+        String mobileNumber = "8585906050";
 
         // Login
         driver.get("https://fosrocfsguat.hspldms.com");
