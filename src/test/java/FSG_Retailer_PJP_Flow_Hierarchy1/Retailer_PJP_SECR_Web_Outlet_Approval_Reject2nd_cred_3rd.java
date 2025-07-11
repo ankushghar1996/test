@@ -15,7 +15,7 @@ import SCER_Web_Portal.OM_Outlet_Approval2nd_main;
 public class Retailer_PJP_SECR_Web_Outlet_Approval_Reject2nd_cred_3rd extends BaseClass_SECR_WebPortal{
 
 	@Test
-    public void Leave_Approval() throws Exception {
+    public void Outlet_RejectTest() throws Exception {
  
 		OM_Outlet_Approval2nd_main SECR = PageFactory.initElements(driver, OM_Outlet_Approval2nd_main.class);
 
@@ -86,7 +86,7 @@ public class Retailer_PJP_SECR_Web_Outlet_Approval_Reject2nd_cred_3rd extends Ba
 	}
 	
 	@Test(priority=1)
-    public void Leave_Approval_NS1() throws Exception {
+    public void Outlet_RejectTest_NS1() throws Exception {
  
 		OM_Outlet_Approval2nd_main SECR = PageFactory.initElements(driver, OM_Outlet_Approval2nd_main.class);
 
@@ -157,7 +157,7 @@ public class Retailer_PJP_SECR_Web_Outlet_Approval_Reject2nd_cred_3rd extends Ba
 	}
 
 	@Test(priority=2)
-    public void Leave_Approval_NS2() throws Exception {
+    public void Outlet_RejectTest_NS2() throws Exception {
  
 		OM_Outlet_Approval2nd_main SECR = PageFactory.initElements(driver, OM_Outlet_Approval2nd_main.class);
 

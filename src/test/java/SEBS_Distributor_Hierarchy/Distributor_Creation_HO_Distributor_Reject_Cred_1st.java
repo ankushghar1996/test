@@ -14,7 +14,7 @@ import HO_Portal_Main.HO_Distributor_Approval_RejectPage;
 public class Distributor_Creation_HO_Distributor_Reject_Cred_1st extends BaseClass_HO_Portal {
 
     @Test
-    public void DistM_DistributorApprov() throws Exception {
+    public void DistM_DistributorReject() throws Exception {
 
         HO_Distributor_Approval_RejectPage APP = PageFactory.initElements(driver, HO_Distributor_Approval_RejectPage.class);
 
@@ -81,7 +81,7 @@ public class Distributor_Creation_HO_Distributor_Reject_Cred_1st extends BaseCla
     }
     
     @Test(priority=1)
-    public void DistM_DistributorApprov_NS1() throws Exception {
+    public void DistM_DistributorReject_NS1() throws Exception {
 
         HO_Distributor_Approval_RejectPage APP = PageFactory.initElements(driver, HO_Distributor_Approval_RejectPage.class);
 
@@ -150,7 +150,7 @@ public class Distributor_Creation_HO_Distributor_Reject_Cred_1st extends BaseCla
     }
     
     @Test(priority=2)
-    public void DistM_DistributorApprov_NS2() throws Exception {
+    public void DistM_DistributorReject_NS2() throws Exception {
 
         HO_Distributor_Approval_RejectPage APP = PageFactory.initElements(driver, HO_Distributor_Approval_RejectPage.class);
 

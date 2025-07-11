@@ -21,7 +21,7 @@ import HO_Portal_Main.HO_Distributor_Approval_View_Main;
 public class Distributor_Activity_Non_PJP_HO_Distributor_Approval_Page_Test_1st extends BaseClass_HO_Portal{
 
 	@Test(priority=0)
-	public void DistM_DistributorApprov() throws Exception {
+	public void Distributor_Approval_Page() throws Exception {
 		
 		ObjectRepo.driver = driver;
 		
@@ -87,7 +87,7 @@ public class Distributor_Activity_Non_PJP_HO_Distributor_Approval_Page_Test_1st 
 			}	
 
 	@Test(priority=1)
-	public void DistM_DistributorApprov_NS1() throws Exception {
+	public void Distributor_Approval_Page_NS1() throws Exception {
 		
 		ObjectRepo.driver = driver;
 		
@@ -154,7 +154,7 @@ public class Distributor_Activity_Non_PJP_HO_Distributor_Approval_Page_Test_1st 
 			}
 	
 	@Test(priority=2)
-	public void DistM_DistributorApprov_NS2() throws Exception {
+	public void Distributor_Approval_Page_NS2() throws Exception {
 		
 		ObjectRepo.driver = driver;
 		

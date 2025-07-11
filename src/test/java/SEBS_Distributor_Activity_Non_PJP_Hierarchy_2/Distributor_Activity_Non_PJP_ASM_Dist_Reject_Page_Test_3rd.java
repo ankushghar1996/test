@@ -14,7 +14,7 @@ import Com_Utility.ObjectRepo;
 public class Distributor_Activity_Non_PJP_ASM_Dist_Reject_Page_Test_3rd extends BaseClass_ASM {
 
     @Test
-    public void View_Page() throws Exception {
+    public void Distributor_Reject_Page() throws Exception {
 
         ASM_Reject_Page ASM = PageFactory.initElements(driver, ASM_Reject_Page.class);
 
@@ -62,7 +62,7 @@ public class Distributor_Activity_Non_PJP_ASM_Dist_Reject_Page_Test_3rd extends 
     }
     
     @Test(priority=1)
-    public void Distributor_Non_pjp_ASM_NS1() throws Exception {
+    public void Distributor_Reject_Page_NS1() throws Exception {
 
         ASM_Reject_Page ASM = PageFactory.initElements(driver, ASM_Reject_Page.class);
         
@@ -112,7 +112,7 @@ public class Distributor_Activity_Non_PJP_ASM_Dist_Reject_Page_Test_3rd extends 
     }
     
     @Test(priority=2)
-    public void Distributor_Non_pjp_ASM_NS2() throws Exception {
+    public void Distributor_Reject_Page_NS2() throws Exception {
 
         ASM_Reject_Page ASM = PageFactory.initElements(driver, ASM_Reject_Page.class);
         

@@ -14,7 +14,7 @@ import Retailer_Portal.Logout_Main;
 public class Logout extends BaseClass_Retailer {
 
     @Test(priority=0)
-    public void Media_Tab() throws Exception {
+    public void Logout() throws Exception {
 
         Logout_Main OUT = PageFactory.initElements(driver, Logout_Main.class);
 

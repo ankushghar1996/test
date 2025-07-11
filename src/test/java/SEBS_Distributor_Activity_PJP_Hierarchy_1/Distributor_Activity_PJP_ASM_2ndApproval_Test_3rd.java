@@ -16,7 +16,7 @@ public class Distributor_Activity_PJP_ASM_2ndApproval_Test_3rd extends BaseClass
 	
 	
 	@Test(priority=0)
-	public void Approval_Page() throws Exception {
+	public void Distributor_Approval_Page() throws Exception {
 		
 	ASM_Approval_Page ASM = PageFactory.initElements(driver,ASM_Approval_Page.class);
 	
@@ -81,7 +81,7 @@ public class Distributor_Activity_PJP_ASM_2ndApproval_Test_3rd extends BaseClass
 
 	}	
 	@Test(priority=1)
-	public void Approval_Page_NS1() throws Exception {
+	public void Distributor_Approval_Page_NS1() throws Exception {
 		
 	ASM_Approval_Page ASM = PageFactory.initElements(driver,ASM_Approval_Page.class);
 	
@@ -142,7 +142,7 @@ public class Distributor_Activity_PJP_ASM_2ndApproval_Test_3rd extends BaseClass
 	}
 	
 	@Test(priority=2)
-	public void Approval_Page_NS2() throws Exception {
+	public void Distributor_Approval_Page_NS2() throws Exception {
 		
 	ASM_Approval_Page ASM = PageFactory.initElements(driver,ASM_Approval_Page.class);
 	

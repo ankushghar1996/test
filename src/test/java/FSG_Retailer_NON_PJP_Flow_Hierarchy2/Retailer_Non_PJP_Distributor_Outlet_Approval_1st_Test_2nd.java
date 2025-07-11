@@ -13,7 +13,7 @@ import Distributor_Portal.Outlet_Approval_1st;
 public class Retailer_Non_PJP_Distributor_Outlet_Approval_1st_Test_2nd extends Base_Class_Distributor {
 
     @Test(priority=0)
-    public void Outlet_Test() throws Exception {
+    public void Outlet_ApprovalTest() throws Exception {
 
         Outlet_Approval_1st DIST = PageFactory.initElements(driver, Outlet_Approval_1st.class);
 
@@ -69,7 +69,7 @@ public class Retailer_Non_PJP_Distributor_Outlet_Approval_1st_Test_2nd extends B
     }
     
     @Test(priority=1)
-    public void Outlet_Test_NS1() throws Exception {
+    public void Outlet_ApprovalTest_NS1() throws Exception {
 
         Outlet_Approval_1st DIST = PageFactory.initElements(driver, Outlet_Approval_1st.class);
 
@@ -126,7 +126,7 @@ public class Retailer_Non_PJP_Distributor_Outlet_Approval_1st_Test_2nd extends B
         
     }
     @Test(priority=2)
-    public void Outlet_Test_NS2() throws Exception {
+    public void Outlet_ApprovalTest_NS2() throws Exception {
 
         Outlet_Approval_1st DIST = PageFactory.initElements(driver, Outlet_Approval_1st.class);
 
