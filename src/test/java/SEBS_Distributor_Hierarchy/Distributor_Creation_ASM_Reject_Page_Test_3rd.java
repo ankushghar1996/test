@@ -14,7 +14,7 @@ import Com_Utility.ObjectRepo;
 public class Distributor_Creation_ASM_Reject_Page_Test_3rd extends BaseClass_ASM {
 
     @Test
-    public void View_Page() throws Exception {
+    public void Distributor_Reject_Page() throws Exception {
 
         ASM_Reject_Page ASM = PageFactory.initElements(driver, ASM_Reject_Page.class);
 

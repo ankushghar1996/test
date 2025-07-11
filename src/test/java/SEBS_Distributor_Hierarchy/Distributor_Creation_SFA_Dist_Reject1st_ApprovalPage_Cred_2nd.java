@@ -13,7 +13,7 @@ public class Distributor_Creation_SFA_Dist_Reject1st_ApprovalPage_Cred_2nd exten
 	
 	
 	@Test
-	public void Dist_ApprovePage() throws Exception {
+	public void Dist_RejectPage() throws Exception {
 		
 		ObjectRepo.driver = driver;
 		
@@ -70,7 +70,7 @@ public class Distributor_Creation_SFA_Dist_Reject1st_ApprovalPage_Cred_2nd exten
 	}
 	
 	@Test(priority=1)
-	public void Dist_ApprovePage_NS1() throws Exception {
+	public void Dist_RejectPage_NS1() throws Exception {
 		
 		ObjectRepo.driver = driver;
 		
@@ -127,7 +127,7 @@ public class Distributor_Creation_SFA_Dist_Reject1st_ApprovalPage_Cred_2nd exten
 	
 	}
 	@Test(priority=2)
-	public void Dist_ApprovePage_NS2() throws Exception {
+	public void Dist_RejectPage_NS2() throws Exception {
 		
 		ObjectRepo.driver = driver;
 		

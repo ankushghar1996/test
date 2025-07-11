@@ -14,7 +14,7 @@ import HO_Portal_Main.OutletMaster_ApprovalPage;
 public class Retailer_PJP_HO_OutletMaster_ApprovalPageCred_1st extends BaseClass_HO_Portal {
 
     @Test
-    public void OM_View() throws Exception {
+    public void OM_ApprovalPage() throws Exception {
 
         OutletMaster_ApprovalPage Appr = PageFactory.initElements(driver, OutletMaster_ApprovalPage.class);
 
@@ -82,7 +82,7 @@ public class Retailer_PJP_HO_OutletMaster_ApprovalPageCred_1st extends BaseClass
     }
     
     @Test(priority=1)
-    public void OM_View_NS1() throws Exception {
+    public void OM_ApprovalPage_NS1() throws Exception {
 
         OutletMaster_ApprovalPage Appr = PageFactory.initElements(driver, OutletMaster_ApprovalPage.class);
 
@@ -150,7 +150,7 @@ public class Retailer_PJP_HO_OutletMaster_ApprovalPageCred_1st extends BaseClass
     }
     
     @Test(priority=2)
-    public void OM_View_NS2() throws Exception {
+    public void OM_ApprovalPage_NS2() throws Exception {
 
         OutletMaster_ApprovalPage Appr = PageFactory.initElements(driver, OutletMaster_ApprovalPage.class);
         ObjectRepo.startTestAndLog_1_NS("Without click on Grid Value");

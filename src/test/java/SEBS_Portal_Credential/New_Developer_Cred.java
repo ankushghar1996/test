@@ -14,7 +14,7 @@ import SEBS_Portal.New_Developer_Creation;
 public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 	
 	@Test(priority = 0)
-	public void SECR_ViewProfile() throws Exception { 
+	public void SEBS_ViewProfile() throws Exception { 
 		
 		New_Developer_Creation view = PageFactory.initElements(driver, New_Developer_Creation.class);
 	

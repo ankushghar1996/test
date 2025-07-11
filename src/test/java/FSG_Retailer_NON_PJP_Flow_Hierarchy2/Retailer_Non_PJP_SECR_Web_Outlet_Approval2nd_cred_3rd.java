@@ -12,7 +12,7 @@ public class Retailer_Non_PJP_SECR_Web_Outlet_Approval2nd_cred_3rd extends BaseC
 
 	
 	@Test(priority=0)
-    public void Leave_Approval() throws Exception {
+    public void Outlet_ApprovalTest() throws Exception {
 
 		OM_Outlet_Approval2nd_main SECR = PageFactory.initElements(driver, OM_Outlet_Approval2nd_main.class);
 	
@@ -71,7 +71,7 @@ public class Retailer_Non_PJP_SECR_Web_Outlet_Approval2nd_cred_3rd extends BaseC
 	}
 	
 	@Test(priority=1)
-    public void Leave_Approval_NS1() throws Exception {
+    public void Outlet_ApprovalTest_NS1() throws Exception {
 
 		OM_Outlet_Approval2nd_main SECR = PageFactory.initElements(driver, OM_Outlet_Approval2nd_main.class);
 	
@@ -135,7 +135,7 @@ public class Retailer_Non_PJP_SECR_Web_Outlet_Approval2nd_cred_3rd extends BaseC
 	}
 	
 	@Test(priority=2)
-    public void Leave_Approval_NS2() throws Exception {
+    public void Outlet_ApprovalTest_NS2() throws Exception {
 
 		OM_Outlet_Approval2nd_main SECR = PageFactory.initElements(driver, OM_Outlet_Approval2nd_main.class);
 	
