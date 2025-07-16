@@ -19,8 +19,12 @@ public class Demo_Mail {
         System.out.println("======= Sending Email with Extent Report OneDrive Link =======");
 
         // Step 1: Path to the HTML report
-        String reportPath = "C:\\COde\\test-new\\test\\test-output\\Extent_Reports\\TestReport.html";
+        // aniket path
+     //   String reportPath = "C:\\COde\\test-new\test\\test-output\\Extent_Reports\\TestReport.html";
 
+        // ankush path
+        String reportPath = "C:\\COde\\test\\test-output\\Extent_Reports\\TestReport.html";
+        
         // Step 2: Zip the HTML report
         String zipPath = zipReport(reportPath);
 
@@ -38,7 +42,7 @@ public class Demo_Mail {
         MultiPartEmail email = new MultiPartEmail();
         email.setHostName("smtp.office365.com");
         email.setSmtpPort(587);
-        email.setAuthenticator(new DefaultAuthenticator("qaautomation@heerasoftware.com", "L^281715140902ab"));
+        email.setAuthenticator(new DefaultAuthenticator("qaautomation@heerasoftware.com", "F.922060763339uy"));
         email.setStartTLSEnabled(true);
         email.setStartTLSRequired(true);
         email.setSSLOnConnect(false);
@@ -55,7 +59,7 @@ public class Demo_Mail {
                 + "Regards,\nAutomation Team");
 
         email.addTo("aniket.jadhav@heerasoftware.com");
-     //   email.addTo("ankush.gharsele@heerasoftware.com");
+        email.addTo("ankush.gharsele@heerasoftware.com");
 
         // Step 6: Attach ZIP report as backup
         EmailAttachment attachment = new EmailAttachment();

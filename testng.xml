@@ -500,7 +500,11 @@
 
 
 <!-- SEBS Activity PJP New Retailer Creation Flow -->
-<class name="SEBS_Portal_Credential.New_Activity_PJPSite_Cred"/>
+<class name="SEBS_Portal_Credential.New_Activity_PJPSite_Cred">
+<methods>
+        <include name="SEBS_New_Activity_PJP_Cred"/>
+    </methods>
+     </class>
 <class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_HO_Distributor_Approval_View_Test_1">
 		<methods>
         <include name="DistM_DistributorApprov_View"/>
@@ -601,7 +605,7 @@
 <!-- SEBS Developer, Site, Contractor, Applicator, Notification, Scheme, PJP, View Profile, DashBoard -->
 <class name="SEBS_Portal_Credential.New_Developer_Cred">
 		<methods>
-        <include name="SEBS_ViewProfile"/>
+        <include name="SEBS_Developer_creation"/>
     </methods>
      </class>
 <class name="SEBS_Portal_Credential.New_Site_Cred">
@@ -644,14 +648,14 @@
         <include name="Dashboard"/>
     </methods>
      </class>    
-<class name="SEBS_Portal_Credential.Media"> 
+<class name="SEBS_Portal_Credential.SEBS_Media_Test"> 
 		<methods>
         <include name="Media"/>
     </methods>
      </class>
 
 
-<!-- SEBS Other Functionalities -->
+<!-- Retailer Other Functionalities -->
 <class name="Retailer_Credential.Retailer_Points_Test">
 		<methods>
         <include name="Points"/>

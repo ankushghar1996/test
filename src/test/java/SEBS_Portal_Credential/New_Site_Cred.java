@@ -38,7 +38,7 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		Thread.sleep(1000);
 		
 		
-		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9854165879");
+		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("98541602012");
 		Thread.sleep(1000);
 		
 		driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
@@ -85,7 +85,7 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		
 		
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_12", "Send Site Name", () ->{
-		driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("sunil shetty");});
+		driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("ram Patil");});
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_13", "Click on Chcekbox_flexCheckDefault", () ->{
