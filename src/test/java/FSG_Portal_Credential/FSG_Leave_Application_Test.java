@@ -34,11 +34,11 @@ public class FSG_Leave_Application_Test extends BaseClass_FSG_Portal {
 	Thread.sleep(1000);
 	
 	ObjectRepo.startTestAndLog_1_SS("FSG_Leave_Application_Test_04", "Verify that user can enter From Date", () -> {
-	driver.findElement(By.xpath("(//input[@type='date'])[1]")).sendKeys("29-06-2025");});
+	driver.findElement(By.xpath("(//input[@type='date'])[1]")).sendKeys("18-07-2025");});
 	Thread.sleep(1000);
 	
 	ObjectRepo.startTestAndLog_1_SS("FSG_Leave_Application_Test_05", "Verify that user can enter To Date", () -> {
-	driver.findElement(By.xpath("(//input[@type='date'])[2]")).sendKeys("29-06-2025"); });
+	driver.findElement(By.xpath("(//input[@type='date'])[2]")).sendKeys("19-07-2025"); });
 	Thread.sleep(1000);
  
 	ObjectRepo.startTestAndLog_1_SS("FSG_Leave_Application_Test_06", "Verify that user can Click On Leave type Dropdown", () -> {

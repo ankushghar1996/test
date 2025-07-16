@@ -88,7 +88,7 @@ public class New_Activity_NonPJPSite_Cred extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC13", "Enter Site Name", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("mrunal shende");
+            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("mrunal pal");
         });
         Thread.sleep(1000);
 
@@ -96,10 +96,6 @@ public class New_Activity_NonPJPSite_Cred extends BaseClass_SEBS_Portal {
             Liabrary.custom_click(view.getChcekbox_flexCheckDefault(), null);
         });
         Thread.sleep(1000);
-        
-        
-        
-        
         
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC15", "Scroll to State", () -> {
