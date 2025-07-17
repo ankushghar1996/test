@@ -7,7 +7,12 @@
 
 <!-- <class name="SECR_Portal_Credential.Mark_Attendence_Cred"/> -->
       <!-- SECR New Distributor Creation Flow -->
-<class name="SECR_Portal_Credential.New_Distributor_Cred"/>
+<class name="HO_Portal_Credential.HO_Distributor_Approval_View_Test">
+			<methods>
+        <include name="DistM_DistributorApprov_View"/>
+    </methods>
+    </class>
+
 
 
     </classes>
