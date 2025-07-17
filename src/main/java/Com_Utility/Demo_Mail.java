@@ -38,8 +38,12 @@ public class Demo_Mail {
         String oneDriveLink = "https://heerasoftware0.sharepoint.com/:f:/r/sites/HSPL_Testing_Team/Shared%20Documents/HSPL_Testing_Team/Common/Ankush%20Gharsele/Automation%20Test%20Reports%20Result?csf=1&web=1&e=AcjdO1";
 
         // Step 4: UNC path to shared folder (not a mapped drive like S:\ or Z:\)
-        String sharedDrivePath = "C:\\Users\\10389\\OneDrive - Heera Software Private Limited (HSPL)\\Automation_Report";
+        // Ankush path
+        String sharedDrivePath = "C:\\Users\\10277\\OneDrive - Heera Software Private Limited (HSPL)\\Automation_Report";
 
+        // aniket path
+ //       String sharedDrivePath = "C:\\Users\\10277\\OneDrive - Heera Software Private Limited (HSPL)\\Automation_Report";
+        
         //Ankush Path = S:\Heera_Common_Shared\Ankush\Automation Test Reports
         
         String copiedPath = copyToSharedFolder(zipPath, sharedDrivePath, oneDriveLink);
