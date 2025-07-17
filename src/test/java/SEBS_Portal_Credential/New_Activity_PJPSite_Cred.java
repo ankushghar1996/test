@@ -81,7 +81,7 @@ public class New_Activity_PJPSite_Cred extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_12", "Enter Site Name", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("Roshan Kumar");
+            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("Nikhil turkar");
         });
         Thread.sleep(1000);
 
