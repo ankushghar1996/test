@@ -23,7 +23,13 @@ public class Demo_Mail {
      //   String reportPath = "C:\\COde\\test-new\test\\test-output\\Extent_Reports\\TestReport.html";
 
         // ankush path
-        String reportPath = "C:\\COde\\test\\test-output\\Extent_Reports\\TestReport.html";
+  //      String reportPath = "C:\\COde\\test\\test-output\\Extent_Reports\\TestReport.html";
+        
+        
+        
+       // Jenkins Path 
+        String reportPath = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Test\\test-output\\Extent_Reports\\TestReport.html";
+
         
         // Step 2: Zip the HTML report
         String zipPath = zipReport(reportPath);
