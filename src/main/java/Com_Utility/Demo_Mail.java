@@ -35,7 +35,7 @@ public class Demo_Mail {
         String zipPath = zipReport(reportPath);
 
         // Step 3: Public OneDrive link (used for email reference)
-        String oneDriveLink = "https://heerasoftware0.sharepoint.com/:f:/r/sites/HSPL_Testing_Team/Shared%20Documents/HSPL_Testing_Team/Common/Ankush%20Gharsele/Automation%20Test%20Reports%20Result?csf=1&web=1&e=AcjdO1";
+        String oneDriveLink = "https://heerasoftware0.sharepoint.com/sites/QATeam/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FQATeam%2FShared%20Documents%2FQA%20Shared%20Folder&viewid=efe5bcf8%2De44d%2D4de2%2Db0cd%2D8ac68543bb53&p=true&ga=1";
 
         // Step 4: UNC path to shared folder (not a mapped drive like S:\ or Z:\)
         // Ankush path
