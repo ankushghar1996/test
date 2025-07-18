@@ -39,7 +39,7 @@ public class Demo_Mail {
 
         // Step 4: UNC path to shared folder (not a mapped drive like S:\ or Z:\)
         // Ankush path
-        String sharedDrivePath = "C:\\Users\\10277\\OneDrive - Heera Software Private Limited (HSPL)\\Automation_Report";
+        String sharedDrivePath = "\\\\Heera_Common_Shared\\QA Team - QA Shared Folder\\Automation result";
 
         // aniket path
  //       String sharedDrivePath = "C:\\Users\\10277\\OneDrive - Heera Software Private Limited (HSPL)\\Automation_Report";
