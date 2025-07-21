@@ -4,9 +4,51 @@
   <test thread-count="5" name="Test">
     <classes>
 
+<class name="SECR_Portal_Credential.New_Distributor_Cred"/>
+
 <class name="HO_Portal_Credential.HO_Distributor_Approval_View_Test">
 			<methods>
         <include name="DistM_DistributorApprov_View"/>
+    </methods>
+    </class>
+<class name="HO_Portal_Credential.HO_Distributor_Reject_Cred">
+			<methods>
+        <include name="DistM_DistributorApprov"/>
+    </methods>
+    </class>
+<class name="HO_Portal_Credential.HO_Distributor_Approval_Page_Test">
+		<methods>
+        <include name="DistM_DistributorApprovPage"/>
+    </methods>
+    </class>
+<class name="SFA_Portal_Credential.Dist_Approval1st_View_Cred">
+			<methods>
+        <include name="Distributor_View"/>
+    </methods>
+    </class>
+<class name="SFA_Portal_Credential.Dist_Reject1st_ApprovalPage_Cred">
+		<methods>
+        <include name="Dist_RejectPage"/>
+    </methods>
+    </class>
+<class name="SFA_Portal_Credential.Dist_Approval1st_ApprPage_Cred">
+		<methods>
+        <include name="Dist_ApprovePage"/>
+    </methods>
+    </class>
+<class name="ASM_Portal_Test.ASM_Approval_View_Test">
+		<methods>
+        <include name="Approval_View_Page"/>
+    </methods>
+    </class>
+<class name="ASM_Portal_Test.ASM_Reject_Page_Test">
+		<methods>
+        <include name="Reject_Page"/>
+    </methods>
+    </class>
+<class name="ASM_Portal_Test.ASM_Approval_Test">
+		<methods>
+        <include name="Approval_Test"/>
     </methods>
     </class>
 
