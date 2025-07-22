@@ -74,7 +74,7 @@ public class SECR_New_Retailer_Status_Cred {
 
 	    @Test
 	    public void testOtpFlowAndRetailerInfo() throws Exception {
-	        String mobileNumber = "7777888802";
+	        String mobileNumber = "7777888803";
 
 	        // Login
 	        driver.get("https://fosrocsecruat.hspldms.com/");
@@ -192,7 +192,7 @@ public class SECR_New_Retailer_Status_Cred {
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_17", "Verify that user should be enter Firm Name.", () -> {
-	        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("rahul bhai Thakur Paints");
+	        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Vinay bhai Thakur Paints");
 	        });
 	        Thread.sleep(1000);
 	        
@@ -450,7 +450,7 @@ public class SECR_New_Retailer_Status_Cred {
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
 	 
-	            String query = "select * from RegistrationPendingMaster where MobileNo='7777888802'";
+	            String query = "select * from RegistrationPendingMaster where MobileNo='7777888803'";
 	            ResultSet rs = stmt.executeQuery(query);
 	            if (rs.next()) {
 	                otp = rs.getString("otp");

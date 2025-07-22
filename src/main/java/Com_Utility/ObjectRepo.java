@@ -237,4 +237,15 @@ public class ObjectRepo {
     public static ExtentReports extentreport() {
         return extent;
     }
+    
+    
+    /*
+    @AfterClass
+    public static void finalizeReportAfterClass() {
+        finalizeReport();
+    }
+    */
+    
+    
+    
 }
