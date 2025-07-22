@@ -3,7 +3,7 @@
 <suite name="Suite">
 
 <listeners>
-    <listener class-name="Com_Utility.ReportExecutionListener"/>
+    <listener class-name="Com_Utility.ReportExecutionListener" />
   </listeners>
 
 

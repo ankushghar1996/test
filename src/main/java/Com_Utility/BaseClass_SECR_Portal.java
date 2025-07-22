@@ -82,7 +82,7 @@ public class BaseClass_SECR_Portal {
         }
     }
    
- /*   
+    
     // AfterSuite to finalize the ExtentReports and generate the final report after all tests are executed
     @AfterSuite
     public void afterSuite() {
@@ -92,7 +92,7 @@ public class BaseClass_SECR_Portal {
         
         
     }
-*/
+
 	
 	
 }

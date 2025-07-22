@@ -299,6 +299,7 @@ public class ObjectRepo {
         }
     }
 
+    /*
     public static void finalizeReport() {
         if (extent != null) {
             extent.flush();
@@ -319,6 +320,37 @@ public class ObjectRepo {
             e.printStackTrace();
         }
     }
+    */
+    
+    
+    public static void finalizeReport() {
+        System.out.println("🟡 finalizeReport() START called at: " + java.time.LocalTime.now() + 
+                           " | Thread: " + Thread.currentThread().getName());
+
+        if (extent != null) {
+            extent.flush();
+        }
+        System.out.println("✅ Extent Report flushed successfully...");
+
+        try {
+            String reportPath = System.getProperty("user.dir") + "/test-output/Extent_Reports/TestReport.html";
+            File reportFile = new File(reportPath);
+            if (!reportFile.exists()) {
+                System.out.println("❌ Report file not found at: " + reportPath);
+                return;
+            }
+            Thread.sleep(5000);
+            Demo_Mail.sendReportEmail();
+        } catch (Exception e) {
+            System.out.println("❌ Failed to send email: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+        System.out.println("🟢 finalizeReport() END at: " + java.time.LocalTime.now());
+    }
+
+    
+    
 
     @AfterClass
     public static void finalizeReportAfterClass() {
