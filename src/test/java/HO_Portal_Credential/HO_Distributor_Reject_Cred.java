@@ -48,22 +48,22 @@ public class HO_Distributor_Reject_Cred extends BaseClass_HO_Portal {
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("HO_DR_TC06", "Click Approval Button", () -> {
-            Liabrary.custom_click(APP.getApproval_btn(), null);
+            Liabrary.custom_click(APP.getApproval_btn(), "Click Approval Button");
         });
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("HO_DR_TC07", "Click Reject Button", () -> {
-            Liabrary.custom_click(APP.getReject_btn(), null);
+            Liabrary.custom_click(APP.getReject_btn(), "Click Reject Button");
         });
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("HO_DR_TC08", "Click Reject Reason Dropdown", () -> {
-            Liabrary.custom_click(APP.getRejectReason_dropdown(), null);
+            Liabrary.custom_click(APP.getRejectReason_dropdown(), "Click Reject Reason Dropdown");
         });
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("HO_DR_TC09", "Select Reject Reason", () -> {
-            Liabrary.custom_click(APP.getRejectReason(), null);
+            Liabrary.custom_click(APP.getRejectReason(), "Select Reject Reason");
         });
         Thread.sleep(1000);
 
@@ -74,7 +74,7 @@ public class HO_Distributor_Reject_Cred extends BaseClass_HO_Portal {
 
         
         ObjectRepo.startTestAndLog_1_SS("HO_DR_TC11", "Click No Button", () -> {
-            Liabrary.custom_click(APP.getNo_btn(), null);
+            Liabrary.custom_click(APP.getNo_btn(), "Click No Button");
         });
         Thread.sleep(1000);
        
