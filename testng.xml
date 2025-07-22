@@ -59,6 +59,8 @@
     </class>
 
 
+
+<class name="SECR_Portal_Credential.Mark_Attendence_Cred"/>
 <!-- SECR New Retailer Creation Flow -->
 <class name="SECR_Portal_Credential.SECR_New_Retailer_Status_Cred"/>
 <class name="HO_Portal_Credential.OutletMaster_ViewPageCred">
@@ -108,7 +110,7 @@
     </class>
 
 
-
+<class name="SECR_Portal_Credential.Mark_Attendence_Cred"/>
 <!-- SECR Activity PJP New Retailer Creation Flow -->
 <class name="SECR_Portal_Credential.Activity_PJP_New_Retailer_Cred"/>
 <class name="SECR_Retailer_Activity_PJP_Hierarchy_1.Retailer_PJP_HO_OutletMaster_ViewPageCred_1st">
@@ -158,7 +160,7 @@
      </class>
 
 
-
+<class name="SECR_Portal_Credential.Mark_Attendence_Cred"/>
 <!-- SECR Activity Non-PJP New Retailer Creation Flow -->
 <class name="SECR_Portal_Credential.Activity_Non_PJP_New_Retailer_Cred"/>
 <class name="SECR_Retailer_Activity_Non_PJP_Hierarchy2.Retailer_Non_PJP_HO_OutletMaster_ViewPageCred_1st">
