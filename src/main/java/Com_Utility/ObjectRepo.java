@@ -13,7 +13,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -27,6 +26,8 @@ public class ObjectRepo {
     public static ExtentTest test;
     public static WebDriver driver;
     public static Object startTest;
+
+    private static boolean reportAlreadySent = false;
 
     public static ExtentReports initializeReport() {
         String reportFolderPath = System.getProperty("user.dir") + File.separator + "test-output" + File.separator + "Extent_Reports" + File.separator;
@@ -51,101 +52,24 @@ public class ObjectRepo {
         test = extent.createTest(testName, testDescription);
     }
 
-    
-    
     public static void startTestAndLog_1(String testNumber, String testDescription) {
         test = extent.createTest(testNumber, testDescription);
     }
 
-    /*
-    public static void startTestAndLog_1_SS(String testNumber, String testDescription) {
-        test = extent.createTest(testNumber, testDescription);
-        try {
-            String encodedScreenshot = takeScreenshot();
-            if (encodedScreenshot != null && !encodedScreenshot.isEmpty()) {
-                test.info(testDescription + " - Screenshot Captured");
-                test.addScreenCaptureFromBase64String(encodedScreenshot);
-            } else {
-                test.fail("Screenshot could not be captured.");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-            test.fail("Error while capturing screenshot: " + e.getMessage());
-        }
-    }
-    */
-    
-    /*
     public static void startTestAndLog_1_SS(String testNumber, String testDescription, Runnable action) {
-        // Start the test
         test = extent.createTest(testNumber, testDescription);
 
         try {
-            // Perform the test action
+            test.info(testDescription);
             action.run();
-            test.pass(testDescription + " - Step Passed");
 
-            // Capture screenshot only if driver is initialized
-            if (driver != null) {
-                String encodedScreenshot = takeScreenshot();
-                if (encodedScreenshot != null && !encodedScreenshot.isEmpty()) {
-                    test.addScreenCaptureFromBase64String(encodedScreenshot, "Screenshot - Passed");
-                } else {
-                    test.warning("Screenshot could not be captured.");
-                }
-            } else {
-                test.info("Driver not initialized — screenshot skipped.");
-            }
-
-        } catch (Exception e) {
-            test.fail(testDescription + " - Step Failed: " + e.getMessage());
-
-            // Capture screenshot only if driver is initialized
-            if (driver != null) {
-                try {
-                    String encodedScreenshot = takeScreenshot();
-                    if (encodedScreenshot != null && !encodedScreenshot.isEmpty()) {
-                        test.addScreenCaptureFromBase64String(encodedScreenshot, "Screenshot - Failed");
-                    } else {
-                        test.warning("Screenshot could not be captured on failure.");
-                    }
-                } catch (IOException ioException) {
-                    ioException.printStackTrace();
-                    test.warning("Screenshot capture failed with IOException.");
-                }
-            } else {
-                test.info("Driver not initialized — failure screenshot skipped.");
-            }
-
-            throw new RuntimeException(e); // Rethrow to fail the test
-        }
-    }
-    */
-    
- // 🔁 NEW METHOD: Flash message support version
-    public static void startTestAndLog_1_SS(String testNumber, String testDescription, Runnable action) {
-        test = extent.createTest(testNumber, testDescription); // ✅ Create test
-
-        try {
-            test.info(testDescription); // ✅ Log step
-            action.run(); // ✅ Execute action
-
-            // ✅ Flash message check after action
             List<WebElement> flashMessages = driver.findElements(By.xpath("//div[@id='toast-container']"));
             boolean flashFound = false;
 
-            // ✅ Safe flash keywords (including OTP success cases)
             List<String> safeFlashKeywords = Arrays.asList(
-                "successfully", 
-                "record saved", 
-                "submitted", 
-                "otp has been sent", 
-                "otp sent", 
-                "otp sent successfully", 
-                "success otp", 
-                "otp dispatched", 
-                "okay", 
-                "yes"
+                "successfully", "record saved", "submitted", "otp has been sent", 
+                "otp sent", "otp sent successfully", "success otp", 
+                "otp dispatched", "okay", "yes"
             );
 
             for (WebElement msg : flashMessages) {
@@ -164,7 +88,6 @@ public class ObjectRepo {
                 }
             }
 
-            // ✅ Final decision
             if (!flashFound) {
                 test.pass("✅ " + testDescription);
                 captureScreenshot("Screenshot - Passed");
@@ -192,17 +115,11 @@ public class ObjectRepo {
         }
     }
 
-
-    
-
     public static void startTestAndLog_2(String testNumber, String testDescription) {
         test = extent.createTest(testNumber, testDescription);
         test.log(Status.INFO, testDescription);
-        
     }
 
-    
-    
     public static void AssertTextAndLog(String actualText, String expectedText) throws Exception {
         try {
             Assert.assertEquals(actualText, expectedText);
@@ -213,10 +130,7 @@ public class ObjectRepo {
             test.addScreenCaptureFromPath(screenshotPath);
             throw e;
         }
-        
     }
-    
-    
 
     public static void logTestResult(String testName, String testDescription, boolean isTestPassed, String additionalInfo) {
         startTest(testName, testDescription);
@@ -226,18 +140,15 @@ public class ObjectRepo {
             test.fail(additionalInfo);
         }
     }
-    
+
     public static void Headlines_logOnlyDescription(String testDescription) {
         test = extent.createTest(testDescription);
         test.info("📝 " + testDescription);
         System.out.println("🖨️ Logged Only Description: " + testDescription);
     }
 
-
     public static void Print_Dynamic_Flash_Massage(WebDriver driver, String xpathLocator, String testNumber_Print_Massage) {
-    	
         try {
-        	
             test = extent.createTest(testNumber_Print_Massage);
             List<WebElement> errorMessageList = driver.findElements(By.xpath(xpathLocator));
             if (!errorMessageList.isEmpty()) {
@@ -258,26 +169,18 @@ public class ObjectRepo {
             e.printStackTrace();
             test.fail("An unexpected error occurred: " + e.getMessage());
         }
-        
     }
-    
-    
 
     public static String takeScreenshot() throws IOException {
-        // Ensure the WebDriver is initialized
         if (driver == null) {
             throw new IllegalStateException("Driver is not initialized.");
         }
 
-        // Take screenshot and store it in a temporary file
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-        // Convert the screenshot file to a byte array
         byte[] fileContent = FileUtils.readFileToByteArray(srcFile);
-
-        // Convert the byte array to a Base64 encoded string
         return Base64.getEncoder().encodeToString(fileContent);
     }
+
     public static void startTestAndLog_1_NS(String testDescription) {
         test = extent.createTest("❌ Negative Scenario");
         test.info("🔸 " + testDescription);
@@ -299,33 +202,15 @@ public class ObjectRepo {
         }
     }
 
-    /*
-    public static void finalizeReport() {
-        if (extent != null) {
-            extent.flush();
+    public static synchronized void finalizeReport() {
+        if (reportAlreadySent) {
+            System.out.println("🚫 Report already finalized, skipping duplicate...");
+            return;
         }
-        System.out.println("✅ Extent Report flushed successfully...");
+        reportAlreadySent = true;
 
-        try {
-            String reportPath = System.getProperty("user.dir") + "/test-output/Extent_Reports/TestReport.html";
-            File reportFile = new File(reportPath);
-            if (!reportFile.exists()) {
-                System.out.println("❌ Report file not found at: " + reportPath);
-                return;
-            }
-            Thread.sleep(5000);
-            Demo_Mail.sendReportEmail();
-        } catch (Exception e) {
-            System.out.println("❌ Failed to send email: " + e.getMessage());
-            e.printStackTrace();
-        }
-    }
-    */
-    
-    
-    public static void finalizeReport() {
-        System.out.println("🟡 finalizeReport() START called at: " + java.time.LocalTime.now() + 
-                           " | Thread: " + Thread.currentThread().getName());
+        System.out.println("🟡 finalizeReport() START called at: " + java.time.LocalTime.now() +
+                " | Thread: " + Thread.currentThread().getName());
 
         if (extent != null) {
             extent.flush();
@@ -349,15 +234,7 @@ public class ObjectRepo {
         System.out.println("🟢 finalizeReport() END at: " + java.time.LocalTime.now());
     }
 
-    
-    
-
-    @AfterClass
-    public static void finalizeReportAfterClass() {
-        finalizeReport();
-    }
-
     public static ExtentReports extentreport() {
-        return null;
+        return extent;
     }
-} 
+}
