@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -56,7 +57,7 @@ public class Market_Non_PJP_New_Retailer_Creation {
 
     @Test
     public void testOtpFlowAndRetailerInfo() throws Exception {
-        String mobileNumber = "8585906057";
+        String mobileNumber = "8585906058";
 
         // Login
         driver.get("https://fosrocfsguat.hspldms.com");
@@ -139,7 +140,7 @@ public class Market_Non_PJP_New_Retailer_Creation {
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_Market_Non_PJP_New_Retailer_Creation_TC_11", "Verify that user should be Enter Retailer Firm Name/Outlet Name.", () -> {
-        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("pintu bhai thakur Paints and Hardware");
+        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Mayur thakur Paints and Hardware");
         });
         Thread.sleep(1000);
         
@@ -239,36 +240,42 @@ public class Market_Non_PJP_New_Retailer_Creation {
         Thread.sleep(1000);
         
         
-        ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_27", "Verify that user should be click on Camera 1 button.", () -> {
-	        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();
-	        });
-	        Thread.sleep(1000);
-	        
+        // ✅ Camera 1
+        ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_33", "Verify that user should be click on Camera 1.", () -> {
+            By cam1 = By.xpath("(//div[@class='upload-documents-container']//span[@class='circle-camera'])[1]");
+            WebElement camera1 = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(cam1));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", camera1);
+            try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} // Optional wait
+            try {
+                camera1.click();
+            } catch (ElementClickInterceptedException e) {
+                System.out.println("⚠️ Camera 1 click intercepted, trying JS click...");
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", camera1);
+            }
+        });
+        Thread.sleep(1000); // Optional
 
-
-	        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-	        // Wait for the Switch Camera button and click it
-	        try {
-	            WebElement switchCamBtn = wait1.until(ExpectedConditions.elementToBeClickable(
-	                By.xpath("//div[@class='switch-cam']//button[1]")));
-	            switchCamBtn.click();
-	            System.out.println("Switch Camera button clicked.");
-	        } catch (TimeoutException e) {
-	            System.out.println("Switch Camera button not found or not clickable.");
-	        }
-
-	        Thread.sleep(2000);
-	        // Wait for the Capture button and click it
-	        try {
-	            WebElement captureBtn = wait1.until(ExpectedConditions.elementToBeClickable(
-	                By.xpath("(//button[@class='capture-button'])[3]")));
-	            captureBtn.click();
-	            System.out.println("Capture button clicked.");
-	        } catch (TimeoutException e) {
-	            System.out.println("Capture button not found or not clickable.");
-	        }  
-	        Thread.sleep(3000);
+        // ✅ Switch & Capture Camera 1
+        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        try {
+            wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='switch-cam']//button[1]"))).click();
+            System.out.println("Switch Camera button clicked.");
+        } catch (TimeoutException e) {
+            System.out.println("Switch Camera button not clickable.");
+        }
+        Thread.sleep(2000);
+        try {
+            wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[@class='capture-button'])[3]"))).click();
+            System.out.println("Capture button clicked.");
+        } catch (TimeoutException e) {
+            System.out.println("Capture button not clickable.");
+        }
+        Thread.sleep(1000);
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_28", "Verify that user should be click on Camera 1 button.", () -> {
@@ -371,7 +378,7 @@ public class Market_Non_PJP_New_Retailer_Creation {
             Connection conn = DriverManager.getConnection(url, username, password);
             Statement stmt = conn.createStatement();
 
-            String query = "select * from RegistrationPendingMaster where MobileNo='8585906057'";
+            String query = "select * from RegistrationPendingMaster where MobileNo='8585906058'";
             
             ResultSet rs = stmt.executeQuery(query);
             
