@@ -66,7 +66,7 @@ public class New_Distributor_Cred {
 	 	    
 	 		 driver.get("https://fosrocsecruatlocal.hspldms.com");
 	 		 
-	 	    String mobileNumber = "9403582307";
+	 	    String mobileNumber = "9403582308";
 
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_01", "Verify that user should be send SECR User Name.", () -> {
@@ -184,7 +184,7 @@ public class New_Distributor_Cred {
 	 	    
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_17", "Verify that user should be send Distributor Firm Name.", () -> {
-	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name*']")).sendKeys("nitin devgan Enterprises and sons");
+	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name*']")).sendKeys("nitin Patle Enterprises and sons");
 	 	    });
 	 	    Thread.sleep(1000);
 	        
@@ -506,7 +506,7 @@ public class New_Distributor_Cred {
 		            Connection conn = DriverManager.getConnection(url, username, password);
 		            Statement stmt = conn.createStatement();
 
-		            String query = "select * from RegistrationPendingMaster where MobileNo='9403582307'";
+		            String query = "select * from RegistrationPendingMaster where MobileNo='9403582308'";
 		            
 		            //select * from RegistrationPendingMaster where MobileNo='9403582580'
 		            
