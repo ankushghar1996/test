@@ -12,7 +12,7 @@ public class Mark_Attendance {
 	
 	
 
-	@FindBy(how=How.XPATH,using="//div[@class='mt-auto']//button[@type='button']")
+	@FindBy(how=How.XPATH,using="(//span[normalize-space()='MARK ATTENDANCE'])[1]")
     private WebElement Mark_Attendance_btn;
 	
 	
