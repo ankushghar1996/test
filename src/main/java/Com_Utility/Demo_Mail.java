@@ -18,6 +18,15 @@ public class Demo_Mail {
     public static void sendReportEmail() {
         System.out.println("======= Sending Email with Extent Report OneDrive Link =======");
 
+        
+        // Step 1: Path to the HTML report
+        // aniket path
+     //   String reportPath = "C:\\COde\\test-new\test\\test-output\\Extent_Reports\\TestReport.html";
+
+        // ankush path
+  //      String reportPath = "C:\\COde\\test\\test-output\\Extent_Reports\\TestReport.html";
+        
+        
         // Path to the report file
         String reportPath = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Test\\test-output\\Extent_Reports\\TestReport.html";
 

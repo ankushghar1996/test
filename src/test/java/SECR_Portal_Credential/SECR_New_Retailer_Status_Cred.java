@@ -97,6 +97,10 @@ public class SECR_New_Retailer_Status_Cred {
 	        });
 	        Thread.sleep(1000);
 
+	        
+//	        driver.findElement(By.xpath("(//span[normalize-space()='MARK ATTENDANCE'])[1]")).click();
+//	        Thread.sleep(1000);
+	        
 	        // Navigate
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_04", "Verify that user should be click on Menu Tab.", () -> {
 	        driver.findElement(By.xpath("//i[@class='fa fa-bars']")).click();
