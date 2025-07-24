@@ -10,156 +10,58 @@
   <test thread-count="5" name="Test">
     <classes>
 
-<!-- SEBS New Distributor Creation -->
-<class name="SEBS_Portal_Credential.New_Distributor_Appointment"/>
-<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_HO_Distributor_Approval_View_Test_1">
+<!-- SEBS Developer, Site, Contractor, Applicator, Notification, Scheme, PJP, View Profile, DashBoard -->
+<class name="SEBS_Portal_Credential.New_Developer_Cred">
 		<methods>
-        <include name="DistM_DistributorApprov_View"/>
+        <include name="SEBS_Developer_creation"/>
     </methods>
      </class>
-<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_HO_Distributor_Reject_Cred_1st">
+<class name="SEBS_Portal_Credential.New_Site_Cred">
 		<methods>
-        <include name="DistM_DistributorReject"/>
+        <include name="SEBS_New_Site_Cred"/>
     </methods>
      </class>
-<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_HO_Distributor_Approval_Page_Test_1st">
+<class name="SEBS_Portal_Credential.SEBS_New_Contractors_Test">
 		<methods>
-        <include name="DistM_DistributorApprov"/>
+        <include name="New_Contractors"/>
     </methods>
      </class>
-<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_SFA_Dist_Approval1st_View_Cred_2nd">
+<class name="SEBS_Portal_Credential.SEBS_New_Applicator_Creation_Test">
 		<methods>
-        <include name="Distributor_View"/>
+        <include name="Applicator_creation"/>
     </methods>
      </class>
-<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_SFA_Dist_Reject1st_ApprovalPage_Cred_2nd">
+<class name="SEBS_Portal_Credential.SEBS_Notification_Test">  
 		<methods>
-        <include name="Dist_RejectPage"/>
+        <include name="New_Notification"/>
+    </methods>
+     </class>   
+<class name="SEBS_Portal_Credential.SEBS_Scheme_Test">    
+		<methods>
+        <include name="Scheme"/>
+    </methods>
+     </class> 
+<class name="SEBS_Portal_Credential.SEBS_View_Profile_Cred">     
+		<methods>
+        <include name="SECR_ViewProfile"/>
     </methods>
      </class>
-<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_SFA_Approval1st_ApprPage_Cred_2nd">
+<class name="SEBS_Portal_Credential.PJP_Cred">     
 		<methods>
-        <include name="Dist_ApprovePage"/>
+        <include name="PJP_Setting"/>
     </methods>
      </class>
-<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_ASM_2ndApproval_View_Test_3rd">
+<class name="SEBS_Portal_Credential.SEBS_Dashboard_Test">  
 		<methods>
-        <include name="Dist_View_Page"/>
+        <include name="Dashboard"/>
     </methods>
-     </class>
-<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_ASM_Reject_Page_Test_3rd">
+     </class>    
+<class name="SEBS_Portal_Credential.SEBS_Media_Test"> 
 		<methods>
-        <include name="Distributor_Reject_Page"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_ASM_Dist_Approval_Test_3rd">
-		<methods>
-        <include name="Distributor_Approval_Page"/>
+        <include name="Media"/>
     </methods>
      </class>
 
-
-<!-- SEBS Activity PJP New Retailer Creation Flow -->
-<class name="SEBS_Portal_Credential.New_Activity_PJPSite_Cred">
-<methods>
-        <include name="SEBS_New_Activity_PJP_Cred"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_HO_Distributor_Approval_View_Test_1">
-		<methods>
-        <include name="DistM_DistributorApprov_View"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_HO_Distributor_Reject_Cred_1st">
-		<methods>
-        <include name="DistM_DistributorReject"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_HO_Distributor_Approval_View_Test_1">
-		<methods>
-        <include name="Distributor_Approval_Page"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_SFA_Dist_Approval1st_View_Cred_2nd">
-		<methods>
-        <include name="Distributor_View"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_SFA_Dist_Reject1st_ApprovalPage_Cred_2nd">
-		<methods>
-        <include name="Dist_RejectPage"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_SFA_Dist_Approval1st_ApprPage_Cred_2nd">
-		<methods>
-        <include name="Dist_ApprovePage"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_ASM_Dist_2ndApproval_View_Test_3rd">
-		<methods>
-        <include name="Dist_View_Page"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_ASM_Dist_Reject_Page_Test_3rd">
-		<methods>
-        <include name="Distributor_Reject_Page"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_PJP_Hierarchy_1.Distributor_Activity_PJP_ASM_2ndApproval_Test_3rd">
-		<methods>
-        <include name="Distributor_Approval_Page"/>
-    </methods>
-     </class>
-
-
-
-<!-- SEBS Activity NON PJP New Retailer Creation Flow -->
-<class name="SEBS_Portal_Credential.New_Activity_NonPJPSite_Cred"/>
-<class name="SEBS_Distributor_Activity_Non_PJP_Hierarchy_2.Distributor_Activity_Non_PJP_HO_Distributor_Approval_View_Test_1">
-		<methods>
-        <include name="DistM_DistributorApprov_View"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_Non_PJP_Hierarchy_2.Distributor_Activity_Non_PJP_HO_Distributor_Reject_Cred_1st">
-		<methods>
-        <include name="DistM_DistributorReject"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_Non_PJP_Hierarchy_2.Distributor_Activity_Non_PJP_HO_Distributor_Approval_Page_Test_1st">
-		<methods>
-        <include name="Distributor_Approval_Page"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_Non_PJP_Hierarchy_2.Distributor_Activity_Non_PJP_SFA_Dist_Approval1st_View_Cred_2nd">
-		<methods>
-        <include name="Distributor_View"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_Non_PJP_Hierarchy_2.Distributor_Activity_Non_PJP_SFA_Dist_Reject1st_ApprovalPage_Cred_2nd">
-		<methods>
-        <include name="Dist_RejectPage"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_Non_PJP_Hierarchy_2.Distributor_Activity_Non_PJP_SFA_Dist_Approval1st_ApprPage_Cred_2nd">
-		<methods>
-        <include name="Dist_ApprovePage"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_Non_PJP_Hierarchy_2.Distributor_Activity_Non_PJP_ASM_Dist_2ndApproval_View_Test_3rd">
-		<methods>
-        <include name="Dist_View_Page"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_Non_PJP_Hierarchy_2.Distributor_Activity_Non_PJP_ASM_Dist_Reject_Page_Test_3rd">
-		<methods>
-        <include name="Distributor_Reject_Page"/>
-    </methods>
-     </class>
-<class name="SEBS_Distributor_Activity_Non_PJP_Hierarchy_2.Distributor_Activity_Non_PJP_ASM_2ndApproval_Test_3rd">
-		<methods>
-        <include name="Distributor_Approval_Page"/>
-    </methods>
-     </class>
 
 
 
