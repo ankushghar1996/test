@@ -36,10 +36,10 @@ public class Retailer_Distributor_Outlet_Approval_Reject_1st_Test_2nd extends Ba
         });
         Thread.sleep(1000);
  
-//        ObjectRepo.startTestAndLog_1_SS("FSG_DB_Outlet_Approval_TC_04", "Select Grid Data From Grid Table", () -> {
-//            Liabrary.custom_click(DIST.getGrid_Data(), "Select Grid Data From Grid Table");
-//        });
-//        Thread.sleep(1000);
+       ObjectRepo.startTestAndLog_1_SS("FSG_DB_Outlet_Approval_TC_04", "Select Grid Data From Grid Table", () -> {
+            Liabrary.custom_click(DIST.getGrid_Data(), "Select Grid Data From Grid Table");
+        });
+        Thread.sleep(1000);
 // 
         ObjectRepo.startTestAndLog_1_SS("FSG_DB_Outlet_Approval_TC_05", "Click on Approval button", () -> {
             Liabrary.custom_click(DIST.getApproval_Page_Button(), "Click on Approval Button");

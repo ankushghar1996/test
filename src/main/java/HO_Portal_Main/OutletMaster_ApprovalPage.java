@@ -103,10 +103,14 @@ public class OutletMaster_ApprovalPage {
 
 	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_btnProceedForApproval']")
     private WebElement ProceedForApproval_btn;
+	
+	
 	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_btnProceedForApproval']")
     private WebElement ProceedForReject_btn;
+	
 	@FindBy(how=How.XPATH,using="//span[@id='ctl00_ParentMasterContentPlaceHolder1_ddlRejectReason_Arrow']")
     private WebElement Reject_Reason_Dropdown;
+	
 	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_btnRejectYes']")
     private WebElement Reject_Yes_Button;
 
