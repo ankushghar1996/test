@@ -41,7 +41,7 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 		
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_TC_06", "Click Distributor Name", () ->{
-			Liabrary.custom_Sendkeys(view.getEnter_Developer_Name(), excel.getStringdata("SEBS_Devloper", 2, 0), null); });
+			Liabrary.custom_Sendkeys(view.getEnter_Developer_Name(), excel.getStringdata("SEBS_Devloper", 2, 0), "Click Distributor Name"); });
 			Thread.sleep(1000);
 		
 			ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_07", "Click Distributor Mapped", () ->{
@@ -90,19 +90,19 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 	        Thread.sleep(1000);
 		
 	    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_15", "Click On State Dropdown", () ->{
-	        Liabrary.custom_click(view.getState_Dropdown(), null); });
+	        Liabrary.custom_click(view.getState_Dropdown(), "Click On State Dropdown"); });
 			Thread.sleep(1000);
 			
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_16", "Select State Dropdown", () ->{	
-	        Liabrary.custom_click(view.getSelect_State(), null); });
+	        Liabrary.custom_click(view.getSelect_State(), "Select State Dropdown"); });
 			Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_17", "Select City Dropdown", () ->{		
-			Liabrary.custom_click(view.getCity_Dropdown(), null); });
+			Liabrary.custom_click(view.getCity_Dropdown(), "Select City Dropdown"); });
 			Thread.sleep(1000);
 			
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_18", "Select City Dropdown", () ->{	
-		Liabrary.custom_click(view.getSelect_City(), null); });
+		Liabrary.custom_click(view.getSelect_City(), "Select City Dropdown"); });
 		Thread.sleep(1000);
 	        
 	        
