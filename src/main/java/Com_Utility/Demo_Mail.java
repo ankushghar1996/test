@@ -78,6 +78,8 @@ public class Demo_Mail {
 
             email.addTo("aniket.jadhav@heerasoftware.com");
             email.addTo("ankush.gharsele@heerasoftware.com");
+            email.addTo("roopali.kulkarni@heerasoftware.com");
+            email.addTo("rohit.deshpande@heerasoftware.com");
 
             // Attach ZIP
             EmailAttachment attachment = new EmailAttachment();
