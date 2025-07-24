@@ -24,59 +24,59 @@ public class New_Activity_NonPJPSite_Cred extends BaseClass_SEBS_Portal {
         New_Site_Creation view = PageFactory.initElements(driver, New_Site_Creation.class);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC01", "Click on Activity Button", () -> {
-            Liabrary.custom_click(view.getActivity_Button(), null);
+            Liabrary.custom_click(view.getActivity_Button(), "Click on Activity Button");
         });
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC02", "Click on Non-PJP Button", () -> {
-            Liabrary.custom_click(view.getNon_PJP_Button(), null);
+            Liabrary.custom_click(view.getNon_PJP_Button(), "Click on Non-PJP Button");
         });
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC03", "Click on Add1 Button", () -> {
-            Liabrary.custom_click(view.getAdd1_Button(), null);
+            Liabrary.custom_click(view.getAdd1_Button(), "Click on Add1 Button");
         });
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC04", "Click on Distributor Mapped", () -> {
-            Liabrary.custom_click(view.getDistributor_Mapped(), null);
+            Liabrary.custom_click(view.getDistributor_Mapped(), "Click on Distributor Mapped");
         });
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC05", "Select Distributor Mapped", () -> {
-            Liabrary.custom_click(view.getSelect_Distributor_Mapped(), null);
+            Liabrary.custom_click(view.getSelect_Distributor_Mapped(), "Select Distributor Mapped");
         });
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC06", "Click Sales Engineer Dropdown", () -> {
-            Liabrary.custom_click(view.getSelect_sales_Engineer_dropdown(), null);
+            Liabrary.custom_click(view.getSelect_sales_Engineer_dropdown(), "Click Sales Engineer Dropdown");
         });
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC07", "Select Sales Engineer", () -> {
-            Liabrary.custom_click(view.getSelect_sales_Engineer(), null);
+            Liabrary.custom_click(view.getSelect_sales_Engineer(), "Select Sales Engineer");
         });
         Thread.sleep(1000);
 
         
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC08", "Click Location Dropdown", () -> {
-            Liabrary.custom_click(view.getSelect_Location_dropdown(), null);
+            Liabrary.custom_click(view.getSelect_Location_dropdown(), "Click Location Dropdown");
         });
         Thread.sleep(1000);
         
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC09", "Select Location", () -> {
-            Liabrary.custom_click(view.getSelect_Location(), null);
+            Liabrary.custom_click(view.getSelect_Location(), "Select Location");
         });
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC10", "Click Developer Dropdown", () -> {
-            Liabrary.custom_click(view.getSelect_developer_Name_dropdown(), null);
+            Liabrary.custom_click(view.getSelect_developer_Name_dropdown(), "Click Developer Dropdown");
         });
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC11", "Select Developer Name", () -> {
-            Liabrary.custom_click(view.getSelect_developer_Name(), null);
+            Liabrary.custom_click(view.getSelect_developer_Name(), "Select Developer Name");
         });
         Thread.sleep(1000);
 
@@ -88,12 +88,12 @@ public class New_Activity_NonPJPSite_Cred extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC13", "Enter Site Name", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("nilesh sharma");
+            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("Abhilash Thakur");
         });
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC14", "Click Checkbox", () -> {
-            Liabrary.custom_click(view.getChcekbox_flexCheckDefault(), null);
+            Liabrary.custom_click(view.getChcekbox_flexCheckDefault(), "Click Checkbox");
         });
         Thread.sleep(1000);
         
@@ -106,12 +106,12 @@ public class New_Activity_NonPJPSite_Cred extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC16", "Click DropdownMenuButton", () -> {
-            Liabrary.custom_click(view.getDropdownMenuButton(), null);
+            Liabrary.custom_click(view.getDropdownMenuButton(), "Click DropdownMenuButton");
         });
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC17", "Click State Checkbox", () -> {
-            Liabrary.custom_click(view.getCheckbox(), null);
+            Liabrary.custom_click(view.getCheckbox(), "Click State Checkbox");
         });
         Thread.sleep(4000);
 
