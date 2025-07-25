@@ -19,7 +19,9 @@ public class Demo_Mail {
         System.out.println("======= Sending Email with Latest Extent Report and OneDrive Link =======");
 
         // Step 1: Path to the HTML report (updated path from Jenkins workspace)
-        String reportPath = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Test\\test-output\\Extent_Reports\\TestReport.html";
+        String workspace = System.getenv("WORKSPACE"); // Jenkins auto-sets this
+        String reportPath = workspace + "\\test-output\\Extent_Reports\\TestReport.html";
+
 
         // Step 2: Zip the report file
         String zipPath;
