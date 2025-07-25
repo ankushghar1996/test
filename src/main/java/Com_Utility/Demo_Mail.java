@@ -6,24 +6,29 @@ import org.apache.commons.mail.MultiPartEmail;
 
 import java.io.*;
 import java.nio.file.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 public class Demo_Mail {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         sendReportEmail();
     }
 
     public static void sendReportEmail() {
         System.out.println("======= Sending Email with Extent Report OneDrive Link =======");
 
-        // Folder path to the full Extent Reports directory
+        // ✅ Path to the report folder
         String reportFolderPath = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Test\\test-output\\Extent_Reports";
 
-        // Generate timestamped ZIP file
+        // ✅ OneDrive link (used in email body)
+        String oneDriveLink = "https://heerasoftware0.sharepoint.com/sites/QATeam/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FQATeam%2FShared%20Documents%2FQA%20Shared%20Folder&viewid=efe5bcf8%2De44d%2D4de2%2Db0cd%2D8ac68543bb53&p=true&ga=1";
+
+        // ✅ Shared folder path (where to copy ZIP)
+        String sharedDrivePath = "C:\\Users\\10277\\OneDrive - Heera Software Private Limited (HSPL)\\Automation_Report";
+
         String zipPath;
         try {
             zipPath = zipReportFolder(reportFolderPath);
@@ -32,30 +37,19 @@ public class Demo_Mail {
             return;
         }
 
-        // OneDrive link
-        String oneDriveLink = "https://heerasoftware0.sharepoint.com/sites/QATeam/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FQATeam%2FShared%20Documents%2FQA%20Shared%20Folder&viewid=efe5bcf8%2De44d%2D4de2%2Db0cd%2D8ac68543bb53&p=true&ga=1";
-
-        // Shared folder path (OneDrive sync folder)
-        String sharedDrivePath = "C:\\Users\\10277\\OneDrive - Heera Software Private Limited (HSPL)\\Automation_Report";
         String copiedPath;
-
         try {
             copiedPath = copyToSharedFolder(zipPath, sharedDrivePath);
         } catch (IOException e) {
-            System.err.println("❌ Failed to copy to shared folder: " + e.getMessage());
-            System.out.println("📌 Please manually check OneDrive link: " + oneDriveLink);
+            System.err.println("❌ Failed to copy ZIP to OneDrive folder: " + e.getMessage());
             copiedPath = "❌ Copy failed. Refer to logs.";
         }
 
-        // Send email
         try {
             MultiPartEmail email = new MultiPartEmail();
             email.setHostName("smtp.office365.com");
             email.setSmtpPort(587);
-            email.setAuthenticator(new DefaultAuthenticator(
-                "qaautomation@heerasoftware.com", 
-                "F.922060763339uy" // 🔒 REPLACE with Jenkins credential or environment variable
-            ));
+            email.setAuthenticator(new DefaultAuthenticator("qaautomation@heerasoftware.com", "F.922060763339uy"));
             email.setStartTLSEnabled(true);
             email.setStartTLSRequired(true);
             email.setSSLOnConnect(false);
@@ -75,7 +69,7 @@ public class Demo_Mail {
             email.addTo("ankush.gharsele@heerasoftware.com");
             email.addTo("roopali.kulkarni@heerasoftware.com");
 
-            // Attach ZIP file
+            // ✅ Attach ZIP
             EmailAttachment attachment = new EmailAttachment();
             attachment.setPath(zipPath);
             attachment.setDisposition(EmailAttachment.ATTACHMENT);
@@ -89,41 +83,52 @@ public class Demo_Mail {
         }
     }
 
-    // ✅ Zip the entire report folder
+    // ✅ Method to zip the report folder
     public static String zipReportFolder(String folderPath) throws IOException {
-        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String zipFilePath = folderPath + "_" + timestamp + ".zip";
+        File folderToZip = new File(folderPath);
 
-        try (
-            FileOutputStream fos = new FileOutputStream(zipFilePath);
-            ZipOutputStream zos = new ZipOutputStream(fos)
-        ) {
-            Path sourceDir = Paths.get(folderPath);
-            Files.walk(sourceDir)
-                .filter(path -> !Files.isDirectory(path))
-                .forEach(path -> {
-                    ZipEntry zipEntry = new ZipEntry(sourceDir.relativize(path).toString());
-                    try {
-                        zos.putNextEntry(zipEntry);
-                        Files.copy(path, zos);
-                        zos.closeEntry();
-                    } catch (IOException e) {
-                        System.err.println("❌ Error zipping file: " + path + " - " + e.getMessage());
-                    }
-                });
+        if (!folderToZip.exists() || !folderToZip.isDirectory()) {
+            throw new IOException("Invalid folder path: " + folderPath);
+        }
+
+        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
+        String zipFilePath = folderToZip.getParent() + File.separator + "Extent_Reports_" + timestamp + ".zip";
+
+        try (FileOutputStream fos = new FileOutputStream(zipFilePath);
+             ZipOutputStream zipOut = new ZipOutputStream(fos)) {
+            zipDirectory(folderToZip, folderToZip.getName(), zipOut);
         }
 
         System.out.println("✅ Folder zipped: " + zipFilePath);
         return zipFilePath;
     }
 
-    // ✅ Copy the ZIP to OneDrive shared folder
+    private static void zipDirectory(File folder, String parentFolder, ZipOutputStream zipOut) throws IOException {
+        for (File file : folder.listFiles()) {
+            if (file.isDirectory()) {
+                zipDirectory(file, parentFolder + "/" + file.getName(), zipOut);
+            } else {
+                try (FileInputStream fis = new FileInputStream(file)) {
+                    ZipEntry zipEntry = new ZipEntry(parentFolder + "/" + file.getName());
+                    zipOut.putNextEntry(zipEntry);
+
+                    byte[] bytes = new byte[1024];
+                    int length;
+                    while ((length = fis.read(bytes)) >= 0) {
+                        zipOut.write(bytes, 0, length);
+                    }
+                }
+            }
+        }
+    }
+
+    // ✅ Method to copy ZIP to OneDrive folder
     public static String copyToSharedFolder(String sourcePath, String sharedDrivePath) throws IOException {
         File sourceFile = new File(sourcePath);
         Path targetDir = Paths.get(sharedDrivePath);
         Path targetPath = targetDir.resolve(sourceFile.getName());
 
-        Files.createDirectories(targetDir); // Ensure directory exists
+        Files.createDirectories(targetDir); // Ensure folder exists
         Files.copy(sourceFile.toPath(), targetPath, StandardCopyOption.REPLACE_EXISTING);
         System.out.println("✅ Report copied to shared folder: " + targetPath);
 
