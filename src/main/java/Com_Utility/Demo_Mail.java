@@ -75,12 +75,11 @@ public class Demo_Mail {
                     + "📂 Copied To: " + copiedPath + "\n\n"
                     + "Also attached as a backup.\n\n"
                     + "Regards,\nAutomation Team");
-/*
+            
             email.addTo("aniket.jadhav@heerasoftware.com");
             email.addTo("ankush.gharsele@heerasoftware.com");
             email.addTo("roopali.kulkarni@heerasoftware.com");
             email.addTo("rohit.deshpande@heerasoftware.com");
-*/
             // Attach ZIP
             EmailAttachment attachment = new EmailAttachment();
             attachment.setPath(zipPath);
