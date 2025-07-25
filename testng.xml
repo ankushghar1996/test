@@ -10,12 +10,7 @@
   <test thread-count="5" name="Test">
     <classes>
 
-
-<class name="HO_Portal_Credential.HO_Distributor_Approval_View_Test">
-			<methods>
-        <include name="DistM_DistributorApprov_View"/>
-    </methods>
-    </class>
+<class name="SECR_Portal_Credential.New_Distributor_Cred"/>
 
 
 
