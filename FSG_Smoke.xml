@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<listeners>
+    <listener class-name="Com_Utility.ReportExecutionListener" />
+  </listeners>
+
+
+  <test thread-count="5" name="Test">
+    <classes>
+
+<!-- <class name="FSG_Portal_Credential.Mark_Attendance_Cred"/> -->
+<!-- FSG New Retailer Creation Flow -->
+<class name="FSG_Portal_Credential.New_Retailer_cred_OTP"/>
+<class name="FSG_Retailer_Hierarchy.Retailer_HO_OutletMaster_ViewPageCred_1st">
+		<methods>
+        <include name="OM_View"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_Hierarchy.Retailer_HO_OutletMaster_Reject_PageCred_1st">
+		<methods>
+        <include name="OM_Reject"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_Hierarchy.Retailer_HO_OutletMaster_ApprovalPageCred_1st">
+		<methods>
+        <include name="Outlet_Approval"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_Hierarchy.Retailer_Distributor_Outlet_Approval_1st_View_Test_2nd">
+		<methods>
+        <include name="Outlet_View"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_Hierarchy.Retailer_Distributor_Outlet_Approval_Reject_1st_Test_2nd">
+		<methods>
+        <include name="Outlet_Reject"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_Hierarchy.Retailer_Distributor_Outlet_Approval_1st_Test_2nd">
+		<methods>
+        <include name="Outlet_ApprovalTest"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_Hierarchy.Retailer_SECR_Web_Outlet_Approval2nd_cred_ViewPage_3rd">
+		<methods>
+        <include name="Outlet_ViewPage"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_Hierarchy.Retailer_SECR_Web_OM_Outlet_Approval_Reject2nd_cred_3rd">
+		<methods>
+        <include name="Outlet_Reject"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_Hierarchy.Retailer_SECR_Web_Outlet_Approval2nd_cred_3rd">
+		<methods>
+        <include name="Outlet_Approval"/>
+    </methods>
+     </class>
+
+
+<!-- FSG Leave Management -->
+<class name="FSG_Portal_Credential.FSG_Leave_Application_Test">
+		<methods>
+        <include name="FSG_leave"/>
+    </methods>
+     </class>
+<class name="SECR_Portal_Credential.SECR_Leave_Approval_Test">
+		<methods>
+        <include name="Leave_Approval"/>
+    </methods>
+     </class>
+
+
+<!-- FSG Market PJP New Retailer Creation -->
+<class name="FSG_Portal_Credential.Market_PJP_New_Retailer_Creation"/>
+<class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_HO_OutletMaster_ViewPageCred_1st">
+		<methods>
+        <include name="OM_View"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_HO_OutletMaster_Reject_PageCred_1st">
+		<methods>
+        <include name="OM_Reject"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_HO_OutletMaster_ApprovalPageCred_1st">
+		<methods>
+        <include name="OM_ApprovalPage"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_Distributor_Outlet_Approval_1st_View_Test_2nd">
+		<methods>
+        <include name="Outlet_View"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_Distributor_Outlet_Approval_Reject_1st_Test_2nd">
+		<methods>
+        <include name="Outlet_RejectTest"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_Distributor_Outlet_Approval_1st_Test2nd">
+		<methods>
+        <include name="Outlet_ApprovalTest"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_SECR_Web_Outlet_Approval2nd_cred_ViewPage_3rd">
+		<methods>
+        <include name="Outlet_ViewPage"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_SECR_Web_Outlet_Approval_Reject2nd_cred_3rd">
+		<methods>
+        <include name="Outlet_RejectTest"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_PJP_Flow_Hierarchy1.Retailer_PJP_SECR_Web_Outlet_Approval2nd_cred_3rd">
+		<methods>
+        <include name="Outlet_Approval"/>
+    </methods>
+     </class>
+
+
+
+<!-- FSG Market Non-PJP New Retailer Creation -->
+<class name="FSG_Portal_Credential.Market_Non_PJP_New_Retailer_Creation"/>
+<class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_HO_OutletMaster_ViewPageCred_1st">
+		<methods>
+        <include name="OM_View"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_HO_OutletMaster_Reject_PageCred_1st">
+		<methods>
+        <include name="OM_Reject"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_HO_OutletMaster_ApprovalPageCred_1st">
+		<methods>
+        <include name="OM_ApprovalPage"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_Distributor_Outlet_Approval_1st_View_Test_2nd">
+		<methods>
+        <include name="Outlet_View"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_Distributor_Outlet_Approval_Reject_1st_Test_2nd">
+		<methods>
+        <include name="Outlet_RejectTest"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_Distributor_Outlet_Approval_1st_Test_2nd">
+		<methods>
+        <include name="Outlet_ApprovalTest"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_SECR_Web_Outlet_Approval2nd_cred_ViewPage_3rd">
+		<methods>
+        <include name="Outlet_ViewPage"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_SECR_Web_Outlet_Approval_Reject2nd_cred_3rd">
+		<methods>
+        <include name="Outlet_RejectTest"/>
+    </methods>
+     </class>
+<class name="FSG_Retailer_NON_PJP_Flow_Hierarchy2.Retailer_Non_PJP_SECR_Web_Outlet_Approval2nd_cred_3rd">
+		<methods>
+        <include name="Outlet_ApprovalTest"/>
+    </methods>
+     </class>
+
+
+
+<!-- FSG Other Functionalities -->
+<class name="FSG_Portal_Credential.FSG_PJP_Test">
+		<methods>
+        <include name="FSG_PJP"/>
+    </methods>
+     </class>
+<class name="FSG_Portal_Credential.FSG_Notification_Test">
+		<methods>
+        <include name="FSG_Notification_Test"/>
+    </methods>
+     </class>
+<class name="FSG_Portal_Credential.FSG_View_Profile_Test">
+		<methods>
+        <include name="FSG_View_Profile"/>
+    </methods>
+     </class>
+<class name="FSG_Portal_Credential.FSG_Logout">
+		<methods>
+        <include name="Logout"/>
+    </methods>
+     </class>
+
+
+
+
+    </classes>
+  </test>
+</suite>
