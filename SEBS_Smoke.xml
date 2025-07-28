@@ -10,11 +10,12 @@
   <test thread-count="5" name="Test">
     <classes>
 
-<class name="HO_Portal_Credential.HO_Distributor_Approval_View_Test">
-			<methods>
+<class name="SEBS_Distributor_Hierarchy.Distributor_Creation_HO_Distributor_Approval_View_Test_1">
+		<methods>
         <include name="DistM_DistributorApprov_View"/>
     </methods>
-    </class>
+     </class>
+
 
 
 
