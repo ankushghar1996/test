@@ -30,6 +30,12 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 		Liabrary.custom_click(view.getAdd_Menu(), "Click Developer Add Menu"); });
 		Thread.sleep(1000);
 		
+		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("98541602020");
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
+		Thread.sleep(1000);
+		
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_04", "Click Distributor Mapped", () ->{
 		Liabrary.custom_click(view.getDistributor_Mapped(), "Click Distributor Mapped");});

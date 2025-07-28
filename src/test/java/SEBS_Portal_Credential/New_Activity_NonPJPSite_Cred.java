@@ -32,6 +32,12 @@ public class New_Activity_NonPJPSite_Cred extends BaseClass_SEBS_Portal {
             Liabrary.custom_click(view.getNon_PJP_Button(), "Click on Non-PJP Button");
         });
         Thread.sleep(1000);
+        
+        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9854160206");
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
+		Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC03", "Click on Add1 Button", () -> {
             Liabrary.custom_click(view.getAdd1_Button(), "Click on Add1 Button");
@@ -88,7 +94,7 @@ public class New_Activity_NonPJPSite_Cred extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC13", "Enter Site Name", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("Abhilash Thakur");
+            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("Abhishake Thakur");
         });
         Thread.sleep(1000);
 

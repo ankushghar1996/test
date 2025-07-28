@@ -127,7 +127,7 @@ public class New_Site_Creation {
     private WebElement Distributor_Mapped;
 	
 	
-	@FindBy(how=How.XPATH,using="(//span[normalize-space()='Chiranth Agencies [10001]'])[1]")
+	@FindBy(how=How.XPATH,using="(//span[normalize-space()='Bluehost DB [10145]'])[1]")
     private WebElement Select_Distributor_Mapped;
 	
 	
@@ -135,7 +135,7 @@ public class New_Site_Creation {
     private WebElement select_sales_Engineer_dropdown;
 	
 	
-	@FindBy(how=How.XPATH,using="//div[@class='ng-option ng-option-marked']//span[normalize-space()='Rohit BS']")
+	@FindBy(how=How.XPATH,using="//div[@class='ng-option ng-option-selected ng-option-marked']//span[normalize-space()='Nageshwar']")
     private WebElement select_sales_Engineer;
 	
 	
@@ -143,7 +143,7 @@ public class New_Site_Creation {
     private WebElement select_Location_dropdown;
 	
 	
-	@FindBy(how=How.XPATH,using="//span[normalize-space()='Navle road']")
+	@FindBy(how=How.XPATH,using="//span[normalize-space()='karvey nagar']")
     private WebElement select_Location;
 	
 

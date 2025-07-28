@@ -32,6 +32,12 @@ public class New_Activity_PJPSite_Cred extends BaseClass_SEBS_Portal {
             Liabrary.custom_click(view.getAdd1_Button(), "Click on Add Button");
         });
         Thread.sleep(1000);
+        
+        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("98541602017");
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
+		Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_03", "Click on Distributor Mapped", () -> {
             Liabrary.custom_click(view.getDistributor_Mapped(), "Click on Distributor Mapped");
@@ -81,7 +87,7 @@ public class New_Activity_PJPSite_Cred extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_12", "Enter Site Name", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("sahil turkar");
+            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("salman turkar");
         });
         Thread.sleep(1000);
 

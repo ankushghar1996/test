@@ -18,20 +18,20 @@ private WebElement Creation_Button ;
 @FindBy(how=How.XPATH,using="(//div[@class='ng-select-container ng-has-value']//input[@type='text'])[1]")
 private WebElement Select_Distributor_Dropdown ;
 
-@FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Chiranth Agencies [10001]']")
+@FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Bluehost DB [10145]']")
 private WebElement Select_Distributor_Dropdown_Value ;		
 
 @FindBy(how=How.XPATH,using="(//div[@class='ng-select-container ng-has-value']//input[@type='text'])[2]")
 private WebElement Sales_Engineer_Dropdown ;	
 
-@FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Rohit BS']")
+@FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Nageshwar']")
 private WebElement Sales_Engineer_Dropdown_Value ;	
 
  
 @FindBy(how=How.XPATH,using="//ng-select[@formcontrolname='Route']")
 private WebElement Route ;
 
-@FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Navle road']")
+@FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='karvey nagar']")
 private WebElement Route_Value ;		
 
 @FindBy(how=How.XPATH,using="//div[@class='col-12 mb-3']//select[@aria-label='Default select example']")

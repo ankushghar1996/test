@@ -74,7 +74,7 @@ public class SECR_New_Retailer_Status_Cred {
 
 	    @Test
 	    public void testOtpFlowAndRetailerInfo() throws Exception {
-	        String mobileNumber = "7777888803";
+	        String mobileNumber = "7777888804";
 
 	        // Login
 	        driver.get("https://fosrocsecruat.hspldms.com/");
@@ -124,7 +124,7 @@ public class SECR_New_Retailer_Status_Cred {
 	        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys(mobileNumber);
 	        });
 	        
-	        
+	        Thread.sleep(3000);
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_08", "Verify that user should be click on Send OTP Button.", () -> {
 	        driver.findElement(By.xpath("//button[normalize-space()='SEND OTP']")).click();
 	        });
@@ -196,7 +196,7 @@ public class SECR_New_Retailer_Status_Cred {
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_17", "Verify that user should be enter Firm Name.", () -> {
-	        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Vinay bhai Thakur Paints");
+	        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("raju bhai Thakur Paints");
 	        });
 	        Thread.sleep(1000);
 	        
@@ -454,7 +454,7 @@ public class SECR_New_Retailer_Status_Cred {
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
 	 
-	            String query = "select * from RegistrationPendingMaster where MobileNo='7777888803'";
+	            String query = "select * from RegistrationPendingMaster where MobileNo='7777888804'";
 	            ResultSet rs = stmt.executeQuery(query);
 	            if (rs.next()) {
 	                otp = rs.getString("otp");
