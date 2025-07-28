@@ -44,7 +44,7 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
         
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC05", "enter mobile number", () -> {
-        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9547829654");
+        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9547829656");
         });
         Thread.sleep(1000);
         
@@ -86,7 +86,7 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC10", "Enter Contractor Name", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("manjusha hussain");
+            driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("mansi patel");
         });
         Thread.sleep(1000);
 
@@ -104,17 +104,17 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC13", "Enter Contact Number", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Contact Number']")).sendKeys("9547821989");
-        });
-        Thread.sleep(1000);
+//        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC13", "Enter Contact Number", () -> {
+//            driver.findElement(By.xpath("//input[@placeholder='Enter Contact Number']")).sendKeys("9547821980");
+//        });
+//        Thread.sleep(1000);
 
         WebElement element2 = driver.findElement(By.xpath("//input[@placeholder='Enter Email Address']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element2);
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC14", "Enter Email Address", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Email Address']")).sendKeys("HSPL@Test.com");
+            driver.findElement(By.xpath("//input[@placeholder='Enter Email Address']")).sendKeys("ramesh1452@gmail.com");
         });
         Thread.sleep(1000);
 
@@ -162,6 +162,8 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
             driver.findElement(By.xpath("//input[@placeholder='Enter PAN Number']")).sendKeys("AZVPK2525M");
         });
         Thread.sleep(1000);
+        
+       
 
         WebElement element3 = driver.findElement(By.xpath("(//div[@class='col-2 col-lg-1']//span[@data-bs-target='#camera'])[1]"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element3);
