@@ -50,42 +50,42 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 			Liabrary.custom_Sendkeys(view.getEnter_Developer_Name(), excel.getStringdata("SEBS_Devloper", 2, 0), "Click Distributor Name"); });
 			Thread.sleep(1000);
 		
-			ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_07", "Click Distributor Mapped", () ->{
+			ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_07", "select salesman Mapped", () ->{
 		driver.findElement(By.xpath("//ng-select[@bindvalue='SalesmanId']//input[@type='text']")).click();
 			});
 		Thread.sleep(1000);
 		
 		
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_08", "select Distributor Mapped", () ->{
-		driver.findElement(By.xpath("//span[@class='ng-option-label']")).click();
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_08", "click salesman Mapped", () ->{
+		driver.findElement(By.xpath("//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Nageshwar']")).click();
 		});
 		Thread.sleep(1000);
 		
 		
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_09", "Click Distributor Mapped", () ->{
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_09", "Click Route Mapped", () ->{
 		driver.findElement(By.xpath("//ng-select[@bindvalue='RouteId']//input[@type='text']")).click();
 		});
 		Thread.sleep(1000);
 		
 		
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_10", "select Distributor Mapped", () ->{
-		driver.findElement(By.xpath("//span[normalize-space()='Navle road']")).click();
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_10", "select Route Mapped", () ->{
+		driver.findElement(By.xpath("//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='karvey nagar']")).click();
 		});
 		Thread.sleep(1000);
 		
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_11", "Enter contact Number", () ->{
-		Liabrary.custom_Sendkeys(view.getEnter_Contact_Number(), excel.getNumericdata("SEBS_Devloper", 1, 1), null);});
+		Liabrary.custom_Sendkeys(view.getEnter_Contact_Number(), excel.getNumericdata("SEBS_Devloper", 1, 1), "Enter contact Number");});
 		Thread.sleep(1000);
 		
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_12", "Enter Email Address", () ->{
-		Liabrary.custom_Sendkeys(view.getEnter_Email_Address(), excel.getStringdata("SEBS_Devloper", 1, 2), null);});
+		Liabrary.custom_Sendkeys(view.getEnter_Email_Address(), excel.getStringdata("SEBS_Devloper", 1, 2), "Enter Email Address");});
 		Thread.sleep(1000);
 		
 		
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_13", "Enter Email Address", () ->{
-		Liabrary.custom_Sendkeys(view.getEnter_Address_Line_1(), excel.getStringdata("SEBS_Devloper", 1, 3), null); });
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_13", "Enter Address", () ->{
+		Liabrary.custom_Sendkeys(view.getEnter_Address_Line_1(), excel.getStringdata("SEBS_Devloper", 1, 3), "Enter Address"); });
 		Thread.sleep(1000);
 		
 		
@@ -113,47 +113,49 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 	        
 	        
 	   ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_19", "Enter PIN Code", () ->{	
-		Liabrary.custom_Sendkeys(view.getEnter_Pin_Code(), excel.getNumericdata("SEBS_Devloper", 1, 4), null); });
+		Liabrary.custom_Sendkeys(view.getEnter_Pin_Code(), excel.getNumericdata("SEBS_Devloper", 1, 4), "Enter PIN Code"); });
 		Thread.sleep(1000);
 	
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_20", "Enter GST Number", () ->{	
-		Liabrary.custom_Sendkeys(view.getEnter_GST_Number(), excel.getStringdata("SEBS_Devloper", 1, 5), null); });
+		Liabrary.custom_Sendkeys(view.getEnter_GST_Number(), excel.getStringdata("SEBS_Devloper", 1, 5), "Enter GST Number"); });
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_21", "Enter_Project_Funnel_lakhs_of_Developer", () ->{
-		Liabrary.custom_Sendkeys(view.getEnter_Project_Funnel_lakhs_of_Developer(), excel.getNumericdata("SEBS_Devloper", 1, 6), null); });
+		Liabrary.custom_Sendkeys(view.getEnter_Project_Funnel_lakhs_of_Developer(), excel.getNumericdata("SEBS_Devloper", 1, 6), "Enter_Project_Funnel_lakhs_of_Developer"); });
 		Thread.sleep(1000);
 		
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_22", "Enter Sales Funnel For developer", () ->{
-		Liabrary.custom_Sendkeys(view.getSalesFunnelFordeveloper(), excel.getNumericdata("SEBS_Devloper", 1, 7), null);});
+		Liabrary.custom_Sendkeys(view.getSalesFunnelFordeveloper(), excel.getNumericdata("SEBS_Devloper", 1, 7), "Enter Sales Funnel For developer");});
 		Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_23", "Enter Fosroc Expected sales in 2025", () ->{
-		Liabrary.custom_Sendkeys(view.getEnter_Fosroc_Expected_sales_in_2025(), excel.getNumericdata("SEBS_Devloper", 1, 8), null); });
+		Liabrary.custom_Sendkeys(view.getEnter_Fosroc_Expected_sales_in_2025(), excel.getNumericdata("SEBS_Devloper", 1, 8), "Enter Fosroc Expected sales in 2025"); });
 		Thread.sleep(1000);
 		
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_24", "Scroll in to view", () ->{
-		WebElement scroll1 = driver.findElement(By.xpath("//input[@formcontrolname='YTDsales']"));
-    	JavascriptExecutor jse1= (JavascriptExecutor)driver;
-    	jse1.executeScript("arguments[0].scrollIntoView(true);", scroll1); });
-        Thread.sleep(1000);
-		
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_25", "Click YTD Sales", () ->{
-		Liabrary.custom_Sendkeys(view.getYTDsales(), excel.getNumericdata("SEBS_Devloper", 1, 9), null); });
-		Thread.sleep(1000);
+//		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_24", "Scroll in to view", () ->{
+//		WebElement scroll1 = driver.findElement(By.xpath("//input[@formcontrolname='YTDsales']"));
+//    	JavascriptExecutor jse1= (JavascriptExecutor)driver;
+//    	jse1.executeScript("arguments[0].scrollIntoView(true);", scroll1); });
+//        Thread.sleep(1000);
+//		
+//        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_25", "Click YTD Sales", () ->{
+//		Liabrary.custom_Sendkeys(view.getYTDsales(), excel.getNumericdata("SEBS_Devloper", 1, 9), "Click YTD Sales"); });
+//		Thread.sleep(1000);
 		
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_26", "Click Dropdown Menu Button", () ->{
-		Liabrary.custom_click(view.getDropdownMenuButton(), null); });
+		Liabrary.custom_click(view.getDropdownMenuButton(), "Click Dropdown Menu Button"); });
 		Thread.sleep(1000);
 		
 		
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_27", "Click on Checkbox ", () ->{
-		Liabrary.custom_click(view.getCheckbox(), null); });
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_27", "Click on Checkbox", () ->{
+		Liabrary.custom_click(view.getCheckbox(), "Click on Checkbox"); });
 		Thread.sleep(1000);
 		
-	
+		driver.findElement(By.xpath("//input[@placeholder='Enter Technical Name']")).sendKeys("aman thakur");
+		Thread.sleep(1000);
+		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_28", "send email ", () ->{
 		driver.findElement(By.xpath("//input[contains(@placeholder,'Email ID.')]")).sendKeys("abc1234@gmail.com"); });
 		Thread.sleep(1000);

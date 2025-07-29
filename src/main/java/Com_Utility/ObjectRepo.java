@@ -110,7 +110,7 @@ public class ObjectRepo {
                     test.addScreenCaptureFromBase64String(screenshot, label);
                 }
             } catch (IOException e) {
-                test.warning("Screenshot capture failed: " + e.getMessage());
+                test.warning("⚠️ Screenshot capture failed: " + e.getMessage());
             }
         }
     }
@@ -171,15 +171,28 @@ public class ObjectRepo {
         }
     }
 
+    
+    
     public static String takeScreenshot() throws IOException {
         if (driver == null) {
             throw new IllegalStateException("Driver is not initialized.");
         }
-
+     
+        try {
+            Thread.sleep(300); // Helps avoid capturing duplicate/stale screenshots
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+     
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         byte[] fileContent = FileUtils.readFileToByteArray(srcFile);
-        return Base64.getEncoder().encodeToString(fileContent);
+        String base64Screenshot = Base64.getEncoder().encodeToString(fileContent);
+     
+        System.out.println("📸 Screenshot captured at: " + System.currentTimeMillis());
+        return base64Screenshot;
     }
+    
+    
 
     public static void startTestAndLog_1_NS(String testDescription) {
         test = extent.createTest("❌ Negative Scenario");
