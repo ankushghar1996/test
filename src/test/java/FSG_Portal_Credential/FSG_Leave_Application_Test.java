@@ -34,11 +34,11 @@ public class FSG_Leave_Application_Test extends BaseClass_FSG_Portal {
 	Thread.sleep(1000);
 	
 	ObjectRepo.startTestAndLog_1_SS("FSG_Leave_Application_Test_04", "Verify that user can enter From Date", () -> {
-	driver.findElement(By.xpath("(//input[@type='date'])[1]")).sendKeys("24-07-2025");});
+	driver.findElement(By.xpath("(//input[@type='date'])[1]")).sendKeys("25-07-2025");});
 	Thread.sleep(1000);
 	
 	ObjectRepo.startTestAndLog_1_SS("FSG_Leave_Application_Test_05", "Verify that user can enter To Date", () -> {
-	driver.findElement(By.xpath("(//input[@type='date'])[2]")).sendKeys("24-07-2025"); });
+	driver.findElement(By.xpath("(//input[@type='date'])[2]")).sendKeys("25-07-2025"); });
 	Thread.sleep(1000);
  
 	ObjectRepo.startTestAndLog_1_SS("FSG_Leave_Application_Test_06", "Verify that user can Click On Leave type Dropdown", () -> {
@@ -53,14 +53,14 @@ public class FSG_Leave_Application_Test extends BaseClass_FSG_Portal {
 	driver.findElement(By.xpath("//*[@formcontrolname='Reason']")).sendKeys("i am feeling unwell and need to rest and recover."); });
 	Thread.sleep(1000);
 	
-//	ObjectRepo.startTestAndLog_1_SS("FSG_Leave_Application_Test_09", "Verify that user can Click On Leave type Dropdown value", () -> {
-//	Liabrary.custom_click(FSG.getApply_Button(), "Click On Apply Button");  });
-//    Thread.sleep(1000);
-    
-    ObjectRepo.startTestAndLog_1_SS("FSG_Leave_Application_Test_10", "Verify that user can Click On Leave type Dropdown value", () -> {
-    Liabrary.custom_click(FSG.getCancled_Leave(), "Click on cancle leave Button");  });
+	ObjectRepo.startTestAndLog_1_SS("FSG_Leave_Application_Test_09", "Verify that user can Click On Leave type Dropdown value", () -> {
+	Liabrary.custom_click(FSG.getApply_Button(), "Click On Apply Button");  });
     Thread.sleep(1000);
     
+//    ObjectRepo.startTestAndLog_1_SS("FSG_Leave_Application_Test_10", "Verify that user can Click On Leave type Dropdown value", () -> {
+//    Liabrary.custom_click(FSG.getCancled_Leave(), "Click on cancle leave Button");  });
+//    Thread.sleep(1000);
+//    
     
 }
 	
