@@ -38,7 +38,7 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
 		  Thread.sleep(1000);
 		
 		
-		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("98541602201");
+		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("98541602203");
 		Thread.sleep(1000);
 		
 		driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
@@ -147,6 +147,10 @@ public class New_Site_Cred extends BaseClass_SEBS_Portal{
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_16", "Enter Contractor Name", () ->{
 		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("sahil");});
         Thread.sleep(1000);
+        
+        driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Email ID.']")).sendKeys("sahil123@gmail.com");
+        Thread.sleep(1000);
+        
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_17", "Enter Contractor Contact Number", () ->{
 		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Contact Number.']")).sendKeys("9654120165");});
