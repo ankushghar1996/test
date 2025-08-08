@@ -115,7 +115,7 @@ public class Distributor_Approval1st_ApprovalPage {
 	}
 
 
-	@FindBy(how = How.XPATH, using = "//input[@id='ParentMasterContentPlaceHolder1_Button1']")
+	@FindBy(how = How.XPATH, using = "//input[@id='ParentMasterContentPlaceHolder1_btnNo']")
 	private WebElement No_btn;
 	
 	

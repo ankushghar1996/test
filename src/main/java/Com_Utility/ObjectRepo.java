@@ -17,6 +17,7 @@ import org.testng.annotations.AfterClass;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -121,7 +122,63 @@ public class ObjectRepo {
         }
     }
     */
-    
+    public static void startTestAndLog_1_SS(String testNumber, String testDescription, Runnable action) {
+        test = extent.createTest(testNumber, testDescription); // ✅ Create test
+
+        try {
+            test.info(testDescription); // ✅ Log step
+            action.run(); // ✅ Execute action
+
+            // ✅ Flash message check after action
+            List<WebElement> flashMessages = driver.findElements(By.xpath("//div[@id='toast-container']"));
+            boolean flashErrorFound = false;
+
+            // ✅ Safe flash keywords (including OTP success cases)
+            List<String> safeFlashKeywords = Arrays.asList(
+                "successfully",
+                "record saved",
+                "submitted",
+                "otp has been sent",
+                "otp sent",
+                "otp sent successfully",
+                "success otp",
+                "otp dispatched",
+                "okay",
+                "yes"
+            );
+
+            for (WebElement msg : flashMessages) {
+                if (msg.isDisplayed()) {
+                    String messageText = msg.getText().trim().toLowerCase();
+                    boolean isSafe = safeFlashKeywords.stream().anyMatch(messageText::contains);
+
+                    if (isSafe) {
+                        test.pass("✅ Flash Message: " + messageText);
+                        captureScreenshot("Screenshot - Flash Success");
+                    } else {
+                        test.fail("❌ Flash Message Detected: " + messageText);
+                        flashErrorFound = true;
+                        captureScreenshot("Screenshot - Flash Error");
+                    }
+                }
+            }
+
+            // ✅ Final decision
+            if (!flashErrorFound) {
+                test.pass("✅ " + testDescription);
+                captureScreenshot("Screenshot - Passed");
+            } else {
+                // ❌ Fail only for error messages, NOT for safe ones
+                throw new RuntimeException("Flash error found — test failed.");
+            }
+
+        } catch (Exception e) {
+            test.fail("❌ Exception in step: " + testDescription + " | " + e.getMessage());
+            captureScreenshot("Screenshot - Exception");
+            throw new RuntimeException(e);
+        }
+    }
+/*
  // 🔁 NEW METHOD: Flash message support version
     public static void startTestAndLog_1_SS(String testNumber, String testDescription, Runnable action) {
         test = extent.createTest(testNumber, testDescription); // ✅ Create test
@@ -177,7 +234,7 @@ public class ObjectRepo {
             captureScreenshot("Screenshot - Exception");
             throw new RuntimeException(e);
         }
-    }
+    }    */
 
     private static void captureScreenshot(String label) {
         if (driver != null) {
@@ -187,10 +244,11 @@ public class ObjectRepo {
                     test.addScreenCaptureFromBase64String(screenshot, label);
                 }
             } catch (IOException e) {
-                test.warning("Screenshot capture failed: " + e.getMessage());
+                test.warning("⚠️ Screenshot capture failed: " + e.getMessage());
             }
         }
     }
+
 
 
     
@@ -232,8 +290,7 @@ public class ObjectRepo {
         test.info("📝 " + testDescription);
         System.out.println("🖨️ Logged Only Description: " + testDescription);
     }
-
-
+    
     public static void Print_Dynamic_Flash_Massage(WebDriver driver, String xpathLocator, String testNumber_Print_Massage) {
     	
         try {
@@ -260,29 +317,35 @@ public class ObjectRepo {
         }
         
     }
-    
-    
+   
 
     public static String takeScreenshot() throws IOException {
-        // Ensure the WebDriver is initialized
         if (driver == null) {
             throw new IllegalStateException("Driver is not initialized.");
         }
 
-        // Take screenshot and store it in a temporary file
+        try {
+            Thread.sleep(300); // Helps avoid capturing duplicate/stale screenshots
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-        // Convert the screenshot file to a byte array
         byte[] fileContent = FileUtils.readFileToByteArray(srcFile);
+        String base64Screenshot = Base64.getEncoder().encodeToString(fileContent);
 
-        // Convert the byte array to a Base64 encoded string
-        return Base64.getEncoder().encodeToString(fileContent);
+        System.out.println("📸 Screenshot captured at: " + System.currentTimeMillis());
+        return base64Screenshot;
     }
+
     public static void startTestAndLog_1_NS(String testDescription) {
         test = extent.createTest("❌ Negative Scenario");
         test.info("🔸 " + testDescription);
-        System.out.println("🖨️ Negative Scenario Logged: " + testDescription);
+        test.fail("❌ This is a negative scenario - Marking as Failed");
+        System.out.println("🖨️ Negative Scenario Logged as Failed: " + testDescription);
     }
+
+
 
     public static void logTestWithScreenshot(String logMessage) {
         try {

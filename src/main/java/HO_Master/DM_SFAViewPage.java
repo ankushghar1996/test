@@ -12,9 +12,7 @@ WebDriver driver;
 	@FindBy(how = How.XPATH, using = "//p[normalize-space()='SFA/Distributor Master']")
 	private WebElement SFADistributor_Master;
 	
-	
-
-	@FindBy(how = How.XPATH, using = "//h4[@id='ParentMasterContentPlaceHolder1_pageHeader']")
+    @FindBy(how = How.XPATH, using = "//h4[@id='ParentMasterContentPlaceHolder1_pageHeader']")
 	private WebElement SFADistributor_Master_Header;
 	
 	@FindBy(how = How.XPATH, using = "//input[@id='ctl00_ParentMasterContentPlaceHolder1_ddlUserType_Input']")
@@ -26,7 +24,6 @@ WebDriver driver;
 	public WebElement getChannelTypeValue_Dropdown() {
 		return ChannelTypeValue_Dropdown;
 	}
-
 	//div[@id='ctl00_ParentMasterContentPlaceHolder1_SFAGridView_GridData']/table/tbody/tr/td[normalize-space()='Ankush DB']
 	
 	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_SFAGridView_GridData']/table/tbody/tr/td[normalize-space()='Safari SFA']")
@@ -35,9 +32,7 @@ WebDriver driver;
 	@FindBy(how = How.XPATH, using = "//h4[@id='ParentMasterContentPlaceHolder1_pageHeader']")
 	private WebElement SFADistributor_Details;
 	
-	// Close & Search btn xpath written in Common data
-	
-	
+	// Close & Search btn xpath written in Common data	
 	
 	public WebElement getSFADistributor_Master() {
 		return SFADistributor_Master;
@@ -59,7 +54,7 @@ WebDriver driver;
 		return SFADistributor_Details;
 	}
 	
-	@FindBy(how = How.XPATH, using = "//input[@id='ParentMasterContentPlaceHolder1_Button2']")
+	@FindBy(how = How.XPATH, using = "//input[@id='ParentMasterContentPlaceHolder1_BtnView']")
 	private WebElement View_btn;
 	
 	public WebElement getView_btn() {

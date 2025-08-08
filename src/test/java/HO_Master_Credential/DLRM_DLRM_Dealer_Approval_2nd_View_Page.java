@@ -96,7 +96,7 @@ public class DLRM_DLRM_Dealer_Approval_2nd_View_Page extends BaseClass{
 	}
 	
 	@Test(priority=1)
-	public void Dealer_Approval_2nd_View_Page_NS() throws Exception{
+	public void Dealer_Approval_2nd_View_Page_NS1 () throws Exception{
 	    HomePage hp = PageFactory.initElements(driver,HomePage.class);
 	    DLRM_Dealer_Approval_2nd_View_Page DAA2 = PageFactory.initElements(driver,DLRM_Dealer_Approval_2nd_View_Page.class);
 		DLRM_Dealer_Approval_2nd DAA1 = PageFactory.initElements(driver,DLRM_Dealer_Approval_2nd.class);

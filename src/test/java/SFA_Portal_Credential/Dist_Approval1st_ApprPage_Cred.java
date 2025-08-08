@@ -9,8 +9,6 @@ import Com_Utility.ObjectRepo;
 import SFA_Portal.Distributor_Approval1st_ApprovalPage;
 
 public class Dist_Approval1st_ApprPage_Cred extends BaseClass_SFA {
-
-
 	
 	@Test(priority = 0)
 
@@ -20,19 +18,16 @@ public class Dist_Approval1st_ApprPage_Cred extends BaseClass_SFA {
 		
 		Distributor_Approval1st_ApprovalPage view = PageFactory.initElements(driver, Distributor_Approval1st_ApprovalPage.class);
 	
-		
 		ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_ApprPage_Cred_01", "Verify that user should be click on SFA_Portal Master menu.", () -> {
 		Liabrary.custom_click(view.getMaster_Menu(), "Click on SFA_Portal Master Menu");
 		});
 		Thread.sleep(1000);
-	
-		
+			
 		ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_ApprPage_Cred_02", "Verify that user should click on SFA_Portal Distributor Master menu.", () -> {
 		    Liabrary.custom_click(view.getDistributor_Master_Menu(), "Click on SFA_Portal Distributor Menu");
 		});
 		Thread.sleep(1000);
 		
-
 		ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_ApprPage_Cred_03", "Verify that user should click on SFA_Portal Distributor Approval menu.", () -> {
 		    Liabrary.custom_click(view.getDistributor_Approval_Menu(), "Click on SFA_Portal Distributor Approval Menu");
 		});
@@ -173,15 +168,14 @@ public class Dist_Approval1st_ApprPage_Cred extends BaseClass_SFA {
 		
 	}
 	
-	
-	
 	@Test(priority = 3)
 	public void Dist_ApprovePage_NS_03() throws Exception {
 		
 		ObjectRepo.driver = driver;
-		
-		Distributor_Approval1st_ApprovalPage view = PageFactory.initElements(driver, Distributor_Approval1st_ApprovalPage.class);
 	
+	Distributor_Approval1st_ApprovalPage view = PageFactory.initElements(driver, Distributor_Approval1st_ApprovalPage.class);
+	
+	ObjectRepo.startTestAndLog_1_NS("Without Click on Approve button");
 		
 		ObjectRepo.startTestAndLog_1_SS("SFA_Dist_Approval1st_ApprPage_Cred_01", "Verify that user should be click on SFA_Portal Master menu.", () -> {
 		Liabrary.custom_click(view.getMaster_Menu(), "Click on SFA_Portal Master Menu");

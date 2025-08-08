@@ -153,7 +153,7 @@ public class New_Developer_Creation {
     private WebElement Distributor_Mapped;
 	
 	
-	@FindBy(how=How.XPATH,using="(//span[normalize-space()='Chiranth Agencies [10001]'])[1]")
+	@FindBy(how=How.XPATH,using="(//span[normalize-space()='Bluehost DB [10145]'])[1]")
     private WebElement Select_Distributor_Mapped;
 	
 	

@@ -182,12 +182,8 @@ public class HO_Distributor_Approval_View_Test extends BaseClass_HO_Portal {
             Liabrary.custom_click(AP.getView_btn(), "Click on View Button");
         });
         Thread.sleep(1000);
-
-        WebElement scroll = driver.findElement(By.xpath("//*[text()='Documents']"));
-        JavascriptExecutor jse1 = (JavascriptExecutor) driver;
-        jse1.executeScript("arguments[0].scrollIntoView(true);", scroll);
-        Thread.sleep(1000);
-
+        
+        
         ObjectRepo.startTestAndLog_1_SS("HO_DAV_TC07", "Download Document 1", () -> {
             Liabrary.custom_click(AP.getDocument_1(), "Distributor Approval");
         });

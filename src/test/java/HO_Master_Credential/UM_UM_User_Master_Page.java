@@ -15,7 +15,6 @@ import HO_Master.UM_User_Master;
 
 public class UM_UM_User_Master_Page extends BaseClass{
 
-	
 	   @Test(priority=0)
 	   public void UM_User_Master_Page() throws Exception{
 		HomePage hp = PageFactory.initElements(driver,HomePage.class);   

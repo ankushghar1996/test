@@ -24,7 +24,7 @@ public class RM_RM_Route_Master_Page extends BaseClass{
 	RM_Route_Master RM1 = PageFactory.initElements(driver,RM_Route_Master.class);
 	Common_Data CD = PageFactory.initElements(driver,Common_Data.class);	
 	
-	ObjectRepo.startTestAndLog_1_NS("Without Select Route Master Page");
+	
 	
 	ObjectRepo.startTestAndLog_1_SS("SA_RM_RM_Route_Master_Page_TC_01", "Verify click on Master Menu", () -> {
         Liabrary.custom_click(hp.getMaster_Menu(), "Select Master Menu");
@@ -38,10 +38,10 @@ public class RM_RM_Route_Master_Page extends BaseClass{
 		Thread.sleep(1000);
 		
 			
-//		ObjectRepo.startTestAndLog_1_SS("SA_RM_RM_Route_Master_Page_TC_03", "Select Route Master Page", () -> {
-//		Liabrary.custom_click(RM1.getRoute_Master_Menu_Btn(),"Select Route Master Page");
-//		});
-//		Thread.sleep(1000);
+		ObjectRepo.startTestAndLog_1_SS("SA_RM_RM_Route_Master_Page_TC_03", "Select Route Master Page", () -> {
+		Liabrary.custom_click(RM1.getRoute_Master_Menu_Btn(),"Select Route Master Page");
+		});
+		Thread.sleep(1000);
 		
 		
 		ObjectRepo.startTestAndLog_1_SS("SA_RM_RM_Route_Master_Page_TC_04", "Verify that Route Master Header Text", () -> {

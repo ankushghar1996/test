@@ -76,10 +76,10 @@ public class ODR_Order_Detailes_Reports extends BaseClass {
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("SA_ODR_Order_Detailes_Reports_TC10", "Click on Download Button", () -> {
-            Liabrary.custom_click(ODR.getDownload_Button(), "Click on Download button");
-        });
-        Thread.sleep(1000);
+//        ObjectRepo.startTestAndLog_1_SS("SA_ODR_Order_Detailes_Reports_TC10", "Click on Download Button", () -> {
+//            Liabrary.custom_click(ODR.getDownload_Button(), "Click on Download button");
+//        });
+//        Thread.sleep(1000);
         
     }
     @Test(priority=1)

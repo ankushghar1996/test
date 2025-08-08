@@ -13,7 +13,7 @@ import HO_Activity.Media_UploadMedia;
 public class UploadMedia_ViewPage extends BaseClass {
 
     @Test(priority=0)
-    public void Upload_media() throws Exception {
+    public void Upload_media_View() throws Exception {
 
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         Media_UploadMedia UM = PageFactory.initElements(driver, Media_UploadMedia.class);
@@ -78,15 +78,15 @@ public class UploadMedia_ViewPage extends BaseClass {
         
 
         ObjectRepo.startTestAndLog_1_SS("SA_UploadMedia_ViewPage_TC_02", "Verify select Media sub menu", () -> {
-            Liabrary.custom_click(hp.getMedia_SubMenu(), "select Media sub menu");
-        });
+        Liabrary.custom_click(hp.getMedia_SubMenu(), "select Media sub menu");
+        });                                                                                              
         Thread.sleep(1000);
 
         
-//        ObjectRepo.startTestAndLog_1_SS("SA_UploadMedia_ViewPage_TC_03", "Verify select Upload Media menu", () -> {
-//            Liabrary.custom_click(UM.getUploadMedia_Menu(), "select Upload Media menu");
-//        });
-//        Thread.sleep(1000);
+  //        ObjectRepo.startTestAndLog_1_SS("SA_UploadMedia_ViewPage_TC_03", "Verify select Upload Media menu", () -> {
+  //            Liabrary.custom_click(UM.getUploadMedia_Menu(), "select Upload Media menu");
+  //        });
+  //        Thread.sleep(1000);
         
 
         ObjectRepo.startTestAndLog_1_SS("SA_UploadMedia_ViewPage_TC_04", "Verify Media Upload header selection", () -> {

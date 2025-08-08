@@ -21,7 +21,7 @@ import HO_Master.RM_PJPMaster_ViewPage;
 public class FSG_FSGMaster_AddPage extends BaseClass{
 
 	@Test(priority = 0)
-	public void FSG_MasterHomepage() throws Exception {
+	public void FSG_Master_Add_Page() throws Exception {
 
 	    HomePage hp = PageFactory.initElements(driver, HomePage.class);
 	    FSG_AddFSGMaster FA = PageFactory.initElements(driver, FSG_AddFSGMaster.class);
@@ -148,7 +148,7 @@ public class FSG_FSGMaster_AddPage extends BaseClass{
 	}
 	
 	@Test(priority = 1)
-	public void FSG_MasterHomepage_NS01() throws Exception {
+	public void FSG_Master_Add_Page_NS01() throws Exception {
 
 	    HomePage hp = PageFactory.initElements(driver, HomePage.class);
 	    FSG_AddFSGMaster FA = PageFactory.initElements(driver, FSG_AddFSGMaster.class);

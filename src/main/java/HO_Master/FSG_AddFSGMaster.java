@@ -60,7 +60,7 @@ WebDriver driver;
 	@FindBy(how = How.XPATH, using = "//input[@id='ctl00_ParentMasterContentPlaceHolder1_ddlDistributor_Input']")
 	private WebElement Distributor_Dropdown;
 	
-	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlDistributor_DropDown']//ul//li[text()='New Annapurna Associate [SFA-101]']")
+	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlDistributor_DropDown']//ul//li[text()='New Annapurna  Associate [SFA-001]']")
 	private WebElement DistributorValue_Dropdown;
 	
 	

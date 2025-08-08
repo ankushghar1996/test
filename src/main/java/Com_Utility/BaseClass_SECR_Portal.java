@@ -46,6 +46,7 @@ public class BaseClass_SECR_Portal {
 	    driver = new ChromeDriver(); 
 
 	    driver.get("https://fosrocsecruatlocal.hspldms.com/");
+	    
 	    driver.manage().window().maximize();
 	    
 	    ObjectRepo.driver = driver;
@@ -57,21 +58,15 @@ public class BaseClass_SECR_Portal {
 
 		
 		Liabrary.custom_Sendkeys(login.getUserName(), excel.getStringdata2("Sheet1", 4, 0), "UserName Field");
-		
-		
+
 		Liabrary.custom_Sendkeys(login.getPassword(), excel.getStringdata2("Sheet1", 4, 1), "Passwod Field");
 
-		
 		Liabrary.custom_click(login.getLogin_btn(), "Login Btn");
 		Thread.sleep(1000);
 	    
-	    
-	    
+  
 	}
 
-
-
-	
 	// AfterMethod to close the browser after each test
     @AfterMethod
     public void close() {

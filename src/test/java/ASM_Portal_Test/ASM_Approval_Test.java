@@ -75,6 +75,8 @@ public class ASM_Approval_Test extends BaseClass_ASM {
 		
 	ASM_Approval_Page ASM = PageFactory.initElements(driver,ASM_Approval_Page.class);
 	
+	ObjectRepo.startTestAndLog_1_NS("Without Click On Approve Button");
+	
 	//Without Click On Approve Button
 	
 	ObjectRepo.startTestAndLog_1_SS("ASM_ASM_Approval_Test_01", "Verify that user should be click on ASM_Portal Master menu.", () -> {

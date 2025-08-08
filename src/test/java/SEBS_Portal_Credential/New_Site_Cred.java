@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,14 +19,13 @@ import SEBS_Portal.New_Site_Creation;
 
 public class New_Site_Cred extends BaseClass_SEBS_Portal{
 
-	
 	@Test
 	public void SEBS_New_Site_Cred() throws Exception {
 		
 		New_Site_Creation view = PageFactory.initElements(driver, New_Site_Creation.class);
 	
 		
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_01", "Click on SEBS Menu", () ->{
+ 	    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Site_Cred_TC_01", "Click on SEBS Menu", () ->{
 		Liabrary.custom_click(view.getSEBS_Menu(), "Click on SEBS Menu");});
 		Thread.sleep(1000);
 		

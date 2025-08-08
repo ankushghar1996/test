@@ -101,8 +101,6 @@ public class RM_RM_SE_Set_PJP_Master_Button extends BaseClass{
 		Liabrary.custom_click(SEPJP2.getSET_PJP_Button(),"Click on SET PJP Button ");	
 		});
 		Thread.sleep(1000);	
-
-
 	
 }
 	

@@ -81,6 +81,7 @@ public class SECR_Pending_Approval_DB_Test extends BaseClass_SECR_Portal {
         SECR_Pending_Approval_DB SECR = PageFactory.initElements(driver, SECR_Pending_Approval_DB.class);
         
         //Without Click Retailer Name
+        ObjectRepo.startTestAndLog_1_NS("Without Click Retailer KYC Approval");
 
         WebElement scroll = driver.findElement(By.xpath("//div[@class='pending-retailer']//span[normalize-space()='New Retailer Created']"));
         JavascriptExecutor jse1 = (JavascriptExecutor) driver;
@@ -94,16 +95,16 @@ public class SECR_Pending_Approval_DB_Test extends BaseClass_SECR_Portal {
         Thread.sleep(1000);
 
         
-        ObjectRepo.startTestAndLog_1_SS("SECR_Pending_Approval_DB_Test_TC02", "Verify that user should be able to click on Retailer KYC Approval", () -> {
-            Liabrary.custom_click(SECR.getRetailer_KYC_Approval(), "Click Retailer KYC Approval");
-        });
-        Thread.sleep(1000);
-
-        
-//        ObjectRepo.startTestAndLog_1_SS("SECR_Pending_Approval_DB_Test_TC03", "Verify that user should be able to click on Retailer name", () -> {
-//            Liabrary.custom_click(SECR.getRetailer_Name(), "Click Retailer name");
+//        ObjectRepo.startTestAndLog_1_SS("SECR_Pending_Approval_DB_Test_TC02", "Verify that user should be able to click on Retailer KYC Approval", () -> {
+//            Liabrary.custom_click(SECR.getRetailer_KYC_Approval(), "Click Retailer KYC Approval");
 //        });
 //        Thread.sleep(1000);
+
+        
+        ObjectRepo.startTestAndLog_1_SS("SECR_Pending_Approval_DB_Test_TC03", "Verify that user should be able to click on Retailer name", () -> {
+            Liabrary.custom_click(SECR.getRetailer_Name(), "Click Retailer name");
+        });
+        Thread.sleep(1000);
 
         
         WebElement scroll2 = driver.findElement(By.xpath("//div[normalize-space()='Upload Documents']"));
@@ -130,6 +131,7 @@ public class SECR_Pending_Approval_DB_Test extends BaseClass_SECR_Portal {
         SECR_Pending_Approval_DB SECR = PageFactory.initElements(driver, SECR_Pending_Approval_DB.class);
         
         //Without Click Retailer KYC Approval
+        ObjectRepo.startTestAndLog_1_NS("Without Click Retailer KYC Approval");
 
         WebElement scroll = driver.findElement(By.xpath("//div[@class='pending-retailer']//span[normalize-space()='New Retailer Created']"));
         JavascriptExecutor jse1 = (JavascriptExecutor) driver;

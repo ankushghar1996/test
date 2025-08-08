@@ -138,7 +138,7 @@ public class ASM_Approval_View_Test extends BaseClass_ASM {
 
         ASM_Approval_View ASM = PageFactory.initElements(driver, ASM_Approval_View.class);
 
-     // Without selecting Grid Data
+     // Without Click on View Button
 		ObjectRepo.startTestAndLog_1_NS("Without click View btn");
         
         

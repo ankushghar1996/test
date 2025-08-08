@@ -84,6 +84,7 @@ public class SECR_MTD_Working_Test_DB extends BaseClass_SECR_Portal {
         SECR_MTD_Working_Main SECR = PageFactory.initElements(driver, SECR_MTD_Working_Main.class);
         
         //Click on Arrow Button
+        ObjectRepo.startTestAndLog_1_NS("Without Click on Arrow Button");
 
         ObjectRepo.startTestAndLog_1_SS("SECR_MTD_Working_TC01", "Scroll to New Retailer Created section", () -> {
             WebElement Scroll1 = driver.findElement(By.xpath("//div[@class='pending-retailer']//span[normalize-space()='New Retailer Created']"));
@@ -150,6 +151,7 @@ public class SECR_MTD_Working_Test_DB extends BaseClass_SECR_Portal {
         SECR_MTD_Working_Main SECR = PageFactory.initElements(driver, SECR_MTD_Working_Main.class);
         
         //Click on MTD Working
+        ObjectRepo.startTestAndLog_1_NS("Without Click on MTD Working");
 
         ObjectRepo.startTestAndLog_1_SS("SECR_MTD_Working_TC01", "Scroll to New Retailer Created section", () -> {
             WebElement Scroll1 = driver.findElement(By.xpath("//div[@class='pending-retailer']//span[normalize-space()='New Retailer Created']"));

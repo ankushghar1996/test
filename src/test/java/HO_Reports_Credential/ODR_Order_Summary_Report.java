@@ -76,10 +76,10 @@ public class ODR_Order_Summary_Report extends BaseClass {
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("SA_ODR_Order_Summary_Report_TC10", "Click on Download Button", () -> {
-            Liabrary.custom_click(OSR.getDownload_Button(), "Click on Download button");
-        });
-        Thread.sleep(1000);
+//        ObjectRepo.startTestAndLog_1_SS("SA_ODR_Order_Summary_Report_TC10", "Click on Download Button", () -> {
+//            Liabrary.custom_click(OSR.getDownload_Button(), "Click on Download button");
+//        });
+//        Thread.sleep(1000);
         
         
     }

@@ -15,7 +15,7 @@ import FSG_Portal.New_Retailer_MTD_YTD_Main;
 public class New_Retailer_MTD_YTD_Test extends BaseClass_FSG_Portal {
 
 	@Test(priority=0)
-    public void FSG_YTD() throws Exception {
+    public void MTD_YTD_Test() throws Exception {
 
         New_Retailer_MTD_YTD_Main FSG = PageFactory.initElements(driver, New_Retailer_MTD_YTD_Main.class);
 
@@ -76,7 +76,7 @@ public class New_Retailer_MTD_YTD_Test extends BaseClass_FSG_Portal {
     }
     
     @Test(priority=1)
-    public void FSG_YTD_NS01() throws Exception {
+    public void MTD_YTD_Test_NS1() throws Exception {
 
         New_Retailer_MTD_YTD_Main FSG = PageFactory.initElements(driver, New_Retailer_MTD_YTD_Main.class);
         WebElement scroll = driver.findElement(By.xpath("//div[@class='capsule']//span[text()='MTD Working']"));
@@ -84,6 +84,8 @@ public class New_Retailer_MTD_YTD_Test extends BaseClass_FSG_Portal {
         jse1.executeScript("arguments[0].scrollIntoView(true);", scroll);
         Thread.sleep(1000);
 
+        
+        ObjectRepo.startTestAndLog_1_NS("Without click on Info Tab");
         ObjectRepo.startTestAndLog_1_SS("FSG_MTDYTD_TC01", "Click on MTD Working", () -> {
             Liabrary.custom_click(FSG.getMTD_Working(), "Click On MTD working");
         });
@@ -104,10 +106,10 @@ public class New_Retailer_MTD_YTD_Test extends BaseClass_FSG_Portal {
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("FSG_MTDYTD_TC05", "Click on More Info Tab", () -> {
-            Liabrary.custom_click(FSG.getMore_Info_Tab(), "Click On More Info Button");
-        });
-        Thread.sleep(1000);
+//        ObjectRepo.startTestAndLog_1_SS("FSG_MTDYTD_TC05", "Click on More Info Tab", () -> {
+//            Liabrary.custom_click(FSG.getMore_Info_Tab(), "Click On More Info Button");
+//        });
+//        Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("FSG_MTDYTD_TC06", "Click on Print Retailer Info", () ->{
         List<WebElement> Print_Retailer_Info = driver.findElements(By.xpath("//div[@class='offcanvas offcanvas-bottom show']"));

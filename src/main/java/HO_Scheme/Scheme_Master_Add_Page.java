@@ -146,7 +146,7 @@ WebDriver driver;
 	private WebElement Product_List_dropdown;
 	
 	
-	@FindBy(how=How.XPATH, using="//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlSKU_DropDown']//ul//li[text()='AURAMIX 450 (250kg)']")
+	@FindBy(how=How.XPATH, using="(//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlSKU_DropDown']//ul//li)[1]")
 	private WebElement Product_ListSelect_dropdown;
 	
 	

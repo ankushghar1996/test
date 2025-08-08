@@ -14,7 +14,7 @@ import Retailer_Portal.Logout_Main;
 public class Logout extends BaseClass_Retailer {
 
     @Test(priority=0)
-    public void Media_Tab() throws Exception {
+    public void Logout_Test() throws Exception {
 
         Logout_Main OUT = PageFactory.initElements(driver, Logout_Main.class);
 
@@ -41,7 +41,7 @@ public class Logout extends BaseClass_Retailer {
     
     
     @Test(priority=1)
-    public void Media_Tab_NS01() throws Exception {
+    public void Logout_NS01() throws Exception {
 
     	//Logout Without Clicking Yes Button
         Logout_Main OUT = PageFactory.initElements(driver, Logout_Main.class);
@@ -63,7 +63,7 @@ public class Logout extends BaseClass_Retailer {
 //        Thread.sleep(1000);
     }
     @Test(priority=2)
-    public void Media_Tab_NS02() throws Exception {
+    public void Logout_NS02() throws Exception {
 
     	//Logout Without Clicking Yes Button
         Logout_Main OUT = PageFactory.initElements(driver, Logout_Main.class);

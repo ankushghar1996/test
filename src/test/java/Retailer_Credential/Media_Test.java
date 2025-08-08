@@ -11,7 +11,7 @@ import Retailer_Portal.Media;
 public class Media_Test extends BaseClass_Retailer {
 
     @Test(priority=0)
-    public void Media_Tab() throws Exception {
+    public void Media_Test_() throws Exception {
 
         Media MDI = PageFactory.initElements(driver, Media.class);
 
@@ -39,7 +39,7 @@ public class Media_Test extends BaseClass_Retailer {
     }
     
     @Test(priority=1)
-    public void Media_Tab_NS01() throws Exception {
+    public void Media_Test_NS01() throws Exception {
 
         Media MDI = PageFactory.initElements(driver, Media.class);
         
@@ -66,7 +66,7 @@ public class Media_Test extends BaseClass_Retailer {
         Thread.sleep(1000);
 }
     @Test(priority=2)
-    public void Media_Tab_NS02() throws Exception {
+    public void Media_Test_NS02() throws Exception {
 
         Media MDI = PageFactory.initElements(driver, Media.class);
         

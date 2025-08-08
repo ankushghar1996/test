@@ -42,6 +42,7 @@ public class SECR_Scheme_Test extends BaseClass_SECR_Portal {
         SECR_Scheme_Main SECR = PageFactory.initElements(driver, SECR_Scheme_Main.class);
 
         //Without Click Scheme Name
+        ObjectRepo.startTestAndLog_1_NS("Without Click Scheme Name");
         
         ObjectRepo.startTestAndLog_1_SS("SECR_Scheme_Test_TC01", "Verify that user should be able to click on Scheme Tab", () -> {
             Liabrary.custom_click(SECR.getScheme_Tab(), "Click Scheme Tab");

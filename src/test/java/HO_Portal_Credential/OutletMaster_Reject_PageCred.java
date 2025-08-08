@@ -93,6 +93,8 @@ public class OutletMaster_Reject_PageCred extends BaseClass_HO_Portal {
  
         OutletMaster_ApprovalPage Appr = PageFactory.initElements(driver, OutletMaster_ApprovalPage.class);
  
+        ObjectRepo.startTestAndLog_1_NS("without Click Outlet Approval SubMenu");
+        
         ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC01", "Click Master Menu", () -> {
             Liabrary.custom_click(Appr.getMaster_Menu(), "Click Master Menu");
         });
@@ -102,11 +104,11 @@ public class OutletMaster_Reject_PageCred extends BaseClass_HO_Portal {
             Liabrary.custom_click(Appr.getOutlet_Master_Menu(), "Click Outlet Master Menu");
         });
         Thread.sleep(1000);
- 
-        ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC03", "Click Outlet Approval SubMenu", () -> {
-            Liabrary.custom_click(Appr.getOutlet_Approval_SubMenu(), "Click Outlet Approval SubMenu");
-        });
-        Thread.sleep(1000);
+// 
+//        ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC03", "Click Outlet Approval SubMenu", () -> {
+//            Liabrary.custom_click(Appr.getOutlet_Approval_SubMenu(), "Click Outlet Approval SubMenu");
+//        });
+//        Thread.sleep(1000);
  
         ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC04", "Validate Outlet Approval Text", () -> {
             WebElement Outlet_Details_Approval = driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_headingAreaReport']"));
@@ -156,15 +158,17 @@ public class OutletMaster_Reject_PageCred extends BaseClass_HO_Portal {
  
         OutletMaster_ApprovalPage Appr = PageFactory.initElements(driver, OutletMaster_ApprovalPage.class);
  
+        ObjectRepo.startTestAndLog_1_NS("without Click Outlet Master Menu");
+     
         ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC01", "Click Master Menu", () -> {
             Liabrary.custom_click(Appr.getMaster_Menu(), "Click Master Menu");
         });
         Thread.sleep(1000);
  
-        ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC02", "Click Outlet Master Menu", () -> {
-            Liabrary.custom_click(Appr.getOutlet_Master_Menu(), "Click Outlet Master Menu");
-        });
-        Thread.sleep(1000);
+//        ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC02", "Click Outlet Master Menu", () -> {
+//            Liabrary.custom_click(Appr.getOutlet_Master_Menu(), "Click Outlet Master Menu");
+//        });
+//        Thread.sleep(1000);
  
         ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC03", "Click Outlet Approval SubMenu", () -> {
             Liabrary.custom_click(Appr.getOutlet_Approval_SubMenu(), "Click Outlet Approval SubMenu");

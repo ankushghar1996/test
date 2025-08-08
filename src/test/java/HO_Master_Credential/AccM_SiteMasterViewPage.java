@@ -17,8 +17,7 @@ public class AccM_SiteMasterViewPage extends BaseClass{
 	
 	@Test(priority=0)
 	public void Site_MasterView_page() throws Exception {
-		
-		
+
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		AM_SiteMasterViewPage SMV = PageFactory.initElements(driver, AM_SiteMasterViewPage.class);
 		AM_SiteMaster SM = PageFactory.initElements(driver, AM_SiteMaster.class);
@@ -41,7 +40,7 @@ public class AccM_SiteMasterViewPage extends BaseClass{
 			WebElement UploadText=driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_retailerHeader']"));
 			String Actual_Text=UploadText.getText();
 			System.out.println(Actual_Text);
-			String Expected_Text=" Site Master";
+			String Expected_Text="Site Master";
 			Assert.assertEquals(Expected_Text, Actual_Text);});
 			Thread.sleep(2000);
 	

@@ -17,7 +17,7 @@ public class AR_Activity_Reports_Main {
 	@FindBy(how=How.XPATH,using = "")
 	private WebElement Activity_Details_Report_Header_Text;	
 	
-	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_Button1']")
+	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_BtnView']")
 	private WebElement View_Button;
 	
 	
@@ -26,7 +26,7 @@ public class AR_Activity_Reports_Main {
 	
 	
 	//input[@id='ParentMasterContentPlaceHolder1_btnDownload']
-	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_btnDownload']")
+	@FindBy(how=How.XPATH,using="//input[@id='ParentMasterContentPlaceHolder1_BtnExport']")
 	private WebElement Download_Button;
 
 	public WebElement getActivity_Report_Menu() {

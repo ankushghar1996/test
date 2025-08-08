@@ -33,7 +33,8 @@ public class FSG_Notification_Test extends BaseClass_FSG_Portal {
 		
 	FSG_Notification_Main FSG = PageFactory.initElements(driver,FSG_Notification_Main.class);
 	
-	//Without Click on Notification ICON
+	ObjectRepo.startTestAndLog_1_NS("Without Click on Notification ICON");
+	
 
 //	ObjectRepo.startTestAndLog_1_SS("FSG_Notification_TC01", "Verify that user clicks on Notification Icon", () -> {
 //	Liabrary.custom_click(FSG.getNotification(), "Click on Notification Icon");
@@ -50,7 +51,8 @@ public class FSG_Notification_Test extends BaseClass_FSG_Portal {
 		
 	FSG_Notification_Main FSG = PageFactory.initElements(driver,FSG_Notification_Main.class);
 	
-	//Without Click on Close Button
+	ObjectRepo.startTestAndLog_1_NS("/Without Click on Close Button");
+
 
 	ObjectRepo.startTestAndLog_1_SS("FSG_Notification_TC01", "Verify that user clicks on Notification Icon", () -> {
 	Liabrary.custom_click(FSG.getNotification(), "Click on Notification Icon");

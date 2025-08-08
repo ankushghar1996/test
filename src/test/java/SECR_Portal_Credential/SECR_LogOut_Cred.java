@@ -26,7 +26,8 @@ public class SECR_LogOut_Cred extends BaseClass_SECR_Portal {
             Liabrary.custom_click(secr.getLogout_Button(), "Click Logout Button");
         });
       
-
+ Thread.sleep(1000);
+ 
         ObjectRepo.startTestAndLog_1_SS("SECR_LogOut_TC03", "Verify that user should be able to confirm logout by clicking 'Yes'", () -> {
             WebElement yes_Button = driver.findElement(By.xpath("//button[normalize-space()='Yes']"));
             yes_Button.click();
@@ -38,7 +39,7 @@ public class SECR_LogOut_Cred extends BaseClass_SECR_Portal {
 
         SECR_LogOut_Main secr = PageFactory.initElements(driver, SECR_LogOut_Main.class);
         
-        ObjectRepo.startTestAndLog_1_NS(null);
+        ObjectRepo.startTestAndLog_1_NS("Without click on Logout Yes Button");
 
         ObjectRepo.startTestAndLog_1_SS("SECR_LogOut_TC01", "Verify that user should be able to click on SECR Menu", () -> {
             Liabrary.custom_click(secr.getSECR_Menu(), "Click SECR Menu");
@@ -50,10 +51,10 @@ public class SECR_LogOut_Cred extends BaseClass_SECR_Portal {
         });
       
 
-        ObjectRepo.startTestAndLog_1_SS("SECR_LogOut_TC03", "Verify that user should be able to confirm logout by clicking 'Yes'", () -> {
-            WebElement yes_Button = driver.findElement(By.xpath("//button[normalize-space()='Yes']"));
-            yes_Button.click();
-        });
+//        ObjectRepo.startTestAndLog_1_SS("SECR_LogOut_TC03", "Verify that user should be able to confirm logout by clicking 'Yes'", () -> {
+//            WebElement yes_Button = driver.findElement(By.xpath("//button[normalize-space()='Yes']"));
+//            yes_Button.click();
+//        });
         
 }
 

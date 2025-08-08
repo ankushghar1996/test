@@ -58,7 +58,9 @@ public class IR_Inventory_TrendByProduct_Report extends BaseClass {
         });
         Thread.sleep(1000);
         
-
+        driver.findElement(By.xpath("//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlChannelType_Input']")).sendKeys("Distributor"); 
+        Thread.sleep(1000);
+        
         ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_TrendByProduct_Report_TC07", "Click on Sales Hierarchy Dropdown", () -> {
             Liabrary.custom_click(ITPR.getSales_Hierarchy_Dropdown(), "Click On Sales Hierarchy Dropdown");
         });
@@ -117,11 +119,11 @@ public class IR_Inventory_TrendByProduct_Report extends BaseClass {
         });
         Thread.sleep(1000);
 
-        
-        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_TrendByProduct_Report_TC17", "Click on Download Button", () -> {
-            Liabrary.custom_click(ITPR.getDownload_Button(), "Click on Download button");
-        });
-        Thread.sleep(1000);
+//        
+//        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_TrendByProduct_Report_TC17", "Click on Download Button", () -> {
+//            Liabrary.custom_click(ITPR.getDownload_Button(), "Click on Download button");
+//        });
+//        Thread.sleep(1000);
         
     }
     

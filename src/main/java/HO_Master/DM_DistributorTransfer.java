@@ -36,7 +36,7 @@ public WebElement getRoute2Value_Dropdown() {
 	private WebElement SFA1_Dropdown;
 	
 	
-	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlFromSFA_DropDown']//ul//li[text()='Safari SFA [SFA-102]']")
+	@FindBy(how = How.XPATH, using = "//li[text()='Consol Care India Private Limited [SFA-006]']")
 	private WebElement SFA1Value_Dropdown;
 	
 	
@@ -44,7 +44,7 @@ public WebElement getRoute2Value_Dropdown() {
 	private WebElement Route1_Dropdown;
 	
 	
-	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlFromRoute_DropDown']//ul//li[text()='MANIK MARKET']")
+	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlFromRoute_DropDown']//ul//li")
 	private WebElement Route1Value_Dropdown;
 	
 	
@@ -52,7 +52,7 @@ public WebElement getRoute2Value_Dropdown() {
 	private WebElement SFA2_Dropdown;
 	
 	
-	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlToSFA_DropDown']//ul//li[text()='New Annapurna Associate [SFA-101]']")
+	@FindBy(how = How.XPATH, using = "(//li[text()='New Annapurna  Associate [SFA-001]'])[1]")
 	private WebElement SFA2Value_Dropdown;
 	
 	
@@ -60,7 +60,7 @@ public WebElement getRoute2Value_Dropdown() {
 	private WebElement Route2_Dropdown;
 	
 	
-	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlToRoute_DropDown']//ul//li[text()='Bangalore']")
+	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlToRoute_DropDown']//ul//li")
 	private WebElement Route2Value_Dropdown;
 	
 	@FindBy(how = How.XPATH, using = "//input[@id='ParentMasterContentPlaceHolder1_btnTransfer']")

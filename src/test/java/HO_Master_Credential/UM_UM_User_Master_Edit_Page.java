@@ -82,6 +82,9 @@ public class UM_UM_User_Master_Edit_Page extends BaseClass{
 			Liabrary.custom_click(UM2.getUserMasterGridLine1(),"Select user Master From Grid List");//Grid Line 1
 			});
 			Thread.sleep(1000);	
+			
+			driver.findElement(By.xpath("(//table[@id='ctl00_ParentMasterContentPlaceHolder1_radGridUserMaster_ctl00']//tr//td)[1]")).click();
+				Thread.sleep(1000);	
 				
 				
 			ObjectRepo.startTestAndLog_1_SS("SA_UM_User_Master_Edit_Page_TC_10", "Click on Edit Button", () -> {
@@ -267,11 +270,7 @@ public class UM_UM_User_Master_Edit_Page extends BaseClass{
 			ObjectRepo.startTestAndLog_1_SS("SA_UM_User_Master_Edit_Page_TC_13", "Click on Edit Button", () -> {
 			Liabrary.custom_click(CD.getClose_Btn(),"Click on Close Button");
 			});
-			Thread.sleep(1000);		
-
-
-
-			
+			Thread.sleep(1000);				
 		}
 	
 	  @Test(priority=2)

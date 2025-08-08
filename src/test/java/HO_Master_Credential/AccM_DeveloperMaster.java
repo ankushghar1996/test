@@ -16,7 +16,7 @@ import HO_Master.AM_SiteMaster;
 public class AccM_DeveloperMaster extends BaseClass{
 
 	@Test(priority=0)
-	public void Contractor_MasterHomepage() throws Exception {
+	public void Developer_Master() throws Exception {
 		
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
@@ -45,15 +45,17 @@ public class AccM_DeveloperMaster extends BaseClass{
 			Assert.assertEquals(Expected_Text, Actual_Text);});
 			Thread.sleep(2000);
 	
-	
-	
+
 	}
+	
 	@Test(priority=01)
-	public void Contractor_MasterHomepage_NS01() throws Exception {
+	public void Developer_Master_NS01() throws Exception {
 		
 		//Without Click Developer Master  
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		AM_DeveloperMaster DM = PageFactory.initElements(driver, AM_DeveloperMaster.class);
+		
+		ObjectRepo.startTestAndLog_1_NS("Without Click On Developer Master");
 		
 	
 		ObjectRepo.startTestAndLog_1_SS("SA_Developer_Master_TC01", "Click On select Master Menu", () -> {
@@ -81,13 +83,14 @@ public class AccM_DeveloperMaster extends BaseClass{
 	
 	}
 	@Test(priority=02)
-	public void Contractor_MasterHomepage_NS02() throws Exception {
+	public void Developer_Master_NS02() throws Exception {
 		
 		//Without Click on Account Master sub menu
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		AM_DeveloperMaster DM = PageFactory.initElements(driver, AM_DeveloperMaster.class);
 		
-	    ObjectRepo.startTestAndLog_1_NS("Without Click Account Master");
+	    ObjectRepo.startTestAndLog_1_NS("Without select Account Master sub menu");
+	    
 		ObjectRepo.startTestAndLog_1_SS("SA_Developer_Master_TC01", "Click On select Master Menu", () -> {
 		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu"); });
 		Thread.sleep(1000);

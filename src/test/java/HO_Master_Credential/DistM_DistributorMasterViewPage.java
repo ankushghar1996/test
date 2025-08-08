@@ -15,8 +15,7 @@ import HO_Master.DM_DistributorMasterViewPage;
 import HO_Master.DM_SFAViewPage;
 
 public class DistM_DistributorMasterViewPage extends BaseClass {
-	
-	@Test
+	@Test(priority=0)
 	public void Distributor_Master_View_Page() throws Exception {
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
@@ -78,10 +77,10 @@ public class DistM_DistributorMasterViewPage extends BaseClass {
 			Liabrary.custom_click(DMV.getClose_btn(), null);});
 			Thread.sleep(1000);
 			
-	
 	}
 	
-	@Test
+	
+	@Test(priority=1)
 	public void Distributor_Master_View_Page_NS1() throws Exception {
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);

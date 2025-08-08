@@ -80,11 +80,11 @@ public class OutletMaster_ApprovalPageCred extends BaseClass_HO_Portal {
     //Proceed click View button without Selecting Grid Data
     
     @Test(priority=01)
-    public void OM_View_NS01() throws Exception {
+    public void OM_ApprovalPage_NS01() throws Exception {
 
         OutletMaster_ApprovalPage Appr = PageFactory.initElements(driver, OutletMaster_ApprovalPage.class);
         
-        ObjectRepo.Headlines_logOnlyDescription("Negative test 1 for Proceed click View button without Selecting Grid Data ");
+        ObjectRepo.startTestAndLog_1_NS("Negative test 1 for Proceed click View button without Selecting Grid Data ");
 
         ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC01", "Click Master Menu", () -> {
             Liabrary.custom_click(Appr.getMaster_Menu(), "Click Master Menu");
@@ -134,11 +134,11 @@ public class OutletMaster_ApprovalPageCred extends BaseClass_HO_Portal {
 }
     //Without Click on Proceed to approval button click approval yes 
     @Test(priority=02)
-    public void OM_View_NS02() throws Exception {
+    public void OM_ApprovalPage_NS02() throws Exception {
 
         OutletMaster_ApprovalPage Appr = PageFactory.initElements(driver, OutletMaster_ApprovalPage.class);
         
-        ObjectRepo.Headlines_logOnlyDescription("NS02= Without Click on Proceed to approval button click approval yes");
+        ObjectRepo.startTestAndLog_1_NS("NS02= Without Click on Proceed to approval button click approval yes");
 
         ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ApprovalPageCred_TC01", "Click Master Menu", () -> {
             Liabrary.custom_click(Appr.getMaster_Menu(), "Click Master Menu");

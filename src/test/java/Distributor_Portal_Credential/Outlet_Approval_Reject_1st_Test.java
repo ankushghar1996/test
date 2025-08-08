@@ -8,7 +8,6 @@ import Com_Utility.Base_Class_Distributor;
 import Com_Utility.Liabrary;
 import Com_Utility.ObjectRepo;
 import Distributor_Portal.Outlet_Approval_1st;
-
  
 public class Outlet_Approval_Reject_1st_Test extends Base_Class_Distributor {
  
@@ -16,9 +15,7 @@ public class Outlet_Approval_Reject_1st_Test extends Base_Class_Distributor {
     public void Outlet_Reject() throws Exception {
  
         Outlet_Approval_1st DIST = PageFactory.initElements(driver, Outlet_Approval_1st.class);
- 
        
-
         ObjectRepo.startTestAndLog_1_SS("DB_Outlet_Approval_TC_01", "Click on Master menu", () -> {
             Liabrary.custom_click(DIST.getMaster(), "Click on Master");
         });
@@ -58,9 +55,7 @@ public class Outlet_Approval_Reject_1st_Test extends Base_Class_Distributor {
 
         ObjectRepo.startTestAndLog_1_SS("DB_Outlet_Approval_TC_08", "Click on No button", () -> {
             Liabrary.custom_click(DIST.getNo_Button(), "Click on No Btn");
-        });
-
-        
+        }); 
         
     }
     

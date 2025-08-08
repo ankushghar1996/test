@@ -32,59 +32,59 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC03", "Click on Creation Button", () -> {
-            Liabrary.custom_click(SEBS.getCreation_Button(), "Creation Button");
+//        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC03", "Click on Creation Button", () -> {
+//            Liabrary.custom_click(SEBS.getCreation_Button(), "Creation Button");
+//        });
+//        Thread.sleep(1000);
+        
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC03", "Click on Add Button", () -> {
+        driver.findElement(By.xpath("//div[@class='circle-add']//i[@aria-hidden='true']")).click();
         });
         Thread.sleep(1000);
         
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC04", "Click on Add Button", () -> {
-        driver.findElement(By.xpath("(//div[@class='circle-add'])[1]")).click();
-        });
-        Thread.sleep(1000);
-        
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC05", "enter mobile number", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC04", "enter mobile number", () -> {
         driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9547821425");
         });
         Thread.sleep(1000);
         
         
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC04", "Click on CONTINUE Button", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC05", "Click on CONTINUE Button", () -> {
         driver.findElement(By.xpath("(//button[normalize-space()='CONTINUE'])[1]")).click();
         });
         Thread.sleep(1000);
 
         
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC05", "Click on Distributor Dropdown", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC06", "Click on Distributor Dropdown", () -> {
             Liabrary.custom_click(SEBS.getSelect_Distributor_Dropdown(), "Distributor Dropdown");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC05", "Select Distributor Dropdown Value", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC07", "Select Distributor Dropdown Value", () -> {
             Liabrary.custom_click(SEBS.getSelect_Distributor_Dropdown_Value(), "Distributor Dropdown Value");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC06", "Click on Sales Engineer Dropdown", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC08", "Click on Sales Engineer Dropdown", () -> {
             Liabrary.custom_click(SEBS.getSales_Engineer_Dropdown(), "Sales Engineer Dropdown");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC07", "Select Sales Engineer Dropdown Value", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC09", "Select Sales Engineer Dropdown Value", () -> {
             Liabrary.custom_click(SEBS.getSales_Engineer_Dropdown_Value(), "Sales Engineer Dropdown Value");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC08", "Click on Route Dropdown", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC10", "Click on Route Dropdown", () -> {
             Liabrary.custom_click(SEBS.getRoute(), "Route Dropdown");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC09", "Select Route Dropdown Value", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC11", "Select Route Dropdown Value", () -> {
             Liabrary.custom_click(SEBS.getRoute_Value(), "Route Dropdown Value");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC10", "Enter Contractor Name", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC12", "Enter Contractor Name", () -> {
             driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("akash jha");
         });
         Thread.sleep(1000);
@@ -93,17 +93,17 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element1);
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC11", "Click on Contractor Type Dropdown", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC13", "Click on Contractor Type Dropdown", () -> {
             Liabrary.custom_click(SEBS.getContractor_Type(), "Contractor Type Dropdown");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC12", "Select Contractor Type Value", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC14", "Select Contractor Type Value", () -> {
             Liabrary.custom_click(SEBS.getContractor_Type_Value(), "Contractor Type Value");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC13", "Enter Contact Number", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC15", "Enter Contact Number", () -> {
             driver.findElement(By.xpath("//input[@placeholder='Enter Contact Number']")).sendKeys("9547821989");
         });
         Thread.sleep(1000);
@@ -112,52 +112,52 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element2);
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC14", "Enter Email Address", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC16", "Enter Email Address", () -> {
             driver.findElement(By.xpath("//input[@placeholder='Enter Email Address']")).sendKeys("HSPL@Test.com");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC15", "Enter Address Line 1", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC17", "Enter Address Line 1", () -> {
             driver.findElement(By.xpath("//input[@placeholder='Enter Address Line 1']")).sendKeys("Navle Bridge");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC16", "Enter Address Line 2", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC18", "Enter Address Line 2", () -> {
             driver.findElement(By.xpath("//input[@placeholder='Enter Address Line 2']")).sendKeys("Narhe");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC17", "Click on State Dropdown", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC19", "Click on State Dropdown", () -> {
             Liabrary.custom_click(SEBS.getState_Dropdown(), "State Dropdown");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC18", "Select State Value", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC20", "Select State Value", () -> {
             Liabrary.custom_click(SEBS.getState_Dropdown_Value(), "State Dropdown Value");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC19", "Click on City Dropdown", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC21", "Click on City Dropdown", () -> {
             Liabrary.custom_click(SEBS.getCity_Dropdown(), "City Dropdown");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC20", "Select City Value", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC22", "Select City Value", () -> {
             Liabrary.custom_click(SEBS.getCity_Dropdown_Value(), "City Dropdown Value");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC21", "Enter Pincode", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC23", "Enter Pincode", () -> {
             driver.findElement(By.xpath("//input[@placeholder='Enter Pin Code']")).sendKeys("411041");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC22", "Enter Aadhaar Number", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC24", "Enter Aadhaar Number", () -> {
             driver.findElement(By.xpath("//input[@placeholder='Enter Aadhar Number']")).sendKeys("803756789012");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC23", "Enter PAN Number", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC25", "Enter PAN Number", () -> {
             driver.findElement(By.xpath("//input[@placeholder='Enter PAN Number']")).sendKeys("AZVPK2525M");
         });
         Thread.sleep(1000);
@@ -166,7 +166,7 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element3);
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC24", "Enter GST Number", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC26", "Enter GST Number", () -> {
             driver.findElement(By.xpath("//input[@placeholder='Enter GST Number']")).sendKeys("27AAAPA1234A1Z5");
         });
         Thread.sleep(1000);
@@ -212,12 +212,12 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
 
 */
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC_033", "Click on camera button", ()-> {  
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC_027", "Click on camera button", ()-> {  
 	        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();});
 	        Thread.sleep(1000);
 
 	        
-	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC_034", "Select camera  and capture", ()-> {  
+	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC_028", "Select camera  and capture", ()-> {  
 	        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	        
@@ -233,7 +233,7 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
 
 	        Thread.sleep(2000);
 	        
-	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC_035", "Select camera  and capture", ()-> { 
+	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC_029", "Select camera  and capture", ()-> { 
 	        	
 	        	 WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 	        // Wait for the Capture button and click it
@@ -250,12 +250,12 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         
         
         
-	        ObjectRepo.startTestAndLog_1_SS("SEBSNew_Contractors_Test_036", "Click on camera button", ()-> {  
+	        ObjectRepo.startTestAndLog_1_SS("SEBSNew_Contractors_Test_030", "Click on camera button", ()-> {  
 		        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[2]")).click();});
 		        Thread.sleep(1000);
 
 		        
-		        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC_037", "Select camera  and capture", ()-> {  
+		        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC_031", "Select camera  and capture", ()-> {  
 		        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 		        
@@ -271,7 +271,7 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
 
 		        Thread.sleep(2000);
 		        
-		        ObjectRepo.startTestAndLog_1_SS("SEBS_New_New_Contractors_Test_TC_038", "Select camera  and capture", ()-> { 
+		        ObjectRepo.startTestAndLog_1_SS("SEBS_New_New_Contractors_Test_TC_033", "Select camera  and capture", ()-> { 
 		        	
 		        	 WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		        // Wait for the Capture button and click it
@@ -287,7 +287,7 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
 		        Thread.sleep(5000);
 	        
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC_39", "Click on SAVE button", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC_34", "Click on SAVE button", () -> {
             driver.findElement(By.xpath("//button[normalize-space()='SAVE']")).click();
         });
         Thread.sleep(1000);
@@ -296,12 +296,10 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
     @Test(priority = 1)
     public void New_Contractors_NS01() throws Exception {
         SEBS_New_Contractors SEBS = PageFactory.initElements(driver, SEBS_New_Contractors.class);
-
-        
+      
       //Without Click on Continue Button
   		ObjectRepo.startTestAndLog_1_NS("Without click on Continue btn");
-  		
-        
+     
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC01", "Click on Menu Button", () -> {
             Liabrary.custom_click(SEBS.getMenu(), "Click on Menu Button");
         });
@@ -362,10 +360,7 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC03", "Click on Creation Button", () -> {
-            Liabrary.custom_click(SEBS.getCreation_Button(), "Creation Button");
-        });
-        Thread.sleep(1000);
+        
         
         
         /*
@@ -406,55 +401,51 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         Liabrary.custom_click(SEBS.getCreation_Button(), "Creation Button");
     });
     Thread.sleep(1000);
+   
     
-    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC04", "Click on Add Button", () -> {
-    driver.findElement(By.xpath("(//div[@class='circle-add'])[1]")).click();
-    });
-    Thread.sleep(1000);
-    
-    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC05", "enter mobile number", () -> {
+    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC04", "enter mobile number", () -> {
     driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9547821425");
     });
     Thread.sleep(1000);
     
     
-    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC04", "Click on CONTINUE Button", () -> {
+    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC05", "Click on CONTINUE Button", () -> {
     driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
     });
     Thread.sleep(1000);
 
     
-    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC05", "Click on Distributor Dropdown", () -> {
+    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC06", "Click on Distributor Dropdown", () -> {
         Liabrary.custom_click(SEBS.getSelect_Distributor_Dropdown(), "Distributor Dropdown");
     });
     Thread.sleep(1000);
 
-    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC05", "Select Distributor Dropdown Value", () -> {
+    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC07", "Select Distributor Dropdown Value", () -> {
         Liabrary.custom_click(SEBS.getSelect_Distributor_Dropdown_Value(), "Distributor Dropdown Value");
     });
     Thread.sleep(1000);
 
-    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC06", "Click on Sales Engineer Dropdown", () -> {
+    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC08", "Click on Sales Engineer Dropdown", () -> {
         Liabrary.custom_click(SEBS.getSales_Engineer_Dropdown(), "Sales Engineer Dropdown");
     });
     Thread.sleep(1000);
 
-    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC07", "Select Sales Engineer Dropdown Value", () -> {
+    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC09", "Select Sales Engineer Dropdown Value", () -> {
         Liabrary.custom_click(SEBS.getSales_Engineer_Dropdown_Value(), "Sales Engineer Dropdown Value");
     });
     Thread.sleep(1000);
 
-    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC08", "Click on Route Dropdown", () -> {
+    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC10", "Click on Route Dropdown", () -> {
         Liabrary.custom_click(SEBS.getRoute(), "Route Dropdown");
     });
     Thread.sleep(1000);
 
-    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC09", "Select Route Dropdown Value", () -> {
+    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC11", "Select Route Dropdown Value", () -> {
         Liabrary.custom_click(SEBS.getRoute_Value(), "Route Dropdown Value");
     });
     Thread.sleep(1000);
 
-    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC10", "Enter Contractor Name", () -> {
+    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC12", "Enter Contractor Name", () -> {
         driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("akash jha");
     });
     Thread.sleep(1000);
@@ -463,12 +454,12 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
     ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element1);
     Thread.sleep(1000);
 
-    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC11", "Click on Contractor Type Dropdown", () -> {
+    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC13", "Click on Contractor Type Dropdown", () -> {
         Liabrary.custom_click(SEBS.getContractor_Type(), "Contractor Type Dropdown");
     });
     Thread.sleep(1000);
 
-    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC12", "Select Contractor Type Value", () -> {
+    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC14", "Select Contractor Type Value", () -> {
         Liabrary.custom_click(SEBS.getContractor_Type_Value(), "Contractor Type Value");
     });
     Thread.sleep(1000);

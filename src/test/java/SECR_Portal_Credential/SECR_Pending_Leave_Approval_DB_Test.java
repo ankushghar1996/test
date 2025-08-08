@@ -51,6 +51,7 @@ public class SECR_Pending_Leave_Approval_DB_Test extends BaseClass_SECR_Portal {
         SECR_Pending_Leave_Approval_DB SECR = PageFactory.initElements(driver, SECR_Pending_Leave_Approval_DB.class);
         
         //Without Click Leave Approval Button
+        ObjectRepo.startTestAndLog_1_NS("Without Click Leave Approval Button");
 
         WebElement scroll = driver.findElement(By.xpath("//div[@class='pending-retailer']//span[normalize-space()='New Retailer Created']"));
         JavascriptExecutor jse1 = (JavascriptExecutor) driver;
@@ -84,7 +85,8 @@ public class SECR_Pending_Leave_Approval_DB_Test extends BaseClass_SECR_Portal {
 
         SECR_Pending_Leave_Approval_DB SECR = PageFactory.initElements(driver, SECR_Pending_Leave_Approval_DB.class);
         
-        //Without Click Leave Approval Button
+        //Without Click Pending Leave Approval
+        ObjectRepo.startTestAndLog_1_NS("Without Click Pending Leave Approval Button");
 
         WebElement scroll = driver.findElement(By.xpath("//div[@class='pending-retailer']//span[normalize-space()='New Retailer Created']"));
         JavascriptExecutor jse1 = (JavascriptExecutor) driver;

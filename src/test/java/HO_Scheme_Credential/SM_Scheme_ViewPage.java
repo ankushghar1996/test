@@ -12,8 +12,8 @@ import HO_Scheme.Scheme_Master_View;
 
 public class SM_Scheme_ViewPage extends BaseClass {
 
-	 @Test(priority=0)
-	    public void Route_Master_Page() throws Exception {
+   @Test(priority=0)
+   public void Scheme_View_Page() throws Exception {
 
 	        HomePage hp = PageFactory.initElements(driver, HomePage.class);
 	        Scheme_Master_View SMV = PageFactory.initElements(driver, Scheme_Master_View.class);
@@ -24,7 +24,7 @@ public class SM_Scheme_ViewPage extends BaseClass {
 	        });
 	        Thread.sleep(1000);
 	        
-
+	        
 	        ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_ViewPage_TC02", "Select Scheme Setup Sub Menu", () -> {
 	            Liabrary.custom_click(hp.getScheme_Setup_SubMenu(), "Select Scheme Setup Sub Menu");
 	        });
@@ -37,10 +37,9 @@ public class SM_Scheme_ViewPage extends BaseClass {
 	        Thread.sleep(1000);
 	        
 	    }
-       
-    
+          
     @Test(priority=01)
-    public void Route_Master_Page_NS01() throws Exception {
+    public void Scheme_View_Page_NS01() throws Exception {
 
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         Scheme_Master_View SMV = PageFactory.initElements(driver, Scheme_Master_View.class);
@@ -73,7 +72,7 @@ public class SM_Scheme_ViewPage extends BaseClass {
     }
     
     @Test(priority=02)
-    public void Route_Master_Page_NS02() throws Exception {
+    public void Scheme_View_Page_NS02() throws Exception {
 
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         Scheme_Master_View SMV = PageFactory.initElements(driver, Scheme_Master_View.class);
