@@ -18,8 +18,7 @@ public class DistM_SFAViewPage extends BaseClass{
 
 	@Test(priority=0)
 	public void SFAViewPage() throws Exception {
-		
-		
+				
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		DM_SFAViewPage SFA = PageFactory.initElements(driver, DM_SFAViewPage.class);
 		Common_Data CD = PageFactory.initElements(driver, Common_Data.class);
@@ -34,9 +33,9 @@ public class DistM_SFAViewPage extends BaseClass{
 		Liabrary.custom_click(hp.getDistributorMaster_SubMenu(), "Distributor Master sub menu");});
 		Thread.sleep(1000);
 	
-//		ObjectRepo.startTestAndLog_1_SS("SA_SFAViewPage_TC03", "Click on SFA Distributor Master", () -> {
-//		Liabrary.custom_click(SFA.getSFADistributor_Master(), null);});
-//		Thread.sleep(1000);
+		ObjectRepo.startTestAndLog_1_SS("SA_SFAViewPage_TC03", "Click on SFA Distributor Master", () -> {
+		Liabrary.custom_click(SFA.getSFADistributor_Master(), null);});
+		Thread.sleep(1000);
 	
 		
 		ObjectRepo.startTestAndLog_1_SS("SA_SFAViewPage_TC04", "Verify SFA Distributor Master Header Text", () -> {

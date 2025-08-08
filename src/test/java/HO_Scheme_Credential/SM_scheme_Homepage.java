@@ -14,9 +14,8 @@ import Com_Utility.ObjectRepo;
 import HO_Scheme.Scheme_Master_Homepage;
 
 public class SM_scheme_Homepage extends BaseClass {
-
     @Test(priority=0)
-    public void Route_Master_Page() throws Exception {	
+    public void scheme_Homepage() throws Exception {	
     	
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         Scheme_Master_Homepage SMH = PageFactory.initElements(driver, Scheme_Master_Homepage.class);
@@ -27,19 +26,16 @@ public class SM_scheme_Homepage extends BaseClass {
         });
         Thread.sleep(1000);
         
-
         ObjectRepo.startTestAndLog_1_SS("SA_SM_scheme_Homepage_TC02", "Select Scheme Setup Sub Menu", () -> {
             Liabrary.custom_click(hp.getScheme_Setup_SubMenu(), "Select Scheme Setup Sub Menu");
         });
         Thread.sleep(1000);
         
-
         ObjectRepo.startTestAndLog_1_SS("SA_SM_scheme_Homepage_TC03", "Select Scheme Master Sub Menu", () -> {
             Liabrary.custom_click(SMH.getScheme_Master_Menu(), "Select Scheme Master Sub Menu");
         });
         Thread.sleep(1000);
 
-        
         ObjectRepo.startTestAndLog_1_SS("SA_SM_scheme_Homepage_TC04", "Verify Scheme Master Header Text", () -> {
             WebElement header = driver.findElement(By.xpath("//h4[normalize-space()='Scheme Master']"));
             String actualText = header.getText();
@@ -52,7 +48,7 @@ public class SM_scheme_Homepage extends BaseClass {
     
     //Header text Change
  @Test(priority=01)
- public void Route_Master_Page_NS01() throws Exception {	
+ public void scheme_Homepage_NS01() throws Exception {	
     	
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         Scheme_Master_Homepage SMH = PageFactory.initElements(driver, Scheme_Master_Homepage.class);
@@ -89,7 +85,7 @@ public class SM_scheme_Homepage extends BaseClass {
  
  //without click scheme setup Menu
 @Test(priority=02)
-public void Route_Master_Page_NS02() throws Exception {	
+public void scheme_Homepage_NS02() throws Exception {	
    	
        HomePage hp = PageFactory.initElements(driver, HomePage.class);
        Scheme_Master_Homepage SMH = PageFactory.initElements(driver, Scheme_Master_Homepage.class);

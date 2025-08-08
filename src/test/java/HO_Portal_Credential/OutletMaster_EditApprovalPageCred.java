@@ -199,7 +199,7 @@ public class OutletMaster_EditApprovalPageCred extends BaseClass_HO_Portal {
     public void OM_Edit_NS01() throws Exception {
     OutletMaster_EditApprovalPage edit = PageFactory.initElements(driver, OutletMaster_EditApprovalPage.class);
     	
-     ObjectRepo.Headlines_logOnlyDescription("NS01= Without edit click proceed further");
+     ObjectRepo.startTestAndLog_1_NS("NS01= Without edit click proceed further");
 
         ObjectRepo.startTestAndLog_1_SS("HO_Outlet_EditApproval_TC01", "Clicking on Master menu", () -> {
             Liabrary.custom_click(edit.getMaster_Menu(), null);
@@ -383,7 +383,7 @@ public class OutletMaster_EditApprovalPageCred extends BaseClass_HO_Portal {
     public void OM_Edit_NS02() throws Exception {
     	OutletMaster_EditApprovalPage edit = PageFactory.initElements(driver, OutletMaster_EditApprovalPage.class);
     	
-    	 ObjectRepo.Headlines_logOnlyDescription("NS02= Wrong Header Text");
+    	 ObjectRepo.startTestAndLog_1_NS("NS02= Wrong Header Text");
 
         ObjectRepo.startTestAndLog_1_SS("HO_Outlet_EditApproval_TC01", "Clicking on Master menu", () -> {
             Liabrary.custom_click(edit.getMaster_Menu(), null);

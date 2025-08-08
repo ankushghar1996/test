@@ -67,7 +67,7 @@ WebDriver driver;
 		return ChannelTypeValue1_Dropdown;
 	}
 
-	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlUserType_DropDown']//ul//li[text()='Distributor']")
+	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlUserType_DropDown']//ul//li[text()='SFA']")
 	private WebElement ChannelTypeValue1_Dropdown;
 	
 	

@@ -102,7 +102,7 @@ public class New_Activity_NonPJPSite_Cred extends BaseClass_SEBS_Portal {
             Liabrary.custom_click(view.getChcekbox_flexCheckDefault(), "Click Checkbox");
         });
         Thread.sleep(1000);
-        
+
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_NonPJP_TC15", "Scroll to State", () -> {
             WebElement scroll1 = driver.findElement(By.xpath("//label[normalize-space()='State']"));

@@ -1,5 +1,7 @@
 package HO_Activity_Credential;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
@@ -9,6 +11,7 @@ import Com_Utility.Common_Data;
 import Com_Utility.HomePage;
 import Com_Utility.Liabrary;
 import Com_Utility.ObjectRepo;
+import HO_Activity.Activity_Upload;
 import HO_Activity.Media_Add_Media;
 import HO_Activity.Media_UploadMedia;
 
@@ -21,6 +24,7 @@ public class AddMedia extends BaseClass {
         Media_UploadMedia UM = PageFactory.initElements(driver, Media_UploadMedia.class);
         Media_Add_Media AM = PageFactory.initElements(driver, Media_Add_Media.class);
 
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         
         ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_01", "Select Activity Menu", () -> {
             Liabrary.custom_click(hp.getActivity_Menu(), "select Activity Menu");
@@ -35,7 +39,7 @@ public class AddMedia extends BaseClass {
         
 
         ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_03", "Select Upload Media menu", () -> {
-            Liabrary.custom_click(UM.getUploadMedia_Menu(), "select Upload Media menu");
+            Liabrary.custom_click(hp.getMedia_Upload(), "select Upload Media menu");
         });
         Thread.sleep(1000);
 
@@ -48,6 +52,12 @@ public class AddMedia extends BaseClass {
         
         ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_05", "Select Video from Type dropdown", () -> {
             Liabrary.custom_click(AM.getType_Dropdown_Select_Video(), null);
+            try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             Liabrary.custom_click(AM.getType_Dropdown_SelectValue_Video(), null);
         });
         Thread.sleep(1000);
@@ -56,6 +66,12 @@ public class AddMedia extends BaseClass {
 
         ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_06", "Select Application category", () -> {
             Liabrary.custom_click(AM.getCategory1_Dropdown_Select_Application_Video(), null);
+            try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             Liabrary.custom_click(AM.getCategory1_Dropdown_SelectValue_Application_Video(), null);
         });
         Thread.sleep(1000);
@@ -87,7 +103,6 @@ public class AddMedia extends BaseClass {
             Liabrary.custom_click(hp.getActivity_Menu(), "select Activity Menu");
         });
         Thread.sleep(1000);
-        
 
         ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_10", "Select Media sub menu", () -> {
             Liabrary.custom_click(hp.getMedia_SubMenu(), "select Media sub menu");
@@ -95,8 +110,8 @@ public class AddMedia extends BaseClass {
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_11", "Select Upload Media menu", () -> {
-            Liabrary.custom_click(UM.getUploadMedia_Menu(), "select Upload Media menu");
+        ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_03", "Select Upload Media menu", () -> {
+            Liabrary.custom_click(hp.getMedia_Upload(), "select Upload Media menu");
         });
         Thread.sleep(1000);
 
@@ -109,6 +124,13 @@ public class AddMedia extends BaseClass {
         
         ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_13", "Select Document from Type dropdown", () -> {
             Liabrary.custom_click(AM.getType_Dropdown_Select_Video(), null);
+            
+            try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             Liabrary.custom_click(AM.getType_Dropdown_SelectValue1_Document(), null);
         });
         Thread.sleep(1000);
@@ -116,6 +138,13 @@ public class AddMedia extends BaseClass {
 
         ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_14", "Select New Product category", () -> {
             Liabrary.custom_click(AM.getCategory1_Dropdown_Select_Application_Video(), null);
+            
+            try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             Liabrary.custom_click(AM.getCategory_Dropdown_Select_New_Product(), null);
         });
         Thread.sleep(1000);
@@ -156,9 +185,8 @@ public class AddMedia extends BaseClass {
         });
         Thread.sleep(1000);
 
-        
-        ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_19", "Select Upload Media menu", () -> {
-            Liabrary.custom_click(UM.getUploadMedia_Menu(), "select Upload Media menu");
+        ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_03", "Select Upload Media menu", () -> {
+            Liabrary.custom_click(hp.getMedia_Upload(), "select Upload Media menu");
         });
         Thread.sleep(1000);
         
@@ -178,6 +206,13 @@ public class AddMedia extends BaseClass {
 
         ObjectRepo.startTestAndLog_1_SS("HOAct_AddMedia_TC_22", "Select Retailer category", () -> {
             Liabrary.custom_click(AM.getCategory1_Dropdown_Select_Application_Video(), null);
+            
+            try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             Liabrary.custom_click(AM.getCategory_Dropdown_Select_Retailer(), null);
         });
         Thread.sleep(1000);

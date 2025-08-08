@@ -17,7 +17,7 @@ import HO_Master.RM_PJPMaster_ViewPage;
 public class RM_RM_PJPMaster_View_Page extends BaseClass {
 
     @Test(priority=0)
-    public void RM_PJPmaster() throws Exception {
+    public void RM_PJPmaster_View_Page() throws Exception {
     	
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         RM_PJPMaster PM1 = PageFactory.initElements(driver, RM_PJPMaster.class);
@@ -211,7 +211,7 @@ public class RM_RM_PJPMaster_View_Page extends BaseClass {
     }
     
     @Test(priority=1)
-    public void RM_PJPmaster_NS1() throws Exception {
+    public void RM_PJPmaster_View_Page_NS1() throws Exception {
     	
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         RM_PJPMaster PM1 = PageFactory.initElements(driver, RM_PJPMaster.class);
@@ -407,7 +407,7 @@ public class RM_RM_PJPMaster_View_Page extends BaseClass {
     }
     
     @Test(priority=2)
-    public void RM_PJPmaster_NS2() throws Exception {
+    public void RM_PJPmaster_View_Page_NS2() throws Exception {
     	
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         RM_PJPMaster PM1 = PageFactory.initElements(driver, RM_PJPMaster.class);

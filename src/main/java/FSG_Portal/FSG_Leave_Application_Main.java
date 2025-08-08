@@ -22,7 +22,7 @@ public class FSG_Leave_Application_Main {
 	private WebElement Reason_Textbox ;
 	@FindBy (how=How.XPATH,using="//button[@class='common-footer-button']")
 	private WebElement Apply_Button ;
-	@FindBy (how=How.XPATH,using=" //b[normalize-space()='Cancel Leave']")
+	@FindBy (how=How.XPATH,using="//button[normalize-space()='CANCEL']")
 	private WebElement Cancled_Leave ;
 	@FindBy (how=How.XPATH,using="")
 	private WebElement Filter_Button ;

@@ -42,7 +42,7 @@ public class AccM_ContractorMaster extends BaseClass{
 			WebElement UploadText=driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_HeaderTaag']"));
 			String Actual_Text=UploadText.getText();
 			System.out.println(Actual_Text);
-			String Expected_Text=" Contractor Master";
+			String Expected_Text="Contractor Master";
 			Assert.assertEquals(Expected_Text, Actual_Text);});
 			Thread.sleep(2000);
 		
@@ -89,7 +89,7 @@ public class AccM_ContractorMaster extends BaseClass{
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		AM_ContractorMaster CM = PageFactory.initElements(driver, AM_ContractorMaster.class);
 		
-	
+	    ObjectRepo.startTestAndLog_1_NS("Without Click on Contractor Master");
 		ObjectRepo.startTestAndLog_1_SS("SA_Contractor_Master_TC01", "Click on Master Menu", () -> {
 		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");});
 		Thread.sleep(1000);
@@ -104,7 +104,7 @@ public class AccM_ContractorMaster extends BaseClass{
 //		Thread.sleep(1000);
 	
 	
-		ObjectRepo.startTestAndLog_1_SS("SA_Contractor_Master_TC04", "Verify Contractor Master header text", () -> {
+		    ObjectRepo.startTestAndLog_1_SS("SA_Contractor_Master_TC04", "Verify Contractor Master header text", () -> {
 			WebElement UploadText=driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_HeaderTaag']"));
 			String Actual_Text=UploadText.getText();
 			System.out.println(Actual_Text);

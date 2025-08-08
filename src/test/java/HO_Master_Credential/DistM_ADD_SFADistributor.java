@@ -17,11 +17,8 @@ import HO_Master.DM_ADDSFADistributor;
 import HO_Master.DM_SFAViewPage;
 
 public class DistM_ADD_SFADistributor extends BaseClass{
-
-	
 	@Test(priority = 0)
-	public void Add_SFA() throws Exception {
-		
+	public void Add_SFA_Distributor() throws Exception {
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		DM_ADDSFADistributor AD = PageFactory.initElements(driver, DM_ADDSFADistributor.class);
@@ -168,11 +165,7 @@ public class DistM_ADD_SFADistributor extends BaseClass{
 		ObjectRepo.startTestAndLog_1_SS("SA_ADD_SFADistributor_TC30", "Godown Address 1", () -> {
 		driver.findElement(By.xpath("//button[@class='btn btn-link btn-block text-left label_default']")).click();});
 		Thread.sleep(1000);
-		
-		
-		
-		
-		
+
 		
 		/*
 		Actions act = new Actions(driver);
@@ -266,9 +259,10 @@ public class DistM_ADD_SFADistributor extends BaseClass{
 		ObjectRepo.startTestAndLog_1_SS("SA_ADD_SFADistributor_TC40", "Click On Close Button", () -> {
 		Liabrary.custom_click(CD.getClose_Btn(), null);});
 		Thread.sleep(1000);
-		
-		
+
 	}
+	
+	
 	
 	
 //	@Test(priority = 1)

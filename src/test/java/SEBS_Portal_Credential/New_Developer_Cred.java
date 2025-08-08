@@ -14,7 +14,9 @@ import SEBS_Portal.New_Developer_Creation;
 public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 	
 	@Test(priority = 0)
-	public void SEBS_Developer_creation() throws Exception { 
+
+	public void SEBS_New_Developer_Creat() throws Exception { 
+
 		
 		New_Developer_Creation view = PageFactory.initElements(driver, New_Developer_Creation.class);
 	
@@ -30,12 +32,13 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 		Liabrary.custom_click(view.getAdd_Menu(), "Click Developer Add Menu"); });
 		Thread.sleep(1000);
 		
-		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("98541602020");
+
+		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9403582560");
 		Thread.sleep(1000);
 		
-		driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
+		driver.findElement(By.xpath("//button[normalize-space(text())='CONTINUE']")).click();
 		Thread.sleep(1000);
-		
+
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_04", "Click Distributor Mapped", () ->{
 		Liabrary.custom_click(view.getDistributor_Mapped(), "Click Distributor Mapped");});
@@ -44,32 +47,36 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_05", "select Distributor Mapped", () ->{
 		Liabrary.custom_click(view.getSelect_Distributor_Mapped(), "select Distributor Mapped");});
 		Thread.sleep(1000);
-		
-		
+			
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_TC_06", "Click Distributor Name", () ->{
-			Liabrary.custom_Sendkeys(view.getEnter_Developer_Name(), excel.getStringdata("SEBS_Devloper", 2, 0), "Click Distributor Name"); });
-			Thread.sleep(1000);
+
+	    Liabrary.custom_Sendkeys(view.getEnter_Developer_Name(), excel.getStringdata("SEBS_Devloper", 2, 0), null); });
+	    Thread.sleep(1000);
 		
-			ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_07", "select salesman Mapped", () ->{
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_07", "Sales Engineer Name", () ->{
 		driver.findElement(By.xpath("//ng-select[@bindvalue='SalesmanId']//input[@type='text']")).click();
 			});
 		Thread.sleep(1000);
-		
-		
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_08", "click salesman Mapped", () ->{
-		driver.findElement(By.xpath("//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Nageshwar']")).click();
+				
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_08", "select Sales Engineer name", () ->{
+		driver.findElement(By.xpath("//span[@class='ng-option-label']")).click();
+
 		});
 		Thread.sleep(1000);
 		
 		
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_09", "Click Route Mapped", () ->{
+
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_09", "Click Route name", () ->{
+
 		driver.findElement(By.xpath("//ng-select[@bindvalue='RouteId']//input[@type='text']")).click();
 		});
 		Thread.sleep(1000);
 		
 		
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_10", "select Route Mapped", () ->{
-		driver.findElement(By.xpath("//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='karvey nagar']")).click();
+
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_10", "select Route", () ->{
+		driver.findElement(By.xpath("//span[contains(@class, 'ng-option-label')]")).click();
+
 		});
 		Thread.sleep(1000);
 		
@@ -180,7 +187,7 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 	
 	
 	@Test(priority = 1)
-	public void SECR_ViewProfile_NS01() throws Exception { 
+	public void SEBS_New_Developer_Creat_NS01() throws Exception { 
 		
 		New_Developer_Creation view = PageFactory.initElements(driver, New_Developer_Creation.class);
 		
@@ -208,12 +215,10 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 }
 	
 	
-	
-	
-	
+
 	
 	@Test(priority = 2)
-	public void SECR_ViewProfile_NS02() throws Exception { 
+	public void SEBS_New_Developer_Creat_NS02() throws Exception { 
 		
 		New_Developer_Creation view = PageFactory.initElements(driver, New_Developer_Creation.class);
 		
@@ -238,7 +243,7 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 	
 	
 	@Test(priority = 3)
-	public void SECR_ViewProfile_NS03() throws Exception { 
+	public void SEBS_New_Developer_Creat_NS03() throws Exception { 
 		
 		New_Developer_Creation view = PageFactory.initElements(driver, New_Developer_Creation.class);
 		
@@ -394,7 +399,7 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 	
 	
 	@Test(priority = 4)
-	public void SECR_ViewProfile_NS_04() throws Exception { 
+	public void SEBS_New_Developer_Creat_NS04() throws Exception { 
 		
 		New_Developer_Creation view = PageFactory.initElements(driver, New_Developer_Creation.class);
 	

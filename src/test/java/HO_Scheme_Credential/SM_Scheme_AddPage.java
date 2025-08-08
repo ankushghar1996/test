@@ -17,7 +17,7 @@ import HO_Scheme.Scheme_Master_Add_Page;
 public class SM_Scheme_AddPage extends BaseClass {
 
     @Test(priority = 0)
-    public void Scheme_Master_AddPage_AllSku() throws Exception {
+    public void Scheme_Master_AddPage() throws Exception {
     	
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         Scheme_Master_Add_Page SMA = PageFactory.initElements(driver, Scheme_Master_Add_Page.class);
@@ -98,7 +98,7 @@ public class SM_Scheme_AddPage extends BaseClass {
 
         while (true) {
             String text = driver.findElement(By.xpath("//span[@id='ctl00_ParentMasterContentPlaceHolder1_dtpStartDate_calendar_Title']")).getText();
-            if (text.equals("December 2024")) break;
+            if (text.equals("August, 2025")) break;
             driver.findElement(By.xpath("//a[@id='ctl00_ParentMasterContentPlaceHolder1_dtpStartDate_calendar_NN']//span[@class='t-font-icon t-i-arrow-right']")).click();
             Thread.sleep(1000);
         }
@@ -122,7 +122,7 @@ public class SM_Scheme_AddPage extends BaseClass {
 
         while (true) {
             String text1 = driver.findElement(By.xpath("//span[@id='ctl00_ParentMasterContentPlaceHolder1_dtpEndDate_calendar_Title']")).getText();
-            if (text1.equals("December 2024")) break;
+            if (text1.equals("December, 2025")) break;
             driver.findElement(By.xpath("//a[@id='ctl00_ParentMasterContentPlaceHolder1_dtpEndDate_calendar_NN']//span[@class='t-font-icon t-i-arrow-right']")).click();
             Thread.sleep(1000);
         }
@@ -319,7 +319,7 @@ public class SM_Scheme_AddPage extends BaseClass {
 
         while (true) {
             String text = driver.findElement(By.xpath("//span[@id='ctl00_ParentMasterContentPlaceHolder1_dtpStartDate_calendar_Title']")).getText();
-            if (text.equals("December 2024")) break;
+            if (text.equals("August, 2025")) break;
             driver.findElement(By.xpath("//a[@id='ctl00_ParentMasterContentPlaceHolder1_dtpStartDate_calendar_NN']//span[@class='t-font-icon t-i-arrow-right']")).click();
             Thread.sleep(1000);
         }
@@ -343,7 +343,7 @@ public class SM_Scheme_AddPage extends BaseClass {
 
         while (true) {
             String text1 = driver.findElement(By.xpath("//span[@id='ctl00_ParentMasterContentPlaceHolder1_dtpEndDate_calendar_Title']")).getText();
-            if (text1.equals("December 2024")) break;
+            if (text1.equals("December, 2025")) break;
             driver.findElement(By.xpath("//a[@id='ctl00_ParentMasterContentPlaceHolder1_dtpEndDate_calendar_NN']//span[@class='t-font-icon t-i-arrow-right']")).click();
             Thread.sleep(1000);
         }
@@ -540,15 +540,15 @@ public class SM_Scheme_AddPage extends BaseClass {
 
         while (true) {
             String text = driver.findElement(By.xpath("//span[@id='ctl00_ParentMasterContentPlaceHolder1_dtpStartDate_calendar_Title']")).getText();
-            if (text.equals("December 2024")) break;
+            if (text.equals("August, 2025")) break;
             driver.findElement(By.xpath("//a[@id='ctl00_ParentMasterContentPlaceHolder1_dtpStartDate_calendar_NN']//span[@class='t-font-icon t-i-arrow-right']")).click();
             Thread.sleep(1000);
         }
 
         ObjectRepo.startTestAndLog_1_SS("SA_SM_Scheme_AddPage_TC13", "Select Start Date", () -> {
-            List<WebElement> ele = driver.findElements(By.xpath("//div[@id='ctl00_ParentMasterContentPlaceHolder1_dtpStartDate_calendar']//table//tbody//tr//td//a[text()='28']"));
+            List<WebElement> ele = driver.findElements(By.xpath("//div[@id='ctl00_ParentMasterContentPlaceHolder1_dtpStartDate_calendar']//table//tbody//tr//td//a[text()='2']"));
             for (WebElement element : ele) {
-                if (element.getText().equals("28")) {
+                if (element.getText().equals("22")) {
                     element.click();
                     break;
                 }
@@ -564,7 +564,7 @@ public class SM_Scheme_AddPage extends BaseClass {
 
         while (true) {
             String text1 = driver.findElement(By.xpath("//span[@id='ctl00_ParentMasterContentPlaceHolder1_dtpEndDate_calendar_Title']")).getText();
-            if (text1.equals("December 2024")) break;
+            if (text1.equals("December, 2025")) break;
             driver.findElement(By.xpath("//a[@id='ctl00_ParentMasterContentPlaceHolder1_dtpEndDate_calendar_NN']//span[@class='t-font-icon t-i-arrow-right']")).click();
             Thread.sleep(1000);
         }

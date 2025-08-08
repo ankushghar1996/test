@@ -14,9 +14,8 @@ import HO_Master.AM_ApplicatiorMaster;
 import HO_Master.DM_DistributorTransfer;
 
 public class AccM_ApplicatiorMaster extends BaseClass{
-
 	@Test(priority=0)
-	public void Distributor_Transfer1() throws Exception {
+	public void Applicator_Master() throws Exception {
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		AM_ApplicatiorMaster AP = PageFactory.initElements(driver, AM_ApplicatiorMaster.class);
@@ -40,18 +39,16 @@ public class AccM_ApplicatiorMaster extends BaseClass{
 			System.out.println(Actual_Text);
 			String Expected_Text="Applicator Master";
 			Assert.assertEquals(Expected_Text, Actual_Text);});
-			Thread.sleep(2000);
-	
-	
-	
-	
+			Thread.sleep(2000);		
 	}
 	
 	@Test(priority=1)
-	public void Distributor_Transfer_NS01() throws Exception {
+	public void  Applicator_Master_NS01() throws Exception {
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		AM_ApplicatiorMaster AP = PageFactory.initElements(driver, AM_ApplicatiorMaster.class);
+		
+		ObjectRepo.startTestAndLog_1_NS("Without Click On Applicator Master");
 		
 		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC01", "Click On Master Menu", () -> {
 		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");});
@@ -61,9 +58,9 @@ public class AccM_ApplicatiorMaster extends BaseClass{
 		Liabrary.custom_click(hp.getAccountMaster_SubMenu(), "select Account Master sub menu");});
 		Thread.sleep(1000);
 	
-		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC03", "Click On Applicator Master", () -> {
-		Liabrary.custom_click(AP.getApplicator_Master(), null);});
-		Thread.sleep(1000);
+//		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC03", "Click On Applicator Master", () -> {
+//		Liabrary.custom_click(AP.getApplicator_Master(), null);});
+//		Thread.sleep(1000);
 	
 		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC04", "Click On Applicator Master", () -> {
 //		ObjectRepo.test.log(Status.INFO, "Test Case 4 : Verify that user should be Target Upload Header Text.");
@@ -73,27 +70,25 @@ public class AccM_ApplicatiorMaster extends BaseClass{
 			String Expected_Text="Applicator Master";
 			Assert.assertEquals(Expected_Text, Actual_Text);});
 			Thread.sleep(2000);
-	
-	
-	
-	
+			
 	}
-	
-	
+
 	@Test(priority=2)
-	public void Distributor_Transfer_NS02() throws Exception {
+	public void  Applicator_Master_NS02() throws Exception {
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		AM_ApplicatiorMaster AP = PageFactory.initElements(driver, AM_ApplicatiorMaster.class);
+		
+		ObjectRepo.startTestAndLog_1_NS("Without select Account Master sub menu");
 		
 		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC01", "Click On Master Menu", () -> {
 		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");});
 		Thread.sleep(1000);
 			
-		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC02", "Click On Account Master SubMenu", () -> {
-		Liabrary.custom_click(hp.getAccountMaster_SubMenu(), "select Account Master sub menu");});
-		Thread.sleep(1000);
-	
+//		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC02", "Click On Account Master SubMenu", () -> {
+//		Liabrary.custom_click(hp.getAccountMaster_SubMenu(), "select Account Master sub menu");});
+//		Thread.sleep(1000);
+//	
 		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC03", "Click On Applicator Master", () -> {
 		Liabrary.custom_click(AP.getApplicator_Master(), null);});
 		Thread.sleep(1000);

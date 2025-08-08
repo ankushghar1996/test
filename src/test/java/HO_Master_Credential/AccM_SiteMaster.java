@@ -19,8 +19,7 @@ public class AccM_SiteMaster extends BaseClass{
 
 	
 	@Test(priority=0)
-	public void Site_MasterHomepage() throws Exception {
-		
+	public void Site_Master() throws Exception {
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		AM_SiteMaster SM = PageFactory.initElements(driver, AM_SiteMaster.class);
@@ -52,7 +51,7 @@ public class AccM_SiteMaster extends BaseClass{
 	}
 	
 	@Test(priority=1)
-	public void Site_MasterHomepage_NS1() throws Exception {
+	public void Site_Master_NS1() throws Exception {
 		
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
@@ -86,7 +85,7 @@ public class AccM_SiteMaster extends BaseClass{
 }
 	
 	@Test(priority=1)
-	public void Site_MasterHomepage_NS2() throws Exception {
+	public void Site_Master_NS2() throws Exception {
 		
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);

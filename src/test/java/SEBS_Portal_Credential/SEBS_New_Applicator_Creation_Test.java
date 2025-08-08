@@ -23,9 +23,7 @@ public class SEBS_New_Applicator_Creation_Test extends BaseClass_SEBS_Portal {
 	public void Applicator_creation () throws Exception {
 		
 		     SEBS_New_Applicator_Creation SEBS = PageFactory.initElements(driver, SEBS_New_Applicator_Creation.class);
-
-		  
-		     
+	     
 		     ObjectRepo.startTestAndLog_1_SS("SEBS_New_Applicator_Creat TC01", "Click on Menu Button", () -> {
 		     Liabrary.custom_click(SEBS.getMenu(), "Click on Menu Button");});
 		   

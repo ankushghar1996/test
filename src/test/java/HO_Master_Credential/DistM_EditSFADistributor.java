@@ -15,16 +15,14 @@ import HO_Master.DM_ADDSFADistributor;
 import HO_Master.DM_EditSFADistributor;
 
 public class DistM_EditSFADistributor extends BaseClass {
-
+	
 	@Test(priority=0)
 	public void EditSFADistributor () throws Exception {
-		
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		DM_ADDSFADistributor AD = PageFactory.initElements(driver, DM_ADDSFADistributor.class);
 		DM_EditSFADistributor AE = PageFactory.initElements(driver, DM_EditSFADistributor.class);
 		Common_Data CD = PageFactory.initElements(driver, Common_Data.class);
-	
 	
 		ObjectRepo.startTestAndLog_1_SS("SA_Edit_SFA_Distributor_TC01", "Click on Master Menu", () -> {
 		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");});
@@ -79,11 +77,10 @@ public class DistM_EditSFADistributor extends BaseClass {
 		Liabrary.custom_click(AE.getClose_btn(), null);});
 		Thread.sleep(1000);
 
-	}
+	    }
 	
-	@Test(priority=1)
-	public void EditSFADistributor_NS1() throws Exception {
-		
+	    @Test(priority=1)
+	    public void EditSFADistributor_NS1() throws Exception {	
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		DM_ADDSFADistributor AD = PageFactory.initElements(driver, DM_ADDSFADistributor.class);
 		DM_EditSFADistributor AE = PageFactory.initElements(driver, DM_EditSFADistributor.class);
@@ -148,7 +145,7 @@ public class DistM_EditSFADistributor extends BaseClass {
 	
 	@Test(priority=2)
 	public void EditSFADistributor_NS2() throws Exception {
-
+		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		DM_ADDSFADistributor AD = PageFactory.initElements(driver, DM_ADDSFADistributor.class);
 		DM_EditSFADistributor AE = PageFactory.initElements(driver, DM_EditSFADistributor.class);

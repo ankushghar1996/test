@@ -43,9 +43,9 @@ public class BaseClass_SEBS_Portal {
 	public void openbrowser() throws Exception {
 	   // System.setProperty("webdriver.chrome.driver", "C:\\COde\\test\\FOSROC_Automation\\chromedriver-win64\\chromedriver.exe");
 	    
-		 WebDriverManager.chromedriver().setup();
+		WebDriverManager.chromedriver().setup();
 		
-		 ChromeOptions options = new ChromeOptions();
+		ChromeOptions options = new ChromeOptions();
  	    options.addArguments("--use-fake-device-for-media-stream");
  	    options.addArguments("--use-fake-ui-for-media-stream");
  	    options.addArguments("--use-file-for-fake-video-capture=C:\\test\\sample-video.y4m"); // 👈 provide a real path

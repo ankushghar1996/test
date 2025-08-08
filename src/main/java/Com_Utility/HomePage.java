@@ -24,6 +24,9 @@ WebDriver driver;
 	@FindBy(how = How.XPATH, using = "//p[normalize-space()='Media']")
 	private WebElement Media_SubMenu;
 	
+	@FindBy(how = How.XPATH, using = "//p[text()='Upload Media']")
+	private WebElement Media_Upload;
+	
 	@FindBy(how = How.XPATH, using = "//p[normalize-space()='Notification Master']")
 	private WebElement NotificationMaster_SubMenu;
 	
@@ -201,6 +204,14 @@ WebDriver driver;
 
 	public WebElement getScheme_Report_SubMenu() {
 		return Scheme_Report_SubMenu;
+	}
+
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	public WebElement getMedia_Upload() {
+		return Media_Upload;
 	}
 	
 	

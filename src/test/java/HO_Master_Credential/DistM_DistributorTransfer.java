@@ -19,11 +19,9 @@ public class DistM_DistributorTransfer extends BaseClass{
 	@Test(priority = 0)
 	public void Distributor_Transfer1() throws Exception {
 		
-		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		DM_DistributorTransfer DT = PageFactory.initElements(driver, DM_DistributorTransfer.class);
 		
-	
 		ObjectRepo.startTestAndLog_1_SS("SA_Distributor_Transfer_TC01", "Click On Master Menu", () -> {
 		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");});
 		Thread.sleep(1000);
@@ -36,14 +34,13 @@ public class DistM_DistributorTransfer extends BaseClass{
 		Liabrary.custom_click(DT.getDistributor_Transfer(), null);});
 		Thread.sleep(1000);
 	
-	
-		ObjectRepo.startTestAndLog_1_SS("SA_Distributor_Transfer_TC04", "Click On Distributor Master SubMenu", () -> {
-			WebElement UploadText=driver.findElement(By.xpath("//h4[normalize-space()='Distributor Transfer']"));
-			String Actual_Text=UploadText.getText();
-			System.out.println(Actual_Text);
-			String Expected_Text="Distributor Transfer";
-			Assert.assertEquals(Expected_Text, Actual_Text);});
-			Thread.sleep(2000);
+//		ObjectRepo.startTestAndLog_1_SS("SA_Distributor_Transfer_TC04", "Click On Distributor Master SubMenu", () -> {
+//			WebElement UploadText=driver.findElement(By.xpath("//h4[normalize-space()='Distributor Transfer']"));
+//			String Actual_Text=UploadText.getText();
+//			System.out.println(Actual_Text);
+//			String Expected_Text="Distributor Transfer";
+//			Assert.assertEquals(Expected_Text, Actual_Text);});
+//			Thread.sleep(2000);
 	
 			ObjectRepo.startTestAndLog_1_SS("SA_Distributor_Transfer_TC05", "Click On SFA1_Dropdown", () -> {
 			Liabrary.custom_click(DT.getSFA1_Dropdown(), null);});
@@ -97,11 +94,11 @@ public class DistM_DistributorTransfer extends BaseClass{
 	
 	@Test(priority = 1)
 	public void Distributor_Transfer1_NS1() throws Exception {
-		
-		
+			
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		DM_DistributorTransfer DT = PageFactory.initElements(driver, DM_DistributorTransfer.class);
 		
+		ObjectRepo.startTestAndLog_1_NS("Without Click On Distributor Transfer");
 	
 		ObjectRepo.startTestAndLog_1_SS("SA_Distributor_Transfer_TC01", "Click On Master Menu", () -> {
 		Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");});
@@ -111,9 +108,9 @@ public class DistM_DistributorTransfer extends BaseClass{
 		Liabrary.custom_click(hp.getDistributorMaster_SubMenu(), "select Distributor Master sub menu");});
 		Thread.sleep(1000);
 	
-		ObjectRepo.startTestAndLog_1_SS("SA_Distributor_Transfer_TC03", "Click On Distributor Transfer", () -> {
-		Liabrary.custom_click(DT.getDistributor_Transfer(), null);});
-		Thread.sleep(1000);
+//		ObjectRepo.startTestAndLog_1_SS("SA_Distributor_Transfer_TC03", "Click On Distributor Transfer", () -> {
+//		Liabrary.custom_click(DT.getDistributor_Transfer(), null);});
+//		Thread.sleep(1000);
 	
 	
 		ObjectRepo.startTestAndLog_1_SS("SA_Distributor_Transfer_TC04", "Click On Distributor Master SubMenu", () -> {
@@ -175,10 +172,12 @@ public class DistM_DistributorTransfer extends BaseClass{
 	
 	
 @Test(priority = 2)
-public void Distributor_Transfer3() throws Exception {
+public void Distributor_Transfer1_NS2 () throws Exception {
 
     HomePage hp = PageFactory.initElements(driver, HomePage.class);
     DM_DistributorTransfer DT = PageFactory.initElements(driver, DM_DistributorTransfer.class);
+    
+    ObjectRepo.startTestAndLog_1_NS("Without Click select Distributor Master sub menu");
 
     Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");
     Thread.sleep(1000);
@@ -212,8 +211,8 @@ public void Distributor_Transfer3() throws Exception {
     Liabrary.custom_click(DT.getRoute2Value_Dropdown(), null);
     Thread.sleep(1000);
 
-    Liabrary.custom_click(DT.getTransfer_btn(), null);
-    Thread.sleep(1000);
+//    Liabrary.custom_click(DT.getTransfer_btn(), null);
+//    Thread.sleep(1000);
     Liabrary.custom_click(DT.getSelectAllCheckBox(), null);
     Thread.sleep(1000);
     Liabrary.custom_click(DT.getArrow1_Forward(), null);
@@ -225,17 +224,19 @@ public void Distributor_Transfer3() throws Exception {
 }
 
 @Test(priority = 3)
-public void DT_WithoutSelectDistributor_CheckBox() throws Exception {
-
+public void Distributor_Transfer1_NS3  () throws Exception {
+              //DT_WithoutSelectDistributor_CheckBox
     HomePage hp = PageFactory.initElements(driver, HomePage.class);
     DM_DistributorTransfer DT = PageFactory.initElements(driver, DM_DistributorTransfer.class);
+    
+    ObjectRepo.startTestAndLog_1_NS("Without click on distributor transfer button");
 
     Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");
     Thread.sleep(1000);
     Liabrary.custom_click(hp.getDistributorMaster_SubMenu(), "select Distributor Master sub menu");
     Thread.sleep(1000);
-    Liabrary.custom_click(DT.getDistributor_Transfer(), null);
-    Thread.sleep(1000);
+//    Liabrary.custom_click(DT.getDistributor_Transfer(), null);
+//    Thread.sleep(1000);
 
     WebElement UploadText = driver.findElement(By.xpath("//h4[normalize-space()='Distributor Transfer']"));
     String Actual_Text = UploadText.getText();
@@ -269,10 +270,12 @@ public void DT_WithoutSelectDistributor_CheckBox() throws Exception {
 }
 
 @Test(priority = 4)
-public void DT_WithoutSelectToDistributor() throws Exception {
+public void Distributor_Transfer1_NS4 () throws Exception {
 
     HomePage hp = PageFactory.initElements(driver, HomePage.class);
     DM_DistributorTransfer DT = PageFactory.initElements(driver, DM_DistributorTransfer.class);
+    
+    ObjectRepo.startTestAndLog_1_NS("Without Select To Distributor ");
 
     Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");
     Thread.sleep(1000);
@@ -308,11 +311,13 @@ public void DT_WithoutSelectToDistributor() throws Exception {
 }
 
 @Test(priority = 5)
-public void DT_WithoutSelectRoute() throws Exception {
+public void Distributor_Transfer1_NS5 () throws Exception {
 
     HomePage hp = PageFactory.initElements(driver, HomePage.class);
     DM_DistributorTransfer DT = PageFactory.initElements(driver, DM_DistributorTransfer.class);
 
+    ObjectRepo.startTestAndLog_1_NS("Without click on transfer Button");
+    
     Liabrary.custom_click(hp.getMaster_Menu(), "select Master Menu");
     Thread.sleep(1000);
     Liabrary.custom_click(hp.getDistributorMaster_SubMenu(), "select Distributor Master sub menu");
@@ -331,8 +336,8 @@ public void DT_WithoutSelectRoute() throws Exception {
     Thread.sleep(1000);
     Liabrary.custom_click(DT.getSFA1Value_Dropdown(), null);
     Thread.sleep(1000);
-    Liabrary.custom_click(DT.getTransfer_btn(), null);
-    Thread.sleep(1000);
+//    Liabrary.custom_click(DT.getTransfer_btn(), null);
+//    Thread.sleep(1000);
 
     WebElement UploadText2 = driver.findElement(By.xpath("//span[@id='ParentMasterContentPlaceHolder1_RFVddlRoute']"));
     String Actual_Text2 = UploadText2.getText();

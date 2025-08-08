@@ -1,10 +1,14 @@
 package SEBS_Portal_Credential;
  
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
  
 import Com_Utility.BaseClass_SEBS_Portal;
@@ -19,16 +23,16 @@ public class SEBS_Dashboard_Test extends BaseClass_SEBS_Portal {
 		
 	SEBS_DashBoard SEBS = PageFactory.initElements(driver,SEBS_DashBoard.class);
 	
-	ObjectRepo.startTestAndLog_1_SS("SEBS_Dashboard_Test_TC01", "Verify that user should be able to click on MTD Capsule", () -> {
-	Liabrary.custom_click(SEBS.getMTD_Capsule(), "Click on MTD Capsule");
-	 });
-	Thread.sleep(1000);
-	
-	WebElement Scroll = driver.findElement(By.xpath("//div[@class='col-12 mt-0']//span[text()=' New Developers Created']"));
+	WebElement Scroll = driver.findElement(By.xpath("//div[@class='col-12 mt-0']//span[text()=' New Applicators Created']"));
 	JavascriptExecutor JSE1 =(JavascriptExecutor) driver;
 	JSE1.executeScript("arguments[0].scrollIntoView(true);", Scroll);
 	Thread.sleep(1000);
 	
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+	wait.until(ExpectedConditions.elementToBeClickable(SEBS.getMTD_Capsule()));
+	Liabrary.custom_click(SEBS.getMTD_Capsule(), "Click on MTD Capsule");
+	Thread.sleep(1000);
+		
 	ObjectRepo.startTestAndLog_1_SS("SEBS_Dashboard_Test_TC02", "Verify that user should be able to click on Arrow Button", () -> {
 	Liabrary.custom_click(SEBS.getArrow_Button(), "Click on Arrow Button ");
 	 });
@@ -51,6 +55,7 @@ public class SEBS_Dashboard_Test extends BaseClass_SEBS_Portal {
 	SEBS_DashBoard SEBS = PageFactory.initElements(driver,SEBS_DashBoard.class);
 	
 	//Without Click on YTD Button
+	ObjectRepo.startTestAndLog_1_NS("Without Click on YTD Button");
 	
 	ObjectRepo.startTestAndLog_1_SS("SEBS_Dashboard_Test_TC01", "Verify that user should be able to click on MTD Capsule", () -> {
 	Liabrary.custom_click(SEBS.getMTD_Capsule(), "Click on MTD Capsule");
@@ -84,6 +89,7 @@ public class SEBS_Dashboard_Test extends BaseClass_SEBS_Portal {
 	SEBS_DashBoard SEBS = PageFactory.initElements(driver,SEBS_DashBoard.class);
 	
 	//without Click Arrow Button
+	ObjectRepo.startTestAndLog_1_NS("without Click Arrow Button");
 	
 	ObjectRepo.startTestAndLog_1_SS("SEBS_Dashboard_Test_TC01", "Verify that user should be able to click on MTD Capsule", () -> {
 	Liabrary.custom_click(SEBS.getMTD_Capsule(), "Click on MTD Capsule");

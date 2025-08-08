@@ -1,5 +1,6 @@
 package Com_Utility;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -7,7 +8,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.Status;
@@ -58,30 +61,21 @@ public static void dropdown(WebElement element, String name, WebDriver driver) {
 	
 	
 	
-	public static void custom_click(WebElement element, String FieldName) {
+	public static void custom_click(WebElement element, String fieldName) {
+	    //ObjectRepo.startTestAndLog_1_SS("Click_" + fieldName, "Click on " + fieldName, () -> {
+	        WebDriverWait wait = new WebDriverWait(ObjectRepo.driver, Duration.ofSeconds(10));
+	        wait.until(ExpectedConditions.elementToBeClickable(element));
 
-		try {
+	        // Optional: highlight element before clicking (for debugging)
+	        ((JavascriptExecutor) ObjectRepo.driver).executeScript("arguments[0].style.border='2px solid red'", element);
 
-			element.click();
-
-			ObjectRepo.test.log(Status.PASS, FieldName+"==>is Clickable..");
-
-			  // Print a message confirming that the button was clicked
-
-	        System.out.println(FieldName + " was clicked successfully!");
-
-		}
-		catch(Exception e)
-
-		{
-
-	  System.out.println(e.getMessage());		
-      System.out.println();//Blank Print For space Between Error massage and another Error Massage
-      System.out.println("Error: Failed to click on element " + FieldName + "' due to: " + e.getMessage());
-
-		}
-
+	        element.click();
+	        System.out.println(fieldName + " was clicked successfully!");
+	  //  });
 	}
+
+
+	
  
 	
 	

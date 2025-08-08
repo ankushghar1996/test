@@ -38,10 +38,10 @@ public class BaseClass_ASM {
  
         LoginPage login = PageFactory.initElements(driver, LoginPage.class);
  
-        Liabrary.custom_Sendkeys(login.getUserName(), excel.getStringdata("Sheet1", 6, 0), "Username Field");
+        Liabrary.custom_Sendkeys(login.getUserName(), excel.getStringdata2("Sheet1", 6, 0), "Username Field");
         
         
-        Liabrary.custom_Sendkeys(login.getPassword(),excel.getStringdata("Sheet1", 6, 1), "Password Field");
+        Liabrary.custom_Sendkeys(login.getPassword(),excel.getStringdata2("Sheet1", 6, 1), "Password Field");
         
         
         Liabrary.custom_click(login.getLogin_Btn(), "Login Button");

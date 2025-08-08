@@ -19,7 +19,6 @@ public class OutletMaster_ViewPageCred extends BaseClass_HO_Portal {
 
         OutletMaster_ViewPage view = PageFactory.initElements(driver, OutletMaster_ViewPage.class);
 
-        ObjectRepo.Headlines_logOnlyDescription("");
      // Package name + login name + class name + test case nmbr
         
         ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ViewP_TC01", "Click Master Menu", () -> {
@@ -78,7 +77,7 @@ public class OutletMaster_ViewPageCred extends BaseClass_HO_Portal {
         OutletMaster_ViewPage view = PageFactory.initElements(driver, OutletMaster_ViewPage.class);
 
      // Package name + login name + class name + test case nmbr
-        ObjectRepo.Headlines_logOnlyDescription("insert wrong header text");
+        ObjectRepo.startTestAndLog_1_NS("insert wrong header text");
         
         ObjectRepo.startTestAndLog_1_SS("HO_OutletMaster_ViewP_TC01", "Click Master Menu", () -> {
             Liabrary.custom_click(view.getMaster_Menu(), null);

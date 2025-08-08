@@ -107,10 +107,7 @@ public class SECR_Approval_Test extends BaseClass_SECR_Portal {
             jse1.executeScript("arguments[0].scrollIntoView(true);", scroll);
         });
         Thread.sleep(1000);
-  
-        
-      
-      
+     
     }
     
     

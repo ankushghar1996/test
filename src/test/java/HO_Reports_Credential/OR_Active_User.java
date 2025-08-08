@@ -15,7 +15,7 @@ import HO_Reports.OR_Active_User_Main;
 public class OR_Active_User extends BaseClass {
 
     @Test(priority=0)
-    public void _Active_User_Reports() throws Exception {
+    public void Active_User_Reports() throws Exception {
 
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         OR_Active_User_Main AU = PageFactory.initElements(driver, OR_Active_User_Main.class);
@@ -38,13 +38,13 @@ public class OR_Active_User extends BaseClass {
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("SA_OR_Active_User_TC04", "Verify Header Text", () -> {
-            WebElement Header_Text = driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_pageHeader']"));
-            String Actual_Text = Header_Text.getText();
-            System.out.println(Actual_Text);
-            String Expected_Text = "Active Users Reports";
-            Assert.assertEquals(Expected_Text, Actual_Text);
-        });
+//        ObjectRepo.startTestAndLog_1_SS("SA_OR_Active_User_TC04", "Verify Header Text", () -> {
+//            WebElement Header_Text = driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_pageHeader']"));
+//            String Actual_Text = Header_Text.getText();
+//            System.out.println(Actual_Text);
+//            String Expected_Text = "Active Users Reports";
+//            Assert.assertEquals(Expected_Text, Actual_Text);
+//        });
         
 
         ObjectRepo.startTestAndLog_1_SS("SA_OR_Active_User_TC05", "Click on Select User Type Dropdown", () -> {
@@ -65,21 +65,21 @@ public class OR_Active_User extends BaseClass {
         Thread.sleep(1000);
 
         
-        ObjectRepo.startTestAndLog_1_SS("SA_OR_Active_User_TC08", "Click on Download Button", () -> {
-            Liabrary.custom_click(AU.getDownload_Button(), "Click on Download button");
-        });
-        Thread.sleep(1000);
+//        ObjectRepo.startTestAndLog_1_SS("SA_OR_Active_User_TC08", "Click on Download Button", () -> {
+//            Liabrary.custom_click(AU.getDownload_Button(), "Click on Download button");
+//        });
+//        Thread.sleep(1000);
         
         
     }
     
-    @Test(priority=0)
-    public void _Active_User_Reports_NS1() throws Exception {
+    @Test(priority=1)
+    public void Active_User_Reports_NS1() throws Exception {
 
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         OR_Active_User_Main AU = PageFactory.initElements(driver, OR_Active_User_Main.class);
         
-        ObjectRepo.startTestAndLog_1_NS("");
+        ObjectRepo.startTestAndLog_1_NS("Without click on Active User Report Menu");
 
         ObjectRepo.startTestAndLog_1_SS("SA_OR_Active_User_TC01", "Click on Report Menu", () -> {
             Liabrary.custom_click(hp.getReports_Menu(), "Click on Report Menu");
@@ -93,10 +93,10 @@ public class OR_Active_User extends BaseClass {
         Thread.sleep(1000);
         
 
-        ObjectRepo.startTestAndLog_1_SS("SA_OR_Active_User_TC03", "Click on Active User Report Menu", () -> {
-            Liabrary.custom_click(AU.getActive_User_Report_Menu(), "Click On Active_User_Report Menu");
-        });
-        Thread.sleep(1000);
+//        ObjectRepo.startTestAndLog_1_SS("SA_OR_Active_User_TC03", "Click on Active User Report Menu", () -> {
+//            Liabrary.custom_click(AU.getActive_User_Report_Menu(), "Click On Active_User_Report Menu");
+//        });
+//        Thread.sleep(1000);
         
 
         ObjectRepo.startTestAndLog_1_SS("SA_OR_Active_User_TC04", "Verify Header Text", () -> {

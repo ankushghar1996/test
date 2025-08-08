@@ -20,7 +20,7 @@ WebDriver driver;
 	@FindBy(how = How.XPATH, using = "//input[@id='ctl00_ParentMasterContentPlaceHolder1_ddlUserType_Input']")
 	private WebElement UserType1_Dropdown;
 	
-	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlDivision_DropDown']")
+	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlDivision']")
 	private WebElement Division_Dropdown;
 	
 	@FindBy(how = How.XPATH, using = "//input[@id='ctl00_ParentMasterContentPlaceHolder1_ddlType1Master_Input']")
@@ -111,10 +111,10 @@ WebDriver driver;
 	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlDivision_DropDown']//ul//li[text()='BS']")
 	private WebElement SelectDivision_Dropdown;
 	
-	@FindBy(how = How.XPATH, using = "//li[@class='rcbHovered'][normalize-space()='Retailer'][text()='Retailer']")
+	@FindBy(how = How.XPATH, using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlType1Master_DropDown']//li")
 	private WebElement SelectActivityFor1_Dropdown;
 	
-	@FindBy(how = How.XPATH, using = "//label[normalize-space()='Umbrella Campaign']")
+	@FindBy(how = How.XPATH, using = "(//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlType1Masters_DropDown']//li)[1]")
 	private WebElement SelectActivityType_Dropdown;
 	
 	@FindBy(how = How.XPATH, using = "//li[@class='rcbHovered'][normalize-space()='November']")

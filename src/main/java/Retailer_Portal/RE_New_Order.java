@@ -15,7 +15,7 @@ public class RE_New_Order {
 	@FindBy(how=How.XPATH,using="//div[@class='order-slider']//img[@src='../../../../../assets/images/development/no-image.jpg']")
 	private WebElement Waterproofing;
 	
-	@FindBy(how=How.XPATH,using="(//div[@class='qty-capsule']//button[text()='+'])[2]")
+	@FindBy(how=How.XPATH,using="(//div[@class='qty-capsule']//button[text()='+'])[1]")
 	private WebElement Product_Add_Cart;
 
 	@FindBy(how=How.XPATH,using="//div[@class='row mx-auto cart-container']//span[text()='VIEW CART']")

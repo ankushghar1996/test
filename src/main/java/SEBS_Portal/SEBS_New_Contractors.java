@@ -12,7 +12,7 @@ private WebElement Menu ;
 @FindBy(how=How.XPATH,using="//div[@class='offcanvas-options mt-4']//span[text()='New Contractor Creation']")
 private WebElement New_Contractor_Creation ;
 
-@FindBy(how=How.XPATH,using="//div[@class='retailer-add d-flex align-items-center text-right']//i[@aria-hidden='true']")
+@FindBy(how=How.XPATH,using="//div[@class='circle-add']//i[@aria-hidden='true']")
 private WebElement Creation_Button ;	
 
 @FindBy(how=How.XPATH,using="(//div[@class='ng-select-container ng-has-value']//input[@type='text'])[1]")

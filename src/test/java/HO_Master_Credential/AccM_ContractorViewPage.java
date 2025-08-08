@@ -15,10 +15,8 @@ import HO_Master.AM_ContractorViewPage;
 
 public class AccM_ContractorViewPage extends BaseClass{
 
-	
 	@Test(priority=0)
-	public void Contractor_MasterHomepage() throws Exception {
-		
+	public void Contractor_Master_View_page() throws Exception {
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		AM_ContractorViewPage CMV = PageFactory.initElements(driver, AM_ContractorViewPage.class);
@@ -56,13 +54,11 @@ public class AccM_ContractorViewPage extends BaseClass{
 		Liabrary.custom_click(CMV.getView_btn(), null);});
 		Thread.sleep(1000);
 		
-
 	}
 	
 	@Test(priority=1)
-	public void Contractor_MasterHomepage_NS1() throws Exception {
-		
-		
+	public void Contractor_Master_View_page_NS1() throws Exception {
+			
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		AM_ContractorViewPage CMV = PageFactory.initElements(driver, AM_ContractorViewPage.class);
 		AM_ContractorMaster CM = PageFactory.initElements(driver, AM_ContractorMaster.class);
@@ -104,9 +100,8 @@ public class AccM_ContractorViewPage extends BaseClass{
 	}
 	
 	@Test(priority=2)
-	public void Contractor_MasterHomepage_NS2() throws Exception {
-		
-		
+	public void Contractor_Master_View_page_NS2() throws Exception {
+			
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
 		AM_ContractorViewPage CMV = PageFactory.initElements(driver, AM_ContractorViewPage.class);
 		AM_ContractorMaster CM = PageFactory.initElements(driver, AM_ContractorMaster.class);

@@ -31,7 +31,6 @@ public class AddNotification extends BaseClass {
         });
             Thread.sleep(1000);
     
-
         ObjectRepo.startTestAndLog_1_SS("SA_AddNotification_TC_02", "Verify click on Notification Master sub menu", () -> {
             Liabrary.custom_click(hp.getNotificationMaster_SubMenu(), "select Notification Master sub menu");
         });

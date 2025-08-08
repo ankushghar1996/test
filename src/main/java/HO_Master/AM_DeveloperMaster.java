@@ -9,7 +9,7 @@ public class AM_DeveloperMaster {
 
 WebDriver driver;
 	
-	@FindBy(how = How.XPATH, using = "//p[normalize-space()='Developer Master']")
+	@FindBy(how = How.XPATH, using = "//p[text()='Developer Account Master']")
 	private WebElement Developer_Master;
 
 	public WebElement getDeveloper_Master() {

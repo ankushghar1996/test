@@ -12,12 +12,10 @@ import SEBS_Portal.SEBS_View_Profile_Main;
 public class SEBS_View_Profile_Cred extends BaseClass_SEBS_Portal {
 
 	@Test(priority = 0)
-    public void SECR_ViewProfile() throws Exception {
+    public void SEBS_ViewProfile() throws Exception {
 
         SEBS_View_Profile_Main view = PageFactory.initElements(driver, SEBS_View_Profile_Main.class);
         
-       
-
         ObjectRepo.startTestAndLog_1_SS("SEBS_View_Profile_Cred_TC01", "Click on SECR Menu", () -> {
             Liabrary.custom_click(view.getSECR_Menu(), "Click on SECR Menu");
         });
@@ -59,11 +57,12 @@ public class SEBS_View_Profile_Cred extends BaseClass_SEBS_Portal {
 	
 	
     @Test(priority = 1)
-    public void SECR_ViewProfile_NS01() throws Exception {
+    public void SEBS_ViewProfile_NS01() throws Exception {
 
         SEBS_View_Profile_Main view = PageFactory.initElements(driver, SEBS_View_Profile_Main.class);
         
         //Without Click On Reset Button
+        ObjectRepo.startTestAndLog_1_NS("Without Click on Reset Button");
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_View_Profile_Cred_TC01", "Click on SECR Menu", () -> {
             Liabrary.custom_click(view.getSECR_Menu(), "Click on SECR Menu");
@@ -106,11 +105,12 @@ public class SEBS_View_Profile_Cred extends BaseClass_SEBS_Portal {
     
     
     @Test(priority = 2)
-    public void SECR_ViewProfile_NS02() throws Exception {
+    public void SEBS_ViewProfile_NS02() throws Exception {
 
         SEBS_View_Profile_Main view = PageFactory.initElements(driver, SEBS_View_Profile_Main.class);
         
         //Without Re Enter New Password
+        ObjectRepo.startTestAndLog_1_NS("Without Re Enter New Password");
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_View_Profile_Cred_TC01", "Click on SECR Menu", () -> {
             Liabrary.custom_click(view.getSECR_Menu(), "Click on SECR Menu");
@@ -143,11 +143,11 @@ public class SEBS_View_Profile_Cred extends BaseClass_SEBS_Portal {
 //        Thread.sleep(1000);
 
         // Uncomment this block if you want to click on Reset Password as well
-        /*
+        
         ObjectRepo.startTestAndLog_1_SS("SEBS_View_Profile_Cred_TC07", "Click on Reset Password Button", () -> {
             Liabrary.custom_click(view.getReset_Password_Button(), "Click on Reset Password Button");
         });
         Thread.sleep(1000);
-        */
+        
     }
 }

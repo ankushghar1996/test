@@ -9,7 +9,7 @@ public class OR_Active_User_Main {
 
 	
 	WebDriver driver;
-	@FindBy(how=How.XPATH, using="//a[@href='../Reports/Mst_ActiveUsersReport.aspx']")
+	@FindBy(how=How.XPATH, using="//p[text()='Active User']")
 	private WebElement Active_User_Report_Menu;
 	
 	
@@ -21,7 +21,7 @@ public class OR_Active_User_Main {
 	private WebElement Select_User_Type_Dropdown_Value;	
 	
 	
-	@FindBy(how=How.XPATH,using = "//input[@id='ParentMasterContentPlaceHolder1_Button1']")
+	@FindBy(how=How.XPATH,using = "//input[@id='ParentMasterContentPlaceHolder1_BtnView']")
 	private WebElement View_Button;	
 	
 	

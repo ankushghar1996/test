@@ -16,7 +16,7 @@ import HO_Master.AM_DeveloperMasterViewPage;
 public class AccM_DeveloperMasterViewPage extends BaseClass{
 
 	@Test(priority=0)
-	public void Site_MasterHomepage() throws Exception {
+	public void Developer_Master_View_Page () throws Exception {
 		
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
@@ -60,7 +60,7 @@ public class AccM_DeveloperMasterViewPage extends BaseClass{
 	}
 	
 	@Test(priority=1)
-	public void Site_MasterHomepage_Ns01() throws Exception {
+	public void Developer_Master_View_Page_NS1 () throws Exception {
 		
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);
@@ -103,7 +103,7 @@ public class AccM_DeveloperMasterViewPage extends BaseClass{
 	
 }
 	@Test(priority=2)
-	public void Site_MasterHomepage_Ns02() throws Exception {
+	public void Developer_Master_View_Page_NS2() throws Exception {
 		
 		
 		HomePage hp = PageFactory.initElements(driver, HomePage.class);

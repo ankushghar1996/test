@@ -1,28 +1,27 @@
 package Com_Utility;
-
+ 
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.MultiPartEmail;
-
+ 
 import java.io.*;
 import java.nio.file.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
-
+ 
 public class Demo_Mail {
-
+ 
     public static void main(String[] args) {
         sendReportEmail();
     }
-
+ 
     public static void sendReportEmail() {
         System.out.println("======= Sending Email with Latest Extent Report and OneDrive Link =======");
-
+ 
         // Step 1: Path to the HTML report (updated path from Jenkins workspace)
         String workspace = System.getenv("WORKSPACE"); // Jenkins auto-sets this
         String reportPath = workspace + "\\test-output\\Extent_Reports\\TestReport.html";
-
-
+ 
         // Step 2: Zip the report file
         String zipPath;
         try {
@@ -32,13 +31,18 @@ public class Demo_Mail {
             return;
         }
 
+
+        
+
+
+ 
         // OneDrive shared folder URL (update as per your OneDrive)
         String oneDriveLink = "https://heerasoftware0.sharepoint.com/sites/QATeam/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FQATeam%2FShared%20Documents%2FQA%20Shared%20Folder&viewid=efe5bcf8%2De44d%2D4de2%2Db0cd%2D8ac68543bb53&p=true&ga=1";
-
+ 
         // Local OneDrive folder path where ZIP will be copied
         String sharedDrivePath = "C:\\Users\\10277\\OneDrive - Heera Software Private Limited (HSPL)\\Automation_Report";
         String copiedPath;
-
+ 
         // Step 3: Copy ZIP to OneDrive folder (for backup & easy access)
         try {
             copiedPath = copyToSharedFolder(zipPath, sharedDrivePath);
@@ -57,10 +61,10 @@ public class Demo_Mail {
             email.setStartTLSEnabled(true);
             email.setStartTLSRequired(true);
             email.setSSLOnConnect(false);
-
+ 
             email.setFrom("qaautomation@heerasoftware.com");
             email.setSubject("Automation Test Execution Report - Latest OneDrive Link + Backup Attachment");
-
+ 
             // Email body with dynamic details
             email.setMsg("Hi Team,\n\n"
                     + "The latest Automation Test Report has been uploaded to OneDrive.\n\n"
@@ -74,12 +78,12 @@ public class Demo_Mail {
             email.addTo("aniket.jadhav@heerasoftware.com");
             email.addTo("ankush.gharsele@heerasoftware.com");
             email.addTo("roopali.kulkarni@heerasoftware.com");
-            email.addTo("mahesh.kulkarni@heerasoftware.com");
-            email.addTo("santosh.dhoot@heerasoftware.com");
-            email.addTo("snehalata.patil@heerasoftware.com");
-            email.addTo("jidnyesh.borse@heerasoftware.com");
-            
+			email.addTo("mahesh.kulkarni@heerasoftware.com");
+			email.addTo("santosh.dhoot@heerasoftware.com");
+			email.addTo("snehalata.patil@heerasoftware.com");
+	           email.addTo("jidnyesh.borse@heerasoftware.com");
             // email.addTo("rohit.deshpande@heerasoftware.com");
+ 
 
             // Attach the ZIP report
             EmailAttachment attachment = new EmailAttachment();
@@ -99,21 +103,21 @@ public class Demo_Mail {
     // Zip the HTML report file
     public static String zipReport(String filePath) throws IOException {
         String zipFilePath = filePath.replace(".html", ".zip");
-
+ 
         try (FileOutputStream fos = new FileOutputStream(zipFilePath);
              ZipOutputStream zipOut = new ZipOutputStream(fos);
              FileInputStream fis = new FileInputStream(new File(filePath))) {
-
+ 
             ZipEntry zipEntry = new ZipEntry(new File(filePath).getName());
             zipOut.putNextEntry(zipEntry);
-
+ 
             byte[] bytes = new byte[1024];
             int length;
             while ((length = fis.read(bytes)) >= 0) {
                 zipOut.write(bytes, 0, length);
             }
         }
-
+ 
         System.out.println("✅ Report zipped: " + zipFilePath);
         return zipFilePath;
     }
@@ -124,10 +128,11 @@ public class Demo_Mail {
         Path targetDir = Paths.get(sharedDrivePath);
         Path targetPath = targetDir.resolve(sourceFile.getName());
 
+ 
         Files.createDirectories(targetDir); // Make sure folder exists
         Files.copy(sourceFile.toPath(), targetPath, StandardCopyOption.REPLACE_EXISTING);
         System.out.println("✅ Report copied to shared folder: " + targetPath);
-
+ 
         return targetPath.toString();
     }
 }

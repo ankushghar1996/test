@@ -73,11 +73,11 @@ public class ASM_Reject_Page_Test extends BaseClass_ASM {
       		ObjectRepo.startTestAndLog_1_NS("Without Click Distributor Approval 2nd Menu");
         
         
-        ObjectRepo.startTestAndLog_1_SS("ASM_View_01", "Click on ASM_Portal Master menu", () -> {
+        ObjectRepo.startTestAndLog_1_SS("ASM_Reject_Test_01", "Click on ASM_Portal Master menu", () -> {
             Liabrary.custom_click(ASM.getMaster(), "Click on Master");
         });
 
-        ObjectRepo.startTestAndLog_1_SS("ASM_View_02", "Click on Distributor Master", () -> {
+        ObjectRepo.startTestAndLog_1_SS("ASM_Reject_Test_02", "Click on Distributor Master", () -> {
             Liabrary.custom_click(ASM.getDistributor_Master(), "Click on Distributor Master");
         });
 
@@ -89,7 +89,7 @@ public class ASM_Reject_Page_Test extends BaseClass_ASM {
 */
         
         
-        ObjectRepo.startTestAndLog_1_SS("ASM_View_04", "Select Grid Data From Grid Table", () -> {
+        ObjectRepo.startTestAndLog_1_SS("ASM_Reject_Test_04", "Select Grid Data From Grid Table", () -> {
             Liabrary.custom_click(ASM.getGrid_Data(), "Select Grid Data From Grid Table");
         });
     
@@ -106,15 +106,15 @@ public class ASM_Reject_Page_Test extends BaseClass_ASM {
 		ObjectRepo.startTestAndLog_1_NS("Without selecting Grid Data");
         
         
-        ObjectRepo.startTestAndLog_1_SS("ASM_View_01", "Click on ASM_Portal Master menu", () -> {
+        ObjectRepo.startTestAndLog_1_SS("ASM_Reject_Test_01", "Click on ASM_Portal Master menu", () -> {
             Liabrary.custom_click(ASM.getMaster(), "Click on Master");
         });
 
-        ObjectRepo.startTestAndLog_1_SS("ASM_View_02", "Click on Distributor Master", () -> {
+        ObjectRepo.startTestAndLog_1_SS("ASM_Reject_Test_02", "Click on Distributor Master", () -> {
             Liabrary.custom_click(ASM.getDistributor_Master(), "Click on Distributor Master");
         });
 
-        ObjectRepo.startTestAndLog_1_SS("ASM_View_03", "Click on Distributor Approval 2nd", () -> {
+        ObjectRepo.startTestAndLog_1_SS("ASM_Reject_Test_03", "Click on Distributor Approval 2nd", () -> {
             Liabrary.custom_click(ASM.getDistributor_Approval_2nd(), "Click Distributor Approval 2nd");
         });
 
@@ -126,7 +126,7 @@ public class ASM_Reject_Page_Test extends BaseClass_ASM {
 	*/
         
         
-        ObjectRepo.startTestAndLog_1_SS("ASM_View_05", "Click on View Button", () -> {
+        ObjectRepo.startTestAndLog_1_SS("ASM_Reject_Test_05", "Click on View Button", () -> {
             Liabrary.custom_click(ASM.getView_Button(), "Click on View Button");
         });
     
@@ -138,6 +138,8 @@ public class ASM_Reject_Page_Test extends BaseClass_ASM {
 
         ASM_Reject_Page ASM = PageFactory.initElements(driver, ASM_Reject_Page.class);
 
+        ObjectRepo.startTestAndLog_1_NS("Without Click On Reject Button");
+        
         ObjectRepo.startTestAndLog_1_SS("ASM_Reject_Test_01", "Verify that user can click on Master menu.", () -> {
             Liabrary.custom_click(ASM.getMaster(), "Click on Master");
         });

@@ -22,11 +22,11 @@ public class IR_Inventory_TrendByProduct_Report_Main {
 		   private WebElement Product_Dropdown_Value;
 		   
 		   
-		   @FindBy(how=How.XPATH,using ="//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlSalesHierarchy_Input']")
+		   @FindBy(how=How.XPATH,using ="//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddldistributor_Input']")
 		   private WebElement Sales_Hierarchy_Dropdown;
 		   
 		   
-		   @FindBy(how=How.XPATH,using ="//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlSalesHierarchy_DropDown']//ul//li[text()='Chiranth Agencies']")
+		   @FindBy(how=How.XPATH,using ="(//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddldistributor_DropDown']//ul//li)[1]")
 		   private WebElement Sales_Hierarchy_Dropdown_Value;
 		   
 		   

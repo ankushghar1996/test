@@ -15,7 +15,7 @@ import HO_Master.PM_Strategic_Product_Setting;
 public class PM_Strategic_Product_Settings extends BaseClass{
 	
 	@Test(priority=0)
-	public void Dealer_ApprovalBTN() throws Exception{
+	public void Strategic_Product_Settings_Homepage() throws Exception{
 	HomePage hp = PageFactory.initElements(driver,HomePage.class);
 	PM_Strategic_Product_Setting SPS = PageFactory.initElements(driver, PM_Strategic_Product_Setting.class);
 	
@@ -59,11 +59,10 @@ public class PM_Strategic_Product_Settings extends BaseClass{
 	Liabrary.custom_click(SPS.getStrategic_Product_Setting_No_Button(), null);
 	});
 	
-	
 	}
 	
 	@Test(priority=1)
-	public void Dealer_ApprovalBTN_NS01() throws Exception{
+	public void Strategic_Product_Settings_Homepage_NS01() throws Exception{
 	HomePage hp = PageFactory.initElements(driver,HomePage.class);
 	PM_Strategic_Product_Setting SPS = PageFactory.initElements(driver, PM_Strategic_Product_Setting.class);
 	
@@ -77,13 +76,11 @@ public class PM_Strategic_Product_Settings extends BaseClass{
 	Liabrary.custom_click(hp.getProductMaster_SubMenu(), null);});
 	Thread.sleep(1000);
 	
-	
 //	ObjectRepo.startTestAndLog_1_SS("SA_PM_HSN_Master_TC03", "Click on Strategic Product Setting Menu Button", () -> {
 //	Liabrary.custom_click(SPS.getStrategic_Product_Setting_Menu_Button(), null);
 //	});
 //	Thread.sleep(1000);
-	
-	
+
 	ObjectRepo.startTestAndLog_1_SS("SA_PM_HSN_Master_TC04", "Verify Strategic Product Setting header text", () -> {
 	WebElement Retailer_Details = driver.findElement(By.xpath("//h4[normalize-space()='Strategic Product Setting']"));
 	String Actual_Text = Retailer_Details.getText();
@@ -113,7 +110,7 @@ public class PM_Strategic_Product_Settings extends BaseClass{
 }
 	
 	@Test(priority=2)
-	public void Dealer_ApprovalBTN_NS02() throws Exception{
+	public void Strategic_Product_Settings_Homepage_NS02() throws Exception{
 	HomePage hp = PageFactory.initElements(driver,HomePage.class);
 	PM_Strategic_Product_Setting SPS = PageFactory.initElements(driver, PM_Strategic_Product_Setting.class);
 	

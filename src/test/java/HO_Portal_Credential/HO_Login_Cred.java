@@ -15,17 +15,17 @@ public class HO_Login_Cred extends BaseClass_HO_Portal {
 
         HO_Login log = PageFactory.initElements(driver, HO_Login.class);
 
-        ObjectRepo.startTestAndLog_1_SS("HO_LC_TC01", "Enter Username", () -> {
+        ObjectRepo.startTestAndLog_1_SS("HO_Login_TC01", "Enter Username", () -> {
             Liabrary.custom_Sendkeys(log.getUserName(), excel.getStringdata("Sheet1", 1, 0), "UserName Field");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("HO_LC_TC02", "Enter Password", () -> {
+        ObjectRepo.startTestAndLog_1_SS("HO_Login_TC02", "Enter Password", () -> {
             Liabrary.custom_Sendkeys(log.getPassword(), excel.getStringdata("Sheet1", 1, 1), "Passwod Field");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("HO_LC_TC03", "Click Login Button", () -> {
+        ObjectRepo.startTestAndLog_1_SS("HO_Login_TC03", "Click Login Button", () -> {
             Liabrary.custom_click(log.getLogin_Btn(), "Login Btn");
         });
         Thread.sleep(1000);
@@ -37,19 +37,19 @@ public class HO_Login_Cred extends BaseClass_HO_Portal {
 
         HO_Login log = PageFactory.initElements(driver, HO_Login.class);
         
-        ObjectRepo.Headlines_logOnlyDescription("without entering username Action Performed");
+        ObjectRepo.startTestAndLog_1_NS("without entering username Action Performed");
 
 //        ObjectRepo.startTestAndLog_1_SS("HO_LC_TC01", "Enter Username", () -> {
 //            Liabrary.custom_Sendkeys(log.getUserName(), excel.getStringdata("Sheet1", 1, 0), "UserName Field");
 //        });
 //        Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("HO_LC_TC02", "Enter Password", () -> {
+        ObjectRepo.startTestAndLog_1_SS("HO_Login_TC02", "Enter Password", () -> {
             Liabrary.custom_Sendkeys(log.getPassword(), excel.getStringdata("Sheet1", 1, 1), "Passwod Field");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("HO_LC_TC03", "Click Login Button", () -> {
+        ObjectRepo.startTestAndLog_1_SS("HO_Login_TC03", "Click Login Button", () -> {
             Liabrary.custom_click(log.getLogin_Btn(), "Login Btn");
         });
         Thread.sleep(1000);
@@ -61,9 +61,9 @@ public class HO_Login_Cred extends BaseClass_HO_Portal {
 
         HO_Login log = PageFactory.initElements(driver, HO_Login.class);
         
-        ObjectRepo.Headlines_logOnlyDescription("without entering Password Action Performed");
+        ObjectRepo.startTestAndLog_1_NS("without entering Password Action Performed");
 
-        ObjectRepo.startTestAndLog_1_SS("HO_LC_TC01", "Enter Username", () -> {
+        ObjectRepo.startTestAndLog_1_SS("HO_Login_TC01", "Enter Username", () -> {
             Liabrary.custom_Sendkeys(log.getUserName(), excel.getStringdata("Sheet1", 1, 0), "UserName Field");
         });
         Thread.sleep(1000);
@@ -73,7 +73,7 @@ public class HO_Login_Cred extends BaseClass_HO_Portal {
 //        });
 //        Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("HO_LC_TC03", "Click Login Button", () -> {
+        ObjectRepo.startTestAndLog_1_SS("HO_Login_TC03", "Click Login Button", () -> {
             Liabrary.custom_click(log.getLogin_Btn(), "Login Btn");
         });
         Thread.sleep(1000);

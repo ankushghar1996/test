@@ -21,14 +21,11 @@ public class SFA_Login_Cred extends BaseClass_SFA {
         });
         Thread.sleep(1000);
 
-        
-        
+            
         ObjectRepo.startTestAndLog_1_SS("SFA_Login_Cred_TC02", "Verify that user should be able to enter SFA Password", () -> {
             Liabrary.custom_Sendkeys(log.getPassword(), excel.getStringdata("Sheet1", 7, 1), "Password Field");
         });
         Thread.sleep(1000);
-        
-        
 
         ObjectRepo.startTestAndLog_1_SS("SFA_Login_Cred_TC03", "Verify that user should be able to click on Login button", () -> {
             Liabrary.custom_click(log.getLogin_Btn(), "Login Btn");

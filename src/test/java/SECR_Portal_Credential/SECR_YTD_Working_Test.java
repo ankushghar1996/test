@@ -89,6 +89,7 @@ public class SECR_YTD_Working_Test extends BaseClass_SECR_Portal {
 
         SECR_YTD_Working SECR = PageFactory.initElements(driver, SECR_YTD_Working.class);
         //Without Clicking YTD Retailer
+        ObjectRepo.startTestAndLog_1_NS("Without Clicking YTD Retailer");
 
         WebElement Scroll1 = driver.findElement(By.xpath("//div[@class='pending-retailer']//span[normalize-space()='New Retailer Created']"));
         JavascriptExecutor JSE1 = (JavascriptExecutor) driver;
@@ -161,6 +162,7 @@ public class SECR_YTD_Working_Test extends BaseClass_SECR_Portal {
         SECR_YTD_Working SECR = PageFactory.initElements(driver, SECR_YTD_Working.class);
         //Without Clicking YTD Retailer
 
+        ObjectRepo.startTestAndLog_1_NS("Without Clicking YTD Retailer");
         WebElement Scroll1 = driver.findElement(By.xpath("//div[@class='pending-retailer']//span[normalize-space()='New Retailer Created']"));
         JavascriptExecutor JSE1 = (JavascriptExecutor) driver;
         JSE1.executeScript("arguments[0].scrollIntoView(true);", Scroll1);

@@ -19,21 +19,19 @@ import HO_Portal_Main.HO_Distributor_Approval_Page_Main;
 import HO_Portal_Main.HO_Distributor_Approval_View_Main;
  
 public class Distributor_Creation_HO_Distributor_Approval_Page_Test_1st extends BaseClass_HO_Portal{
-
+	
 	@Test
 	public void DistM_DistributorApprov() throws Exception {
 		
 		ObjectRepo.driver = driver;
 		
 		HO_Distributor_Approval_Page_Main APP = PageFactory.initElements(driver, HO_Distributor_Approval_Page_Main.class);
-		
-		
+			
 		ObjectRepo.startTestAndLog_1_SS("SEBS_DistCreation_HO_Initial_Approval_Test_01", "Verify that user should be click on HO_Portal Master menu.", () -> {
 		Liabrary.custom_click(APP.getMaster(), "select Master Menu");
 		});
 		Thread.sleep(1000);
-		
-	
+
 		ObjectRepo.startTestAndLog_1_SS("SEBS_DistCreation_HO_Initial_Approval_Test_02", "Verify that user should click on HO_Portal Distributor Master menu.", () -> {
 		    Liabrary.custom_click(APP.getDistributor_Master(), "select Distributor Master sub menu");
 		});
@@ -45,7 +43,6 @@ public class Distributor_Creation_HO_Distributor_Approval_Page_Test_1st extends 
 		});
 		Thread.sleep(1000);
 		
-
 		ObjectRepo.startTestAndLog_1_SS("SEBS_DistCreation_HO_Initial_Approval_Test_04", "Verify that user should see Distributor Approval header text.", () -> {
 		    WebElement UploadText = driver.findElement(By.xpath("//h4[normalize-space()='Distributor Approval']"));
 		    String Actual_Text = UploadText.getText();

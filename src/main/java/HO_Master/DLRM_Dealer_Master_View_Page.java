@@ -9,7 +9,6 @@ public class DLRM_Dealer_Master_View_Page {
 
 	WebDriver driver;
 	
-	
 	@FindBy (how=How.XPATH,using = "//*[@id='ctl00_ParentMasterContentPlaceHolder1_radGridRetailerMaster_ctl00']//tr//td[text()='Asian Enterprises']")
 	private WebElement Dealer_Master_GridaData_Table_Value_Select;
 	
@@ -20,7 +19,6 @@ public class DLRM_Dealer_Master_View_Page {
 	
 	@FindBy(how=How.XPATH,using= "//*[@id='ParentMasterContentPlaceHolder1_btnView']")
 	private WebElement Dealer_Master_View_Button;
-	
 	
 	@FindBy(how=How.XPATH,using= "//*[@id='ParentMasterContentPlaceHolder1_documentLink1']")
 	private WebElement Document1_Download;

@@ -15,7 +15,7 @@ import HO_Master.DLRM_Dealer_Approval_1st;
 public class DLRM_DLRM_Dealer_Approval_1st extends BaseClass{
 
 	@Test(priority=0)
-	 public void Dealer_Approval_1st_View_Page () throws Exception{
+	 public void Dealer_Approval_1st () throws Exception{
     HomePage hp = PageFactory.initElements(driver,HomePage.class);
     DLRM_Dealer_Approval_1st DAA1 = PageFactory.initElements(driver,DLRM_Dealer_Approval_1st.class);
 
@@ -49,7 +49,7 @@ public class DLRM_DLRM_Dealer_Approval_1st extends BaseClass{
 
 
 	@Test(priority=1)
-	 public void Dealer_Approval_1st_View_Page_NS1 () throws Exception{
+	 public void Dealer_Approval_1st_NS01 () throws Exception{
     HomePage hp = PageFactory.initElements(driver,HomePage.class);
     DLRM_Dealer_Approval_1st DAA1 = PageFactory.initElements(driver,DLRM_Dealer_Approval_1st.class);
 
@@ -88,7 +88,7 @@ public class DLRM_DLRM_Dealer_Approval_1st extends BaseClass{
   }
 	
 	@Test(priority=2)
-	 public void Dealer_Approval_1st_View_Page_NS2 () throws Exception{
+	 public void Dealer_Approval_1st_NS02 () throws Exception{
    HomePage hp = PageFactory.initElements(driver,HomePage.class);
    DLRM_Dealer_Approval_1st DAA1 = PageFactory.initElements(driver,DLRM_Dealer_Approval_1st.class);
 

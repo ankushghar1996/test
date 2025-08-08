@@ -21,8 +21,7 @@ public class UploadMedia_ActionViewPage extends BaseClass {
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         Media_UploadMedia UM = PageFactory.initElements(driver, Media_UploadMedia.class);
         Common_Data CD = PageFactory.initElements(driver, Common_Data.class);
-
-        
+  
         ObjectRepo.startTestAndLog_1_SS("SA_UploadMedia_ActionViewPage_TC_01", "Verify click on Activity Menu", () -> {
             Liabrary.custom_click(hp.getActivity_Menu(), "select Activity Menu");
         });
@@ -100,7 +99,7 @@ public void Upload_media_NS01() throws Exception {
     Media_UploadMedia UM = PageFactory.initElements(driver, Media_UploadMedia.class);
     Common_Data CD = PageFactory.initElements(driver, Common_Data.class);
     
-    ObjectRepo.startTestAndLog_1_NS("Without click on view button");
+    ObjectRepo.startTestAndLog_1_NS("Without select Media Value Type dropdown");
 
     ObjectRepo.startTestAndLog_1_SS("SA_UploadMedia_ActionViewPage_TC_01", "Verify click on Activity Menu", () -> {
         Liabrary.custom_click(hp.getActivity_Menu(), "select Activity Menu");
@@ -136,23 +135,21 @@ public void Upload_media_NS01() throws Exception {
     Thread.sleep(1000);
 
     
-    ObjectRepo.startTestAndLog_1_SS("SA_UploadMedia_ActionViewPage_TC_06", "Select Media Type value", () -> {
-        Liabrary.custom_click(UM.getMediaTypeValue_Dropdown(), "select Media Value Type dropdown");
+//    ObjectRepo.startTestAndLog_1_SS("SA_UploadMedia_ActionViewPage_TC_06", "Select Media Type value", () -> {
+//        Liabrary.custom_click(UM.getMediaTypeValue_Dropdown(), "select Media Value Type dropdown");
+//    });
+//    Thread.sleep(1000);
+
+    
+
+    ObjectRepo.startTestAndLog_1_SS("SA_UploadMedia_ActionViewPage_TC_08", "Click on Action View icon", () -> {
+      Liabrary.custom_click(UM.getActionView_Icon(), "click on Action View icon");
     });
     Thread.sleep(1000);
-
     
-//    ObjectRepo.startTestAndLog_1_SS("SA_UploadMedia_ActionViewPage_TC_07", "Click on View button", () -> {
-//        Liabrary.custom_click(UM.getView_Btn(), "click on View button");
-//    });
-//    Thread.sleep(1000);
-
-//    ObjectRepo.startTestAndLog_1_SS("SA_UploadMedia_ActionViewPage_TC_08", "Click on Action View icon", () -> {
-//        Liabrary.custom_click(UM.getActionView_Icon(), "click on Action View icon");
-//    });
-//    Thread.sleep(1000);
+    driver.findElement(By.xpath("//a[@id='ParentMasterContentPlaceHolder1_documentLink1']")).click();
+    Thread.sleep(1000);
     
-
     ObjectRepo.startTestAndLog_1_SS("SA_UploadMedia_ActionViewPage_TC_09", "Verify Media Upload header in Action View page", () -> {
         WebElement uploadText1 = driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_pageHeader']"));
         String actualText1 = uploadText1.getText();

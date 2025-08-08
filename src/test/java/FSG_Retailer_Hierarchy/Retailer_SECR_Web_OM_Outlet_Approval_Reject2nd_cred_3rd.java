@@ -14,10 +14,11 @@ import SCER_Web_Portal.OM_Outlet_Approval2nd_main;
  
 public class Retailer_SECR_Web_OM_Outlet_Approval_Reject2nd_cred_3rd extends BaseClass_SECR_WebPortal{
 
-	@Test
-    public void Outlet_Reject() throws Exception {
 
- 
+
+    @Test
+    public void Outlet_Reject() throws Exception { 
+
 		OM_Outlet_Approval2nd_main SECR = PageFactory.initElements(driver, OM_Outlet_Approval2nd_main.class);
 
 		 // Package name + login name + class name + test case nmbr

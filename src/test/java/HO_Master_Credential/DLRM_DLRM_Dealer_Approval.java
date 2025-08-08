@@ -14,7 +14,6 @@ import Com_Utility.ObjectRepo;
 import HO_Master.DLRM_Dealer_Approval;
 
 public class DLRM_DLRM_Dealer_Approval extends BaseClass{
-
 	
 	@Test(priority=0)
 	public void DLRM_Dealer_Approval() throws Exception {
@@ -26,8 +25,7 @@ public class DLRM_DLRM_Dealer_Approval extends BaseClass{
     Liabrary.custom_click(hp.getMaster_Menu(),"Select Master Menu");
 	});
 	Thread.sleep(1000);
-	
-	
+		
 	ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_TC02", "Click On OutletMaster_SubMenu ", () -> {
 	Liabrary.custom_click(hp.getOutletMaster_SubMenu(),"Outlet Master Submenu");
 	});
@@ -38,10 +36,8 @@ public class DLRM_DLRM_Dealer_Approval extends BaseClass{
 	});
 	Thread.sleep(1000);
 	
-	
 	// 
-	
-	ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_TC04", "Verify Outlet Approval Header Text", () -> {
+		ObjectRepo.startTestAndLog_1_SS("SA_DLRM_Dealer_Approval_TC04", "Verify Outlet Approval Header Text", () -> {
 		WebElement View_Dealer_Approval_Header_TXT = driver.findElement(By.xpath("//h4[text()='Outlet Approval']"));
 		String Actual_Text = View_Dealer_Approval_Header_TXT.getText();
 		System.out.println(Actual_Text);
@@ -49,9 +45,7 @@ public class DLRM_DLRM_Dealer_Approval extends BaseClass{
 		Assert.assertEquals(Expected_Text,Actual_Text);
 	    });
 		Thread.sleep(1000);
-
-		
-		
+	
 }
 	
 	@Test(priority=1)

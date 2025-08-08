@@ -19,13 +19,11 @@ public class IR_Inventory_FlashBy_Product_Report extends BaseClass {
     	
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         IR_Inventory_FlashBy_Product_Report_Main IR = PageFactory.initElements(driver, IR_Inventory_FlashBy_Product_Report_Main.class);
-
         
         ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC01", "Verify click on Report Menu", () -> {
             Liabrary.custom_click(hp.getReports_Menu(), "Click on Report Menu");
         });
         Thread.sleep(1000);
-
         
         ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBy_Product_Report_TC02", "Click on Inventory Report Submenu", () -> {
             Liabrary.custom_click(hp.getInventory_Report_SubMenu(), "Click On Inventory_Report_SubMenu");

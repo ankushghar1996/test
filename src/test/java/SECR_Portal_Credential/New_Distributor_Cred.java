@@ -125,7 +125,7 @@ public class New_Distributor_Cred {
 	 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_09", "Verify that user should be send OTP.", () -> {
 	 	            driver.findElement(By.xpath("//input[@placeholder='Enter OTP']")).sendKeys(otp);
 	 	        });
-	 	        Thread.sleep(1000);
+	 	        Thread.sleep(3000);
 	 	        
 	 	        
 	 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_10", "Verify that user should be click on Continue Button.", () -> {
@@ -374,6 +374,7 @@ public class New_Distributor_Cred {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				} // Optional
+	            
 	            try {
 	                camera2.click();
 	            } catch (ElementClickInterceptedException e) {

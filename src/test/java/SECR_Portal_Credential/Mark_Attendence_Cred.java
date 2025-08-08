@@ -10,9 +10,6 @@ import FSG_Portal.Mark_Attendance;
 
 public class Mark_Attendence_Cred extends BaseClass_SECR_Portal{
 
-	
-	
-	
 	@Test
 	public void SECR_AttendenceMark() throws Exception {
 		

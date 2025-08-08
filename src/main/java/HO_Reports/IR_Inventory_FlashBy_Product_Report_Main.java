@@ -16,40 +16,40 @@ public class IR_Inventory_FlashBy_Product_Report_Main {
 	private WebElement Inventory_FlashBy_Product_Report_Menu;
 	
 	
-	   @FindBy(how=How.XPATH,using = "//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlproductHierarchy_Input']")
+	   @FindBy(how=How.XPATH,using = "//input[@id='ctl00_ParentMasterContentPlaceHolder1_ddlproductHierarchy_Input']")
 	   private WebElement Product_Dropdown;
 	 
-	  @FindBy(how=How.XPATH,using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlproductHierarchy_DropDown']//ul//li[text()='FOSROC MEMBRANE HDPE-P STANDARD (1.2mmx1.5mx20m)']")
+	  @FindBy(how=How.XPATH,using = "//li[text()='ANTISLIP GRAIN No2 (25kg)']")
 	  private WebElement Product_Dropdown_Value;
 	 
-	  @FindBy(how=How.XPATH,using ="//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlSalesHierarchy_Input']")
+	  @FindBy(how=How.XPATH,using ="//input[@id='ctl00_ParentMasterContentPlaceHolder1_ddlSalesHierarchy_Input']")
 	  private WebElement Sales_Hierarchy_Dropdown;
 	 
-	@FindBy(how=How.XPATH,using ="//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlSalesHierarchy_DropDown']//ul//li[text()='Chiranth Agencies']")
+	@FindBy(how=How.XPATH,using ="//li[text()='Abhilash Thakur Enterprises and sons']")
 	  private WebElement Sales_Hierarchy_Dropdown_Value;
 	 
 	  @FindBy(how=How.XPATH,using ="//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlgeographySalesHiearchy_Input']")
 	  private WebElement Geography_Hierarchy_Dropdown;
 	 
-	  @FindBy(how=How.XPATH,using ="//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlgeographySalesHiearchy_DropDown']//ul//li[text()='Bangalore']")
+	  @FindBy(how=How.XPATH,using ="//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlgeographySalesHiearchy_DropDown']//li")
 	  private WebElement Geography_Hierarchy_Dropdown_Value;
 	  
 	  @FindBy(how=How.XPATH,using ="//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlForYear_Input']")
 	  private WebElement For_Year_Dropdown;
 	 
-	  @FindBy(how=How.XPATH,using ="//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlForYear_DropDown']//ul//li[text()='2024']")
+	  @FindBy(how=How.XPATH,using ="//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlForYear_DropDown']//ul//li[text()='2025']")
 	  private WebElement For_Year_Dropdown_Value;
 	  
 	  @FindBy(how=How.XPATH,using ="//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlMonths_Input']")
 	  private WebElement For_Month_Dropdown;
 	 
-	  @FindBy(how=How.XPATH,using ="//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlMonths_DropDown']//ul//li[text()='December']")
+	  @FindBy(how=How.XPATH,using ="//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlMonths_DropDown']//li[text()='July']")
 	  private WebElement For_Month_Dropdown_Value;
 	 
 	  @FindBy(how=How.XPATH,using ="//input[@id='ctl00_ParentMasterContentPlaceHolder1_ddlReportLevel_Input']")
 	  private WebElement Report_Level_Dropdown;
 	 
-	  @FindBy(how=How.XPATH,using ="//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlReportLevel_DropDown']//ul//li[text()='State']")
+	  @FindBy(how=How.XPATH,using ="//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlReportLevel_DropDown']//ul//li")
 	  private WebElement Report_Level_Dropdown_Value;
 	  
 	  @FindBy(how=How.XPATH,using ="//input[@id='ParentMasterContentPlaceHolder1_btnSavr']")

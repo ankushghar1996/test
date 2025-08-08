@@ -10,7 +10,6 @@ import SECR_Portal.PJP;
 
 
 public class PJP_Cred extends BaseClass_SECR_Portal {
-
     @Test
     public void PJP_Setting() throws Exception {
 
@@ -32,8 +31,7 @@ public class PJP_Cred extends BaseClass_SECR_Portal {
             Liabrary.custom_click(pjp.getCLOSE_btn(), "Click Close Button");
         });
         Thread.sleep(1000);
-        
-        
+             
     }
     
     @Test(priority=01)

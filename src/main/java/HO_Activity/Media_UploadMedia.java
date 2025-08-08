@@ -10,7 +10,7 @@ public class Media_UploadMedia {
 	
 WebDriver driver;
 	
-	@FindBy(how = How.XPATH, using = "(//*[@class='nav-link'])[7]")
+	@FindBy(how = How.XPATH, using = "//p[text()='Upload Media']")
 	private WebElement UploadMedia_Menu;
 	
 	
@@ -30,10 +30,10 @@ WebDriver driver;
 	
 	
 	
-	@FindBy(how = How.XPATH, using = "//*[@id='ParentMasterContentPlaceHolder1_btnView']")
+	@FindBy(how = How.XPATH, using = "//*[@id='ParentMasterContentPlaceHolder1_BtnView']")
 	private WebElement View_Btn;
 	
-	@FindBy(how = How.XPATH, using = "//*[@id='btnadd']")
+	@FindBy(how = How.XPATH, using = "//*[@id='ParentMasterContentPlaceHolder1_BtnAdd']")
 	private WebElement Add_Btn;
 	
 	@FindBy(how = How.XPATH, using = "//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlMediaType_Input']")

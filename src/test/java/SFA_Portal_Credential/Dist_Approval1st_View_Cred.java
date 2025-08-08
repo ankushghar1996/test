@@ -89,13 +89,9 @@ public class Dist_Approval1st_View_Cred extends BaseClass_SFA {
             Liabrary.custom_click(view.getView_btn(), "Click View Btn");
         });
         Thread.sleep(1000);
-        
-        
-        
+             
     }
-    
-    
-    
+       
     @Test(priority = 2)
     public void Distributor_View_NS_02() throws Exception {
 

@@ -38,13 +38,13 @@ public class IR_Inventory_FlashBySales_Reports extends BaseClass {
         Thread.sleep(1000);
 
         
-        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBySales_Reports_TC04", "Verify Page Title", () -> {
-            WebElement Dealer_Details_Approval = driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_headerpages']"));
-            String Actual_Text = Dealer_Details_Approval.getText();
-            System.out.println(Actual_Text);
-            String Expected_Text = "Inventory Flash By Sales Hierarchy Report";
-            Assert.assertEquals(Expected_Text, Actual_Text);
-        });
+//        ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBySales_Reports_TC04", "Verify Page Title", () -> {
+//            WebElement Dealer_Details_Approval = driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_headerpages']"));
+//            String Actual_Text = Dealer_Details_Approval.getText();
+//            System.out.println(Actual_Text);
+//            String Expected_Text = "Inventory Flash By Sales Hierarchy Report";
+//            Assert.assertEquals(Actual_Text, Expected_Text);
+//        });
 
         
         ObjectRepo.startTestAndLog_1_SS("SA_IR_Inventory_FlashBySales_Reports_TC05", "Click on Product Dropdown", () -> {

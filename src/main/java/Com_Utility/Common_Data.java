@@ -69,7 +69,7 @@ public class Common_Data {
 		return Download_Template;
 	}
 
-	@FindBy(how = How.XPATH, using = "//*[@id='ParentMasterContentPlaceHolder1_btnView']")
+	@FindBy(how = How.XPATH, using = "//*[@id='ParentMasterContentPlaceHolder1_BtnView']")
 	private WebElement View_Btn;
 	
 	@FindBy(how = How.XPATH, using = "//*[@id='btnadd']")

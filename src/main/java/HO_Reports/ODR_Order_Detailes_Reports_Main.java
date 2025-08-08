@@ -17,11 +17,11 @@ public class ODR_Order_Detailes_Reports_Main {
 	private WebElement Select_Type_Master_Dropdown;	
 
 	 
-	@FindBy(how=How.XPATH,using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlType1Master_DropDown']//ul//li[text()='Distributor']")
+	@FindBy(how=How.XPATH,using = "//div[@id='ctl00_ParentMasterContentPlaceHolder1_ddlType1Master_DropDown']//ul//li[text()='Retailer']")
 	private WebElement Select_Type_Master_Dropdown_Value;
 	
 	
-	@FindBy(how=How.XPATH,using = "//input[@id='ParentMasterContentPlaceHolder1_Button1']")
+	@FindBy(how=How.XPATH,using = "//input[@id='ParentMasterContentPlaceHolder1_BtnView']")
 	private WebElement View_Button;	
 	
 	

@@ -1,4 +1,4 @@
-	package SECR_Portal_Credential;
+package SECR_Portal_Credential;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
@@ -38,6 +38,7 @@ public class SECR_Media_Test extends BaseClass_SECR_Portal {
 
         SECR_Media_Main SECR = PageFactory.initElements(driver, SECR_Media_Main.class);
         //Without Clicking Media Button
+        ObjectRepo.startTestAndLog_1_NS("Without Clicking Media Button");
 
         ObjectRepo.startTestAndLog_1_SS("SECR_Media_TC01", "Verify that user should be able to click on Media Tab", () -> {
             Liabrary.custom_click(SECR.getMedia_Tab(), "Click on Media Tab");
@@ -62,6 +63,7 @@ public class SECR_Media_Test extends BaseClass_SECR_Portal {
 
         SECR_Media_Main SECR = PageFactory.initElements(driver, SECR_Media_Main.class);
         //Without Click On Media Documents Search Button
+        ObjectRepo.startTestAndLog_1_NS("Without Click On Media Documents Search Button");
 
         ObjectRepo.startTestAndLog_1_SS("SECR_Media_TC01", "Verify that user should be able to click on Media Tab", () -> {
             Liabrary.custom_click(SECR.getMedia_Tab(), "Click on Media Tab");

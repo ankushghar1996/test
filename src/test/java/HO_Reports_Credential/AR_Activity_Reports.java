@@ -17,7 +17,6 @@ public class AR_Activity_Reports extends BaseClass {
     	
         HomePage hp = PageFactory.initElements(driver, HomePage.class);
         AR_Activity_Reports_Main AR = PageFactory.initElements(driver, AR_Activity_Reports_Main.class);
-
         
         ObjectRepo.startTestAndLog_1_SS("SA_AR_Activity_Reports_TC_01", "Verify click on Report Menu", () -> {
             Liabrary.custom_click(hp.getReports_Menu(), "Click on Report Menu");
@@ -38,13 +37,13 @@ public class AR_Activity_Reports extends BaseClass {
         
 
         ObjectRepo.startTestAndLog_1_SS("SA_AR_Activity_Reports_TC_04", "Enter From Date", () -> {
-            driver.findElement(By.xpath("//*[@id='ctl00_ParentMasterContentPlaceHolder1_Fromdate_dateInput']")).sendKeys("20/10/2024");
+            driver.findElement(By.xpath("//*[@id='ctl00_ParentMasterContentPlaceHolder1_Fromdate_dateInput']")).sendKeys("20/5/2025");
         });
         Thread.sleep(1000);
 
         
         ObjectRepo.startTestAndLog_1_SS("SA_AR_Activity_Reports_TC_05", "Enter To Date", () -> {
-            driver.findElement(By.xpath("//*[@id='ctl00_ParentMasterContentPlaceHolder1_Todate_dateInput']")).sendKeys("29/11/2024");
+            driver.findElement(By.xpath("//*[@id='ctl00_ParentMasterContentPlaceHolder1_Todate_dateInput']")).sendKeys("29/11/2025");
         });
         Thread.sleep(1000);
 

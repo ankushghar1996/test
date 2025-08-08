@@ -9,13 +9,11 @@ import Com_Utility.ObjectRepo;
 import Retailer_Portal.Retailer_Points;
 
 public class Retailer_Points_Test extends BaseClass_Retailer {
-
+	
 	@Test(priority=0)
     public void Points() throws Exception {
 
         Retailer_Points RETR = PageFactory.initElements(driver, Retailer_Points.class);
-        
-        
 
         ObjectRepo.startTestAndLog_1_SS("Retailer_Points_TC01", "Click on menu Button", () -> {
             Liabrary.custom_click(RETR.getMenu(), "Click on menu Button");
@@ -94,6 +92,7 @@ public class Retailer_Points_Test extends BaseClass_Retailer {
         });
         Thread.sleep(1000);
     }
+    
     @Test(priority=2)
     public void Points_NS02() throws Exception {
 

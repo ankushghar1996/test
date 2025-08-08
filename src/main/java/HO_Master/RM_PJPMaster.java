@@ -41,7 +41,7 @@ public class RM_PJPMaster {
 	  private WebElement Distributor_Name_Dropdown;
 	  
 	  
-	  @FindBy(how=How.XPATH,using= "//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlDistributorName_DropDown']//ul//li[text()='New Annapurna Associate [SFA-101]']")
+	  @FindBy(how=How.XPATH,using= "//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlDistributorName_DropDown']//ul//li[text()='New Annapurna  Associate [SFA-001]']")
 	  private WebElement Distributor_Name_Dropdown_Value;
 	 
 	  
@@ -49,7 +49,7 @@ public class RM_PJPMaster {
 	  private WebElement FSG_Name_Dropdown;
 	  
 	  
-	  @FindBy(how=How.XPATH,using= "//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlSalesmanName_DropDown']//ul//li[text()='Rajesh']")
+	  @FindBy(how=How.XPATH,using= "//*[@id='ctl00_ParentMasterContentPlaceHolder1_ddlSalesmanName_DropDown']//ul//li")
 	  private WebElement FSG_Name_Dropdown_Value;
 	  
 	 
