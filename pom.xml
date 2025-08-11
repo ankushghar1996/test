@@ -218,6 +218,14 @@
 </dependency>
  
  
+ <dependency>
+    <groupId>org.mongodb</groupId>
+    <artifactId>mongodb-driver-sync</artifactId>
+    <version>4.10.2</version> <!-- Latest version as of now -->
+</dependency>
+
+ 
+ 
  
 </dependencies>
 
