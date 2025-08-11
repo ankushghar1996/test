@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+ 
+ 
+<!-- SEBS Developer, Site, Contractor, Applicator, Notification, Scheme, PJP, View Profile, DashBoard -->
+
+<class name="SEBS_Portal_Credential.SEBS_New_Contractors_Test">
+		<methods>
+        <include name="New_Contractors"/>
+         <include name="New_Contractors_NS01"/>
+          <include name="New_Contractors_NS02"/>
+    </methods>
+     </class>
+     
+<class name="SEBS_Portal_Credential.SEBS_New_Applicator_Creation_Test">
+		<methods>
+        <include name="Applicator_creation"/>
+        <include name="Applicator_creation_NS01"/>
+        <include name="Applicator_creation_NS02"/>   
+    </methods>
+     </class>
+     
+<class name="SEBS_Portal_Credential.SEBS_Notification_Test">  
+		<methods>
+        <include name="New_Notification"/>
+        <include name="New_Notification"/>
+        <include name="New_Notification"/>
+    </methods>
+     </class>
+     
+<class name="SEBS_Portal_Credential.SEBS_Scheme_Test">    
+		<methods>
+        <include name="Scheme"/>
+        <include name="Scheme_Ns01"/>
+        <include name="Scheme_Ns02"/>
+    </methods>
+     </class>
+     
+<class name="SEBS_Portal_Credential.SEBS_View_Profile_Cred">     
+		<methods>
+        <include name="SECR_ViewProfile"/>
+        <include name="SEBS_ViewProfile_NS01"/>
+        <include name="SEBS_ViewProfile_NS02"/>       
+    </methods>
+     </class>
+     
+<class name="SEBS_Portal_Credential.PJP_Cred">     
+		<methods>
+        <include name="PJP_Setting"/>
+        <include name="PJP_Setting_NS_01"/>
+         <include name="PJP_Setting_NS_02"/>        
+    </methods>
+     </class>
+     
+<class name="SEBS_Portal_Credential.SEBS_Dashboard_Test">  
+		<methods>
+        <include name="Dashboard"/>
+        <include name="Dashboard_NS01"/>
+        <include name="Dashboard_NS02"/>
+        
+    </methods>
+     </class>
+    <class name="SEBS_Portal_Credential.SEBS_Media_Test">
+		<methods>
+        <include name="Media"/>
+         <include name="Media_NS01"/>
+          <include name="Media_NS02"/>
+    </methods>
+     </class>
+   
+    </classes>
+  </test>
+</suite>

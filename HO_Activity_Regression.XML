@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+    
+      <!-- Super Admin HO Activity Flow -->
+      <class name="HO_Activity_Credential.ActivityUpload">
+        <methods>
+          <include name="Activity_Upload"/>
+          <include name="Activity_Upload_NS01"/>
+          <include name="Activity_Upload_NS02"/>
+        </methods>
+      </class>
+      <class name="HO_Activity_Credential.AddMedia">
+        <methods>
+          <include name="Add_Media_Case1"/>
+          <include name="Add_Media_Case2"/>
+          <include name="Add_Media_Case3"/>
+        </methods>
+      </class>
+      <class name="HO_Activity_Credential.UploadMedia_ActionViewPage">
+        <methods>
+          <include name="Upload_media"/>
+          <include name="Upload_media_NS01"/>
+          <include name="Upload_media_NS02"/>
+        </methods>
+      </class>
+      <class name="HO_Activity_Credential.UploadMedia_ViewPage">
+        <methods>
+          <include name="Upload_media_View"/>
+          <include name="Upload_media_NS1"/>
+          <include name="Upload_media_NS2"/>
+        </methods> 
+      </class>
+    </classes>
+  </test>
+</suite>
