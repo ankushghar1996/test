@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <!-- <class name="SECR_Portal_Credential.Mark_Attendence_Cred"/> -->
+
+      <!-- HO Master Credential Master -->
+      <class name="HO_Master_Credential.AccM_ApplicatiorMaster">
+        <methods>
+          <include name="Applicator_Master"/>
+          <include name="Applicator_Master_NS01"/>
+          <include name="Applicator_Master_NS01"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.AccM_ApplicatorViewPage">
+        <methods>
+          <include name="Applicator_View_Page"/>
+          <include name="Applicator_View_Page_NS1"/>
+          <include name="Applicator_View_Page_NS2"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.AccM_ContractorMaster">
+        <methods>
+          <include name="Contractor_MasterHomepage"/>
+          <include name="Contractor_MasterHomepage_NS01"/>
+          <include name="Contractor_MasterHomepage_NS02"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.AccM_ContractorViewPage">
+        <methods>
+          <include name="Contractor_Master_View_page"/>
+          <include name="Contractor_Master_View_page_NS1"/>
+          <include name="Contractor_Master_View_page_NS2"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.AccM_DeveloperMaster">
+        <methods>
+          <include name="Developer_Master"/>
+          <include name="Developer_Master_NS01"/>
+          <include name="Developer_Master_NS02"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.AccM_DeveloperMasterViewPage">
+        <methods>
+          <include name="Developer_Master_View_Page"/>
+          <include name="Developer_Master_View_Page_NS1"/>
+          <include name="Developer_Master_View_Page_NS2"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.AccM_SiteMaster">
+        <methods>
+          <include name="Site_Master"/>
+          <include name="Site_Master_NS1"/>
+          <include name="Site_Master_NS2"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.AccM_SiteMasterViewPage">
+        <methods>
+          <include name="Site_MasterView_page"/>
+          <include name="Site_MasterView_page_NS1"/>
+          <include name="Site_MasterView_page_NS2"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.DistM_ADD_SFADistributor">
+        <methods>
+          <include name="Add_SFA_Distributor"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.DistM_DistApp_ViewPage">
+        <methods>
+          <include name="Dist_App_ViewPage"/>
+          <include name="Upload_media_NS01"/>
+          <include name="Upload_media_NS02"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.DistM_DistributorApprove1">
+        <methods>
+          <include name="DistributorApprove1"/>
+          <include name="DistributorApprove1_NS01"/>
+          <include name="DistributorApprove1_NS02"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.DistM_DistributorApprovl">
+        <methods>
+          <include name="DistributorApprovl"/>
+          <include name="DistributorApprovl_NS1"/>
+          <include name="DistributorApprovl_NS2"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.DistM_DistributorMasterViewPage">
+        <methods>
+          <include name="Distributor_Master_View_Page"/>
+          <include name="DistributorApprovl_NS1"/>
+          <include name="DistributorApprovl_NS2"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.DistM_DistributorTransfer">
+        <methods>
+          <include name="Distributor_Transfer1"/>
+          <include name="Distributor_Transfer1_NS1"/>
+          <include name="Distributor_Transfer1_NS2"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.DistM_EditSFADistributor">
+        <methods>
+          <include name="EditSFADistributor"/>
+          <include name="EditSFADistributor_NS1"/>
+          <include name="EditSFADistributor_NS2"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.DistM_SFAViewPage">
+        <methods>
+          <include name="SFAViewPage"/>
+          <include name="SFAViewPage_NS1"/>
+          <include name="SFAViewPage_NS2"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.DLRM_DLRM_Dealer_Approval">
+        <methods>
+          <include name="DLRM_Dealer_Approval"/>
+          <include name="DLRM_Dealer_Approval_NS01"/>
+          <include name="DLRM_Dealer_Approval_NS02"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.DLRM_DLRM_Dealer_ApprovalBTN_Page">
+        <methods>
+          <include name="Dealer_ApprovalBTN"/>
+          <include name="Dealer_ApprovalBTN_NS01"/>
+          <include name="Dealer_ApprovalBTN_NS02"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.DLRM_DLRM_Dealer_ApprovalView_Page">
+        <methods>
+          <include name="Dealer_Approval_View"/>
+          <include name="Dealer_Approval_View_ns01"/>
+          <include name="Dealer_Approval_View_ns02"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.DLRM_DLRM_Dealer_Master_Page">
+        <methods>
+          <include name="Dealer_Master_Page"/>
+          <include name="Dealer_Master_Page_NS01"/>
+          <include name="Dealer_Master_Page_NS2"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.DLRM_DLRM_Dealer_Master_Upload_Retailer_Page">
+        <methods>
+          <include name="Dealer_Master_Upload_Retailer_Page"/>
+          <include name="Dealer_Master_Upload_Retailer_Page_NS1"/>
+          <include name="Dealer_Master_Upload_Retailer_Page_NS2"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.DLRM_DLRM_Dealer_Transfer">
+        <methods>
+          <include name="Outlet_Transfer"/>
+        </methods>
+      </class>
+       <class name="HO_Master_Credential.FSG_FSGMaster_AddPage">
+        <methods>
+          <include name="FSG_Master_Add_Page"/>
+          <include name="FSG_Master_Add_Page_NS01"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.FSG_Master">
+        <methods>
+          <include name="FSG_Master_Method"/>
+          <include name="FSG_Master_Method_NS01"/>
+          <include name="FSG_Master_Method_NS02"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.FSG_MasterHomePage">
+        <methods>
+          <include name="FSG_Master_Method"/>
+          <include name="FSG_Master_Method_NS1"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.FSG_MasterViewPage">
+        <methods>
+          <include name="FSG_Master_View"/>
+          <include name="FSG_Master_View_NS01"/>
+           <include name="FSG_Master_View_NS2"/>
+        </methods>
+      </class>
+      <class name="HO_Master_Credential.UM_UM_User_Master_Add_Page">
+        <methods>
+          <include name="UM_User_Master_Add"/>
+          <include name="UM_User_Master_Add_NS01"/>
+           <include name="UM_User_Master_Add_NS02"/>
+        </methods>
+      </class>
+       <class name="HO_Master_Credential.UM_UM_User_Master_Edit_Page">
+        <methods>
+          <include name="User_Master_EditPage"/>
+          <include name="User_Master_EditPage_NS01"/>
+           <include name="User_Master_EditPage_NS02"/>
+        </methods>
+      </class>
+       <class name="HO_Master_Credential.UM_UM_User_Master_Page">
+        <methods>
+          <include name="UM_User_Master_Page"/>
+          <include name="UM_User_Master_Page_NS01"/>
+        </methods>
+      </class>
+       <class name="HO_Master_Credential.UM_UM_User_Master_View_Page">
+        <methods>
+          <include name="UM_User_Master_View"/>
+          <include name="UM_User_Master_View_NS1"/>
+           <include name="UM_User_Master_View_NS2"/>
+        </methods>
+      </class>
+       </classes>
+  </test>
+</suite>

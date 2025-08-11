@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+    
+      <!-- Super Admin Settings Flow -->
+      <class name="HO_Settings_Credential.Test_Cluster_Creation">
+        <methods>
+          <include name="Cluster_Creation_Page"/>
+          <include name="Cluster_Creation_Page_NS1"/>
+          <include name="Cluster_Creation_Page_NS2"/>
+        </methods>
+      </class>
+      
+      <class name="HO_Settings_Credential.Test_Cluster_Mapping">
+        <methods>
+          <include name="Cluster_Mapping"/>
+          <include name="Cluster_Mapping_NS1"/>
+          <include name="Cluster_Mapping_NS2"/>
+        </methods>
+      </class>
+      <class name="HO_Settings_Credential.Test_Permission_Wise_Access">
+        <methods>
+          <include name="Permission_Wise_Access"/>
+          <include name="Permission_Wise_Access_NS1"/>
+          <include name="Permission_Wise_Access_NS02"/>
+        </methods>
+      </class>
+      
+      <class name="HO_Settings_Credential.Test_Role_Wise_Access">
+        <methods>
+          <include name="Role_Wise_Access"/>
+          <include name="Role_Wise_Access_NS1"/>
+          <include name="Role_Wise_Access_NS2"/>
+        </methods>
+      </class>
+      <!-- Super Admin Scheme Flow -->
+      <class name="HO_Scheme_Credential.SM_Scheme_AddPage">
+        <methods>
+          <include name="Scheme_Master_AddPage"/>
+          <include name="Scheme_Master_AddPage_AllSku_NS1"/>
+          <include name="Scheme_Master_AddPage_AllSku_NS2"/>
+        </methods>
+      </class>
+      
+      <class name="HO_Scheme_Credential.SM_scheme_Homepage">
+        <methods>
+          <include name="scheme_Homepage"/>
+          <include name="scheme_Homepage_NS01"/>
+          <include name="scheme_Homepage_NS02"/>
+        </methods>
+      </class>
+      
+      <class name="HO_Scheme_Credential.SM_Scheme_ViewPage">
+        <methods>
+          <include name="Scheme_View_Page"/>
+          <include name="Scheme_View_Page_NS01"/>
+          <include name="Scheme_View_Page_NS02"/>
+        </methods>
+      </class>
+      
+
+      <!-- Super Admin Reports Flow -->
+      <class name="HO_Reports_Credential.AR_Activity_Reports">
+        <methods>
+          <include name="Activity_Reports"/>
+          <include name="Activity_Reports_NS01"/>
+          <include name="Activity_Reports_NS02"/>
+        </methods>
+      </class>
+      
+      <class name="HO_Reports_Credential.IR_Geographical_Hierarchy_Report">
+        <methods>
+          <include name="Inventory_FlashBy_Product_Report"/>
+          <include name="Inventory_FlashBy_Product_Report_NS01"/>
+          <include name="Inventory_FlashBy_Product_Report_NS02"/>
+        </methods>
+      </class>
+      
+      <class name="HO_Reports_Credential.IR_Inventory_FlashBy_Product_Report">
+        <methods>
+          <include name="Inventory_FlashBy_Product_Report"/>
+          <include name="Inventory_FlashBy_Product_Report_NS01"/>
+          <include name="Inventory_FlashBy_Product_Report_NS02"/>
+        </methods>
+      </class>
+      
+      <class name="HO_Reports_Credential.IR_Inventory_FlashBySales_Reports">
+        <methods>
+          <include name="Inventory_FlashBySales_Reports"/>
+          <include name="Inventory_FlashBySales_Reports_NS01"/>
+          <include name="Inventory_FlashBySales_Reports_NS02"/>
+        </methods>
+      </class>
+      <class name="HO_Reports_Credential.IR_Inventory_FlashBy_Product_Report">
+        <methods>
+          <include name="Inventory_TrendByProduct_Report"/>
+          <include name="Inventory_TrendByProduct_Report_NS01"/>
+          <include name="Inventory_TrendByProduct_Report_NS02"/>
+        </methods>
+      </class>
+       <class name="HO_Reports_Credential.ODR_Order_Detailes_Reports">
+        <methods>
+          <include name="Order_Detailes_Reports"/>
+          <include name="Order_Detailes_Reports_NS1"/>
+          <include name="Order_Detailes_Reports_NS2"/>
+        </methods>
+      </class>
+      
+       <class name="HO_Reports_Credential.ODR_Order_Summary_Report">
+        <methods>
+          <include name="Order_Detailes_Reports"/>
+          <include name="Order_Detailes_Reports_NS1"/>
+          <include name="Order_Detailes_Reports_NS2"/>
+        </methods>
+      </class>
+      
+       <class name="HO_Reports_Credential.OR_Active_User">
+        <methods>
+          <include name="Active_User_Reports"/>
+          <include name="Active_User_Reports_NS1"/>
+        </methods>
+      </class>
+
+    </classes>
+  </test>
+</suite>
