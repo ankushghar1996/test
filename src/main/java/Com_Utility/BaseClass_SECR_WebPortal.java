@@ -48,10 +48,13 @@ public class BaseClass_SECR_WebPortal {
         LoginPage loginelements = PageFactory.initElements(driver, LoginPage.class);
  
         // Use custom methods to send keys and clicks, replace Liabrary with Library
+
         Liabrary.custom_Sendkeys(loginelements.getUserName(), excel.getStringdata2("Sheet1", 10, 0), "UserName Field");
+
       
         Liabrary.custom_Sendkeys(loginelements.getPassword(), excel.getStringdata2("Sheet1", 10, 1), "Password Field");
   
+
         Liabrary.custom_click(loginelements.getLogin_Btn(), "Login Btn");
         Thread.sleep(1000);
     
