@@ -9,6 +9,7 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
@@ -89,14 +90,36 @@ public class SEBS_New_Applicator_Creation_Test extends BaseClass_SEBS_Portal {
 		    JSE1.executeScript("arguments[0].scrollIntoView(true);", element1); });
 		    Thread.sleep(1000);
 		
-
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Applicator_Creat TC14", "Click on Applicator Type", () -> {
-		    Liabrary.custom_click(SEBS.getApplicator_Type(), "Click on Applicator Type"); });
 		    
-		
+		    ObjectRepo.startTestAndLog_1_SS("SEBS_New_Applicator_Creat TC15", "Select Applicator Type Value", () -> {
+		        WebElement dropdownElement = driver.findElement(
+		            By.xpath("//select[@formcontrolname='ApplicatorType']")
+		        );
 
-		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Applicator_Creat TC15", "Click on Applicator Type Value", () -> {
-		    Liabrary.custom_click(SEBS.getApplicator_Type_Value(), "Click on Applicator Type Value"); });
+		        // Create Select object
+		        Select select = new Select(dropdownElement);
+
+		        // Choose by visible text
+		        select.selectByVisibleText("Anchoring");
+
+		        // Or by value
+		        // select.selectByValue("10");
+
+		        // Or by index
+		        // select.selectByIndex(1);
+
+		        
+		    });
+		    Thread.sleep(1000);
+		    
+//
+//		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Applicator_Creat TC14", "Click on Applicator Type", () -> {
+//		    Liabrary.custom_click(SEBS.getApplicator_Type(), "Click on Applicator Type"); });
+//		    
+//		
+//
+//		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Applicator_Creat TC15", "Click on Applicator Type Value", () -> {
+//		    Liabrary.custom_click(SEBS.getApplicator_Type_Value(), "Click on Applicator Type Value"); });
 		    
 		
 

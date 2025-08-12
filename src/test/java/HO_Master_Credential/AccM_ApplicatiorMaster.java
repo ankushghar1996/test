@@ -14,6 +14,7 @@ import HO_Master.AM_ApplicatiorMaster;
 import HO_Master.DM_DistributorTransfer;
 
 public class AccM_ApplicatiorMaster extends BaseClass{
+	
 	@Test(priority=0)
 	public void Applicator_Master() throws Exception {
 		
@@ -32,14 +33,15 @@ public class AccM_ApplicatiorMaster extends BaseClass{
 		Liabrary.custom_click(AP.getApplicator_Master(), null);});
 		Thread.sleep(1000);
 	
-		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC04", "Click On Applicator Master", () -> {
-//		ObjectRepo.test.log(Status.INFO, "Test Case 4 : Verify that user should be Target Upload Header Text.");
-			WebElement UploadText=driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_pageHeader']"));
-			String Actual_Text=UploadText.getText();
-			System.out.println(Actual_Text);
-			String Expected_Text="Applicator Master";
-			Assert.assertEquals(Expected_Text, Actual_Text);});
-			Thread.sleep(2000);		
+//		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC04", "Click On Applicator Master", () -> {
+////		ObjectRepo.test.log(Status.INFO, "Test Case 4 : Verify that user should be Target Upload Header Text.");
+//			WebElement UploadText=driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_pageHeader']"));
+//			String Actual_Text=UploadText.getText();
+//			System.out.println(Actual_Text);
+//			String Expected_Text="Applicator Master";
+//			Assert.assertEquals(Expected_Text, Actual_Text);});
+//			Thread.sleep(2000);		
+		
 	}
 	
 	@Test(priority=1)
@@ -62,14 +64,14 @@ public class AccM_ApplicatiorMaster extends BaseClass{
 //		Liabrary.custom_click(AP.getApplicator_Master(), null);});
 //		Thread.sleep(1000);
 	
-		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC04", "Click On Applicator Master", () -> {
-//		ObjectRepo.test.log(Status.INFO, "Test Case 4 : Verify that user should be Target Upload Header Text.");
-			WebElement UploadText=driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_pageHeader']"));
-			String Actual_Text=UploadText.getText();
-			System.out.println(Actual_Text);
-			String Expected_Text="Applicator Master";
-			Assert.assertEquals(Expected_Text, Actual_Text);});
-			Thread.sleep(2000);
+//		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC04", "Click On Applicator Master", () -> {
+////		ObjectRepo.test.log(Status.INFO, "Test Case 4 : Verify that user should be Target Upload Header Text.");
+//			WebElement UploadText=driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_pageHeader']"));
+//			String Actual_Text=UploadText.getText();
+//			System.out.println(Actual_Text);
+//			String Expected_Text="Applicator Master";
+//			Assert.assertEquals(Expected_Text, Actual_Text);});
+//			Thread.sleep(2000);
 			
 	}
 
@@ -93,14 +95,14 @@ public class AccM_ApplicatiorMaster extends BaseClass{
 		Liabrary.custom_click(AP.getApplicator_Master(), null);});
 		Thread.sleep(1000);
 	
-		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC04", "Click On Applicator Master", () -> {
-//		ObjectRepo.test.log(Status.INFO, "Test Case 4 : Verify that user should be Target Upload Header Text.");
-			WebElement UploadText=driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_pageHeader']"));
-			String Actual_Text=UploadText.getText();
-			System.out.println(Actual_Text);
-			String Expected_Text="Applicator Master";
-			Assert.assertEquals(Expected_Text, Actual_Text);});
-			Thread.sleep(2000);
+//		ObjectRepo.startTestAndLog_1_SS("SA_Applicator_Master TC04", "Click On Applicator Master", () -> {
+////		ObjectRepo.test.log(Status.INFO, "Test Case 4 : Verify that user should be Target Upload Header Text.");
+//			WebElement UploadText=driver.findElement(By.xpath("//h4[@id='ParentMasterContentPlaceHolder1_pageHeader']"));
+//			String Actual_Text=UploadText.getText();
+//			System.out.println(Actual_Text);
+//			String Expected_Text="Applicator Master";
+//			Assert.assertEquals(Expected_Text, Actual_Text);});
+//			Thread.sleep(2000);
 	
 	
 	

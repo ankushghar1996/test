@@ -54,12 +54,12 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 	    Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_07", "Sales Engineer Name", () ->{
-		driver.findElement(By.xpath("//ng-select[@bindvalue='SalesmanId']//input[@type='text']")).click();
+		driver.findElement(By.xpath("(//div[@class='add-new-developer-form p-3']//child::div//ng-select//child::div[@class='ng-value-container'])[2]")).click();
 			});
 		Thread.sleep(1000);
 				
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_08", "select Sales Engineer name", () ->{
-		driver.findElement(By.xpath("//span[@class='ng-option-label']")).click();
+		driver.findElement(By.xpath("//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Nageshwar']")).click();
 
 		});
 		Thread.sleep(1000);
@@ -68,14 +68,14 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_09", "Click Route name", () ->{
 
-		driver.findElement(By.xpath("//ng-select[@bindvalue='RouteId']//input[@type='text']")).click();
+		driver.findElement(By.xpath("(//div[@class='add-new-developer-form p-3']//child::div//ng-select//child::div[@class='ng-value-container'])[3]")).click();
 		});
 		Thread.sleep(1000);
 		
 		
 
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_10", "select Route", () ->{
-		driver.findElement(By.xpath("//span[contains(@class, 'ng-option-label')]")).click();
+		driver.findElement(By.xpath("//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='N8 Cidco']")).click();
 
 		});
 		Thread.sleep(1000);

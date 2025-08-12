@@ -16,13 +16,13 @@ public class SEBS_New_Applicator_Creation {
   @FindBy(how=How.XPATH,using="//div[@class='retailer-add d-flex align-items-center text-right']//i[@aria-hidden='true']")
   private WebElement Creation_Button ;	
   
-  @FindBy(how=How.XPATH,using="(//div[@class='ng-select-container ng-has-value']//input[@type='text'])[1]")
+  @FindBy(how=How.XPATH,using="(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[1]")
   private WebElement Select_Distributor_Dropdown ;		
   
   @FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Bluehost DB [10145]']")
   private WebElement Select_Distributor_Dropdown_Value ;	
   
-  @FindBy(how=How.XPATH,using="(//div[@class='ng-select-container ng-has-value']//input[@type='text'])[2]")
+  @FindBy(how=How.XPATH,using="(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[2]")
   private WebElement Sales_Engineer_Dropdown ;	
   
   @FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Nageshwar']")
@@ -30,24 +30,25 @@ public class SEBS_New_Applicator_Creation {
   
   
  
-  @FindBy(how=How.XPATH,using="//ng-select[@formcontrolname='Route']")
+  @FindBy(how=How.XPATH,using="(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[3]")
   private WebElement Route ;
   
-  @FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='karvey nagar']")
-  private WebElement Route_Value ;		
+  @FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='N8 Cidco']")
+  private WebElement Route_Value ;	
+  
   @FindBy(how=How.XPATH,using="//div[@class='col-12 mb-3']//select[@aria-label='Default select example']")
   private WebElement Applicator_Type ;
  
   @FindBy(how=How.XPATH,using="//div[@class='col-12 mb-3']//option[text()='Contractor ']")
   private WebElement Applicator_Type_Value;
  
-  @FindBy (how=How.XPATH,using = "//div[@class='col-12 mb-3']//ng-select[@bindvalue='StateId']")
+  @FindBy (how=How.XPATH,using = "(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[4]")
   private WebElement State_Dropdown;
  
   @FindBy (how=How.XPATH,using = "//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Maharashtra']")
   private WebElement State_Dropdown_Value;
  
-  @FindBy (how=How.XPATH,using = "//ng-select[@bindvalue='TownId']//input[@type='text']")
+  @FindBy (how=How.XPATH,using = "(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[5]")
   private WebElement City_Dropdown ;
  
   @FindBy (how=How.XPATH,using = "//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Ahmednagar']")

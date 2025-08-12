@@ -149,7 +149,7 @@ public class New_Developer_Creation {
     private WebElement Add_Menu;
 	
 	
-	@FindBy(how=How.XPATH,using="(//ng-select[contains(@bindvalue,'DistributorCode')])[1]")
+	@FindBy(how=How.XPATH,using="(//div[@class='add-new-developer-form p-3']//child::div//ng-select//child::div[@class='ng-value-container'])[1]")
     private WebElement Distributor_Mapped;
 	
 	
@@ -173,7 +173,7 @@ public class New_Developer_Creation {
     private WebElement Enter_Address_Line_1;
 	
 	
-	@FindBy(how=How.XPATH,using="//ng-select[@class='gray-background-removed ng-select-searchable ng-select-clearable ng-select ng-select-single ng-untouched ng-pristine ng-valid']//input[@type='text']")
+	@FindBy(how=How.XPATH,using="(//div[@class='add-new-developer-form p-3']//child::div//ng-select//child::div[@class='ng-value-container'])[4]")
     private WebElement State_Dropdown;
 	
 	
@@ -181,7 +181,7 @@ public class New_Developer_Creation {
     private WebElement Select_State;
 	
 	
-	@FindBy(how=How.XPATH,using="//ng-select[@class='ng-select-searchable ng-select-clearable ng-select ng-select-single ng-untouched ng-pristine ng-invalid']//input[@type='text']")
+	@FindBy(how=How.XPATH,using="(//div[@class='add-new-developer-form p-3']//child::div//ng-select//child::div[@class='ng-value-container'])[5]")
     private WebElement City_Dropdown;
 	
 	
