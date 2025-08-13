@@ -106,13 +106,13 @@ public class New_Distributor_Cred {
 	 	    
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_07", "Verify that user should be send Mobile Number.", () -> {
-	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys(mobileNumber);
+	 	        driver.findElement(By.xpath("//input[contains(@placeholder, 'Enter Mobile Number')]")).sendKeys(mobileNumber);
 	 	    });
 	 	    Thread.sleep(1000);
 	 	    
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_08", "Verify that user should be click on Send OTP Button.", () -> {
-	 	        driver.findElement(By.xpath("//button[normalize-space()='SEND OTP']")).click();
+	 	        driver.findElement(By.xpath("//button[contains(text(), 'SEND OTP')]")).click();
 	 	    });
 	 	    Thread.sleep(3000);
 	 	    
@@ -231,7 +231,7 @@ public class New_Distributor_Cred {
 	        });
 	        Thread.sleep(1000);
 	        
-	        
+	 
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_22", "Verify that user should be send Address Line 1.", () -> {
 	            driver.findElement(By.xpath("//input[@placeholder='Enter Address Line 1']")).sendKeys("civil lines");
 	        });

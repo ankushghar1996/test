@@ -8,7 +8,6 @@ import Com_Utility.Liabrary;
 import Com_Utility.ObjectRepo;
 import SECR_Portal.PJP;
 
-
 public class PJP_Cred extends BaseClass_SECR_Portal {
     @Test
     public void PJP_Setting() throws Exception {

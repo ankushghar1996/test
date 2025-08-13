@@ -27,27 +27,21 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Activity_Non_PJP_New_Retailer_Cred {
 
-	
-	
+
 	 WebDriver driver;
 	 
 	 @BeforeSuite
      public void setupSuite() {
- 		
-         ObjectRepo.initializeReport();  // Important: Initializes the Extent report
-         
-         
+		 
+         ObjectRepo.initializeReport();  // Important: Initializes the Extent report      
      }
 	 
-	 
-
 	    @BeforeClass
 	    public void setUp() {
 	        
 	    	WebDriverManager.chromedriver().setup();
 	    	
-	    	
-	   	 ChromeOptions options = new ChromeOptions();
+	   	    ChromeOptions options = new ChromeOptions();
 	   	    options.addArguments("--use-fake-device-for-media-stream");
 	   	    options.addArguments("--use-fake-ui-for-media-stream");
 	   	    options.addArguments("--use-file-for-fake-video-capture=C:\\test\\sample-video.y4m"); // 👈 provide a real path
@@ -55,12 +49,11 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 	   	    driver = new ChromeDriver(options);
 	   	    driver.manage().window().maximize();
 	   	    
-	   	 ObjectRepo.driver = driver;
+	   	    ObjectRepo.driver = driver;
 	   	    
 	   	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	   	    
-	   	   
-	   	    
+   	    
 	    }
 
 	    @Test
@@ -69,7 +62,7 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 	        String mobileNumber = "7777888824";
 
 	        // Login
-	        driver.get("https://fosrocsecruat.hspldms.com/");
+	        driver.get("https://fosrocsecruatlocal.hspldms.com/");
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_01", "Verify that user should be send SECR User Name.", () -> {
 		        driver.findElement(By.xpath("//input[@placeholder='User Name']")).sendKeys("SECR-008");
@@ -140,7 +133,7 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 	        System.out.println("Entering New Retailer Info...");
 	        
 	        
-	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_11", "Verify that user should be click on Distributor dropdown.", () -> {
+	            ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_11", "Verify that user should be click on Distributor dropdown.", () -> {
 		        driver.findElement(By.xpath("//ng-select[@bindvalue='DistributorCode']")).click();
 		        });
 		        Thread.sleep(1000);
@@ -148,7 +141,7 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 		        
 		        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_12", "Verify that user should be select Distributor in Distributordropdown.", () -> { 
 		        driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Chiranth Agencies [10001]']")).click();
-		    });
+		        });
 		        Thread.sleep(1000);
 		        
 		        
@@ -290,8 +283,6 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 		        });
 		        Thread.sleep(1000);
 	        
-
-
 	        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	        // Wait for the Switch Camera button and click it
@@ -315,9 +306,7 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 	            System.out.println("Capture button not found or not clickable.");
 	        }    
 	        Thread.sleep(5000);
-	        
-	        
-	        
+	        	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_33", "Verify that user should be click on Camera 1 button.", () -> {
 		        driver.findElement(By.xpath("(//div[@class='upload-documents-container']//child::div//child::div//child::span[@class='circle-camera'])[2]")).click();
 		        });

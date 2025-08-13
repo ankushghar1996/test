@@ -78,7 +78,7 @@ public class SECR_New_Retailer_Status_Cred {
 	        String mobileNumber = "7777888950";
 
 	        // Login
-	        driver.get("https://fosrocsecruat.hspldms.com/");
+	        driver.get("https://fosrocsecruatlocal.hspldms.com/");
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_01", "Verify that user should be send SECR User Name.", () -> {

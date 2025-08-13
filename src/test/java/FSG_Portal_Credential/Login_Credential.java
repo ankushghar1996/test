@@ -32,6 +32,7 @@ public class Login_Credential extends BaseClass_FSG_Portal {
         });
         Thread.sleep(1000);
     }
+    
     @Test(priority=01)
     public void testLoginPage_NS01 () throws Exception{
 

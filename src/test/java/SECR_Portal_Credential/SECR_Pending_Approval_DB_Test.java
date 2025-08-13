@@ -118,13 +118,9 @@ public class SECR_Pending_Approval_DB_Test extends BaseClass_SECR_Portal {
         });
         Thread.sleep(1000);
 
-        
-      
+   
 }
-    
-    
-    
-    
+
     @Test (priority = 2)
     public void Pending_Approval_DB_NS02() throws Exception {
 
