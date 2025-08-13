@@ -123,7 +123,7 @@ public class New_Site_Creation {
     private WebElement Add_Menu;
 	
 	
-	@FindBy(how=How.XPATH,using="(//div[contains(@class,'ng-select-container ng-has-value')])[1]")
+	@FindBy(how=How.XPATH,using="(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[1]")
     private WebElement Distributor_Mapped;
 	
 	
@@ -131,27 +131,29 @@ public class New_Site_Creation {
     private WebElement Select_Distributor_Mapped;
 	
 	
-	@FindBy(how=How.XPATH,using="//ng-select[contains(@class, 'ng-select') and @formcontrolname='FSG']")
+	@FindBy(how=How.XPATH,using="(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[2]")
     private WebElement select_sales_Engineer_dropdown;
 	
+//	(//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]
+	//div[@class='ng-option ng-option-selected ng-option-marked']//span[normalize-space()='Nageshwar']
 	
-	@FindBy(how=How.XPATH,using="//div[@class='ng-option ng-option-selected ng-option-marked']//span[normalize-space()='Nageshwar']")
+	@FindBy(how=How.XPATH,using="(//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")
     private WebElement select_sales_Engineer;
 	
 	
-	@FindBy(how=How.XPATH,using="(//input[contains(@type,'text')])[3]")
+	@FindBy(how=How.XPATH,using="(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[3]")
     private WebElement select_Location_dropdown;
 	
-	
-	@FindBy(how=How.XPATH,using="//span[normalize-space()='karvey nagar']")
+//	(//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]
+	@FindBy(how=How.XPATH,using="(//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")
     private WebElement select_Location;
 	
 
-	@FindBy(how=How.XPATH,using="(//input[@type='text'])[4]")
+	@FindBy(how=How.XPATH,using="(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[4]")
 	private WebElement select_developer_Name_dropdown;
 	
-	
-	@FindBy(how=How.XPATH,using="//span[normalize-space()='Akash Dev']")
+//	(//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-top']//child::div//child::span[contains(@class,'ng-option')])[1]
+	@FindBy(how=How.XPATH,using="(//span[@class='ng-option-label'][normalize-space()='Ahuja Developer'])[1]")
 	private WebElement select_developer_Name;
 	
 	
@@ -254,7 +256,17 @@ public class New_Site_Creation {
 		return Non_PJP_Button;
 	}
 	
-	
+	@FindBy (how=How.XPATH,using = "(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[4]")
+	private WebElement State_Dropdown;
+	 
+	@FindBy (how=How.XPATH,using = "//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Maharashtra']")
+	private WebElement State_Dropdown_Value;
+	 
+	@FindBy (how=How.XPATH,using = "(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[5]")
+	private WebElement City_Dropdown ;
+	 
+	@FindBy (how=How.XPATH,using = "//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Ahmednagar']")
+	private WebElement City_Dropdown_Value ;
 	
 	
 	

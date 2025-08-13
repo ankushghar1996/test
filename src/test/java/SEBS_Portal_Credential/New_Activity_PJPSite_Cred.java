@@ -33,116 +33,143 @@ public class New_Activity_PJPSite_Cred extends BaseClass_SEBS_Portal {
         });
         Thread.sleep(1000);
         
-        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("98541602017");
+        
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_03", "Enter Mobile Number", () -> {
+        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("98541602018");});
 		Thread.sleep(1000);
 		
-		driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
+		
+		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_04", "Click on CONTINUE Button", () -> {
+		driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();});
 		Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_03", "Click on Distributor Mapped", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_05", "Click on Distributor Mapped", () -> {
             Liabrary.custom_click(view.getDistributor_Mapped(), "Click on Distributor Mapped");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_04", "Select Distributor Mapped", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_06", "Select Distributor Mapped", () -> {
             Liabrary.custom_click(view.getSelect_Distributor_Mapped(), "Select Distributor Mapped");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_05", "Select Sales Engineer Dropdown", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_07", "Select Sales Engineer Dropdown", () -> {
             Liabrary.custom_click(view.getSelect_sales_Engineer_dropdown(), "Select Sales Engineer Dropdown");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_06", "Select Sales Engineer", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_08", "Select Sales Engineer", () -> {
             Liabrary.custom_click(view.getSelect_sales_Engineer(), "Select Sales Engineer");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_07", "Select Location Dropdown", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_09", "Select Location Dropdown", () -> {
             Liabrary.custom_click(view.getSelect_Location_dropdown(), "Select Location Dropdown");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_08", "Select Location", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_10", "Select Location", () -> {
             Liabrary.custom_click(view.getSelect_Location(), "Select Location");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_09", "Select Developer Name Dropdown", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_11", "Select Developer Name Dropdown", () -> {
             Liabrary.custom_click(view.getSelect_developer_Name_dropdown(), "Select Developer Name Dropdown");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_10", "Select Developer Name", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_12", "Select Developer Name", () -> {
             Liabrary.custom_click(view.getSelect_developer_Name(), "Select Developer Name");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_11", "Scroll to Site Name field", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_13", "Scroll to Site Name field", () -> {
             WebElement scroll = driver.findElement(By.xpath("//label[normalize-space()='Site Name']"));
             JavascriptExecutor jse = (JavascriptExecutor) driver;
             jse.executeScript("arguments[0].scrollIntoView(true);", scroll);
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_12", "Enter Site Name", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("salman turkar");
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_14", "Enter Site Name", () -> {
+            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("Aniket");
         });
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_13", "Click on Flex Checkbox", () -> {
-            Liabrary.custom_click(view.getChcekbox_flexCheckDefault(), "Click on Flex Checkbox");
-        });
-        Thread.sleep(1000);
-
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_14", "Scroll to State Dropdown", () -> {
-            WebElement scroll1 = driver.findElement(By.xpath("//label[normalize-space()='State']"));
-            JavascriptExecutor jse1 = (JavascriptExecutor) driver;
-            jse1.executeScript("arguments[0].scrollIntoView(true);", scroll1);
-        });
-        Thread.sleep(1000);
-
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_15", "Open State Dropdown", () -> {
-            Liabrary.custom_click(view.getDropdownMenuButton(), "Open State Dropdown");
-        });
-        Thread.sleep(1000);
-
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_16", "Select State Checkbox", () -> {
-            Liabrary.custom_click(view.getCheckbox(), "Select State Checkbox");
-        });
-        Thread.sleep(4000);
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_15", "Click on Chcekbox_flexCheckDefault", () ->{
+    		Liabrary.custom_click(view.getChcekbox_flexCheckDefault(), "Click on Chcekbox_flexCheckDefault");});
+    		Thread.sleep(1000);
+    		
+    	
+    		WebElement scroll1 = driver.findElement(By.xpath("//label[normalize-space()='State']"));
+        	JavascriptExecutor jse1= (JavascriptExecutor)driver;
+        	jse1.executeScript("arguments[0].scrollIntoView(true);", scroll1);
+            Thread.sleep(1000);
+    		
+            
+            ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_16", "Enter Project Funnel (lakhs) of Site", () ->{
+            driver.findElement(By.xpath("//input[@placeholder='Enter Project Funnel (lakhs) of Site']")).sendKeys("40");});
+            Thread.sleep(1000);
+            
+            
+            ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_17", "Enter Sales Funnel (lakhs) of Site", () ->{
+            driver.findElement(By.xpath("(//input[@placeholder='Enter Sales Funnel (lakhs) of Site'])[1]")).sendKeys("521");});
+            Thread.sleep(1000);
+            
+            
+            ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_18", "Enter Fosroc Expected sales in 2025", () ->{
+            driver.findElement(By.xpath("//input[@placeholder='Enter Fosroc Expected sales in 2025']")).sendKeys("5142");});
+            Thread.sleep(1000);
+            
+            
+            
+            WebElement scroll3 = driver.findElement(By.xpath("//label[normalize-space()='YTD Sales (lakhs)']"));
+        	JavascriptExecutor jse3= (JavascriptExecutor)driver;
+        	jse3.executeScript("arguments[0].scrollIntoView(true);", scroll3);
+            Thread.sleep(1000);
+            
+            
+            ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_19", "Enter YTD Sales (lakhs)", () ->{
+            driver.findElement(By.xpath("//input[@placeholder='Enter YTD Sales (lakhs)']")).sendKeys("3214");});
+            Thread.sleep(1000);
+            
+    		
+            ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_20", "Click on Dropdown Menu Button", () ->{
+            Liabrary.custom_click(view.getDropdownMenuButton(), "Click on Dropdown Menu Button");});
+            Thread.sleep(1000);
+            
+    		
+    		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_21", "Click on Checkbox", () ->{
+    		Liabrary.custom_click(view.getCheckbox(), "Click on Checkbox");});
+    		Thread.sleep(4000);
+    		
+    		
+    		WebElement scroll2 = driver.findElement(By.xpath("//label[normalize-space()='Contractor Name']"));
+        	JavascriptExecutor jse2= (JavascriptExecutor)driver;
+        	jse2.executeScript("arguments[0].scrollIntoView(true);", scroll2);
+            Thread.sleep(1000);
+    		
+    		
+            ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_22", "Enter Contractor Name", () ->{
+    		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("sahil");});
+            Thread.sleep(1000);
+            
+            
+            ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_23", "Click on Chcekbox_flexCheckDefault", () ->{
+            driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Email ID.']")).sendKeys("sahil123@gmail.com");});
+            Thread.sleep(1000);
+            
+    		
+    		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_24", "Enter Contractor Contact Number", () ->{
+    		driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Contact Number.']")).sendKeys("9654120165");});
+    		  Thread.sleep(1000);
         
         
-        
-        
-        
-        
-
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_17", "Scroll to Contractor Name", () -> {
-            WebElement scroll2 = driver.findElement(By.xpath("//label[normalize-space()='Contractor Name']"));
-            JavascriptExecutor jse2 = (JavascriptExecutor) driver;
-            jse2.executeScript("arguments[0].scrollIntoView(true);", scroll2);
-        });
-        Thread.sleep(1000);
-
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_18", "Enter Contractor Name", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("nilesh");
-        });
-        Thread.sleep(1000);
-
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_19", "Enter Contractor Contact Number", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Contact Number.']")).sendKeys("9654120143");
-        });
-        Thread.sleep(1000);
-        
-        
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_20", "Click on camera button", ()-> {  
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_25", "Click on camera button", ()-> {  
 	        driver.findElement(By.xpath("(//div[@class='new-retailer-container o-hidden']//child::div//child::div//child::span[@class='circle-camera'])[1]")).click();});
 	        Thread.sleep(1000);
 
 	        
-	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_21", "Select camera  and capture", ()-> {  
+	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_26", "Select camera  and capture", ()-> {  
 	        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	        
@@ -158,7 +185,7 @@ public class New_Activity_PJPSite_Cred extends BaseClass_SEBS_Portal {
 
 	        Thread.sleep(5000);
 	        
-	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_22", "Select camera  and capture", ()-> { 
+	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_27", "Select camera  and capture", ()-> { 
 	        	
 	        	 WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 	        // Wait for the Capture button and click it
@@ -175,17 +202,17 @@ public class New_Activity_PJPSite_Cred extends BaseClass_SEBS_Portal {
 	
 	
 	
-	ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_23", "Click on Save_Button", () ->{
+	ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_28", "Click on Save_Button", () ->{
 	Liabrary.custom_click(view.getSAVE_Button(), "Save Button");
 	});
 	Thread.sleep(4000);
 	
 	
-	ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_24", "Click on Okay Button", () ->{
-	driver.findElement(By.xpath("//button[normalize-space()='OKAY']")).click();		
-      });
-	Thread.sleep(4000);
-        
+//	ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_PJP_TC_24", "Click on Okay Button", () ->{
+//	driver.findElement(By.xpath("//button[normalize-space()='OKAY']")).click();		
+//      });
+//	Thread.sleep(4000);
+//        
         
         
 

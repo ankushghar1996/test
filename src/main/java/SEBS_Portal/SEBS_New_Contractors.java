@@ -1,52 +1,66 @@
 package SEBS_Portal;
  
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.Select;
+
+import Com_Utility.ObjectRepo;
  
 public class SEBS_New_Contractors {
 	
 @FindBy(how=How.XPATH,using="//div[@class='navbar-title']//i[@aria-hidden='true']")
 private WebElement Menu ;
 
-@FindBy(how=How.XPATH,using="//div[@class='offcanvas-options mt-4']//span[text()='New Contractor Creation']")
+@FindBy(how=How.XPATH,using="//div[contains(@class,'offcanvas-options') and contains(@class,'mt-4')]//span[contains(text(),'New Contractor Creation')]")
 private WebElement New_Contractor_Creation ;
 
 @FindBy(how=How.XPATH,using="//div[@class='circle-add']//i[@aria-hidden='true']")
 private WebElement Creation_Button ;	
 
-@FindBy(how=How.XPATH,using="(//div[@class='ng-select-container ng-has-value']//input[@type='text'])[1]")
+@FindBy(how=How.XPATH,using="(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[1]")
 private WebElement Select_Distributor_Dropdown ;
 
 @FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Bluehost DB [10145]']")
 private WebElement Select_Distributor_Dropdown_Value ;		
 
-@FindBy(how=How.XPATH,using="(//div[@class='ng-select-container ng-has-value']//input[@type='text'])[2]")
+@FindBy(how=How.XPATH,using="(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[2]")
 private WebElement Sales_Engineer_Dropdown ;	
 
-@FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Nageshwar']")
+
+//   (//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]
+//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Nageshwar']
+@FindBy(how=How.XPATH,using="(//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")
 private WebElement Sales_Engineer_Dropdown_Value ;	
 
  
-@FindBy(how=How.XPATH,using="//ng-select[@formcontrolname='Route']")
+@FindBy(how=How.XPATH,using="(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[3]")
 private WebElement Route ;
 
-@FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='karvey nagar']")
+
+//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='karvey nagar']
+@FindBy(how=How.XPATH,using="(//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")
 private WebElement Route_Value ;		
 
-@FindBy(how=How.XPATH,using="//div[@class='col-12 mb-3']//select[@aria-label='Default select example']")
+
+
+
+
+//   (//div[@class='col-12 mb-3']//child::select[contains(@class,'form-select ng-untouched')])[1]
+@FindBy(how=How.XPATH,using="//div[@class='col-12 mb-3']//child::select[contains(@class,'form-select ng-untouched')]")
 private WebElement Contractor_Type ;
  
 @FindBy(how=How.XPATH,using="//div[@class='col-12 mb-3']//option[text()='Contractor ']")
 private WebElement Contractor_Type_Value;
  
-@FindBy (how=How.XPATH,using = "//div[@class='col-12 mb-3']//ng-select[@bindvalue='StateId']")
+@FindBy (how=How.XPATH,using = "(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[4]")
 private WebElement State_Dropdown;
  
 @FindBy (how=How.XPATH,using = "//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Maharashtra']")
 private WebElement State_Dropdown_Value;
  
-@FindBy (how=How.XPATH,using = "//ng-select[@bindvalue='TownId']//input[@type='text']")
+@FindBy (how=How.XPATH,using = "(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[5]")
 private WebElement City_Dropdown ;
  
 @FindBy (how=How.XPATH,using = "//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Ahmednagar']")

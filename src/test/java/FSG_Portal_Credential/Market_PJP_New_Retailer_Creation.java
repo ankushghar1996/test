@@ -14,6 +14,7 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -46,6 +47,16 @@ public class Market_PJP_New_Retailer_Creation {
         
     	WebDriverManager.chromedriver().setup();
     	
+    	ChromeOptions options = new ChromeOptions();
+        options.addArguments("--use-fake-ui-for-media-stream"); // ✅ use real camera, auto-accept permissions
+
+        // ❌ Do not use this if you want real webcam
+        // options.addArguments("--use-file-for-fake-video-capture=C:\\test\\sample-video.y4m");
+
+        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+        options.setExperimentalOption("useAutomationExtension", false);
+        options.addArguments("start-maximized");
+    	
     //	System.setProperty("webdriver.chrome.driver", "C:\\COde\\test\\FOSROC_Automation\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -56,10 +67,10 @@ public class Market_PJP_New_Retailer_Creation {
 
     @Test
     public void testOtpFlowAndRetailerInfo() throws Exception {
-        String mobileNumber = "9040526630";
+        String mobileNumber = "9040526633";
 
         // Login
-        driver.get("https://fosrocfsguat.hspldms.com");
+        driver.get("https://fosrocfsguatlocal.hspldms.com");
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_Market_PJP_New_Retailer_Creation_TC_01", "Verify that user should be send FSG User Name.", () -> {
@@ -139,13 +150,13 @@ public class Market_PJP_New_Retailer_Creation {
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_Market_PJP_New_Retailer_Creation_TC_11", "Verify that user should be Enter Retailer Firm Name/Outlet Name.", () -> {
-        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("yogi Hardware");
+        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Sushil Hardware");
         });
         Thread.sleep(1000);
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_Market_PJP_New_Retailer_Creation_TC_12", "Verify that user should be click on Retailer Category dropdown.", () -> {
-        driver.findElement(By.xpath("//div[@class='ng-input']/input[@type='text']")).click();
+        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3 o-auto']//child::ng-select//child::div//input[@type='text'])[1]")).click();
         });
         Thread.sleep(1000);
         
@@ -157,13 +168,13 @@ public class Market_PJP_New_Retailer_Creation {
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_Market_PJP_New_Retailer_Creation_TC_14", "Verify that user should be click on Route dropdown.", () -> {
-        driver.findElement(By.xpath("//label[contains(text(),'Route')]/following::div[contains(@class,'ng-input')][1]/input")).click();
+        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3 o-auto']//child::ng-select//child::div//input[@type='text'])[2]")).click();
         });
         Thread.sleep(1000);
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_Market_PJP_New_Retailer_Creation_TC_15", "Verify that user should be select Route in Route dropdown.", () -> {
-        driver.findElement(By.xpath("//span[normalize-space()='Karve Nagar']")).click();
+        driver.findElement(By.xpath("(//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")).click();
         });
         Thread.sleep(1000);
         
@@ -187,13 +198,13 @@ public class Market_PJP_New_Retailer_Creation {
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_Market_PJP_New_Retailer_Creation_TC_19", "Verify that user should be click on City dropdown.", () -> {
-        driver.findElement(By.xpath("//ng-select[@bindvalue='TownId']//input[@type='text']")).click();
+        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3 o-auto']//child::ng-select//child::div//input[@type='text'])[4]")).click();
         });
         Thread.sleep(1000);
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_Market_PJP_New_Retailer_Creation_TC_20", "Verify that user should be select city in City dropdown.", () -> {
-        driver.findElement(By.xpath("//span[normalize-space()='Amravati']")).click();
+        driver.findElement(By.xpath("(//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")).click();
         });
         Thread.sleep(1000);
         
@@ -393,7 +404,7 @@ public class Market_PJP_New_Retailer_Creation {
             Connection conn = DriverManager.getConnection(url, username, password);
             Statement stmt = conn.createStatement();
 
-            String query = "select * from RegistrationPendingMaster where MobileNo='9040526630'";
+            String query = "select * from RegistrationPendingMaster where MobileNo='9040526633'";
             
             ResultSet rs = stmt.executeQuery(query);
             
