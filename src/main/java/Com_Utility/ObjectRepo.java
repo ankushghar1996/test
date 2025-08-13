@@ -1,11 +1,11 @@
 package Com_Utility;
-
+ 
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Base64;
 import java.util.List;
-
+ 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -13,23 +13,23 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
+ 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-
+ 
 public class ObjectRepo {
-
+ 
     public static ExtentReports extent;
     public static ExtentTest test;
     public static WebDriver driver;
     public static Object startTest;
-
+ 
     private static boolean reportAlreadySent = false;
-
+ 
     public static ExtentReports initializeReport() {
         String reportFolderPath = System.getProperty("user.dir") + File.separator + "test-output" + File.separator + "Extent_Reports" + File.separator;
         File reportDir = new File(reportFolderPath);
@@ -40,7 +40,7 @@ public class ObjectRepo {
         reporter.config().setDocumentTitle("Test Execution Report");
         reporter.config().setReportName("Automation Test Report For Fosroc_HO");
         reporter.config().setTheme(Theme.DARK);
-
+ 
         extent = new ExtentReports();
         extent.attachReporter(reporter);
         extent.setSystemInfo("Browser Name", "Chrome");
@@ -48,28 +48,27 @@ public class ObjectRepo {
         extent.setSystemInfo("Environment", "QA Environment");
         return extent;
     }
-
+ 
     public static void startTest(String testName, String testDescription) {
         test = extent.createTest(testName, testDescription);
     }
-
+ 
     public static void startTestAndLog_1(String testNumber, String testDescription) {
         test = extent.createTest(testNumber, testDescription);
     }
-
+ 
    
-    
     public static void startTestAndLog_1_SS(String testNumber, String testDescription, Runnable action) {
         test = extent.createTest(testNumber, testDescription); // ✅ Create test
-
+ 
         try {
             test.info(testDescription); // ✅ Log step
             action.run(); // ✅ Execute action
-
+ 
             // ✅ Flash message check after action
             List<WebElement> flashMessages = driver.findElements(By.xpath("//div[@id='toast-container']"));
             boolean flashErrorFound = false;
-
+ 
             // ✅ Safe flash keywords (including OTP success cases)
             List<String> safeFlashKeywords = Arrays.asList(
                 "successfully",
@@ -83,12 +82,12 @@ public class ObjectRepo {
                 "okay",
                 "yes"
             );
-
+ 
             for (WebElement msg : flashMessages) {
                 if (msg.isDisplayed()) {
                     String messageText = msg.getText().trim().toLowerCase();
                     boolean isSafe = safeFlashKeywords.stream().anyMatch(messageText::contains);
-
+ 
                     if (isSafe) {
                         test.pass("✅ Flash Message: " + messageText);
                         captureScreenshot("Screenshot - Flash Success");
@@ -99,7 +98,7 @@ public class ObjectRepo {
                     }
                 }
             }
-
+ 
             // ✅ Final decision
             if (!flashErrorFound) {
                 test.pass("✅ " + testDescription);
@@ -108,7 +107,7 @@ public class ObjectRepo {
                 // ❌ Fail only for error messages, NOT for safe ones
                 throw new RuntimeException("Flash error found — test failed.");
             }
-
+ 
         } catch (Exception e) {
             test.fail("❌ Exception in step: " + testDescription + " | " + e.getMessage());
             captureScreenshot("Screenshot - Exception");
@@ -116,30 +115,30 @@ public class ObjectRepo {
         }
     }
 /*
- // 🔁 NEW METHOD: Flash message support version
+// 🔁 NEW METHOD: Flash message support version
     public static void startTestAndLog_1_SS(String testNumber, String testDescription, Runnable action) {
         test = extent.createTest(testNumber, testDescription); // ✅ Create test
-
+ 
         try {
             test.info(testDescription); // ✅ Log step
             action.run(); // ✅ Execute action
-
+ 
             // ✅ Flash message check after action
 >>>>>>> Aniket_211
             List<WebElement> flashMessages = driver.findElements(By.xpath("//div[@id='toast-container']"));
             boolean flashFound = false;
-
+ 
             List<String> safeFlashKeywords = Arrays.asList(
                 "successfully", "record saved", "submitted", "otp has been sent", 
                 "otp sent", "otp sent successfully", "success otp", 
                 "otp dispatched", "okay", "yes"
             );
-
+ 
             for (WebElement msg : flashMessages) {
                 if (msg.isDisplayed()) {
                     String messageText = msg.getText().trim().toLowerCase();
                     boolean isSafe = safeFlashKeywords.stream().anyMatch(messageText::contains);
-
+ 
                     if (isSafe) {
                         test.pass("✅ Flash Message: " + messageText);
                         captureScreenshot("Screenshot - Flash Success");
@@ -150,21 +149,21 @@ public class ObjectRepo {
                     }
                 }
             }
-
+ 
             if (!flashFound) {
                 test.pass("✅ " + testDescription);
                 captureScreenshot("Screenshot - Passed");
             } else {
                 throw new RuntimeException("Flash error found — test failed.");
             }
-
+ 
         } catch (Exception e) {
             test.fail("❌ Exception in step: " + testDescription + " | " + e.getMessage());
             captureScreenshot("Screenshot - Exception");
             throw new RuntimeException(e);
         }
     }    */
-
+ 
     private static void captureScreenshot(String label) {
         if (driver != null) {
             try {
@@ -177,13 +176,11 @@ public class ObjectRepo {
             }
         }
     }
-
-
     public static void startTestAndLog_2(String testNumber, String testDescription) {
         test = extent.createTest(testNumber, testDescription);
         test.log(Status.INFO, testDescription);
     }
-
+ 
     public static void AssertTextAndLog(String actualText, String expectedText) throws Exception {
         try {
             Assert.assertEquals(actualText, expectedText);
@@ -195,7 +192,7 @@ public class ObjectRepo {
             throw e;
         }
     }
-
+ 
     public static void logTestResult(String testName, String testDescription, boolean isTestPassed, String additionalInfo) {
         startTest(testName, testDescription);
         if (isTestPassed) {
@@ -204,13 +201,13 @@ public class ObjectRepo {
             test.fail(additionalInfo);
         }
     }
-
+ 
     public static void Headlines_logOnlyDescription(String testDescription) {
         test = extent.createTest(testDescription);
         test.info("📝 " + testDescription);
         System.out.println("🖨️ Logged Only Description: " + testDescription);
     }
-
+ 
     public static void Print_Dynamic_Flash_Massage(WebDriver driver, String xpathLocator, String testNumber_Print_Massage) {
         try {
             test = extent.createTest(testNumber_Print_Massage);
@@ -234,38 +231,38 @@ public class ObjectRepo {
             test.fail("An unexpected error occurred: " + e.getMessage());
         }
     }
-
+ 
     
     public static String takeScreenshot() throws IOException {
         if (driver == null) {
             throw new IllegalStateException("Driver is not initialized.");
         }
-
+ 
         try {
             Thread.sleep(300); // Helps avoid capturing duplicate/stale screenshots
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-
-
+ 
+ 
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         byte[] fileContent = FileUtils.readFileToByteArray(srcFile);
         String base64Screenshot = Base64.getEncoder().encodeToString(fileContent);
-
+ 
         System.out.println("📸 Screenshot captured at: " + System.currentTimeMillis());
         return base64Screenshot;
     }
-
-
+ 
+ 
     public static void startTestAndLog_1_NS(String testDescription) {
         test = extent.createTest("❌ Negative Scenario");
         test.info("🔸 " + testDescription);
         test.fail("❌ This is a negative scenario - Marking as Failed");
         System.out.println("🖨️ Negative Scenario Logged as Failed: " + testDescription);
     }
-
-
-
+ 
+ 
+ 
     public static void logTestWithScreenshot(String logMessage) {
         try {
             String encodedScreenshot = takeScreenshot();
@@ -280,22 +277,22 @@ public class ObjectRepo {
             test.fail("Error while capturing screenshot: " + e.getMessage());
         }
     }
-
+ 
     public static synchronized void finalizeReport() {
         if (reportAlreadySent) {
             System.out.println("🚫 Report already finalized, skipping duplicate...");
             return;
         }
         reportAlreadySent = true;
-
+ 
         System.out.println("🟡 finalizeReport() START called at: " + java.time.LocalTime.now() +
                 " | Thread: " + Thread.currentThread().getName());
-
+ 
         if (extent != null) {
             extent.flush();
         }
         System.out.println("✅ Extent Report flushed successfully...");
-
+ 
         try {
             String reportPath = System.getProperty("user.dir") + "/test-output/Extent_Reports/TestReport.html";
             File reportFile = new File(reportPath);
@@ -309,10 +306,10 @@ public class ObjectRepo {
             System.out.println("❌ Failed to send email: " + e.getMessage());
             e.printStackTrace();
         }
-
+ 
         System.out.println("🟢 finalizeReport() END at: " + java.time.LocalTime.now());
     }
-
+ 
     public static ExtentReports extentreport() {
         return extent;
     }
