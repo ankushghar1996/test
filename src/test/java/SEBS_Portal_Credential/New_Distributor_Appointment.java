@@ -70,7 +70,7 @@ public class New_Distributor_Appointment {
 	    @Test
 	    public void testOtpFlowAndRetailerInfo() throws Exception {
 	    	
-	        String mobileNumber = "9082956711";
+	        String mobileNumber = "9082956715";
 
 	        // Login
 	        
@@ -155,31 +155,31 @@ public class New_Distributor_Appointment {
 	        System.out.println("Add Distributor Info...");
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_010", "Click on Distributor Code", () -> {
-	        driver.findElement(By.xpath("//ng-select[@bindvalue='DistributorCode']//input[@type='text']")).click();});
+	        driver.findElement(By.xpath("(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[1]")).click();});
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_011", "Click on SFA Name ", () -> {
-	        driver.findElement(By.xpath("//span[contains(text(),'New Annapurna')]")).click();});
+	        driver.findElement(By.xpath("(//span[contains(text(),'New Annapurna  Associate')])[2]")).click();});
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_012", "Click on Distributor Area ", () -> {
-	        driver.findElement(By.xpath("//ng-select[@bindvalue='BeatCode']//input[@type='text']")).click(); });
+	        driver.findElement(By.xpath("(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[2]")).click(); });
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_013", "Click on Distributor Area Name", () -> {
-	        driver.findElement(By.xpath("//span[contains(text(),'Koregaon Park')]")).click();});
+	        driver.findElement(By.xpath("(//ng-dropdown-panel[@class='ng-dropdown-panel ng-star-inserted ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")).click();});
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_014", "Click on SE Area ", () -> {
-	        driver.findElement(By.xpath("//ng-select[@bindvalue='AreaId']//input[@type='text']")).click();});
+	        driver.findElement(By.xpath("(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[3]")).click();});
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_015", "Click on SE Area Name ", () -> {
-	        driver.findElement(By.xpath("//span[contains(text(),'Pune')]")).click();});
+	        driver.findElement(By.xpath("(//ng-dropdown-panel[@class='ng-dropdown-panel ng-star-inserted ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")).click();});
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_016", "Send  Distributor Firm Name ", () -> {
-	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name']")).sendKeys("Ram enterprises");});
+	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name']")).sendKeys("raju enterprises");});
 	        Thread.sleep(1000);
 	        
 	       /* 
@@ -223,7 +223,7 @@ public class New_Distributor_Appointment {
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_023", "Click on state Dropdown", ()-> {  
-	        driver.findElement(By.xpath("(//input[@type='text'])[9]")).click();});
+	        driver.findElement(By.xpath("(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[4]")).click();});
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_024", "Select state", ()-> {  
@@ -247,7 +247,7 @@ public class New_Distributor_Appointment {
 
 	        */
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_025", "Click On city Dropdown", ()-> {  
-	        driver.findElement(By.xpath("//ng-select[@class='ng-select-searchable ng-select-clearable ng-select ng-select-single ng-untouched ng-pristine ng-invalid']//input[@type='text']")).click();});
+	        driver.findElement(By.xpath("(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[5]")).click();});
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_026", "Select City From Dropdown", ()-> {  
@@ -472,7 +472,7 @@ public class New_Distributor_Appointment {
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
 
-	            String query = "select * from RegistrationPendingMaster where MobileNo='9082956711'";
+	            String query = "select * from RegistrationPendingMaster where MobileNo='9082956715'";
 	            
 	            ResultSet rs = stmt.executeQuery(query);
 	            

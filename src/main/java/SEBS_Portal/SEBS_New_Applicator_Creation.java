@@ -19,12 +19,18 @@ public class SEBS_New_Applicator_Creation {
   @FindBy(how=How.XPATH,using="(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[1]")
   private WebElement Select_Distributor_Dropdown ;		
   
+  
+  
   @FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Bluehost DB [10145]']")
   private WebElement Select_Distributor_Dropdown_Value ;	
+  
   
   @FindBy(how=How.XPATH,using="(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[2]")
   private WebElement Sales_Engineer_Dropdown ;	
   
+  
+  
+ // (//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]
   @FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Nageshwar']")
   private WebElement Sales_Engineer_Dropdown_Value ;	
   
@@ -33,6 +39,8 @@ public class SEBS_New_Applicator_Creation {
   @FindBy(how=How.XPATH,using="(//div[@class='col-12 mb-3']//child::ng-select//child::div//input[@type='text'])[3]")
   private WebElement Route ;
   
+  
+ // (//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]
   @FindBy(how=How.XPATH,using="//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='N8 Cidco']")
   private WebElement Route_Value ;	
   
