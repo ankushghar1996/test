@@ -16,20 +16,20 @@ public class PJP_Cred extends BaseClass_SEBS_Portal {
         PJP_SEBS pj = PageFactory.initElements(driver, PJP_SEBS.class);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_PJP_Cred_TC01", "Verify that user should be able to click on SEBS Menu", () -> {
-            Liabrary.custom_click(pj.getSEBS_Menu(), null);
+            Liabrary.custom_click(pj.getSEBS_Menu(), "Verify that user should be able to click on SEBS Menu");
         });
         Thread.sleep(1000);
 
         
         ObjectRepo.startTestAndLog_1_SS("SEBS_PJP_Cred_TC02", "Verify that user should be able to click on PJP SubMenu", () -> {
-            Liabrary.custom_click(pj.getPJP_SubMenu(), null);
+            Liabrary.custom_click(pj.getPJP_SubMenu(), "Verify that user should be able to click on SEBS Menu");
         });
         Thread.sleep(1000);
 
         
         
         ObjectRepo.startTestAndLog_1_SS("SEBS_PJP_Cred_TC03", "Verify that user should be able to click on Close Button", () -> {
-            Liabrary.custom_click(pj.getCLOSE_btn(), null);
+            Liabrary.custom_click(pj.getCLOSE_btn(), "Verify that user should be able to click on Close Button");
         });
         Thread.sleep(1000);
         

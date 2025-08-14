@@ -63,7 +63,7 @@ public class New_Retailer_cred_OTP {
 
     @Test
     public void testOtpFlowAndRetailerInfo() throws Exception {
-        String mobileNumber = "8585544007";
+        String mobileNumber = "8585544008";
 
         // Login
         driver.get("https://fosrocfsguatlocal.hspldms.com");
@@ -399,7 +399,7 @@ public class New_Retailer_cred_OTP {
             Connection conn = DriverManager.getConnection(url, username, password);
             Statement stmt = conn.createStatement();
 
-            String query = "select * from RegistrationPendingMaster where MobileNo='8585544007'";
+            String query = "select * from RegistrationPendingMaster where MobileNo='8585544008'";
             
             ResultSet rs = stmt.executeQuery(query);
             

@@ -35,7 +35,7 @@ public class New_Activity_NonPJPSite_Cred extends BaseClass_SEBS_Portal {
         
         
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_NonPJP_TC03", "Enter Mobile Number", () -> {
-        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9854160206");});
+        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9854160207");});
 		Thread.sleep(1000);
 		
 		
@@ -98,7 +98,7 @@ public class New_Activity_NonPJPSite_Cred extends BaseClass_SEBS_Portal {
         Thread.sleep(1000);
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Activity_NonPJP_TC15", "Enter Site Name", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("Abhishake Thakur");
+            driver.findElement(By.xpath("//input[@placeholder='Enter Site Name']")).sendKeys("pritesh Thakur");
         });
         Thread.sleep(1000);
 

@@ -16,15 +16,21 @@ public class FSG_Leave_Application_Main {
 	private WebElement Apply_Leave ;
 	@FindBy (how=How.XPATH,using="//select[@formcontrolname='LeaveType']")
 	private WebElement Leave_Type ;
-	@FindBy (how=How.XPATH,using="//select//option[text()='Sick Leaves']")
+	
+	@FindBy (how=How.XPATH,using="//select//option[text()='Casual Leaves']")
 	private WebElement Leave_Type_Value ;
+	
 	@FindBy (how=How.XPATH,using="//*[@class='form-control form-textarea ng-pristine ng-invalid ng-touched']")
 	private WebElement Reason_Textbox ;
-	@FindBy (how=How.XPATH,using="//button[@class='common-footer-button']")
+	
+	
+	@FindBy (how=How.XPATH,using="//button[normalize-space()='APPLY']")
 	private WebElement Apply_Button ;
+	
 	@FindBy (how=How.XPATH,using="//button[normalize-space()='CANCEL']")
 	private WebElement Cancled_Leave ;
 	@FindBy (how=How.XPATH,using="")
+	
 	private WebElement Filter_Button ;
  
 	public WebElement getFSG_Menu() {

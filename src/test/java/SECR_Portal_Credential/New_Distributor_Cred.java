@@ -66,7 +66,7 @@ public class New_Distributor_Cred {
 	 	    
 	 		 driver.get("https://fosrocsecruatlocal.hspldms.com");
 	 		 
-	 	    String mobileNumber = "9403582311";
+	 	    String mobileNumber = "9403582314";
 
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_01", "Verify that user should be send SECR User Name.", () -> {
@@ -76,15 +76,16 @@ public class New_Distributor_Cred {
 	 	  
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_02", "Verify that user should be SECR send Password.", () -> {
-	 	        driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("Fosroc@1");
+	 	        driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("Aniket@2");
 	 	    });
 	 	    Thread.sleep(1000);
 	 	    
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_03", "Verify that user should be click on Continue Button.", () -> {
-	 	        driver.findElement(By.xpath("(//button[@type='button'])[1]")).click();
+	 	        driver.findElement(By.xpath("//button[normalize-space()='LOGIN']")).click();
 	 	    });
 	 	    Thread.sleep(1000);
+	 	 //div[@class='login-form d-flex mt-5 justify-content-center']//child::div//button[normalize-space()='LOGIN']
 	 	    
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_04", "Verify that user should be select Options Menu.", () -> {
@@ -148,7 +149,7 @@ public class New_Distributor_Cred {
 	 	    System.out.println("Add Distributor Info...");
 
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_11", "Verify that user should be click on SFA dropdown.", () -> {
-	 	        driver.findElement(By.xpath("//ng-select[@bindvalue='DistributorCode']//input[@type='text']")).click();
+	 	        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3']//child::ng-select//child::div//input[@type='text'])[1]")).click();
 	 	    });
 	 	    Thread.sleep(1000);
 	 	    
@@ -160,7 +161,7 @@ public class New_Distributor_Cred {
 	 	    
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_13", "Verify that user should be click on SFA Area dropdown.", () -> {
-	 	        driver.findElement(By.xpath("//ng-select[@bindvalue='BeatCode']//input[@type='text']")).click();
+	 	        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3']//child::ng-select//child::div//input[@type='text'])[2]")).click();
 	 	    });
 	 	    Thread.sleep(1000);
 	 	    
@@ -172,7 +173,7 @@ public class New_Distributor_Cred {
 	 	    
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_15", "Verify that user should be click on SE Area dropdown.", () -> {
-	 	        driver.findElement(By.xpath("//ng-select[@bindvalue='AreaId']//input[@type='text']")).click();
+	 	        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3']//child::ng-select//child::div//input[@type='text'])[3]")).click();
 	 	    });
 	 	    Thread.sleep(1000);
 	 	    
@@ -184,7 +185,7 @@ public class New_Distributor_Cred {
 	 	    
 	 	    
 	 	    ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_17", "Verify that user should be send Distributor Firm Name.", () -> {
-	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name*']")).sendKeys("Riya Patle Enterprises and sons");
+	 	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name*']")).sendKeys("Sejal Patle Enterprises and sons");
 	 	    });
 	 	    Thread.sleep(1000);
 	        
@@ -239,7 +240,7 @@ public class New_Distributor_Cred {
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_23", "Verify that user should be click on State in State dropdown.", () -> {
-	            driver.findElement(By.xpath("//ng-select[@class='gray-background-y ng-select-searchable ng-select-clearable ng-select ng-select-single ng-untouched ng-pristine ng-valid']//input[@type='text']")).click();
+	            driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3']//child::ng-select//child::div//input[@type='text'])[4]")).click();
 	        });
 	        Thread.sleep(1000);
 	        
@@ -268,7 +269,7 @@ public class New_Distributor_Cred {
 	        */
 	       
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Distributor_Cred_TC_25", "Verify that user should be click on City in City dropdown.", () -> {
-	            driver.findElement(By.xpath("//ng-select[@class='ng-select-searchable ng-select-clearable ng-select ng-select-single ng-untouched ng-pristine ng-invalid']//input[@type='text']")).click();
+	            driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3']//child::ng-select//child::div//input[@type='text'])[5]")).click();
 	        });
 	        Thread.sleep(1000);
 	        
@@ -507,7 +508,7 @@ public class New_Distributor_Cred {
 		            Connection conn = DriverManager.getConnection(url, username, password);
 		            Statement stmt = conn.createStatement();
 
-		            String query = "select * from RegistrationPendingMaster where MobileNo='9403582311'";
+		            String query = "select * from RegistrationPendingMaster where MobileNo='9403582314'";
 		            
 		            //select * from RegistrationPendingMaster where MobileNo='9403582580'
 		            

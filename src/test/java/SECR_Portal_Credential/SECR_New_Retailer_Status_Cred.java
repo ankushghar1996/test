@@ -55,10 +55,15 @@ public class SECR_New_Retailer_Status_Cred {
 	    	WebDriverManager.chromedriver().setup();
 	    	
 	    	
-	   	 ChromeOptions options = new ChromeOptions();
-	   	    options.addArguments("--use-fake-device-for-media-stream");
-	   	    options.addArguments("--use-fake-ui-for-media-stream");
-	   	    options.addArguments("--use-file-for-fake-video-capture=C:\\test\\sample-video.y4m"); // 👈 provide a real path
+	    	ChromeOptions options = new ChromeOptions();
+	         options.addArguments("--use-fake-ui-for-media-stream"); // ✅ use real camera, auto-accept permissions
+
+	         // ❌ Do not use this if you want real webcam
+	         // options.addArguments("--use-file-for-fake-video-capture=C:\\test\\sample-video.y4m");
+
+	         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+	         options.setExperimentalOption("useAutomationExtension", false);
+	         options.addArguments("start-maximized");
 
 	   	    driver = new ChromeDriver(options);
 	   	    driver.manage().window().maximize();
@@ -76,11 +81,11 @@ public class SECR_New_Retailer_Status_Cred {
 	    public void testOtpFlowAndRetailerInfo() throws Exception {
 
 
-	        String mobileNumber = "7777888950";
+	        String mobileNumber = "7777888952";
 
 
 	        // Login
-	        driver.get("https://fosrocsecruat.hspldms.com/");
+	        driver.get("https://fosrocsecruatlocal.hspldms.com");
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_01", "Verify that user should be send SECR User Name.", () -> {
@@ -89,13 +94,13 @@ public class SECR_New_Retailer_Status_Cred {
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_02", "Verify that user should be SECR send Password.", () -> {
-	        driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("Fosroc@1");
+	        driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("Fosroc@3");
 	        });
 	        
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_03", "Verify that user should be click on Continue Button.", () -> {
-	        driver.findElement(By.xpath("//button[@class='btn btn-primary w-100']//span[text()=' LOGIN ']")).click();
+	        driver.findElement(By.xpath("//button[normalize-space()='LOGIN']")).click();
 	        });
 	        Thread.sleep(1000);
 
@@ -162,7 +167,7 @@ public class SECR_New_Retailer_Status_Cred {
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_11", "Verify that user should be click on Distributor dropdown.", () -> {
-	        driver.findElement(By.xpath("//ng-select[@bindvalue='DistributorCode']")).click();
+	        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3']//child::ng-select//child::div//input[@type='text'])[1]")).click();
 	        });
 	        Thread.sleep(1000);
 	        
@@ -174,31 +179,31 @@ public class SECR_New_Retailer_Status_Cred {
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_13", "Verify that user should be click on FSG Name dropdown.", () -> {
-	        driver.findElement(By.xpath("(//input[@type='text'])[2]")).click();
+	        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3']//child::ng-select//child::div//input[@type='text'])[2]")).click();
 	        });
 	        Thread.sleep(1000);
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_14", "Verify that user should be select FSG in FSG Name dropdown.", () -> { 
-	        driver.findElement(By.xpath("//span[normalize-space()='Aniket J']")).click();
+	        driver.findElement(By.xpath("(//ng-dropdown-panel[@class='ng-dropdown-panel ng-star-inserted ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")).click();
 	        });
 	        Thread.sleep(1000);
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_15", "Verify that user should be click on Route dropdown.", () -> {
-	        driver.findElement(By.xpath("(//input[@type='text'])[3]")).click();
+	        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3']//child::ng-select//child::div//input[@type='text'])[3]")).click();
 	        });
 	        Thread.sleep(1000);
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_16", "Verify that user should be select Route in Route dropdown.", () -> {
-	        driver.findElement(By.xpath("//span[normalize-space()='Karve Nagar']")).click();
+	        driver.findElement(By.xpath("(//ng-dropdown-panel[@class='ng-dropdown-panel ng-star-inserted ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")).click();
 	        });
 	        Thread.sleep(1000);
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_17", "Verify that user should be enter Firm Name.", () -> {
-	        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Riya Thakur Paints");
+	        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("hitendra Thakur Paints");
 	        });
 	        Thread.sleep(1000);
 	        
@@ -240,7 +245,7 @@ public class SECR_New_Retailer_Status_Cred {
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_23", "Verify that user should be click on State dropdown.", () -> {
-	        driver.findElement(By.xpath("//ng-select[@class='gray-background-y ng-select-searchable ng-select-clearable ng-select ng-select-single ng-untouched ng-pristine ng-valid']//input[@type='text']")).click();
+	        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3']//child::ng-select//child::div//input[@type='text'])[4]")).click();
 	        });
 	        Thread.sleep(1000);
 	        
@@ -252,7 +257,7 @@ public class SECR_New_Retailer_Status_Cred {
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_New_Retailer_Status_Cred_TC_25", "Verify that user should be click on City dropdown.", () -> {
-	        driver.findElement(By.xpath("(//input[@type='text'])[9]")).click();
+	        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3']//child::ng-select//child::div//input[@type='text'])[5]")).click();
 	        });
 	        Thread.sleep(1000);
 	        
@@ -458,7 +463,7 @@ public class SECR_New_Retailer_Status_Cred {
 	 
 
 
-	            String query = "select * from RegistrationPendingMaster where MobileNo='7777888950'";
+	            String query = "select * from RegistrationPendingMaster where MobileNo='7777888952'";
 
 
 	            ResultSet rs = stmt.executeQuery(query);
