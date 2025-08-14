@@ -57,7 +57,7 @@ public class Market_Non_PJP_New_Retailer_Creation {
 
     @Test
     public void testOtpFlowAndRetailerInfo() throws Exception {
-        String mobileNumber = "8585906060";
+        String mobileNumber = "8585906061";
 
         // Login
         driver.get("https://fosrocfsguat.hspldms.com");
@@ -122,7 +122,7 @@ public class Market_Non_PJP_New_Retailer_Creation {
             
             
             ObjectRepo.startTestAndLog_1_SS("FSG_Market_Non_PJP_New_Retailer_Creation_TC_10", "Verify that user should be click on Continue Button.", () -> {
-            driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
+            driver.findElement(By.xpath("//div[@id='verificationProcess']//child::div//button[normalize-space()='CONTINUE']")).click();
             });
             Thread.sleep(2000);
 
@@ -378,7 +378,7 @@ public class Market_Non_PJP_New_Retailer_Creation {
             Connection conn = DriverManager.getConnection(url, username, password);
             Statement stmt = conn.createStatement();
 
-            String query = "select * from RegistrationPendingMaster where MobileNo='8585906060'";
+            String query = "select * from RegistrationPendingMaster where MobileNo='8585906061'";
             
             ResultSet rs = stmt.executeQuery(query);
             
