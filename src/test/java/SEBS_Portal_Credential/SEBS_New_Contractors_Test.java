@@ -46,7 +46,7 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC04", "enter mobile number", () -> {
-        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9547821427");
+        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9547821428");
         });
         Thread.sleep(1000);
         
@@ -89,7 +89,7 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
 
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC12", "Enter Contractor Name", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("akash sharma");
+            driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("nilesh sharma");
 
         });
         Thread.sleep(1000);

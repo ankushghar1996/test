@@ -47,10 +47,15 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 	    	WebDriverManager.chromedriver().setup();
 	    	
 	    	
-	   	 ChromeOptions options = new ChromeOptions();
-	   	    options.addArguments("--use-fake-device-for-media-stream");
-	   	    options.addArguments("--use-fake-ui-for-media-stream");
-	   	    options.addArguments("--use-file-for-fake-video-capture=C:\\test\\sample-video.y4m"); // 👈 provide a real path
+	    	ChromeOptions options = new ChromeOptions();
+	         options.addArguments("--use-fake-ui-for-media-stream"); // ✅ use real camera, auto-accept permissions
+
+	         // ❌ Do not use this if you want real webcam
+	         // options.addArguments("--use-file-for-fake-video-capture=C:\\test\\sample-video.y4m");
+
+	         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+	         options.setExperimentalOption("useAutomationExtension", false);
+	         options.addArguments("start-maximized");
 
 	   	    driver = new ChromeDriver(options);
 	   	    driver.manage().window().maximize();
@@ -66,10 +71,10 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 	    @Test
 	    public void testOtpFlowAndRetailerInfo() throws Exception {
 	    	
-	        String mobileNumber = "7777888825";
+	        String mobileNumber = "7777888827";
 
 	        // Login
-	        driver.get("https://fosrocsecruat.hspldms.com/");
+	        driver.get("https://fosrocsecruatlocal.hspldms.com");
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_01", "Verify that user should be send SECR User Name.", () -> {
 		        driver.findElement(By.xpath("//input[@placeholder='User Name']")).sendKeys("SECR-008");
@@ -77,13 +82,13 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 		        
 		        
 		        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_02", "Verify that user should be SECR send Password.", () -> {
-		        driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("Fosroc@1");
+		        driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("Fosroc@3");
 		        });
 		        
 		        
 		        
 		        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_03", "Verify that user should be click on Continue Button.", () -> {
-		        driver.findElement(By.xpath("(//button[@type='button'])[1]")).click();
+		        driver.findElement(By.xpath("//button[normalize-space()='LOGIN']")).click();
 		        });
 		        Thread.sleep(1000);
 
@@ -141,7 +146,7 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 	        
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_11", "Verify that user should be click on Distributor dropdown.", () -> {
-		        driver.findElement(By.xpath("//ng-select[@bindvalue='DistributorCode']")).click();
+		        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3']//child::ng-select//child::div//input[@type='text'])[1]")).click();
 		        });
 		        Thread.sleep(1000);
 		        
@@ -153,31 +158,31 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 		        
 		        
 		        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_13", "Verify that user should be click on FSG Name dropdown.", () -> {
-		        driver.findElement(By.xpath("(//input[@type='text'])[2]")).click();
+		        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3']//child::ng-select//child::div//input[@type='text'])[2]")).click();
 		        });
 		        Thread.sleep(1000);
 		        
 		        
 		        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_14", "Verify that user should be select FSG in FSG Name dropdown.", () -> { 
-		        driver.findElement(By.xpath("//span[normalize-space()='Aniket J']")).click();
+		        driver.findElement(By.xpath("(//ng-dropdown-panel[@class='ng-dropdown-panel ng-star-inserted ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")).click();
 		        });
 		        Thread.sleep(1000);
 		        
 		        
 		        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_15", "Verify that user should be click on Route dropdown.", () -> {
-		        driver.findElement(By.xpath("(//input[@type='text'])[3]")).click();
+		        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3']//child::ng-select//child::div//input[@type='text'])[3]")).click();
 		        });
 		        Thread.sleep(1000);
 		        
 		        
 		        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_16", "Verify that user should be select Route in Route dropdown.", () -> {
-		        driver.findElement(By.xpath("//span[normalize-space()='Karve Nagar']")).click();
+		        driver.findElement(By.xpath("(//ng-dropdown-panel[@class='ng-dropdown-panel ng-star-inserted ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")).click();
 		        });
 		        Thread.sleep(1000);
 		        
 		        
 		        ObjectRepo.startTestAndLog_1_SS("SECR_Activity_Non_PJP_New_Retailer_Cred_TC_17", "Verify that user should be enter Firm Name.", () -> {
-		        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Riya Paints");
+		        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("mukesh Paints");
 		        });
 		        Thread.sleep(1000);
 		        
@@ -414,7 +419,7 @@ public class Activity_Non_PJP_New_Retailer_Cred {
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
 	 
-	            String query = "select * from RegistrationPendingMaster where MobileNo='7777888825'";
+	            String query = "select * from RegistrationPendingMaster where MobileNo='7777888827'";
 	            ResultSet rs = stmt.executeQuery(query);
 	            if (rs.next()) {
 	                otp = rs.getString("otp");

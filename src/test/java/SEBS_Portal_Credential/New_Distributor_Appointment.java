@@ -70,7 +70,7 @@ public class New_Distributor_Appointment {
 	    @Test
 	    public void testOtpFlowAndRetailerInfo() throws Exception {
 	    	
-	        String mobileNumber = "9082956715";
+	        String mobileNumber = "9082956716";
 
 	        // Login
 	        
@@ -179,7 +179,7 @@ public class New_Distributor_Appointment {
 	        Thread.sleep(1000);
 	        
 	        ObjectRepo.startTestAndLog_1_SS("SEBS_New_DIST_APPOINTMENT_TC_016", "Send  Distributor Firm Name ", () -> {
-	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name']")).sendKeys("raju enterprises");});
+	        driver.findElement(By.xpath("//input[@placeholder='Enter Distributor Firm Name']")).sendKeys("Akhil enterprises");});
 	        Thread.sleep(1000);
 	        
 	       /* 
@@ -472,7 +472,7 @@ public class New_Distributor_Appointment {
 	            Connection conn = DriverManager.getConnection(url, username, password);
 	            Statement stmt = conn.createStatement();
 
-	            String query = "select * from RegistrationPendingMaster where MobileNo='9082956715'";
+	            String query = "select * from RegistrationPendingMaster where MobileNo='9082956716'";
 	            
 	            ResultSet rs = stmt.executeQuery(query);
 	            

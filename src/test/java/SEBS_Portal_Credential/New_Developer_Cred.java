@@ -33,7 +33,7 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 		Thread.sleep(1000);
 		
 
-		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9403582561");
+		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9403582563");
 		Thread.sleep(1000);
 		
 		driver.findElement(By.xpath("//button[normalize-space(text())='CONTINUE']")).click();
@@ -50,7 +50,7 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 			
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_TC_06", "Click Distributor Name", () ->{
 
-	    Liabrary.custom_Sendkeys(view.getEnter_Developer_Name(), excel.getStringdata("SEBS_Devloper", 2, 0), null); });
+	    Liabrary.custom_Sendkeys(view.getEnter_Developer_Name(), excel.getStringdata("SEBS_Devloper", 1, 0), null); });
 	    Thread.sleep(1000);
 		
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_07", "Sales Engineer Name", () ->{

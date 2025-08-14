@@ -10,7 +10,7 @@
   <test thread-count="5" name="Test">
     <classes>
 
- <class name="FSG_Portal_Credential.Mark_Attendance_Cred"/> 
+<!-- <class name="FSG_Portal_Credential.Mark_Attendance_Cred"/> -->
 <!-- FSG New Retailer Creation Flow -->
 <class name="FSG_Portal_Credential.New_Retailer_cred_OTP"/>
 <class name="FSG_Retailer_Hierarchy.Retailer_HO_OutletMaster_ViewPageCred_1st">
