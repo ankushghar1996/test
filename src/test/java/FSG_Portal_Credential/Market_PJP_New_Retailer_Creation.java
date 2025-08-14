@@ -67,7 +67,9 @@ public class Market_PJP_New_Retailer_Creation {
 
     @Test
     public void testOtpFlowAndRetailerInfo() throws Exception {
+
         String mobileNumber = "9040526633";
+
 
         // Login
         driver.get("https://fosrocfsguatlocal.hspldms.com");
@@ -404,7 +406,9 @@ public class Market_PJP_New_Retailer_Creation {
             Connection conn = DriverManager.getConnection(url, username, password);
             Statement stmt = conn.createStatement();
 
+
             String query = "select * from RegistrationPendingMaster where MobileNo='9040526633'";
+
             
             ResultSet rs = stmt.executeQuery(query);
             

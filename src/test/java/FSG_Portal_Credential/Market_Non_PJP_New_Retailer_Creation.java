@@ -134,7 +134,7 @@ public class Market_Non_PJP_New_Retailer_Creation {
             
             
             ObjectRepo.startTestAndLog_1_SS("FSG_Market_Non_PJP_New_Retailer_Creation_TC_10", "Verify that user should be click on Continue Button.", () -> {
-            driver.findElement(By.xpath("//button[normalize-space()='CONTINUE']")).click();
+            driver.findElement(By.xpath("//div[@id='verificationProcess']//child::div//button[normalize-space()='CONTINUE']")).click();
             });
             Thread.sleep(2000);
 
