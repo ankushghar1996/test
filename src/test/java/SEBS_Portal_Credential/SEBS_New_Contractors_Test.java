@@ -8,6 +8,7 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
@@ -45,7 +46,7 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
         
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC04", "enter mobile number", () -> {
-        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9547821425");
+        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9547821427");
         });
         Thread.sleep(1000);
         
@@ -88,27 +89,49 @@ public class SEBS_New_Contractors_Test extends BaseClass_SEBS_Portal {
 
 
         ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC12", "Enter Contractor Name", () -> {
-            driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("akash jha");
+            driver.findElement(By.xpath("//input[@placeholder='Enter Contractor Name']")).sendKeys("akash sharma");
 
         });
         Thread.sleep(1000);
 
+        
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractor_Creat TC13", "Select Contractor Type Value", () -> {
+            WebElement dropdownElement = driver.findElement(By.xpath("//select[@formcontrolname='ContractorType']"));
+
+            // Create Select object
+            Select select = new Select(dropdownElement);
+
+            // Choose by visible text
+            select.selectByVisibleText("Civil Contractor");
+
+            // Or by value
+            // select.selectByValue("13");
+
+            // Or by index
+            // select.selectByIndex(1);
+        });
+
+
+
+
+        
+
+//        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC13", "Click on Contractor Type Dropdown", () -> {
+//            Liabrary.custom_click(SEBS.getContractor_Type(), "Contractor Type Dropdown");
+//        });
+//        Thread.sleep(1000);
+//
+//        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC14", "Select Contractor Type Value", () -> {
+//            Liabrary.custom_click(SEBS.getContractor_Type_Value(), "Contractor Type Value");
+//        });
+//        Thread.sleep(1000);
+        
         WebElement element1 = driver.findElement(By.xpath("//div[@class='col-12 mb-3']//select[@aria-label='Default select example']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element1);
         Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC13", "Click on Contractor Type Dropdown", () -> {
-            Liabrary.custom_click(SEBS.getContractor_Type(), "Contractor Type Dropdown");
-        });
-        Thread.sleep(1000);
 
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC14", "Select Contractor Type Value", () -> {
-            Liabrary.custom_click(SEBS.getContractor_Type_Value(), "Contractor Type Value");
-        });
-        Thread.sleep(1000);
-
-
-        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC15", "Enter Contact Number", () -> {
+        ObjectRepo.startTestAndLog_1_SS("SEBS_New_Contractors_Test_TC14", "Enter Contact Number", () -> {
             driver.findElement(By.xpath("//input[@placeholder='Enter Contact Number']")).sendKeys("9547821989");
         });
         Thread.sleep(1000);

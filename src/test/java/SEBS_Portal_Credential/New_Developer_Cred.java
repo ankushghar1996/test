@@ -33,7 +33,7 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 		Thread.sleep(1000);
 		
 
-		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9403582560");
+		driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("9403582561");
 		Thread.sleep(1000);
 		
 		driver.findElement(By.xpath("//button[normalize-space(text())='CONTINUE']")).click();
@@ -58,8 +58,11 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 			});
 		Thread.sleep(1000);
 				
+		
+//		(//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]
+		//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Nageshwar']
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_08", "select Sales Engineer name", () ->{
-		driver.findElement(By.xpath("//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='Nageshwar']")).click();
+		driver.findElement(By.xpath("(//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")).click();
 
 		});
 		Thread.sleep(1000);
@@ -73,9 +76,10 @@ public class New_Developer_Cred extends BaseClass_SEBS_Portal{
 		Thread.sleep(1000);
 		
 		
-
+//		(//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]
+		//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='N8 Cidco']
 		ObjectRepo.startTestAndLog_1_SS("SEBS_New_Developer_Cred_TC_10", "select Route", () ->{
-		driver.findElement(By.xpath("//div[@class='ng-dropdown-panel-items scroll-host']//span[text()='N8 Cidco']")).click();
+		driver.findElement(By.xpath("(//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")).click();
 
 		});
 		Thread.sleep(1000);

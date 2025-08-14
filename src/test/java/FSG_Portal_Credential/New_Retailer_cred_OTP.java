@@ -63,7 +63,7 @@ public class New_Retailer_cred_OTP {
 
     @Test
     public void testOtpFlowAndRetailerInfo() throws Exception {
-        String mobileNumber = "8585544004";
+        String mobileNumber = "8585544007";
 
         // Login
         driver.get("https://fosrocfsguatlocal.hspldms.com");
@@ -146,13 +146,13 @@ public class New_Retailer_cred_OTP {
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_11", "Verify that user should be Enter Retailer Firm Name/Outlet Name.", () -> {
-        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Ramesh patel Hardware");
+        driver.findElement(By.xpath("//input[@placeholder='Enter Retailer Firm Name/Outlet Name']")).sendKeys("Raju patel Hardware");
         });
         Thread.sleep(1000);
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_12", "Verify that user should be click on Retailer Category dropdown.", () -> {
-        driver.findElement(By.xpath("//div[@class='ng-input']/input[@type='text']")).click();
+        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3 o-auto']//child::ng-select//child::div//input[@type='text'])[1]")).click();
         });
         Thread.sleep(1000);
         
@@ -164,13 +164,13 @@ public class New_Retailer_cred_OTP {
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_14", "Verify that user should be click on Route dropdown.", () -> {
-        driver.findElement(By.xpath("//label[contains(text(),'Route')]/following::div[contains(@class,'ng-input')][1]/input")).click();
+        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3 o-auto']//child::ng-select//child::div//input[@type='text'])[2]")).click();
         });
         Thread.sleep(1000);
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_15", "Verify that user should be select Route in Route dropdown.", () -> {
-        driver.findElement(By.xpath("//span[normalize-space()='Karve Nagar']")).click();
+        driver.findElement(By.xpath("(//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")).click();
         });
         Thread.sleep(1000);
         
@@ -194,13 +194,13 @@ public class New_Retailer_cred_OTP {
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_19", "Verify that user should be click on City dropdown.", () -> {
-        driver.findElement(By.xpath("//ng-select[@bindvalue='TownId']//input[@type='text']")).click();
+        driver.findElement(By.xpath("(//div[@class='new-retailer-form p-3 o-auto']//child::ng-select//child::div//input[@type='text'])[4]")).click();
         });
         Thread.sleep(1000);
         
         
         ObjectRepo.startTestAndLog_1_SS("FSG_New_Retailer_cred_OTP_TC_20", "Verify that user should be select city in City dropdown.", () -> {
-        driver.findElement(By.xpath("//span[normalize-space()='Amravati']")).click();
+        driver.findElement(By.xpath("(//ng-dropdown-panel[@class='ng-dropdown-panel ng-select-bottom']//child::div//child::span[contains(@class,'ng-option')])[1]")).click();
         });
         Thread.sleep(1000);
         
@@ -399,7 +399,7 @@ public class New_Retailer_cred_OTP {
             Connection conn = DriverManager.getConnection(url, username, password);
             Statement stmt = conn.createStatement();
 
-            String query = "select * from RegistrationPendingMaster where MobileNo='8585544004'";
+            String query = "select * from RegistrationPendingMaster where MobileNo='8585544007'";
             
             ResultSet rs = stmt.executeQuery(query);
             
